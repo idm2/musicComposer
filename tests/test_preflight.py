@@ -1,0 +1,97 @@
+import pytest
+
+from songcomposer.generate.preflight import banned_terms, preflight, validate_request
+from songcomposer.generate.provider import GENERIC_LIMITS, GenerationRequest
+from songcomposer.models import SourceInfo, SpecSection
+
+
+def req(**over):
+    base = dict(
+        title="Glass Hour", style_prompt="sparse indie folk, melancholy", negative_style="",
+        vocal_gender="any", target_duration_s=120, n_takes=3,
+        sections=[
+            SpecSection(name="Verse 1", duration_s=60, lines=[
+                "The kettle clicks off in the dark", "Your coat still hangs behind the door",
+                "I count the streetlights to the park", "And lose my place at twenty-four"]),
+            SpecSection(name="Chorus", duration_s=60, lines=[
+                "Glass hour, hold me still", "Glass hour, against my will",
+                "Turn the morning down", "Until you come around"]),
+        ])
+    base.update(over)
+    return GenerationRequest(**base)
+
+
+def problems(r, ref=(), banned=()):
+    return validate_request(r, GENERIC_LIMITS, list(ref), list(banned))
+
+
+def test_clean_request_passes():
+    assert problems(req()) == []
+
+
+@pytest.mark.parametrize("line,rule", [
+    ("Hold me <break/> still", "markup"),
+    ("Hold me [softly] still", "markup"),
+    ("Broken � char", "replacement-char"),
+    ("soft\xadhyphen line", "soft-hyphen"),
+    ("TODO write this line", "placeholder"),
+    ("Lyrics go here", "placeholder"),
+    ("", "empty-line"),
+    ("x" * 201, "line-too-long"),
+])
+def test_bad_lines_are_caught(line, rule):
+    r = req()
+    r.sections[0].lines[1] = line
+    assert any(p.startswith(f"Verse 1 line 2: {rule}") for p in problems(r)), problems(r)
+
+
+def test_structure_rules():
+    assert any("title" in p for p in problems(req(title="")))
+    assert any("title" in p for p in problems(req(title="x" * 81)))
+    assert any("style_prompt" in p for p in problems(req(style_prompt=" ")))
+    assert any("at least 2 sections" in p for p in problems(req(sections=req().sections[:1])))
+    assert any("no lyrics" in p.lower() for p in problems(req(sections=[
+        SpecSection(name="A", lines=[], duration_s=60), SpecSection(name="B", lines=[], duration_s=60)])))
+
+
+def test_duration_rules():
+    r = req()
+    r.sections[0].duration_s = 2
+    assert any("Verse 1: duration" in p for p in problems(r))
+    assert any("sum to" in p for p in problems(req(target_duration_s=300)))
+
+
+def test_crammed_lyrics_caught_by_words_per_second():
+    r = req()
+    r.sections[0].lines = ["word " * 12] * 25          # 300 words in 60 s = 5 wps
+    assert any("words/sec" in p for p in problems(r))
+
+
+def test_style_must_not_name_the_reference_or_say_in_the_style_of():
+    assert any("banned term" in p for p in problems(req(style_prompt="folk like Bon Iver"), banned=["Bon Iver"]))
+    assert any("style of" in p for p in problems(req(style_prompt="folk in the style of someone")))
+
+
+def test_lines_copied_from_the_reference_are_caught():
+    ref = ["and", "i", "count", "the", "streetlights", "to", "the", "park", "tonight"]
+    out = problems(req(), ref=ref)
+    assert any("copies the reference" in p and "streetlights" in p for p in out)
+
+
+def test_banned_terms_from_source_title():
+    src = SourceInfo(origin="u", kind="url", title="Bon Iver - Holocene (Official Video)", uploader="Bon Iver",
+                     duration_s=1, sample_rate=44100, sha1="a" * 40, ingested_at="now")
+    assert banned_terms(src) == ["Bon Iver", "Holocene"]
+    assert banned_terms(None) == []
+
+
+def test_preflight_exits_and_says_nothing_was_generated(capsys):
+    with pytest.raises(SystemExit) as e:
+        preflight(req(title=""), GENERIC_LIMITS, [], [])
+    assert e.value.code == 1
+    assert "NOTHING was generated" in capsys.readouterr().out
+
+
+def test_preflight_passes_quietly(capsys):
+    preflight(req(), GENERIC_LIMITS, [], [])
+    assert "pre-flight passed" in capsys.readouterr().out
