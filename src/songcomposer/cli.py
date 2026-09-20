@@ -52,3 +52,10 @@ def brief(song: str,
     """Your brief → work/<song>/02-brief.json."""
     from .brief import run_brief
     run_brief(song, from_file=from_, text=text)
+
+
+@app.command()
+def compose(song: str, force: bool = typer.Option(False, "--force", help="rewrite an existing spec")) -> None:
+    """Brief + analysis → lyrics and song spec (work/<song>/03-spec.json). Edit the file freely afterwards."""
+    from .compose import run_compose
+    run_compose(song, force=force)
