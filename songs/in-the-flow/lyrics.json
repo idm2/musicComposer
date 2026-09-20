@@ -1,0 +1,2791 @@
+{
+  "schema_version": 1,
+  "song": "in-the-flow",
+  "title": "In the Flow",
+  "audio": "in-the-flow.mp3",
+  "duration_s": 217.584,
+  "lines": [
+    {
+      "section": "Verse 1",
+      "text": "I was running every road",
+      "start": 9.32,
+      "end": 16.34,
+      "confidence": 0.592,
+      "words": [
+        {
+          "word": "I",
+          "start": 9.32,
+          "end": 10.04,
+          "confidence": 0.18
+        },
+        {
+          "word": "was",
+          "start": 10.04,
+          "end": 10.48,
+          "confidence": 0.036
+        },
+        {
+          "word": "running",
+          "start": 10.48,
+          "end": 15.6,
+          "confidence": 0.958
+        },
+        {
+          "word": "every",
+          "start": 15.6,
+          "end": 16.04,
+          "confidence": 0.97
+        },
+        {
+          "word": "road",
+          "start": 16.04,
+          "end": 16.34,
+          "confidence": 0.818
+        }
+      ]
+    },
+    {
+      "section": "Verse 1",
+      "text": "Chasing signs I didn't know",
+      "start": 16.34,
+      "end": 19.06,
+      "confidence": 0.926,
+      "words": [
+        {
+          "word": "Chasing",
+          "start": 16.34,
+          "end": 18.06,
+          "confidence": 0.747
+        },
+        {
+          "word": "signs",
+          "start": 18.06,
+          "end": 18.32,
+          "confidence": 0.992
+        },
+        {
+          "word": "I",
+          "start": 18.32,
+          "end": 18.52,
+          "confidence": 0.973
+        },
+        {
+          "word": "didn't",
+          "start": 18.52,
+          "end": 18.84,
+          "confidence": 0.998
+        },
+        {
+          "word": "know",
+          "start": 18.84,
+          "end": 19.06,
+          "confidence": 0.92
+        }
+      ]
+    },
+    {
+      "section": "Verse 1",
+      "text": "Living loud and sleeping light",
+      "start": 19.06,
+      "end": 21.82,
+      "confidence": 0.905,
+      "words": [
+        {
+          "word": "Living",
+          "start": 19.06,
+          "end": 19.86,
+          "confidence": 0.776
+        },
+        {
+          "word": "loud",
+          "start": 19.86,
+          "end": 21.08,
+          "confidence": 0.989
+        },
+        {
+          "word": "and",
+          "start": 21.08,
+          "end": 21.28,
+          "confidence": 0.961
+        },
+        {
+          "word": "sleeping",
+          "start": 21.28,
+          "end": 21.46,
+          "confidence": 0.981
+        },
+        {
+          "word": "light",
+          "start": 21.46,
+          "end": 21.82,
+          "confidence": 0.819
+        }
+      ]
+    },
+    {
+      "section": "Verse 1",
+      "text": "Looking for you every night",
+      "start": 21.82,
+      "end": 24.62,
+      "confidence": 0.992,
+      "words": [
+        {
+          "word": "Looking",
+          "start": 21.82,
+          "end": 22.54,
+          "confidence": 0.972
+        },
+        {
+          "word": "for",
+          "start": 22.54,
+          "end": 23.06,
+          "confidence": 0.998
+        },
+        {
+          "word": "you",
+          "start": 23.06,
+          "end": 23.62,
+          "confidence": 0.996
+        },
+        {
+          "word": "every",
+          "start": 23.62,
+          "end": 23.98,
+          "confidence": 0.995
+        },
+        {
+          "word": "night",
+          "start": 23.98,
+          "end": 24.62,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Verse 1",
+      "text": "Every city, every shore",
+      "start": 24.62,
+      "end": 27.34,
+      "confidence": 0.997,
+      "words": [
+        {
+          "word": "Every",
+          "start": 24.62,
+          "end": 26.32,
+          "confidence": 0.994
+        },
+        {
+          "word": "city,",
+          "start": 26.32,
+          "end": 26.76,
+          "confidence": 0.999
+        },
+        {
+          "word": "every",
+          "start": 26.76,
+          "end": 27.04,
+          "confidence": 0.998
+        },
+        {
+          "word": "shore",
+          "start": 27.04,
+          "end": 27.34,
+          "confidence": 0.999
+        }
+      ]
+    },
+    {
+      "section": "Verse 1",
+      "text": "Always reaching out for more",
+      "start": 27.34,
+      "end": 29.98,
+      "confidence": 0.837,
+      "words": [
+        {
+          "word": "Always",
+          "start": 27.34,
+          "end": 29.1,
+          "confidence": 0.989
+        },
+        {
+          "word": "reaching",
+          "start": 29.1,
+          "end": 29.4,
+          "confidence": 0.999
+        },
+        {
+          "word": "out",
+          "start": 29.4,
+          "end": 29.7,
+          "confidence": 1.0
+        },
+        {
+          "word": "for",
+          "start": 29.7,
+          "end": 29.86,
+          "confidence": 0.978
+        },
+        {
+          "word": "more",
+          "start": 29.86,
+          "end": 29.98,
+          "confidence": 0.218
+        }
+      ]
+    },
+    {
+      "section": "Verse 1",
+      "text": "Couldn't see the current then",
+      "start": 31.04,
+      "end": 32.8,
+      "confidence": 0.759,
+      "words": [
+        {
+          "word": "Couldn't",
+          "start": 31.04,
+          "end": 31.92,
+          "confidence": 0.533
+        },
+        {
+          "word": "see",
+          "start": 31.92,
+          "end": 32.1,
+          "confidence": 0.997
+        },
+        {
+          "word": "the",
+          "start": 32.1,
+          "end": 32.28,
+          "confidence": 0.997
+        },
+        {
+          "word": "current",
+          "start": 32.28,
+          "end": 32.54,
+          "confidence": 0.906
+        },
+        {
+          "word": "then",
+          "start": 32.54,
+          "end": 32.8,
+          "confidence": 0.364
+        }
+      ]
+    },
+    {
+      "section": "Verse 1",
+      "text": "It was carrying me to when",
+      "start": 32.8,
+      "end": 34.76,
+      "confidence": 0.606,
+      "words": [
+        {
+          "word": "It",
+          "start": 32.8,
+          "end": 33.14,
+          "confidence": 0.82
+        },
+        {
+          "word": "was",
+          "start": 33.14,
+          "end": 33.3,
+          "confidence": 0.993
+        },
+        {
+          "word": "carrying",
+          "start": 33.3,
+          "end": 33.8,
+          "confidence": 0.84
+        },
+        {
+          "word": "me",
+          "start": 33.8,
+          "end": 34.16,
+          "confidence": 0.985
+        },
+        {
+          "word": "to",
+          "start": 34.16,
+          "end": 34.46,
+          "confidence": 0.0
+        },
+        {
+          "word": "when",
+          "start": 34.46,
+          "end": 34.76,
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "section": "Pre-Chorus",
+      "text": "You walked in like morning does",
+      "start": 35.0,
+      "end": 37.24,
+      "confidence": 0.76,
+      "words": [
+        {
+          "word": "You",
+          "start": 35.0,
+          "end": 35.54,
+          "confidence": 0.753
+        },
+        {
+          "word": "walked",
+          "start": 35.54,
+          "end": 35.86,
+          "confidence": 0.997
+        },
+        {
+          "word": "in",
+          "start": 35.86,
+          "end": 36.1,
+          "confidence": 0.83
+        },
+        {
+          "word": "like",
+          "start": 36.1,
+          "end": 36.44,
+          "confidence": 0.993
+        },
+        {
+          "word": "morning",
+          "start": 36.44,
+          "end": 36.94,
+          "confidence": 0.99
+        },
+        {
+          "word": "does",
+          "start": 36.94,
+          "end": 37.24,
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "section": "Pre-Chorus",
+      "text": "Quiet, golden, sure, because",
+      "start": 37.68,
+      "end": 40.18,
+      "confidence": 0.649,
+      "words": [
+        {
+          "word": "Quiet,",
+          "start": 37.68,
+          "end": 38.34,
+          "confidence": 0.76
+        },
+        {
+          "word": "golden,",
+          "start": 38.34,
+          "end": 38.94,
+          "confidence": 0.967
+        },
+        {
+          "word": "sure,",
+          "start": 38.94,
+          "end": 39.46,
+          "confidence": 0.0
+        },
+        {
+          "word": "because",
+          "start": 39.46,
+          "end": 40.18,
+          "confidence": 0.869
+        }
+      ]
+    },
+    {
+      "section": "Pre-Chorus",
+      "text": "Something bigger than us two",
+      "start": 40.18,
+      "end": 43.04,
+      "confidence": 0.983,
+      "words": [
+        {
+          "word": "Something",
+          "start": 40.18,
+          "end": 41.06,
+          "confidence": 0.926
+        },
+        {
+          "word": "bigger",
+          "start": 41.06,
+          "end": 41.76,
+          "confidence": 0.998
+        },
+        {
+          "word": "than",
+          "start": 41.76,
+          "end": 42.3,
+          "confidence": 0.999
+        },
+        {
+          "word": "us",
+          "start": 42.3,
+          "end": 42.74,
+          "confidence": 0.995
+        },
+        {
+          "word": "two",
+          "start": 42.74,
+          "end": 43.04,
+          "confidence": 0.997
+        }
+      ]
+    },
+    {
+      "section": "Pre-Chorus",
+      "text": "Had been pulling me to you",
+      "start": 43.04,
+      "end": 45.92,
+      "confidence": 0.949,
+      "words": [
+        {
+          "word": "Had",
+          "start": 43.04,
+          "end": 43.84,
+          "confidence": 0.707
+        },
+        {
+          "word": "been",
+          "start": 43.84,
+          "end": 44.08,
+          "confidence": 0.999
+        },
+        {
+          "word": "pulling",
+          "start": 44.08,
+          "end": 44.62,
+          "confidence": 0.988
+        },
+        {
+          "word": "me",
+          "start": 44.62,
+          "end": 45.22,
+          "confidence": 1.0
+        },
+        {
+          "word": "to",
+          "start": 45.22,
+          "end": 45.68,
+          "confidence": 0.998
+        },
+        {
+          "word": "you",
+          "start": 45.68,
+          "end": 45.92,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "Felt the whole world slow its spin",
+      "start": 45.92,
+      "end": 47.9,
+      "confidence": 0.678,
+      "words": [
+        {
+          "word": "Felt",
+          "start": 45.92,
+          "end": 46.28,
+          "confidence": 0.994
+        },
+        {
+          "word": "the",
+          "start": 46.28,
+          "end": 46.38,
+          "confidence": 1.0
+        },
+        {
+          "word": "whole",
+          "start": 46.38,
+          "end": 46.62,
+          "confidence": 0.997
+        },
+        {
+          "word": "world",
+          "start": 46.62,
+          "end": 47.06,
+          "confidence": 1.0
+        },
+        {
+          "word": "slow",
+          "start": 47.06,
+          "end": 47.3,
+          "confidence": 0.754
+        },
+        {
+          "word": "its",
+          "start": 47.3,
+          "end": 47.6,
+          "confidence": 0.0
+        },
+        {
+          "word": "spin",
+          "start": 47.6,
+          "end": 47.9,
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "Just to let your light come in",
+      "start": 48.0,
+      "end": 51.08,
+      "confidence": 0.819,
+      "words": [
+        {
+          "word": "Just",
+          "start": 48.0,
+          "end": 48.3,
+          "confidence": 0.0
+        },
+        {
+          "word": "to",
+          "start": 48.3,
+          "end": 49.1,
+          "confidence": 0.762
+        },
+        {
+          "word": "let",
+          "start": 49.1,
+          "end": 49.38,
+          "confidence": 1.0
+        },
+        {
+          "word": "your",
+          "start": 49.38,
+          "end": 49.7,
+          "confidence": 1.0
+        },
+        {
+          "word": "light",
+          "start": 49.7,
+          "end": 50.12,
+          "confidence": 1.0
+        },
+        {
+          "word": "come",
+          "start": 50.12,
+          "end": 50.54,
+          "confidence": 0.983
+        },
+        {
+          "word": "in",
+          "start": 50.54,
+          "end": 51.08,
+          "confidence": 0.986
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "With you, I'm in the flow",
+      "start": 51.08,
+      "end": 53.42,
+      "confidence": 0.978,
+      "words": [
+        {
+          "word": "With",
+          "start": 51.08,
+          "end": 51.78,
+          "confidence": 0.953
+        },
+        {
+          "word": "you,",
+          "start": 51.78,
+          "end": 52.16,
+          "confidence": 1.0
+        },
+        {
+          "word": "I'm",
+          "start": 52.16,
+          "end": 52.64,
+          "confidence": 0.956
+        },
+        {
+          "word": "in",
+          "start": 52.64,
+          "end": 52.8,
+          "confidence": 0.986
+        },
+        {
+          "word": "the",
+          "start": 52.8,
+          "end": 53.06,
+          "confidence": 0.979
+        },
+        {
+          "word": "flow",
+          "start": 53.06,
+          "end": 53.42,
+          "confidence": 0.997
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "And I'm never letting go",
+      "start": 53.42,
+      "end": 56.08,
+      "confidence": 0.999,
+      "words": [
+        {
+          "word": "And",
+          "start": 53.42,
+          "end": 54.26,
+          "confidence": 0.995
+        },
+        {
+          "word": "I'm",
+          "start": 54.26,
+          "end": 54.62,
+          "confidence": 1.0
+        },
+        {
+          "word": "never",
+          "start": 54.62,
+          "end": 55.24,
+          "confidence": 1.0
+        },
+        {
+          "word": "letting",
+          "start": 55.24,
+          "end": 55.64,
+          "confidence": 1.0
+        },
+        {
+          "word": "go",
+          "start": 55.64,
+          "end": 56.08,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "Every door just opens wide",
+      "start": 56.78,
+      "end": 59.38,
+      "confidence": 0.999,
+      "words": [
+        {
+          "word": "Every",
+          "start": 56.78,
+          "end": 57.36,
+          "confidence": 0.998
+        },
+        {
+          "word": "door",
+          "start": 57.36,
+          "end": 57.7,
+          "confidence": 1.0
+        },
+        {
+          "word": "just",
+          "start": 57.7,
+          "end": 58.0,
+          "confidence": 1.0
+        },
+        {
+          "word": "opens",
+          "start": 58.0,
+          "end": 58.78,
+          "confidence": 1.0
+        },
+        {
+          "word": "wide",
+          "start": 58.78,
+          "end": 59.38,
+          "confidence": 0.995
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "Every star is on our side",
+      "start": 59.38,
+      "end": 62.16,
+      "confidence": 0.86,
+      "words": [
+        {
+          "word": "Every",
+          "start": 59.38,
+          "end": 60.12,
+          "confidence": 0.235
+        },
+        {
+          "word": "star",
+          "start": 60.12,
+          "end": 60.36,
+          "confidence": 0.986
+        },
+        {
+          "word": "is",
+          "start": 60.36,
+          "end": 60.82,
+          "confidence": 0.998
+        },
+        {
+          "word": "on",
+          "start": 60.82,
+          "end": 61.12,
+          "confidence": 0.997
+        },
+        {
+          "word": "our",
+          "start": 61.12,
+          "end": 61.62,
+          "confidence": 0.943
+        },
+        {
+          "word": "side",
+          "start": 61.62,
+          "end": 62.16,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "With you, I'm in the flow",
+      "start": 62.36,
+      "end": 64.4,
+      "confidence": 0.924,
+      "words": [
+        {
+          "word": "With",
+          "start": 62.36,
+          "end": 62.8,
+          "confidence": 0.72
+        },
+        {
+          "word": "you,",
+          "start": 62.8,
+          "end": 63.2,
+          "confidence": 0.998
+        },
+        {
+          "word": "I'm",
+          "start": 63.2,
+          "end": 63.7,
+          "confidence": 0.876
+        },
+        {
+          "word": "in",
+          "start": 63.7,
+          "end": 63.92,
+          "confidence": 0.989
+        },
+        {
+          "word": "the",
+          "start": 63.92,
+          "end": 64.1,
+          "confidence": 0.998
+        },
+        {
+          "word": "flow",
+          "start": 64.1,
+          "end": 64.4,
+          "confidence": 0.963
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "And I'm never letting go",
+      "start": 64.4,
+      "end": 67.1,
+      "confidence": 0.989,
+      "words": [
+        {
+          "word": "And",
+          "start": 64.4,
+          "end": 65.38,
+          "confidence": 0.95
+        },
+        {
+          "word": "I'm",
+          "start": 65.38,
+          "end": 65.64,
+          "confidence": 0.999
+        },
+        {
+          "word": "never",
+          "start": 65.64,
+          "end": 66.24,
+          "confidence": 0.999
+        },
+        {
+          "word": "letting",
+          "start": 66.24,
+          "end": 66.68,
+          "confidence": 0.998
+        },
+        {
+          "word": "go",
+          "start": 66.68,
+          "end": 67.1,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Verse 2",
+      "text": "Now your hand is in my hand",
+      "start": 72.18,
+      "end": 75.1,
+      "confidence": 0.996,
+      "words": [
+        {
+          "word": "Now",
+          "start": 72.18,
+          "end": 73.06,
+          "confidence": 0.983
+        },
+        {
+          "word": "your",
+          "start": 73.06,
+          "end": 73.3,
+          "confidence": 0.998
+        },
+        {
+          "word": "hand",
+          "start": 73.3,
+          "end": 73.68,
+          "confidence": 1.0
+        },
+        {
+          "word": "is",
+          "start": 73.68,
+          "end": 74.04,
+          "confidence": 0.996
+        },
+        {
+          "word": "in",
+          "start": 74.04,
+          "end": 74.18,
+          "confidence": 1.0
+        },
+        {
+          "word": "my",
+          "start": 74.18,
+          "end": 74.5,
+          "confidence": 0.999
+        },
+        {
+          "word": "hand",
+          "start": 74.5,
+          "end": 75.1,
+          "confidence": 0.998
+        }
+      ]
+    },
+    {
+      "section": "Verse 2",
+      "text": "And I finally understand",
+      "start": 75.1,
+      "end": 77.22,
+      "confidence": 0.997,
+      "words": [
+        {
+          "word": "And",
+          "start": 75.1,
+          "end": 75.9,
+          "confidence": 0.988
+        },
+        {
+          "word": "I",
+          "start": 75.9,
+          "end": 76.0,
+          "confidence": 1.0
+        },
+        {
+          "word": "finally",
+          "start": 76.0,
+          "end": 76.66,
+          "confidence": 0.999
+        },
+        {
+          "word": "understand",
+          "start": 76.66,
+          "end": 77.22,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Verse 2",
+      "text": "When you stop the push and fight",
+      "start": 77.22,
+      "end": 80.42,
+      "confidence": 0.932,
+      "words": [
+        {
+          "word": "When",
+          "start": 77.22,
+          "end": 78.46,
+          "confidence": 0.997
+        },
+        {
+          "word": "you",
+          "start": 78.46,
+          "end": 78.64,
+          "confidence": 1.0
+        },
+        {
+          "word": "stop",
+          "start": 78.64,
+          "end": 79.02,
+          "confidence": 0.979
+        },
+        {
+          "word": "the",
+          "start": 79.02,
+          "end": 79.34,
+          "confidence": 0.993
+        },
+        {
+          "word": "push",
+          "start": 79.34,
+          "end": 79.78,
+          "confidence": 0.594
+        },
+        {
+          "word": "and",
+          "start": 79.78,
+          "end": 80.06,
+          "confidence": 0.999
+        },
+        {
+          "word": "fight",
+          "start": 80.06,
+          "end": 80.42,
+          "confidence": 0.96
+        }
+      ]
+    },
+    {
+      "section": "Verse 2",
+      "text": "Everything just falls in line",
+      "start": 80.96,
+      "end": 83.46,
+      "confidence": 0.996,
+      "words": [
+        {
+          "word": "Everything",
+          "start": 80.96,
+          "end": 81.6,
+          "confidence": 0.998
+        },
+        {
+          "word": "just",
+          "start": 81.6,
+          "end": 82.14,
+          "confidence": 1.0
+        },
+        {
+          "word": "falls",
+          "start": 82.14,
+          "end": 82.48,
+          "confidence": 0.999
+        },
+        {
+          "word": "in",
+          "start": 82.48,
+          "end": 82.92,
+          "confidence": 0.993
+        },
+        {
+          "word": "line",
+          "start": 82.92,
+          "end": 83.46,
+          "confidence": 0.988
+        }
+      ]
+    },
+    {
+      "section": "Verse 2",
+      "text": "Coffee steam and window rain",
+      "start": 83.46,
+      "end": 85.96,
+      "confidence": 0.931,
+      "words": [
+        {
+          "word": "Coffee",
+          "start": 83.46,
+          "end": 84.22,
+          "confidence": 0.997
+        },
+        {
+          "word": "steam",
+          "start": 84.22,
+          "end": 84.52,
+          "confidence": 0.81
+        },
+        {
+          "word": "and",
+          "start": 84.52,
+          "end": 84.92,
+          "confidence": 0.922
+        },
+        {
+          "word": "window",
+          "start": 84.92,
+          "end": 85.46,
+          "confidence": 0.999
+        },
+        {
+          "word": "rain",
+          "start": 85.46,
+          "end": 85.96,
+          "confidence": 0.926
+        }
+      ]
+    },
+    {
+      "section": "Verse 2",
+      "text": "Even Mondays feel the same",
+      "start": 86.46,
+      "end": 88.72,
+      "confidence": 0.998,
+      "words": [
+        {
+          "word": "Even",
+          "start": 86.46,
+          "end": 87.04,
+          "confidence": 0.999
+        },
+        {
+          "word": "Mondays",
+          "start": 87.04,
+          "end": 87.68,
+          "confidence": 0.989
+        },
+        {
+          "word": "feel",
+          "start": 87.68,
+          "end": 87.98,
+          "confidence": 1.0
+        },
+        {
+          "word": "the",
+          "start": 87.98,
+          "end": 88.28,
+          "confidence": 1.0
+        },
+        {
+          "word": "same",
+          "start": 88.28,
+          "end": 88.72,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Verse 2",
+      "text": "Like the universe said yes",
+      "start": 88.72,
+      "end": 91.48,
+      "confidence": 0.836,
+      "words": [
+        {
+          "word": "Like",
+          "start": 88.72,
+          "end": 89.66,
+          "confidence": 0.303
+        },
+        {
+          "word": "the",
+          "start": 89.66,
+          "end": 89.8,
+          "confidence": 0.995
+        },
+        {
+          "word": "universe",
+          "start": 89.8,
+          "end": 90.48,
+          "confidence": 0.986
+        },
+        {
+          "word": "said",
+          "start": 90.48,
+          "end": 90.94,
+          "confidence": 0.972
+        },
+        {
+          "word": "yes",
+          "start": 90.94,
+          "end": 91.48,
+          "confidence": 0.926
+        }
+      ]
+    },
+    {
+      "section": "Verse 2",
+      "text": "And it's wearing your blue dress",
+      "start": 91.86,
+      "end": 94.58,
+      "confidence": 0.918,
+      "words": [
+        {
+          "word": "And",
+          "start": 91.86,
+          "end": 92.38,
+          "confidence": 0.934
+        },
+        {
+          "word": "it's",
+          "start": 92.38,
+          "end": 92.64,
+          "confidence": 0.967
+        },
+        {
+          "word": "wearing",
+          "start": 92.64,
+          "end": 92.98,
+          "confidence": 0.996
+        },
+        {
+          "word": "your",
+          "start": 92.98,
+          "end": 93.6,
+          "confidence": 0.617
+        },
+        {
+          "word": "blue",
+          "start": 93.6,
+          "end": 93.8,
+          "confidence": 0.998
+        },
+        {
+          "word": "dress",
+          "start": 93.8,
+          "end": 94.58,
+          "confidence": 0.999
+        }
+      ]
+    },
+    {
+      "section": "Pre-Chorus",
+      "text": "You laugh and the whole room glows",
+      "start": 94.58,
+      "end": 98.52,
+      "confidence": 0.975,
+      "words": [
+        {
+          "word": "You",
+          "start": 94.58,
+          "end": 95.54,
+          "confidence": 0.866
+        },
+        {
+          "word": "laugh",
+          "start": 95.54,
+          "end": 95.8,
+          "confidence": 0.977
+        },
+        {
+          "word": "and",
+          "start": 95.8,
+          "end": 96.08,
+          "confidence": 0.987
+        },
+        {
+          "word": "the",
+          "start": 96.08,
+          "end": 96.38,
+          "confidence": 0.999
+        },
+        {
+          "word": "whole",
+          "start": 96.38,
+          "end": 96.98,
+          "confidence": 0.999
+        },
+        {
+          "word": "room",
+          "start": 96.98,
+          "end": 97.82,
+          "confidence": 0.999
+        },
+        {
+          "word": "glows",
+          "start": 97.82,
+          "end": 98.52,
+          "confidence": 0.998
+        }
+      ]
+    },
+    {
+      "section": "Pre-Chorus",
+      "text": "Where it comes from, no one knows",
+      "start": 98.56,
+      "end": 101.18,
+      "confidence": 0.987,
+      "words": [
+        {
+          "word": "Where",
+          "start": 98.56,
+          "end": 98.64,
+          "confidence": 0.995
+        },
+        {
+          "word": "it",
+          "start": 98.64,
+          "end": 98.82,
+          "confidence": 1.0
+        },
+        {
+          "word": "comes",
+          "start": 98.82,
+          "end": 99.04,
+          "confidence": 1.0
+        },
+        {
+          "word": "from,",
+          "start": 99.04,
+          "end": 99.34,
+          "confidence": 1.0
+        },
+        {
+          "word": "no",
+          "start": 99.34,
+          "end": 99.72,
+          "confidence": 0.913
+        },
+        {
+          "word": "one",
+          "start": 99.72,
+          "end": 100.46,
+          "confidence": 1.0
+        },
+        {
+          "word": "knows",
+          "start": 100.46,
+          "end": 101.18,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Pre-Chorus",
+      "text": "The same love that lights the sky",
+      "start": 101.18,
+      "end": 103.26,
+      "confidence": 0.805,
+      "words": [
+        {
+          "word": "The",
+          "start": 101.18,
+          "end": 101.5,
+          "confidence": 0.666
+        },
+        {
+          "word": "same",
+          "start": 101.5,
+          "end": 101.78,
+          "confidence": 1.0
+        },
+        {
+          "word": "love",
+          "start": 101.78,
+          "end": 102.02,
+          "confidence": 1.0
+        },
+        {
+          "word": "that",
+          "start": 102.02,
+          "end": 102.24,
+          "confidence": 1.0
+        },
+        {
+          "word": "lights",
+          "start": 102.24,
+          "end": 102.56,
+          "confidence": 0.971
+        },
+        {
+          "word": "the",
+          "start": 102.56,
+          "end": 102.96,
+          "confidence": 1.0
+        },
+        {
+          "word": "sky",
+          "start": 102.96,
+          "end": 103.26,
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "section": "Pre-Chorus",
+      "text": "Is looking at me through your eyes",
+      "start": 103.94,
+      "end": 106.46,
+      "confidence": 0.856,
+      "words": [
+        {
+          "word": "Is",
+          "start": 103.94,
+          "end": 104.24,
+          "confidence": 0.0
+        },
+        {
+          "word": "looking",
+          "start": 104.24,
+          "end": 104.56,
+          "confidence": 0.989
+        },
+        {
+          "word": "at",
+          "start": 104.56,
+          "end": 104.82,
+          "confidence": 1.0
+        },
+        {
+          "word": "me",
+          "start": 104.82,
+          "end": 104.92,
+          "confidence": 1.0
+        },
+        {
+          "word": "through",
+          "start": 104.92,
+          "end": 105.18,
+          "confidence": 1.0
+        },
+        {
+          "word": "your",
+          "start": 105.18,
+          "end": 105.92,
+          "confidence": 1.0
+        },
+        {
+          "word": "eyes",
+          "start": 105.92,
+          "end": 106.46,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "Felt the whole world slow its spin",
+      "start": 106.46,
+      "end": 108.6,
+      "confidence": 0.691,
+      "words": [
+        {
+          "word": "Felt",
+          "start": 106.46,
+          "end": 106.96,
+          "confidence": 0.986
+        },
+        {
+          "word": "the",
+          "start": 106.96,
+          "end": 107.06,
+          "confidence": 1.0
+        },
+        {
+          "word": "whole",
+          "start": 107.06,
+          "end": 107.32,
+          "confidence": 0.999
+        },
+        {
+          "word": "world",
+          "start": 107.32,
+          "end": 107.74,
+          "confidence": 1.0
+        },
+        {
+          "word": "slow",
+          "start": 107.74,
+          "end": 108.0,
+          "confidence": 0.851
+        },
+        {
+          "word": "its",
+          "start": 108.0,
+          "end": 108.3,
+          "confidence": 0.0
+        },
+        {
+          "word": "spin",
+          "start": 108.3,
+          "end": 108.6,
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "Just to let your light come in",
+      "start": 109.34,
+      "end": 111.78,
+      "confidence": 0.994,
+      "words": [
+        {
+          "word": "Just",
+          "start": 109.34,
+          "end": 109.72,
+          "confidence": 0.999
+        },
+        {
+          "word": "to",
+          "start": 109.72,
+          "end": 109.82,
+          "confidence": 1.0
+        },
+        {
+          "word": "let",
+          "start": 109.82,
+          "end": 110.08,
+          "confidence": 1.0
+        },
+        {
+          "word": "your",
+          "start": 110.08,
+          "end": 110.38,
+          "confidence": 1.0
+        },
+        {
+          "word": "light",
+          "start": 110.38,
+          "end": 110.8,
+          "confidence": 0.999
+        },
+        {
+          "word": "come",
+          "start": 110.8,
+          "end": 111.24,
+          "confidence": 0.999
+        },
+        {
+          "word": "in",
+          "start": 111.24,
+          "end": 111.78,
+          "confidence": 0.963
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "With you, I'm in the flow",
+      "start": 111.78,
+      "end": 114.06,
+      "confidence": 0.991,
+      "words": [
+        {
+          "word": "With",
+          "start": 111.78,
+          "end": 112.44,
+          "confidence": 0.995
+        },
+        {
+          "word": "you,",
+          "start": 112.44,
+          "end": 112.86,
+          "confidence": 1.0
+        },
+        {
+          "word": "I'm",
+          "start": 112.86,
+          "end": 113.36,
+          "confidence": 0.957
+        },
+        {
+          "word": "in",
+          "start": 113.36,
+          "end": 113.54,
+          "confidence": 1.0
+        },
+        {
+          "word": "the",
+          "start": 113.54,
+          "end": 113.74,
+          "confidence": 0.998
+        },
+        {
+          "word": "flow",
+          "start": 113.74,
+          "end": 114.06,
+          "confidence": 0.999
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "And I'm never letting go",
+      "start": 114.46,
+      "end": 116.78,
+      "confidence": 1.0,
+      "words": [
+        {
+          "word": "And",
+          "start": 114.46,
+          "end": 115.02,
+          "confidence": 0.999
+        },
+        {
+          "word": "I'm",
+          "start": 115.02,
+          "end": 115.3,
+          "confidence": 1.0
+        },
+        {
+          "word": "never",
+          "start": 115.3,
+          "end": 115.9,
+          "confidence": 1.0
+        },
+        {
+          "word": "letting",
+          "start": 115.9,
+          "end": 116.32,
+          "confidence": 1.0
+        },
+        {
+          "word": "go",
+          "start": 116.32,
+          "end": 116.78,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "Every door just opens wide",
+      "start": 116.78,
+      "end": 120.0,
+      "confidence": 0.819,
+      "words": [
+        {
+          "word": "Every",
+          "start": 116.78,
+          "end": 118.02,
+          "confidence": 0.282
+        },
+        {
+          "word": "door",
+          "start": 118.02,
+          "end": 118.34,
+          "confidence": 0.906
+        },
+        {
+          "word": "just",
+          "start": 118.34,
+          "end": 118.7,
+          "confidence": 0.973
+        },
+        {
+          "word": "opens",
+          "start": 118.7,
+          "end": 119.34,
+          "confidence": 0.94
+        },
+        {
+          "word": "wide",
+          "start": 119.34,
+          "end": 120.0,
+          "confidence": 0.996
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "Every star is on our side",
+      "start": 120.0,
+      "end": 122.84,
+      "confidence": 0.939,
+      "words": [
+        {
+          "word": "Every",
+          "start": 120.0,
+          "end": 120.78,
+          "confidence": 0.646
+        },
+        {
+          "word": "star",
+          "start": 120.78,
+          "end": 121.06,
+          "confidence": 0.999
+        },
+        {
+          "word": "is",
+          "start": 121.06,
+          "end": 121.52,
+          "confidence": 0.998
+        },
+        {
+          "word": "on",
+          "start": 121.52,
+          "end": 121.82,
+          "confidence": 0.998
+        },
+        {
+          "word": "our",
+          "start": 121.82,
+          "end": 122.32,
+          "confidence": 0.995
+        },
+        {
+          "word": "side",
+          "start": 122.32,
+          "end": 122.84,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "With you, I'm in the flow",
+      "start": 123.04,
+      "end": 125.1,
+      "confidence": 0.967,
+      "words": [
+        {
+          "word": "With",
+          "start": 123.04,
+          "end": 123.5,
+          "confidence": 0.972
+        },
+        {
+          "word": "you,",
+          "start": 123.5,
+          "end": 123.92,
+          "confidence": 0.996
+        },
+        {
+          "word": "I'm",
+          "start": 123.92,
+          "end": 124.4,
+          "confidence": 0.9
+        },
+        {
+          "word": "in",
+          "start": 124.4,
+          "end": 124.58,
+          "confidence": 0.999
+        },
+        {
+          "word": "the",
+          "start": 124.58,
+          "end": 124.76,
+          "confidence": 0.938
+        },
+        {
+          "word": "flow",
+          "start": 124.76,
+          "end": 125.1,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "And I'm never letting go",
+      "start": 125.1,
+      "end": 127.98,
+      "confidence": 0.993,
+      "words": [
+        {
+          "word": "And",
+          "start": 125.1,
+          "end": 126.08,
+          "confidence": 0.969
+        },
+        {
+          "word": "I'm",
+          "start": 126.08,
+          "end": 126.34,
+          "confidence": 1.0
+        },
+        {
+          "word": "never",
+          "start": 126.34,
+          "end": 126.84,
+          "confidence": 1.0
+        },
+        {
+          "word": "letting",
+          "start": 126.84,
+          "end": 127.44,
+          "confidence": 0.998
+        },
+        {
+          "word": "go",
+          "start": 127.44,
+          "end": 127.98,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Bridge",
+      "text": "There's a river under everything",
+      "start": 129.52,
+      "end": 131.88,
+      "confidence": 0.996,
+      "words": [
+        {
+          "word": "There's",
+          "start": 129.52,
+          "end": 130.44,
+          "confidence": 0.993
+        },
+        {
+          "word": "a",
+          "start": 130.44,
+          "end": 130.52,
+          "confidence": 1.0
+        },
+        {
+          "word": "river",
+          "start": 130.52,
+          "end": 130.84,
+          "confidence": 1.0
+        },
+        {
+          "word": "under",
+          "start": 130.84,
+          "end": 131.18,
+          "confidence": 0.989
+        },
+        {
+          "word": "everything",
+          "start": 131.18,
+          "end": 131.88,
+          "confidence": 0.999
+        }
+      ]
+    },
+    {
+      "section": "Bridge",
+      "text": "It carried me through the wandering",
+      "start": 131.88,
+      "end": 134.5,
+      "confidence": 0.962,
+      "words": [
+        {
+          "word": "It",
+          "start": 131.88,
+          "end": 132.8,
+          "confidence": 0.884
+        },
+        {
+          "word": "carried",
+          "start": 132.8,
+          "end": 133.24,
+          "confidence": 0.978
+        },
+        {
+          "word": "me",
+          "start": 133.24,
+          "end": 133.46,
+          "confidence": 1.0
+        },
+        {
+          "word": "through",
+          "start": 133.46,
+          "end": 133.78,
+          "confidence": 0.998
+        },
+        {
+          "word": "the",
+          "start": 133.78,
+          "end": 133.96,
+          "confidence": 0.999
+        },
+        {
+          "word": "wandering",
+          "start": 133.96,
+          "end": 134.5,
+          "confidence": 0.915
+        }
+      ]
+    },
+    {
+      "section": "Bridge",
+      "text": "I don't need to know how far it goes",
+      "start": 134.5,
+      "end": 139.3,
+      "confidence": 0.955,
+      "words": [
+        {
+          "word": "I",
+          "start": 134.5,
+          "end": 135.16,
+          "confidence": 0.962
+        },
+        {
+          "word": "don't",
+          "start": 135.16,
+          "end": 135.88,
+          "confidence": 1.0
+        },
+        {
+          "word": "need",
+          "start": 135.88,
+          "end": 136.14,
+          "confidence": 0.995
+        },
+        {
+          "word": "to",
+          "start": 136.14,
+          "end": 136.36,
+          "confidence": 1.0
+        },
+        {
+          "word": "know",
+          "start": 136.36,
+          "end": 136.66,
+          "confidence": 1.0
+        },
+        {
+          "word": "how",
+          "start": 137.18,
+          "end": 137.64,
+          "confidence": 0.648
+        },
+        {
+          "word": "far",
+          "start": 137.64,
+          "end": 138.28,
+          "confidence": 1.0
+        },
+        {
+          "word": "it",
+          "start": 138.28,
+          "end": 138.84,
+          "confidence": 0.996
+        },
+        {
+          "word": "goes",
+          "start": 138.84,
+          "end": 139.3,
+          "confidence": 0.998
+        }
+      ]
+    },
+    {
+      "section": "Bridge",
+      "text": "I just hold you close and let it flow",
+      "start": 139.3,
+      "end": 144.02,
+      "confidence": 0.936,
+      "words": [
+        {
+          "word": "I",
+          "start": 139.3,
+          "end": 140.34,
+          "confidence": 0.997
+        },
+        {
+          "word": "just",
+          "start": 140.34,
+          "end": 140.74,
+          "confidence": 0.984
+        },
+        {
+          "word": "hold",
+          "start": 140.74,
+          "end": 141.46,
+          "confidence": 0.974
+        },
+        {
+          "word": "you",
+          "start": 141.46,
+          "end": 141.94,
+          "confidence": 1.0
+        },
+        {
+          "word": "close",
+          "start": 141.94,
+          "end": 142.52,
+          "confidence": 0.999
+        },
+        {
+          "word": "and",
+          "start": 142.52,
+          "end": 142.94,
+          "confidence": 0.467
+        },
+        {
+          "word": "let",
+          "start": 142.94,
+          "end": 143.16,
+          "confidence": 1.0
+        },
+        {
+          "word": "it",
+          "start": 143.16,
+          "end": 143.56,
+          "confidence": 1.0
+        },
+        {
+          "word": "flow",
+          "start": 143.56,
+          "end": 144.02,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Bridge",
+      "text": "Love like the sun loves, asking nothing back",
+      "start": 144.36,
+      "end": 149.66,
+      "confidence": 0.851,
+      "words": [
+        {
+          "word": "Love",
+          "start": 144.36,
+          "end": 145.54,
+          "confidence": 0.925
+        },
+        {
+          "word": "like",
+          "start": 145.54,
+          "end": 145.9,
+          "confidence": 0.965
+        },
+        {
+          "word": "the",
+          "start": 145.9,
+          "end": 146.18,
+          "confidence": 0.997
+        },
+        {
+          "word": "sun",
+          "start": 146.18,
+          "end": 146.62,
+          "confidence": 0.987
+        },
+        {
+          "word": "loves,",
+          "start": 146.62,
+          "end": 147.8,
+          "confidence": 0.0
+        },
+        {
+          "word": "asking",
+          "start": 147.8,
+          "end": 148.18,
+          "confidence": 0.968
+        },
+        {
+          "word": "nothing",
+          "start": 148.18,
+          "end": 148.76,
+          "confidence": 0.971
+        },
+        {
+          "word": "back",
+          "start": 148.76,
+          "end": 149.66,
+          "confidence": 0.997
+        }
+      ]
+    },
+    {
+      "section": "Bridge",
+      "text": "I'll love you like that, I'll love you like that",
+      "start": 150.16,
+      "end": 154.72,
+      "confidence": 0.797,
+      "words": [
+        {
+          "word": "I'll",
+          "start": 150.16,
+          "end": 150.46,
+          "confidence": 0.0
+        },
+        {
+          "word": "love",
+          "start": 150.46,
+          "end": 150.72,
+          "confidence": 0.989
+        },
+        {
+          "word": "you",
+          "start": 150.72,
+          "end": 150.88,
+          "confidence": 1.0
+        },
+        {
+          "word": "like",
+          "start": 150.88,
+          "end": 151.14,
+          "confidence": 0.999
+        },
+        {
+          "word": "that,",
+          "start": 151.14,
+          "end": 151.86,
+          "confidence": 0.999
+        },
+        {
+          "word": "I'll",
+          "start": 151.86,
+          "end": 153.22,
+          "confidence": 0.0
+        },
+        {
+          "word": "love",
+          "start": 153.22,
+          "end": 153.5,
+          "confidence": 1.0
+        },
+        {
+          "word": "you",
+          "start": 153.5,
+          "end": 153.68,
+          "confidence": 1.0
+        },
+        {
+          "word": "like",
+          "start": 153.68,
+          "end": 154.14,
+          "confidence": 1.0
+        },
+        {
+          "word": "that",
+          "start": 154.14,
+          "end": 154.72,
+          "confidence": 0.984
+        }
+      ]
+    },
+    {
+      "section": "Final Chorus",
+      "text": "Felt the whole world slow its spin",
+      "start": 155.9,
+      "end": 158.26,
+      "confidence": 0.703,
+      "words": [
+        {
+          "word": "Felt",
+          "start": 155.9,
+          "end": 156.66,
+          "confidence": 0.979
+        },
+        {
+          "word": "the",
+          "start": 156.66,
+          "end": 156.76,
+          "confidence": 1.0
+        },
+        {
+          "word": "whole",
+          "start": 156.76,
+          "end": 157.0,
+          "confidence": 0.997
+        },
+        {
+          "word": "world",
+          "start": 157.0,
+          "end": 157.42,
+          "confidence": 1.0
+        },
+        {
+          "word": "slow",
+          "start": 157.42,
+          "end": 157.66,
+          "confidence": 0.942
+        },
+        {
+          "word": "its",
+          "start": 157.66,
+          "end": 157.96,
+          "confidence": 0.0
+        },
+        {
+          "word": "spin",
+          "start": 157.96,
+          "end": 158.26,
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "section": "Final Chorus",
+      "text": "Just to let your light come in",
+      "start": 158.6,
+      "end": 161.5,
+      "confidence": 0.948,
+      "words": [
+        {
+          "word": "Just",
+          "start": 158.6,
+          "end": 159.34,
+          "confidence": 0.715
+        },
+        {
+          "word": "to",
+          "start": 159.34,
+          "end": 159.54,
+          "confidence": 0.955
+        },
+        {
+          "word": "let",
+          "start": 159.54,
+          "end": 159.8,
+          "confidence": 1.0
+        },
+        {
+          "word": "your",
+          "start": 159.8,
+          "end": 160.08,
+          "confidence": 1.0
+        },
+        {
+          "word": "light",
+          "start": 160.08,
+          "end": 160.52,
+          "confidence": 0.999
+        },
+        {
+          "word": "come",
+          "start": 160.52,
+          "end": 160.98,
+          "confidence": 0.998
+        },
+        {
+          "word": "in",
+          "start": 160.98,
+          "end": 161.5,
+          "confidence": 0.968
+        }
+      ]
+    },
+    {
+      "section": "Final Chorus",
+      "text": "With you, I'm in the flow",
+      "start": 161.5,
+      "end": 163.82,
+      "confidence": 0.999,
+      "words": [
+        {
+          "word": "With",
+          "start": 161.5,
+          "end": 162.2,
+          "confidence": 0.992
+        },
+        {
+          "word": "you,",
+          "start": 162.2,
+          "end": 162.7,
+          "confidence": 1.0
+        },
+        {
+          "word": "I'm",
+          "start": 162.72,
+          "end": 163.1,
+          "confidence": 1.0
+        },
+        {
+          "word": "in",
+          "start": 163.1,
+          "end": 163.32,
+          "confidence": 1.0
+        },
+        {
+          "word": "the",
+          "start": 163.32,
+          "end": 163.52,
+          "confidence": 1.0
+        },
+        {
+          "word": "flow",
+          "start": 163.52,
+          "end": 163.82,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Final Chorus",
+      "text": "And I'm never letting go",
+      "start": 164.08,
+      "end": 167.26,
+      "confidence": 0.999,
+      "words": [
+        {
+          "word": "And",
+          "start": 164.08,
+          "end": 164.82,
+          "confidence": 0.998
+        },
+        {
+          "word": "I'm",
+          "start": 164.82,
+          "end": 165.08,
+          "confidence": 1.0
+        },
+        {
+          "word": "never",
+          "start": 165.08,
+          "end": 166.06,
+          "confidence": 1.0
+        },
+        {
+          "word": "letting",
+          "start": 166.06,
+          "end": 166.82,
+          "confidence": 0.999
+        },
+        {
+          "word": "go",
+          "start": 166.82,
+          "end": 167.26,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Final Chorus",
+      "text": "Every door just opens wide",
+      "start": 167.26,
+      "end": 169.78,
+      "confidence": 0.997,
+      "words": [
+        {
+          "word": "Every",
+          "start": 167.26,
+          "end": 167.86,
+          "confidence": 0.998
+        },
+        {
+          "word": "door",
+          "start": 167.86,
+          "end": 168.2,
+          "confidence": 1.0
+        },
+        {
+          "word": "just",
+          "start": 168.2,
+          "end": 168.46,
+          "confidence": 1.0
+        },
+        {
+          "word": "opens",
+          "start": 168.46,
+          "end": 169.28,
+          "confidence": 1.0
+        },
+        {
+          "word": "wide",
+          "start": 169.28,
+          "end": 169.78,
+          "confidence": 0.987
+        }
+      ]
+    },
+    {
+      "section": "Final Chorus",
+      "text": "Every star is on our side",
+      "start": 170.28,
+      "end": 172.66,
+      "confidence": 0.999,
+      "words": [
+        {
+          "word": "Every",
+          "start": 170.28,
+          "end": 170.58,
+          "confidence": 0.999
+        },
+        {
+          "word": "star",
+          "start": 170.58,
+          "end": 170.9,
+          "confidence": 0.999
+        },
+        {
+          "word": "is",
+          "start": 170.9,
+          "end": 171.3,
+          "confidence": 1.0
+        },
+        {
+          "word": "on",
+          "start": 171.3,
+          "end": 171.62,
+          "confidence": 1.0
+        },
+        {
+          "word": "our",
+          "start": 171.62,
+          "end": 172.14,
+          "confidence": 0.999
+        },
+        {
+          "word": "side",
+          "start": 172.14,
+          "end": 172.66,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Final Chorus",
+      "text": "With you, I'm in the flow",
+      "start": 172.66,
+      "end": 174.88,
+      "confidence": 0.897,
+      "words": [
+        {
+          "word": "With",
+          "start": 172.66,
+          "end": 173.36,
+          "confidence": 0.423
+        },
+        {
+          "word": "you,",
+          "start": 173.36,
+          "end": 173.7,
+          "confidence": 0.987
+        },
+        {
+          "word": "I'm",
+          "start": 173.82,
+          "end": 174.16,
+          "confidence": 0.995
+        },
+        {
+          "word": "in",
+          "start": 174.16,
+          "end": 174.38,
+          "confidence": 0.991
+        },
+        {
+          "word": "the",
+          "start": 174.38,
+          "end": 174.58,
+          "confidence": 0.994
+        },
+        {
+          "word": "flow",
+          "start": 174.58,
+          "end": 174.88,
+          "confidence": 0.993
+        }
+      ]
+    },
+    {
+      "section": "Final Chorus",
+      "text": "And I'm never letting go",
+      "start": 174.88,
+      "end": 178.5,
+      "confidence": 0.909,
+      "words": [
+        {
+          "word": "And",
+          "start": 174.88,
+          "end": 175.56,
+          "confidence": 0.556
+        },
+        {
+          "word": "I'm",
+          "start": 175.56,
+          "end": 176.14,
+          "confidence": 0.998
+        },
+        {
+          "word": "never",
+          "start": 176.14,
+          "end": 176.68,
+          "confidence": 0.999
+        },
+        {
+          "word": "letting",
+          "start": 176.68,
+          "end": 177.7,
+          "confidence": 0.993
+        },
+        {
+          "word": "go",
+          "start": 177.7,
+          "end": 178.5,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Final Chorus",
+      "text": "Just to let your light come in",
+      "start": 181.14,
+      "end": 183.42,
+      "confidence": 0.604,
+      "words": [
+        {
+          "word": "Just",
+          "start": 181.14,
+          "end": 181.44,
+          "confidence": 0.0
+        },
+        {
+          "word": "to",
+          "start": 181.44,
+          "end": 181.74,
+          "confidence": 0.0
+        },
+        {
+          "word": "let",
+          "start": 181.74,
+          "end": 181.98,
+          "confidence": 0.382
+        },
+        {
+          "word": "your",
+          "start": 181.98,
+          "end": 182.3,
+          "confidence": 0.966
+        },
+        {
+          "word": "light",
+          "start": 182.3,
+          "end": 182.68,
+          "confidence": 0.906
+        },
+        {
+          "word": "come",
+          "start": 182.68,
+          "end": 183.08,
+          "confidence": 0.988
+        },
+        {
+          "word": "in",
+          "start": 183.08,
+          "end": 183.42,
+          "confidence": 0.984
+        }
+      ]
+    },
+    {
+      "section": "Final Chorus",
+      "text": "With you, I'm in the flow",
+      "start": 183.42,
+      "end": 185.96,
+      "confidence": 0.982,
+      "words": [
+        {
+          "word": "With",
+          "start": 183.42,
+          "end": 184.2,
+          "confidence": 0.894
+        },
+        {
+          "word": "you,",
+          "start": 184.2,
+          "end": 184.88,
+          "confidence": 1.0
+        },
+        {
+          "word": "I'm",
+          "start": 184.88,
+          "end": 185.18,
+          "confidence": 1.0
+        },
+        {
+          "word": "in",
+          "start": 185.18,
+          "end": 185.44,
+          "confidence": 1.0
+        },
+        {
+          "word": "the",
+          "start": 185.44,
+          "end": 185.64,
+          "confidence": 1.0
+        },
+        {
+          "word": "flow",
+          "start": 185.64,
+          "end": 185.96,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Final Chorus",
+      "text": "And I'm never letting go",
+      "start": 185.96,
+      "end": 189.32,
+      "confidence": 0.999,
+      "words": [
+        {
+          "word": "And",
+          "start": 185.96,
+          "end": 186.74,
+          "confidence": 0.997
+        },
+        {
+          "word": "I'm",
+          "start": 186.74,
+          "end": 187.18,
+          "confidence": 1.0
+        },
+        {
+          "word": "never",
+          "start": 187.18,
+          "end": 188.06,
+          "confidence": 1.0
+        },
+        {
+          "word": "letting",
+          "start": 188.06,
+          "end": 188.86,
+          "confidence": 1.0
+        },
+        {
+          "word": "go",
+          "start": 188.86,
+          "end": 189.32,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Final Chorus",
+      "text": "Every door just opens wide",
+      "start": 189.32,
+      "end": 191.9,
+      "confidence": 0.965,
+      "words": [
+        {
+          "word": "Every",
+          "start": 189.32,
+          "end": 189.92,
+          "confidence": 0.845
+        },
+        {
+          "word": "door",
+          "start": 189.92,
+          "end": 190.26,
+          "confidence": 0.979
+        },
+        {
+          "word": "just",
+          "start": 190.26,
+          "end": 190.54,
+          "confidence": 1.0
+        },
+        {
+          "word": "opens",
+          "start": 190.54,
+          "end": 191.28,
+          "confidence": 1.0
+        },
+        {
+          "word": "wide",
+          "start": 191.28,
+          "end": 191.9,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Final Chorus",
+      "text": "Every star is on our side",
+      "start": 191.9,
+      "end": 194.68,
+      "confidence": 0.997,
+      "words": [
+        {
+          "word": "Every",
+          "start": 191.9,
+          "end": 192.62,
+          "confidence": 0.987
+        },
+        {
+          "word": "star",
+          "start": 192.62,
+          "end": 192.92,
+          "confidence": 0.999
+        },
+        {
+          "word": "is",
+          "start": 192.92,
+          "end": 193.32,
+          "confidence": 0.999
+        },
+        {
+          "word": "on",
+          "start": 193.32,
+          "end": 193.66,
+          "confidence": 1.0
+        },
+        {
+          "word": "our",
+          "start": 193.66,
+          "end": 194.14,
+          "confidence": 0.996
+        },
+        {
+          "word": "side",
+          "start": 194.14,
+          "end": 194.68,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Final Chorus",
+      "text": "With you, I'm in the flow",
+      "start": 194.9,
+      "end": 196.96,
+      "confidence": 1.0,
+      "words": [
+        {
+          "word": "With",
+          "start": 194.9,
+          "end": 195.32,
+          "confidence": 0.998
+        },
+        {
+          "word": "you,",
+          "start": 195.32,
+          "end": 195.74,
+          "confidence": 1.0
+        },
+        {
+          "word": "I'm",
+          "start": 195.88,
+          "end": 196.2,
+          "confidence": 1.0
+        },
+        {
+          "word": "in",
+          "start": 196.2,
+          "end": 196.36,
+          "confidence": 1.0
+        },
+        {
+          "word": "the",
+          "start": 196.36,
+          "end": 196.62,
+          "confidence": 1.0
+        },
+        {
+          "word": "flow",
+          "start": 196.62,
+          "end": 196.96,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Final Chorus",
+      "text": "No, I'm never letting go",
+      "start": 198.02,
+      "end": 201.58,
+      "confidence": 0.984,
+      "words": [
+        {
+          "word": "No,",
+          "start": 198.02,
+          "end": 198.86,
+          "confidence": 0.918
+        },
+        {
+          "word": "I'm",
+          "start": 198.86,
+          "end": 199.0,
+          "confidence": 1.0
+        },
+        {
+          "word": "never",
+          "start": 199.0,
+          "end": 199.78,
+          "confidence": 1.0
+        },
+        {
+          "word": "letting",
+          "start": 199.78,
+          "end": 200.58,
+          "confidence": 1.0
+        },
+        {
+          "word": "go",
+          "start": 200.58,
+          "end": 201.58,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Outro",
+      "text": "In the flow",
+      "start": 201.58,
+      "end": 204.02,
+      "confidence": 0.632,
+      "words": [
+        {
+          "word": "In",
+          "start": 201.58,
+          "end": 203.7,
+          "confidence": 0.206
+        },
+        {
+          "word": "the",
+          "start": 203.7,
+          "end": 204.02,
+          "confidence": 0.905
+        },
+        {
+          "word": "flow",
+          "start": 204.02,
+          "end": 204.02,
+          "confidence": 0.785
+        }
+      ]
+    },
+    {
+      "section": "Outro",
+      "text": "With you, I'm home",
+      "start": 204.48,
+      "end": 207.52,
+      "confidence": 0.318,
+      "words": [
+        {
+          "word": "With",
+          "start": 204.48,
+          "end": 206.0,
+          "confidence": 0.292
+        },
+        {
+          "word": "you,",
+          "start": 206.0,
+          "end": 206.92,
+          "confidence": 0.98
+        },
+        {
+          "word": "I'm",
+          "start": 206.92,
+          "end": 207.22,
+          "confidence": 0.0
+        },
+        {
+          "word": "home",
+          "start": 207.22,
+          "end": 207.52,
+          "confidence": 0.0
+        }
+      ]
+    }
+  ],
+  "unaligned_lines": [
+    "Felt the whole world slow its spin",
+    "Just to let your light come in",
+    "With you, I'm in the flow",
+    "And I'm never letting go",
+    "Felt the whole world slow its spin"
+  ]
+}
