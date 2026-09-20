@@ -62,36 +62,47 @@ class SunoProvider:
 
     def generate(self, req: GenerationRequest, dest_dir: Path, start_index: int,
                  on_take: Callable[[TakeResult], None]) -> float:
+        own = self._client is None
         client = self._client or httpx.Client(timeout=120.0)
-        dest_dir.mkdir(parents=True, exist_ok=True)
-        spec = self.payload(req)
-        before = kie_get("/chat/credit", client).get("data")
-        print(f"  Kie.ai credit balance: {before}")
-        task_ids = [kie_post("/jobs/createTask", spec["body"], client)["data"]["taskId"]
-                    for _ in range(spec["n_requests"])]
-        index = start_index
-        for task_id in task_ids:
-            data = poll_job(task_id, client, label=f"suno {task_id[:8]}", sleep=self._sleep)
-            raw = dest_dir / f"raw-suno-{task_id}.json"
-            write_json(raw, data)                                   # BEFORE parsing: the paid URLs are in here
-            tracks = extract_tracks(json.loads(data.get("resultJson") or "{}"))
-            if not tracks:
-                raise RuntimeError(f"Suno succeeded but no audio URLs were recognised — the paid result is saved at "
-                                   f"{raw}; add its shape to extract_tracks()")
-            for track in tracks:
-                path = dest_dir / f"take-{index}.mp3"
-                # No Authorization header here: the URL points at an arbitrary CDN host
-                # named by the provider's result JSON, never at api.kie.ai — the key must
-                # not be sent to it.
-                with client.stream("GET", track["url"]) as res:
-                    res.raise_for_status()
-                    with open(path, "wb") as f:
-                        for block in res.iter_bytes():
-                            f.write(block)
-                duration = track.get("duration") or probe_duration(path)
-                on_take(TakeResult(provider_ref=track["ref"], path=path, duration_s=float(duration)))
-                index += 1
-        after = kie_get("/chat/credit", client).get("data")
-        if isinstance(before, (int, float)) and isinstance(after, (int, float)) and before >= after:
-            return (before - after) * USD_PER_CREDIT
-        return self.estimate(req).usd
+        try:
+            dest_dir.mkdir(parents=True, exist_ok=True)
+            spec = self.payload(req)
+            before = kie_get("/chat/credit", client).get("data")
+            print(f"  Kie.ai credit balance: {before}")
+            task_ids = [kie_post("/jobs/createTask", spec["body"], client)["data"]["taskId"]
+                        for _ in range(spec["n_requests"])]
+            index = start_index
+            for task_id in task_ids:
+                data = poll_job(task_id, client, label=f"suno {task_id[:8]}", sleep=self._sleep)
+                raw = dest_dir / f"raw-suno-{task_id}.json"
+                write_json(raw, data)                               # BEFORE parsing: the paid URLs are in here
+                tracks = extract_tracks(json.loads(data.get("resultJson") or "{}"))
+                if not tracks:
+                    raise RuntimeError(f"Suno succeeded but no audio URLs were recognised — the paid result is "
+                                       f"saved at {raw}; add its shape to extract_tracks()")
+                for track in tracks:
+                    path = dest_dir / f"take-{index}.mp3"
+                    part = path.with_name(path.name + ".part")
+                    try:
+                        # No Authorization header here: the URL points at an arbitrary CDN
+                        # host named by the provider's result JSON, never at api.kie.ai —
+                        # the key must not be sent to it, even across a redirect.
+                        with client.stream("GET", track["url"], follow_redirects=True) as res:
+                            res.raise_for_status()
+                            with open(part, "wb") as f:
+                                for block in res.iter_bytes():
+                                    f.write(block)
+                        part.rename(path)                           # atomic: no half-written take-N.mp3 on failure
+                    except Exception:
+                        part.unlink(missing_ok=True)
+                        raise
+                    duration = track.get("duration") or probe_duration(path)
+                    on_take(TakeResult(provider_ref=track["ref"], path=path, duration_s=float(duration)))
+                    index += 1
+            after = kie_get("/chat/credit", client).get("data")
+            if isinstance(before, (int, float)) and isinstance(after, (int, float)) and before >= after:
+                return (before - after) * USD_PER_CREDIT
+            return self.estimate(req).usd
+        finally:
+            if own:
+                client.close()

@@ -134,3 +134,104 @@ def test_api_key_is_never_sent_to_the_audio_host(tmp_path):
     provider.generate(REQ, tmp_path, 1, lambda t: None)
     assert download_headers, "no download requests were recorded"
     assert all("authorization" not in h for h in download_headers)
+
+
+def _two_track_ok_handler():
+    ok = lambda a, b: {"state": "success", "resultJson": json.dumps(
+        {"sunoData": [{"id": a, "audio_url": f"https://cdn/{a}.mp3", "duration": 151.2},
+                      {"id": b, "audio_url": f"https://cdn/{b}.mp3", "duration": 149.0}]})}
+    handler, _ = _server({"t1": [ok("a", "b")], "t2": [ok("c", "d")]}, credits=[1000, 976])
+    return handler
+
+
+def _failing_task_handler():
+    handler, _ = _server({"t1": [{"state": "fail", "failMsg": "SENSITIVE_WORD_ERROR"}], "t2": []}, credits=[10, 10])
+    return handler
+
+
+class _TrackingClient(httpx.Client):
+    """httpx.Client that records every close() call on a list passed in by the test."""
+
+    def __init__(self, closed: list, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._closed_sink = closed
+
+    def close(self):
+        self._closed_sink.append(self)
+        super().close()
+
+
+@pytest.mark.parametrize("handler_factory,expect_raise", [(_two_track_ok_handler, False), (_failing_task_handler, True)],
+                         ids=["ok", "fail"])
+def test_owned_client_is_closed_on_success_and_on_raise(tmp_path, monkeypatch, handler_factory, expect_raise):
+    from songcomposer.generate import suno as mod
+    closed: list = []
+    handler = handler_factory()
+    monkeypatch.setattr(mod.httpx, "Client",
+                        lambda *a, **k: _TrackingClient(closed, transport=httpx.MockTransport(handler)))
+
+    provider = SunoProvider("V6", sleep=lambda s: None)   # no client injected — provider owns the one it creates
+    if expect_raise:
+        with pytest.raises(RuntimeError, match="SENSITIVE_WORD_ERROR"):
+            provider.generate(REQ, tmp_path, 1, lambda t: None)
+    else:
+        provider.generate(REQ, tmp_path, 1, lambda t: None)
+    assert len(closed) == 1
+
+
+def test_injected_client_is_not_closed(tmp_path):
+    closed: list = []
+    injected = _TrackingClient(closed, transport=httpx.MockTransport(_two_track_ok_handler()))
+
+    SunoProvider("V6", client=injected, sleep=lambda s: None).generate(REQ, tmp_path, 1, lambda t: None)
+    assert closed == []
+    injected.close()   # caller-owned — clean up what the test opened
+
+
+def test_download_failure_mid_stream_leaves_no_partial_file(tmp_path):
+    ok = lambda a, b: {"state": "success", "resultJson": json.dumps(
+        {"sunoData": [{"id": a, "audio_url": f"https://cdn/{a}.mp3", "duration": 151.2},
+                      {"id": b, "audio_url": f"https://cdn/{b}.mp3", "duration": 149.0}]})}
+    base_handler, _ = _server({"t1": [ok("a", "b")], "t2": []}, credits=[1000, 976])
+
+    def broken_stream():
+        yield b"ID3" + b"\x00" * 1000
+        raise httpx.ReadError("connection reset mid-download")
+
+    def handler(req: httpx.Request):
+        if req.url.host == "cdn" and req.url.path.endswith("/b.mp3"):
+            return httpx.Response(200, content=broken_stream())
+        return base_handler(req)
+
+    got = []
+    provider = SunoProvider("V6", client=httpx.Client(transport=httpx.MockTransport(handler)), sleep=lambda s: None)
+    with pytest.raises(httpx.ReadError):
+        provider.generate(REQ, tmp_path, 1, got.append)
+    assert [t.path.name for t in got] == ["take-1.mp3"]           # the take delivered before the failure stays
+    assert (tmp_path / "take-1.mp3").exists()
+    assert not (tmp_path / "take-2.mp3").exists()
+    assert not (tmp_path / "take-2.mp3.part").exists()
+
+
+def test_redirected_download_is_followed_and_carries_no_auth_on_either_hop(tmp_path):
+    ok = lambda a, b: {"state": "success", "resultJson": json.dumps(
+        {"sunoData": [{"id": a, "audio_url": f"https://cdn/{a}.mp3", "duration": 151.2},
+                      {"id": b, "audio_url": f"https://cdn/{b}.mp3", "duration": 149.0}]})}
+    base_handler, _ = _server({"t1": [ok("a", "b")], "t2": [ok("c", "d")]}, credits=[1000, 976])
+    hops = []
+
+    def handler(req: httpx.Request):
+        if req.url.host in ("cdn", "cdn2"):
+            hops.append(req)
+        if req.url.host == "cdn" and req.url.path.endswith("/a.mp3"):
+            assert "authorization" not in req.headers
+            return httpx.Response(302, headers={"Location": f"https://cdn2{req.url.path}"})
+        return base_handler(req)
+
+    got = []
+    provider = SunoProvider("V6", client=httpx.Client(transport=httpx.MockTransport(handler)), sleep=lambda s: None)
+    provider.generate(REQ, tmp_path, 1, got.append)
+    assert [h.url.host for h in hops if h.url.path.endswith("/a.mp3")] == ["cdn", "cdn2"]
+    assert all("authorization" not in h.headers for h in hops)
+    assert (tmp_path / "take-1.mp3").exists()
+    assert [t.path.name for t in got] == ["take-1.mp3", "take-2.mp3", "take-3.mp3", "take-4.mp3"]
