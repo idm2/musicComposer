@@ -94,7 +94,7 @@ def pick(song: str, take: int = typer.Option(..., "--take", help="take number fr
 
 @app.command()
 def chart(song: str, force: bool = typer.Option(False, "--force", help="re-transcribe the chosen take")) -> None:
-    """Chosen take → chords.txt, tab.txt, chart.pdf, <song>.musicxml, lyrics.json in out/<song>/."""
+    """Chosen take → chords.txt, tab.txt, <song>.musicxml, lyrics.json in out/<song>/ (plus chart.pdf when LilyPond is installed and the renderer succeeds)."""
     from .chart import run_chart
     run_chart(song, force=force)
 

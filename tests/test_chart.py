@@ -31,6 +31,52 @@ def test_chart_writes_every_deliverable_into_out(root, t, monkeypatch):  # noqa:
     assert read_json(p.lyrics_json)["song"] == "demo"
 
 
+def _write_demo_spec() -> SongPaths:
+    p = SongPaths("demo")
+    write_model(p.spec, SongSpec(title="Glass Hour", style_prompt="s", target_duration_s=60,
+                                 sections=[SpecSection(name="V", lines=["Glass hour"], duration_s=60)]))
+    return p
+
+
+def test_musicxml_failure_does_not_abort_the_other_deliverables(root, t, monkeypatch, capsys):  # noqa: F811
+    """A single fallible renderer (music21 on probabilistic transcription data) must not take down
+    the whole stage: the deliverables that already succeeded stay on disk, the remaining renderer
+    (write_pdf) still gets attempted, and the summary block still runs."""
+    p = _write_demo_spec()
+    monkeypatch.setattr(chart, "run_transcribe", lambda song, force=False: t)
+
+    def boom(title, t, dest):
+        raise RuntimeError("music21 choked")
+    monkeypatch.setattr(chart, "write_musicxml", boom)
+
+    written = chart.run_chart("demo")
+
+    assert p.chords_txt.exists() and p.tab_txt.exists() and p.lyrics_json.exists()
+    assert "musicxml" not in written
+    assert p.chart_ly.exists()          # write_pdf was still attempted independently of musicxml
+    out = capsys.readouterr().out
+    assert "musicxml" in out and "music21 choked" in out
+    assert "chart:" in out              # the final summary block still ran
+
+
+def test_tab_failure_does_not_abort_the_other_deliverables(root, t, monkeypatch, capsys):  # noqa: F811
+    pytest.importorskip("music21")
+    p = _write_demo_spec()
+    monkeypatch.setattr(chart, "run_transcribe", lambda song, force=False: t)
+
+    def boom(title, t):
+        raise RuntimeError("tab blew up")
+    monkeypatch.setattr(chart, "render_tab", boom)
+
+    written = chart.run_chart("demo")
+
+    assert p.chords_txt.exists() and p.lyrics_json.exists()
+    assert "tab" not in written
+    out = capsys.readouterr().out
+    assert "tab" in out and "tab blew up" in out
+    assert "chart:" in out
+
+
 def test_import_chart_does_not_import_heavy_libs():
     """Architectural pin: chart.py wires up renderers but every heavy dependency they use
     (music21, torch, librosa, demucs, faster_whisper, basic_pitch, lv_chordia) must stay lazy."""
