@@ -28,6 +28,14 @@ def test_no_beats_is_an_error_not_a_guess():
         summarise_beats([0.5], [])
 
 
+def test_degenerate_bar_length_is_clamped_to_a_notatable_range():
+    # M8b: a run where every "bar" holds a single beat must never propagate a "1/4" time signature
+    # into BeatMap.bpb, music21.meter.TimeSignature or LilyPond's \time.
+    beats = [i * 0.6 for i in range(9)]
+    downbeats = beats                                   # every beat is also a downbeat: per_bar would be 1
+    assert summarise_beats(beats, downbeats).time_signature == "2/4"
+
+
 def test_importing_beats_does_not_import_torch():
     """Architectural pin: analyze() will import every component module, including beats,
     even for an LLM-only --ears subjective run that has no business touching torch. Run in

@@ -49,6 +49,16 @@ def test_header_has_key_tempo_and_meter():
     assert out.startswith("Glass Hour\n") and "Key: C major" in out and "100 BPM" in out and "4/4" in out
 
 
+def test_header_omits_tempo_when_only_key_was_measured():
+    """M1: GlobalInfo.tempo_bpm/time_signature may be absent (e.g. `analyze --ears key` with no
+    `beats` ear). The header must omit the fact, never print a fabricated tempo."""
+    a = Analysis(audio_sha1="a" * 40, engines={},
+                global_info=GlobalInfo(key="C major", key_confidence=0.9))
+    out = render_chordsheet("Glass Hour", Transcription(take=1, analysis=a, lines=[]))
+    assert "Key: C major" in out
+    assert "Tempo:" not in out and "BPM" not in out and "Time:" not in out
+
+
 def test_transpose_harte():
     assert transpose_harte("Bb:min7/b7", -1) == "A:min7/b7"
     assert transpose_harte("C:maj", 2) == "D:maj"

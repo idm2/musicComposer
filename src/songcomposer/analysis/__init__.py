@@ -69,10 +69,16 @@ def analyze(audio: Path, cache_dir: Path, config: Config, ears: set[str] | None 
         print(f"> lyrics (whisper {config.whisper_model})")
         result.lyrics = lyrics_mod.transcribe_words(stems.vocals, cache_dir, config.whisper_model, hint=lyrics_hint)
         result.engines["lyrics"] = f"faster-whisper {config.whisper_model}"
-    if grid and measured:
-        result.global_info = GlobalInfo(key=measured["key"], key_confidence=measured["key_confidence"],
-                                        tempo_bpm=grid.tempo_bpm, time_signature=grid.time_signature,
-                                        loudness_lufs=measured["loudness_lufs"], duration_s=measured["duration_s"])
+    if grid or measured:
+        # Build from whichever ear actually ran — `key` without `beats` (or vice versa) must not
+        # throw away a computed confidence just because the OTHER half of GlobalInfo is missing.
+        result.global_info = GlobalInfo(
+            key=measured["key"] if measured else None,
+            key_confidence=measured["key_confidence"] if measured else None,
+            tempo_bpm=grid.tempo_bpm if grid else None,
+            time_signature=grid.time_signature if grid else None,
+            loudness_lufs=measured["loudness_lufs"] if measured else None,
+            duration_s=measured["duration_s"] if measured else None)
     if "structure" in ears:
         print("> structure")
         duration = measured["duration_s"] if measured else (grid.beats[-1] if grid.beats else 0.0)

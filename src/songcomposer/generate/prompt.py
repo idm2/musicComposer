@@ -21,16 +21,16 @@ def build_request(spec: SongSpec, analysis: Analysis | None, fidelity: str, note
     g = analysis.global_info if analysis else None
     s = analysis.subjective if analysis else None
     if fidelity in ("medium", "close"):
-        if g:
+        if g and g.tempo_bpm is not None:
             parts.append(f"{round(g.tempo_bpm)} BPM")
         if s:
             parts += s.instrumentation[:5]
             parts.append(s.vocal_character)
     if fidelity == "close":
-        if g:
+        if g and g.key is not None:
             parts.append(f"in {g.key}")
-            if g.time_signature != "4/4":
-                parts.append(f"{g.time_signature} time")
+        if g and g.time_signature is not None and g.time_signature != "4/4":
+            parts.append(f"{g.time_signature} time")
         if s:
             parts += [s.production, s.timbre]
     if note.strip():

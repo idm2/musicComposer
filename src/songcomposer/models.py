@@ -48,12 +48,15 @@ class Word(BaseModel):
 
 
 class GlobalInfo(BaseModel):
-    key: str                        # e.g. "A minor"
-    key_confidence: Confidence
-    tempo_bpm: float
-    time_signature: str             # e.g. "4/4"
-    loudness_lufs: float | None
-    duration_s: float
+    """Whichever of these an objective ear actually measured. `analyze()` builds this from
+    whichever of the beats/key ears ran — never both required — so any field here may be absent.
+    RULE: a missing measurement is None, never a fabricated default (a made-up 120 BPM is a lie)."""
+    key: str | None = None                      # e.g. "A minor"
+    key_confidence: Confidence | None = None
+    tempo_bpm: float | None = None
+    time_signature: str | None = None           # e.g. "4/4"
+    loudness_lufs: float | None = None
+    duration_s: float | None = None
 
 
 class DensitySpan(BaseModel):

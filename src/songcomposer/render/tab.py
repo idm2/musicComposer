@@ -88,8 +88,16 @@ def _melody_block(t: Transcription, beatmap: BeatMap) -> list[str]:
 def render_tab(title: str, t: Transcription) -> str:
     a = t.analysis
     head = [title, "=" * len(title), f"Guitar tab, transcribed from take {t.take}. Standard tuning."]
-    if a.global_info:
-        head.append(f"Key: {a.global_info.key}   Tempo: {a.global_info.tempo_bpm:.0f} BPM   Time: {a.global_info.time_signature}")
+    g = a.global_info
+    line = []
+    if g and g.key is not None:
+        line.append(f"Key: {g.key}")
+    if g and g.tempo_bpm is not None:
+        line.append(f"Tempo: {g.tempo_bpm:.0f} BPM")
+    if g and g.time_signature is not None:
+        line.append(f"Time: {g.time_signature}")
+    if line:
+        head.append("   ".join(line))
     head.append("Inner parts of a mix transcribe approximately: treat the right-hand read as a starting point, the chords and melody as the reliable part.")
     if len(a.beats) < 2:
         return "\n".join(head + ["", "No beat grid was detected — tab cannot be laid out. See chords.txt."]) + "\n"

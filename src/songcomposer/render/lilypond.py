@@ -77,14 +77,17 @@ def build_ly(title: str, t: Transcription) -> str:
     a = t.analysis
     beatmap = BeatMap.from_analysis(a)
     g = a.global_info
-    flats = _uses_flats(g.key) if g else False
+    flats = _uses_flats(g.key) if g and g.key is not None else False
     music, words = _melody(t, beatmap, flats)
     setup = []
-    if g:
+    if g and g.key is not None:
         tonic, _, mode = g.key.partition(" ")
         if mode in ("major", "minor"):
             setup.append(f"\\key {_name(tonic)} \\{mode}")
-        setup += [f"\\time {g.time_signature}", f"\\tempo 4 = {round(g.tempo_bpm)}"]
+    if g and g.time_signature is not None:
+        setup.append(f"\\time {g.time_signature}")
+    if g and g.tempo_bpm is not None:
+        setup.append(f"\\tempo 4 = {round(g.tempo_bpm)}")
     _, kept, total = selected_melody(t)
     tagline = ("Grey chord names and parenthesised notes are low-confidence detections. Melody is shown in "
               f"guitar range. {kept} of {total} transcribed vocal notes shown.")

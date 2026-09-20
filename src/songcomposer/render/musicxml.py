@@ -23,9 +23,11 @@ def write_musicxml(title: str, t: Transcription, dest: Path) -> None:
     beatmap = BeatMap.from_analysis(a)
     part = stream.Part()
     g = a.global_info
-    if g:
+    if g and g.time_signature is not None:
         part.insert(0, meter.TimeSignature(g.time_signature))
+    if g and g.tempo_bpm is not None:
         part.insert(0, tempo.MetronomeMark(number=round(g.tempo_bpm)))
+    if g and g.key is not None:
         tonic, _, mode = g.key.partition(" ")
         if mode in ("major", "minor"):
             part.insert(0, key.Key(_m21_name(tonic), mode))

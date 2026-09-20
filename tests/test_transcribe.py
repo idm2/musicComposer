@@ -4,7 +4,9 @@ import sys
 import pytest
 
 from songcomposer import transcribe
-from songcomposer.models import LyricLine, SongSpec, SpecSection, Word
+from songcomposer.jsonio import write_model
+from songcomposer.models import (Analysis, Chosen, GlobalInfo, LyricLine, SongSpec, SpecSection, Word)
+from songcomposer.paths import SongPaths
 
 SPEC = SongSpec(title="T", style_prompt="s", target_duration_s=60, sections=[
     SpecSection(name="Verse 1", duration_s=30, lines=["Glass hour, hold me still", "Turn the morning down"]),
@@ -77,6 +79,30 @@ def test_a_fully_unaligned_last_section_sits_at_the_end():
     secs = transcribe.sections_from_lines(lines, 90.0)
     assert [(s.label, s.start, s.end) for s in secs] == [("Verse 1", 2.0, 90.0), ("Outro", 90.0, 90.0)]
     assert secs[1].confidence == 0.0
+
+
+def test_structure_engine_is_relabelled_when_the_lyric_derived_override_fires(root, monkeypatch):  # noqa: F811
+    """M6: run_transcribe replaces result.sections with sections_from_lines(...) when our own form
+    beats the DSP guess, but engines['structure'] still claimed 'librosa agglomerative + heard
+    labels' — a lie about which ear actually produced the sections that shipped."""
+    p = SongPaths("demo")
+    write_model(p.spec, SongSpec(title="T", style_prompt="s", target_duration_s=10,
+                                 sections=[SpecSection(name="Verse 1", duration_s=10, lines=["Glass hour"])]))
+    write_model(p.chosen, Chosen(take=1, file="take-1.mp3", provider="fake", sha1="a" * 40, chosen_at="now"))
+    p.takes_dir.mkdir(parents=True, exist_ok=True)
+    (p.takes_dir / "take-1.mp3").write_bytes(b"x")
+
+    words = [Word(word="Glass", start=0.0, end=0.4, confidence=0.9), Word(word="hour", start=0.4, end=0.8, confidence=0.9)]
+    fake = Analysis(audio_sha1="a" * 40, engines={"structure": "librosa agglomerative + heard labels"},
+                    global_info=GlobalInfo(key="C major", key_confidence=0.9, tempo_bpm=100, time_signature="4/4",
+                                           loudness_lufs=-14, duration_s=10.0),
+                    lyrics=words)
+    monkeypatch.setattr(transcribe, "analyze", lambda *a, **k: fake)
+    monkeypatch.setattr(transcribe, "to_wav",
+                        lambda src, dst: (dst.parent.mkdir(parents=True, exist_ok=True), dst.write_bytes(b"wav")))
+
+    out = transcribe.run_transcribe("demo")
+    assert out.analysis.engines["structure"] == "aligned spec lyrics"
 
 
 def test_importing_transcribe_does_not_import_the_analysis_stack():

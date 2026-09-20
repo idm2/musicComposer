@@ -18,7 +18,8 @@ class BeatMap:
 
     @classmethod
     def from_analysis(cls, a: Analysis) -> "BeatMap":
-        bpb = int(a.global_info.time_signature.split("/")[0]) if a.global_info else 4
+        g = a.global_info
+        bpb = int(g.time_signature.split("/")[0]) if g and g.time_signature else 4
         return cls(a.beats, a.downbeats, bpb)
 
     @property

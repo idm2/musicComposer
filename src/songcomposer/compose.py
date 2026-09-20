@@ -53,10 +53,18 @@ from the ground up.
 
 def summarise_analysis(a: Analysis) -> str:
     out = []
-    if a.global_info:
-        g = a.global_info
-        out.append(f"Measured: key {g.key} (confidence {g.key_confidence:.2f}), {g.tempo_bpm:.0f} BPM, "
-                   f"{g.time_signature}, {g.duration_s:.0f}s long.")
+    g = a.global_info
+    measured = []
+    if g and g.key is not None:
+        measured.append(f"key {g.key} (confidence {g.key_confidence:.2f})")
+    if g and g.tempo_bpm is not None:
+        measured.append(f"{g.tempo_bpm:.0f} BPM")
+    if g and g.time_signature is not None:
+        measured.append(g.time_signature)
+    if g and g.duration_s is not None:
+        measured.append(f"{g.duration_s:.0f}s long")
+    if measured:
+        out.append("Measured: " + ", ".join(measured) + ".")
     else:
         out.append("Key, tempo and chords: not measured (objective ear has not run). Do not assume any.")
     solid = [c.symbol for c in a.chords if c.confidence >= LOW_CONFIDENCE]

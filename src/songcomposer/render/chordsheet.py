@@ -31,9 +31,16 @@ def render_chordsheet(title: str, t: Transcription) -> str:
     chords = sorted(a.chords, key=lambda c: c.onset)
     low = sum(1 for c in chords if c.confidence < LOW_CONFIDENCE)
     out = [title, "=" * len(title)]
-    if a.global_info:
-        g = a.global_info
-        out.append(f"Key: {g.key} (confidence {g.key_confidence:.2f})   Tempo: {g.tempo_bpm:.0f} BPM   Time: {g.time_signature}")
+    g = a.global_info
+    line = []
+    if g and g.key is not None:
+        line.append(f"Key: {g.key} (confidence {g.key_confidence:.2f})")
+    if g and g.tempo_bpm is not None:
+        line.append(f"Tempo: {g.tempo_bpm:.0f} BPM")
+    if g and g.time_signature is not None:
+        line.append(f"Time: {g.time_signature}")
+    if line:
+        out.append("   ".join(line))
     capo, shapes = suggest_capo(chords)
     if capo:
         out.append(f"Capo suggestion: fret {capo} — play " + ", ".join(f"{k}→{v}" for k, v in shapes.items()))

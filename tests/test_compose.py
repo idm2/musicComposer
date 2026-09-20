@@ -59,6 +59,17 @@ def test_summary_with_partial_analysis_says_so():
     assert "not measured" in s
 
 
+def test_summary_reports_a_measured_key_even_without_tempo():
+    """M1: `analyze --ears key` (no `beats`) still measures a key and its confidence — the writer
+    must be told the key, not "not measured", and must never see a fabricated tempo."""
+    a = Analysis(audio_sha1="a" * 40, engines={"key": "krumhansl/librosa"},
+                global_info=GlobalInfo(key="A minor", key_confidence=0.8))
+    s = compose.summarise_analysis(a)
+    assert "A minor" in s and "0.80" in s
+    assert "not measured" not in s
+    assert "BPM" not in s
+
+
 def test_compose_writes_spec_and_passes_brief_and_analysis_to_writer(song, monkeypatch):
     seen = {}
 

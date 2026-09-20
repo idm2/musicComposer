@@ -125,8 +125,13 @@ def run_transcribe(song: str, force: bool = False) -> Transcription:
     result = analyze(wav, paths.cache, load_config(), ears=set(OBJECTIVE_EARS), lyrics_hint=" ".join(spec.all_lines())[:900])
     lines = align_lines(spec, result.lyrics)
     aligned = [l for l in lines if l.start is not None]
-    if len(aligned) * 2 >= len(lines) and result.global_info:          # our own form beats a DSP guess at it
+    if (len(aligned) * 2 >= len(lines) and result.global_info                 # our own form beats a DSP guess at it
+            and result.global_info.duration_s is not None):
         result.sections = sections_from_lines(lines, result.global_info.duration_s)
+        result.engines["structure"] = "aligned spec lyrics"                   # M6: the override above replaced
+                                                                                # result.sections; say so, or the
+                                                                                # engines dict still claims the
+                                                                                # librosa+heard-labels ear ran.
     out = Transcription(take=chosen.take, analysis=result, lines=lines)
     write_model(paths.transcription, out)
     print(f"  {len(aligned)}/{len(lines)} lyric lines aligned, {len(result.chords)} chords → {paths.transcription}")

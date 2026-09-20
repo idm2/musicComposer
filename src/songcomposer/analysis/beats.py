@@ -25,6 +25,7 @@ def summarise_beats(beats: list[float], downbeats: list[float]) -> BeatGrid:
     tempo = 60.0 / median(b - a for a, b in zip(beats, beats[1:]))
     counts = [sum(1 for b in beats if lo - 0.02 <= b < hi - 0.02) for lo, hi in zip(downbeats, downbeats[1:])]
     per_bar = Counter(counts).most_common(1)[0][0] if counts else 4
+    per_bar = max(2, min(12, per_bar))          # a degenerate run must never propagate a "1/4" or "40/4" time signature
     return BeatGrid(beats=[round(b, 4) for b in beats], downbeats=[round(d, 4) for d in downbeats],
                     tempo_bpm=round(tempo, 2), time_signature=f"{per_bar}/4")
 

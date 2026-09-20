@@ -57,6 +57,16 @@ def test_subjective_only_still_works_and_warns(patched, tmp_path, sine_wav, caps
     assert "PARTIAL ANALYSIS" in capsys.readouterr().out
 
 
+def test_key_ear_without_beats_keeps_its_measurement_and_confidence(patched, tmp_path, sine_wav):
+    """M1: `key` needs stems but not `beats` — the old `if grid and measured:` threw the computed
+    key and its confidence away entirely just because tempo wasn't also available."""
+    a = analysis.analyze(sine_wav, tmp_path, Config(), ears={"key"})
+    assert "beats" not in a.engines and "key" in a.engines
+    assert a.global_info is not None
+    assert a.global_info.key == "C major" and a.global_info.key_confidence == 0.8
+    assert a.global_info.tempo_bpm is None and a.global_info.time_signature is None
+
+
 def test_importing_analysis_package_does_not_import_the_heavy_stack():
     """The top-level package imports every component module lazily, inside analyze() itself,
     so `import songcomposer.analysis` alone must never pull in the GPU stack."""
