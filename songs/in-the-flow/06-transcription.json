@@ -10,7 +10,7 @@
       "key": "krumhansl/librosa",
       "notes": "basic-pitch 0.4.0",
       "lyrics": "faster-whisper large-v3",
-      "structure": "librosa agglomerative + heard labels"
+      "structure": "aligned spec lyrics"
     },
     "global_info": {
       "key": "A major",

@@ -25,7 +25,7 @@ Final Chorus: strums detected but no consistent pattern — listen and choose yo
 Outro: strums detected but no consistent pattern — listen and choose your own
 
 MELODY (vocal line in guitar range; (n) = low-confidence note)
-570 of 618 transcribed vocal notes shown (48 outside sung spans or below confidence 0.3).
+570 of 618 transcribed vocal notes selected for the melody line (48 outside sung spans or below confidence 0.3).
 bar 1
 e|----------------------------------------------------------------|----------------------------------------------------------------|----------------------------------------------------0---0-------|----------------------------------------------------------------|
 B|----------------------------------------------------------------|----------------------------------------------------------------|------------------------------------------------3---------------|----------------3-------3-----------2---3---2---3---2-----------|
