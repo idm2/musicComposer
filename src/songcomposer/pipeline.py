@@ -15,7 +15,7 @@ from .pick import run_pick
 
 
 def run_all(song: str, src: str, brief_file: str | None = None, brief_text: str | None = None,
-            provider_name: str | None = None, fidelity: str | None = None,
+            provider_name: str | None = None, fidelity: str | None = None, takes: int | None = None,
             input_fn: Callable[[str], str] = input, provider=None) -> None:
     paths = SongPaths(song)
     run_ingest(song, src)
@@ -24,11 +24,11 @@ def run_all(song: str, src: str, brief_file: str | None = None, brief_text: str 
     if not paths.brief.exists():
         run_brief(song, from_file=brief_file, text=brief_text)
     run_compose(song)
-    run_generate(song, provider_name=provider_name, fidelity=fidelity, input_fn=input_fn, provider=provider)
+    run_generate(song, provider_name=provider_name, fidelity=fidelity, takes=takes, input_fn=input_fn, provider=provider)
     if not paths.chosen.exists():
-        takes = TakesManifest(**read_json(paths.takes_json)).all_takes()
+        all_takes = TakesManifest(**read_json(paths.takes_json)).all_takes()
         print("Listen to the takes in", paths.takes_dir)
-        for t in takes:
+        for t in all_takes:
             print(f"  take {t.index}: {t.provider}, {t.duration_s:.0f}s")
         run_pick(song, int(input_fn("Which take? ").strip()))
     run_chart(song)

@@ -45,3 +45,19 @@ def test_whole_pipeline_contracts(root, sine_wav, mp3_bytes, monkeypatch):  # no
     assert read_json(p.chosen)["take"] == 2
     assert p.out_mp3.exists() and p.chords_txt.exists() and p.tab_txt.exists() and p.lyrics_json.exists()
     assert read_json(p.lyrics_json)["lines"][0]["words"][0]["word"] == "The"
+
+
+def test_run_all_threads_the_take_count_through_to_generate(root, sine_wav, mp3_bytes, monkeypatch):  # noqa: F811
+    """`--takes` must reach run_generate — not just be accepted and dropped."""
+    pytest.importorskip("music21")
+    monkeypatch.setattr(pipeline, "analyze", fake_analyze)
+    monkeypatch.setattr(transcribe, "analyze", fake_analyze)
+    monkeypatch.setattr(transcribe, "to_wav", lambda src, dst: (dst.parent.mkdir(parents=True, exist_ok=True),
+                                                                dst.write_bytes(b"wav")))
+    monkeypatch.setattr(compose, "chat_json", lambda *a, **k: GOOD)
+    replies = iter(["yes", "1"])
+    pipeline.run_all("demo", str(sine_wav), brief_text="A song about insomnia after a breakup.",
+                     provider=FakeProvider("fake", mp3_bytes, n=2), fidelity="loose", takes=2,
+                     input_fn=lambda prompt: next(replies))
+    p = SongPaths("demo")
+    assert [t.index for t in TakesManifest(**read_json(p.takes_json)).all_takes()] == [1, 2]

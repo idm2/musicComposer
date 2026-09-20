@@ -78,11 +78,15 @@ def compose(song: str, force: bool = typer.Option(False, "--force", help="rewrit
 def generate(song: str,
              provider: str = typer.Option(None, "--provider", help="suno | elevenlabs (default: songcomposer.toml)"),
              regen: bool = typer.Option(False, "--regen", help="pay for fresh takes from this provider"),
-             fidelity: str = typer.Option(None, "--fidelity", help="loose | medium | close (asked if omitted)"),
-             note: str = typer.Option("", "--note", help="extra direction for this run")) -> None:
+             fidelity: str = typer.Option(None, "--fidelity",
+                                          help="loose | medium | close (asked if omitted; requires a reference "
+                                               "— invalid with no 01-analysis.json)"),
+             note: str = typer.Option("", "--note", help="extra direction for this run"),
+             takes: int = typer.Option(None, "--takes",
+                                       help="how many takes to generate, 1-6 (asked if omitted, default 3)")) -> None:
     """Spec → takes. Validates, prints estimated cost, and waits for an explicit 'yes' before spending."""
     from .generate import run_generate
-    run_generate(song, provider_name=provider, regen=regen, fidelity=fidelity, note=note)
+    run_generate(song, provider_name=provider, regen=regen, fidelity=fidelity, note=note, takes=takes)
 
 
 @app.command()
@@ -104,10 +108,12 @@ def run(song: str,
         from_: str = typer.Option(..., "--from", help="URL, audio file or video file"),
         brief: str = typer.Option(None, "--brief", help="brief markdown file"),
         text: str = typer.Option(None, "--text", help="inline brief"),
-        provider: str = typer.Option(None, "--provider")) -> None:
+        provider: str = typer.Option(None, "--provider"),
+        takes: int = typer.Option(None, "--takes",
+                                  help="how many takes to generate, 1-6 (asked if omitted, default 3)")) -> None:
     """Whole pipeline. Still stops to confirm cost, and to ask which take you want."""
     from .pipeline import run_all
-    run_all(song, from_, brief_file=brief, brief_text=text, provider_name=provider)
+    run_all(song, from_, brief_file=brief, brief_text=text, provider_name=provider, takes=takes)
 
 
 @app.command()

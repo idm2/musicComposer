@@ -17,6 +17,9 @@ from .preflight import banned_terms, preflight
 from .prompt import FIDELITY_LEVELS, build_request
 from .provider import Provider, TakeResult
 
+MIN_TAKES = 1
+MAX_TAKES = 6      # ElevenLabs' seed-list length — going higher would silently give fewer takes than asked
+
 
 def get_provider(name: str, config: Config) -> Provider:
     if name == "suno":
@@ -44,6 +47,16 @@ def ask_fidelity(input_fn: Callable[[str], str]) -> tuple[str, str]:
     return level, input_fn("Anything to add for this run? (enter to skip): ").strip()
 
 
+def ask_takes(input_fn: Callable[[str], str]) -> int:
+    print(f"How many takes should we generate? ({MIN_TAKES}-{MAX_TAKES}, enter for the default of 3)")
+    while True:
+        raw = input_fn(f"Takes [{MIN_TAKES}-{MAX_TAKES}, default 3]: ").strip()
+        if raw == "":
+            return 3
+        if raw.isdigit() and MIN_TAKES <= int(raw) <= MAX_TAKES:
+            return int(raw)
+
+
 def sanity_check(path: Path, duration_s: float, target_s: float) -> str | None:
     size = path.stat().st_size
     if size < 100_000:
@@ -54,7 +67,7 @@ def sanity_check(path: Path, duration_s: float, target_s: float) -> str | None:
 
 
 def run_generate(song: str, provider_name: str | None = None, regen: bool = False,
-                 fidelity: str | None = None, note: str = "",
+                 fidelity: str | None = None, note: str = "", takes: int | None = None,
                  input_fn: Callable[[str], str] = input, provider: Provider | None = None) -> TakesManifest:
     paths = SongPaths(song)
     config = load_config()
@@ -63,11 +76,29 @@ def run_generate(song: str, provider_name: str | None = None, regen: bool = Fals
     source = SourceInfo(**read_json(paths.source_json)) if paths.source_json.exists() else None
     provider = provider or get_provider(provider_name or config.default_provider, config)
 
-    if fidelity is None:
+    if takes is not None and not MIN_TAKES <= takes <= MAX_TAKES:
+        raise ValueError(f"takes must be between {MIN_TAKES} and {MAX_TAKES}, got {takes}")
+
+    if analysis is None:
+        # Fidelity means "how closely to track the reference" — meaningless with none to track.
+        if fidelity is not None:
+            raise ValueError("--fidelity has nothing to track without a reference (no 01-analysis.json) — "
+                             "omit it to compose from the brief alone")
+        fidelity, note = "loose", "no reference — composed from the brief alone"
+    elif fidelity is None:
         fidelity, note = ask_fidelity(input_fn)
-    req = build_request(spec, analysis, fidelity, note)
+        if takes is None:
+            takes = ask_takes(input_fn)
+    if takes is None:
+        takes = 3
+
+    req = build_request(spec, analysis, fidelity, note, n_takes=takes)
     payload = provider.payload(req)
-    request_hash = content_key(provider.name, json.dumps(payload, sort_keys=True, ensure_ascii=False))
+    # n_takes is folded into the hash explicitly: a provider's own payload can be identical for two
+    # different take counts (Suno needs 2 requests for both 3 and 4 takes), which would otherwise let
+    # a smaller run silently reuse a larger run's cached takes.
+    request_hash = content_key(provider.name, json.dumps({"n_takes": req.n_takes, **payload},
+                                                          sort_keys=True, ensure_ascii=False))
 
     manifest = TakesManifest(**read_json(paths.takes_json)) if paths.takes_json.exists() else TakesManifest()
     same = [r for r in manifest.runs if r.request_hash == request_hash and r.takes]
@@ -80,7 +111,8 @@ def run_generate(song: str, provider_name: str | None = None, regen: bool = Fals
     preflight(req, provider.limits, [w.word for w in analysis.lyrics] if analysis else [], banned_terms(source))
     est = provider.estimate(req)
     print(f"\nprovider : {provider.name}\nstyle    : {req.style_prompt}\n"
-          f"length   : {req.target_duration_s:.0f}s × {req.n_takes} takes\n"
+          f"length   : {req.target_duration_s:.0f}s\n"
+          f"requested: {req.n_takes} take(s)\n"
           f"ESTIMATED COST: ${est.usd:.2f}  ({est.basis})")
     if input_fn("Type 'yes' to spend this and generate: ").strip().lower() != "yes":
         print("aborted — nothing was generated, nothing was spent")
