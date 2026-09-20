@@ -30,3 +30,9 @@ out/
 # OS
 .DS_Store
 Thumbs.db
+
+# Spike scratch audio
+spikes/**/*.wav
+
+# Subagent-driven-development scratch
+.superpowers/
