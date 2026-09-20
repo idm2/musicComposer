@@ -20,6 +20,21 @@ STYLE_OF = re.compile(r"(?i)\b(in the style of|sounds? like|à la|a la)\b")
 MIN_WPS, MAX_WPS = 0.2, 4.5          # sung words per second; above this the model truncates or garbles, below it the section is mostly empty
 SHINGLE = 6                          # consecutive shared words that count as copying the reference
 
+# YouTube Shorts titles cram hashtags together ("#love#cinek#song"), and splitting on '#' to
+# reach a hidden artist tag also turns every generic word in the hashtag soup into a "banned
+# term" — "love", "song" and "baby" then block any legitimate song that happens to use them.
+# This stop-list is applied ONLY to terms produced by the '#' split, never to the dash/pipe
+# split (where a real artist name is far more likely to sit as a whole phrase, e.g.
+# "Favori Videolarim"). Cost of this trade-off: a real artist genuinely named e.g. "Baby"
+# slips through when their name only ever appears as a hashtag. Accepted, because blocking
+# every song that mentions "love" is worse. Compared lower-cased. Keep alphabetised.
+HASHTAG_STOPWORDS = frozenset({
+    "audio", "baby", "beat", "beats", "best", "concert", "cover", "dance", "edit", "explore",
+    "floating", "foryou", "foryoupage", "fyp", "happy", "hit", "hits", "live", "love", "lyrics",
+    "mood", "music", "new", "obessed", "obsessed", "official", "reels", "remix", "sad", "short",
+    "shorts", "singer", "singing", "song", "songs", "top", "trending", "vibes", "video", "viral",
+})
+
 
 def _norm_words(text: str) -> list[str]:
     return re.findall(r"[a-z0-9']+", text.lower().replace("’", "'"))
@@ -32,14 +47,24 @@ def banned_terms(source: SourceInfo | None) -> list[str]:
     terms: list[str] = []
     for raw in filter(None, [source.uploader, source.title]):
         cleaned = re.sub(r"[\(\[].*?[\)\]]", "", raw)
-        # YouTube Shorts titles often run hashtags together with no separating space
-        # ("#love#cinek #floating#song") — split on '#' too, or an artist tag hiding inside one
-        # never gets checked. This over-generates short junk terms ("song", "beats"); that is the
-        # safe direction, since over-blocking just surfaces as an actionable pre-flight message.
-        for piece in re.split(r"#|\s+[-–—|]\s+", cleaned):
-            piece = piece.strip()
-            if len(piece) >= 4 and piece not in terms:
-                terms.append(piece)
+        # Split on dash/pipe first — this is the "normal" delimiter for "Artist - Title" style
+        # metadata, and a real artist name is likely to sit here as a whole phrase, so no
+        # stop-list is applied to what it yields.
+        for phrase in re.split(r"\s+[-–—|]\s+", cleaned):
+            phrase = phrase.strip()
+            if not phrase:
+                continue
+            if "#" in phrase:
+                # YouTube Shorts titles often run hashtags together with no separating space
+                # ("#love#cinek #floating#song") — split on '#' too, or an artist tag hiding
+                # inside one never gets checked. That also turns generic hashtag words into
+                # "banned terms", so filter those (and only those) through HASHTAG_STOPWORDS.
+                for piece in phrase.split("#"):
+                    piece = piece.strip()
+                    if len(piece) >= 4 and piece.lower() not in HASHTAG_STOPWORDS and piece not in terms:
+                        terms.append(piece)
+            elif len(phrase) >= 4 and phrase not in terms:
+                terms.append(phrase)
     return terms
 
 

@@ -127,6 +127,62 @@ def test_banned_terms_splits_on_hashtags_in_a_real_youtube_shorts_title():
     assert any("cinek" in p for p in problems(style_prompt_with_artist_name, banned=terms))
 
 
+def test_hashtag_stoplist_drops_generic_words_but_keeps_artist_tag_and_uploader():
+    """The over-block found in live use: the project's real reference title yielded 13 banned
+    terms including generic words like 'love' and 'song', which then rejected any legitimate
+    song mentioning them. Only the genuine artist tag ('cinek') and the uploader phrase
+    ('Favori Videolarim') should survive."""
+    src = SourceInfo(
+        origin="u", kind="url",
+        title="No one can beat you\U0001f495 #trending #love#cinek #floating#song#concert "
+              "#obessed#shorts#beats#singer#baby",
+        uploader="Favori Videolarim ",
+        duration_s=1, sample_rate=44100, sha1="a" * 40, ingested_at="now")
+    terms = banned_terms(src)
+    assert "cinek" in terms
+    assert "Favori Videolarim" in terms
+    for generic in ("love", "song", "beats", "baby"):
+        assert generic not in terms
+
+
+def test_hashtag_stoplist_still_blocks_style_prompt_naming_the_real_artist():
+    src = SourceInfo(
+        origin="u", kind="url",
+        title="No one can beat you\U0001f495 #trending #love#cinek #floating#song#concert "
+              "#obessed#shorts#beats#singer#baby",
+        uploader="Favori Videolarim ",
+        duration_s=1, sample_rate=44100, sha1="a" * 40, ingested_at="now")
+    terms = banned_terms(src)
+    r = req(style_prompt="acoustic pop featuring cinek's voice")
+    assert any("cinek" in p for p in problems(r, banned=terms))
+
+
+def test_new_song_with_generic_love_and_song_words_now_passes_preflight():
+    """The false positive this fix exists for: retitling the song 'Love Like the Sun Loves'
+    with a style prompt describing a love song must not trip the banned-terms check against
+    the hashtag-heavy reference title above."""
+    src = SourceInfo(
+        origin="u", kind="url",
+        title="No one can beat you\U0001f495 #trending #love#cinek #floating#song#concert "
+              "#obessed#shorts#beats#singer#baby",
+        uploader="Favori Videolarim ",
+        duration_s=1, sample_rate=44100, sha1="a" * 40, ingested_at="now")
+    terms = banned_terms(src)
+    r = req(title="Love Like the Sun Loves",
+            style_prompt="tender modern acoustic R&B pop love song, 88 BPM, A major")
+    assert problems(r, banned=terms) == []
+
+
+def test_hashtag_stoplist_does_not_apply_to_dash_pipe_split():
+    """The stop-list must only apply to terms produced by splitting on '#'. A real artist name
+    sitting in a dash/pipe-delimited title (the more likely place to find one) must survive
+    even if it happens to collide with a stop-list word."""
+    src = SourceInfo(origin="u", kind="url", title="Baby - Some Song", uploader=None,
+                     duration_s=1, sample_rate=44100, sha1="a" * 40, ingested_at="now")
+    terms = banned_terms(src)
+    assert "Baby" in terms
+
+
 def test_preflight_exits_and_says_nothing_was_generated(capsys):
     with pytest.raises(SystemExit) as e:
         preflight(req(title=""), GENERIC_LIMITS, [], [])
