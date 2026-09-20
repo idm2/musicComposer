@@ -84,7 +84,9 @@ _QUALITY_INTERVALS = {
 
 
 def chord_pitch_classes(parsed: ParsedChord) -> set[int]:
-    """Pitch classes sounding in the chord. Unknown qualities fall back to a major triad on the root."""
+    """Pitch classes sounding in the chord. Unknown qualities fall back to a major triad on the root
+    (in which case any confidence computed against this template is unreliable by construction —
+    it is being checked against a guess, not the recogniser's actual claim)."""
     root = pitch_class(parsed.root)
     intervals = set(_QUALITY_INTERVALS.get(parsed.quality, (0, 4, 7)))
     for ext in parsed.extensions:
