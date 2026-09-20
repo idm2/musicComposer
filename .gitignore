@@ -24,6 +24,8 @@ models/
 
 # Pipeline intermediates and deliverables — large audio, regenerable.
 # Deliverables still live here on disk (see CLAUDE.md), they just aren't versioned.
+# The small permanent record of each song is archived into songs/<song>/ instead:
+#   uv run python tools/archive-song.py <song>
 work/
 out/
 

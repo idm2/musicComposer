@@ -1,0 +1,66 @@
+{
+  "runs": [
+    {
+      "provider": "suno",
+      "request_hash": "2cbe6bdf47bda6f4",
+      "fidelity": "loose",
+      "fidelity_note": "",
+      "style_prompt": "tender modern acoustic R&B pop love song, 88 BPM, A major, plucked fingerpicked acoustic guitar loop up front with clean wide reverb, smooth sensitive soft male tenor vocal, close and breathy, gentle falsetto lifts, deep soft sub bass, gentle electronic kick and finger-snap beat, airy pads, thick stacked vocal harmonies on the chorus, polished spacious production, intimate then joyful and soaring",
+      "payload": {
+        "n_requests": 2,
+        "body": {
+          "model": "ai-music-api/generate",
+          "input": {
+            "prompt": "[Intro]\n\n[Hook]\nFelt the whole world slow its spin\nJust to let your light come in\nWith you, I'm in the flow\nAnd I'm never letting go\n\n[Verse 1]\nI was running every road\nChasing signs I didn't know\nLiving loud and sleeping light\nLooking for you every night\nEvery city, every shore\nAlways reaching out for more\nCouldn't see the current then\nIt was carrying me to when\n\n[Pre-Chorus]\nYou walked in like morning does\nQuiet, golden, sure, because\nSomething bigger than us two\nHad been pulling me to you\n\n[Chorus]\nFelt the whole world slow its spin\nJust to let your light come in\nWith you, I'm in the flow\nAnd I'm never letting go\nEvery door just opens wide\nEvery star is on our side\nWith you, I'm in the flow\nAnd I'm never letting go\n\n[Verse 2]\nNow your hand is in my hand\nAnd I finally understand\nWhen you stop the push and fight\nEverything just falls in line\nCoffee steam and window rain\nEven Mondays feel the same\nLike the universe said yes\nAnd it's wearing your blue dress\n\n[Pre-Chorus]\nYou laugh and the whole room glows\nWhere it comes from, no one knows\nThe same love that lights the sky\nIs looking at me through your eyes\n\n[Chorus]\nFelt the whole world slow its spin\nJust to let your light come in\nWith you, I'm in the flow\nAnd I'm never letting go\nEvery door just opens wide\nEvery star is on our side\nWith you, I'm in the flow\nAnd I'm never letting go\n\n[Bridge]\nThere's a river under everything\nIt carried me through the wandering\nI don't need to know how far it goes\nI just hold you close and let it flow\nLove like the sun loves, asking nothing back\nI'll love you like that, I'll love you like that\n\n[Final Chorus]\nFelt the whole world slow its spin\nJust to let your light come in\nWith you, I'm in the flow\nAnd I'm never letting go\nEvery door just opens wide\nEvery star is on our side\nWith you, I'm in the flow\nAnd I'm never letting go\nFelt the whole world slow its spin\nJust to let your light come in\nWith you, I'm in the flow\nAnd I'm never letting go\nEvery door just opens wide\nEvery star is on our side\nWith you, I'm in the flow\nNo, I'm never letting go\n\n[Outro]\nIn the flow\nWith you, I'm home",
+            "custom_mode": true,
+            "instrumental": false,
+            "model": "V6",
+            "style": "tender modern acoustic R&B pop love song, 88 BPM, A major, plucked fingerpicked acoustic guitar loop up front with clean wide reverb, smooth sensitive soft male tenor vocal, close and breathy, gentle falsetto lifts, deep soft sub bass, gentle electronic kick and finger-snap beat, airy pads, thick stacked vocal harmonies on the chorus, polished spacious production, intimate then joyful and soaring",
+            "title": "In the Flow",
+            "duration": 218,
+            "negative_tags": "aggressive drums, distorted guitars, harsh synths, shouted vocals, autotune artifacts, lo-fi, retro production, rap verse",
+            "vocal_gender": "m"
+          }
+        }
+      },
+      "cost_estimate_usd": 0.12,
+      "cost_actual_usd": 0.12,
+      "created_at": "2026-09-20T07:09:19.041515+00:00",
+      "warnings": [],
+      "takes": [
+        {
+          "index": 1,
+          "file": "take-1.mp3",
+          "provider": "suno",
+          "provider_ref": "7587c96b-fa45-4379-a206-f9cf262caebc",
+          "duration_s": 217.6,
+          "bytes": 4891125
+        },
+        {
+          "index": 2,
+          "file": "take-2.mp3",
+          "provider": "suno",
+          "provider_ref": "657d40ad-38e3-44a0-a996-d9efb209cfd0",
+          "duration_s": 217.56,
+          "bytes": 4740933
+        },
+        {
+          "index": 3,
+          "file": "take-3.mp3",
+          "provider": "suno",
+          "provider_ref": "76ac5541-6676-46f0-87af-198a0b787a3d",
+          "duration_s": 217.36,
+          "bytes": 4866693
+        },
+        {
+          "index": 4,
+          "file": "take-4.mp3",
+          "provider": "suno",
+          "provider_ref": "5aee0c50-c772-4551-bdd9-fe6dd0ee379c",
+          "duration_s": 217.36,
+          "bytes": 5058789
+        }
+      ]
+    }
+  ]
+}

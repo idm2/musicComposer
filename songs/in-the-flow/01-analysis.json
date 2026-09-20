@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "audio_sha1": "782514332cd96202d87a57759f70190f218cc523",
+  "engines": {
+    "subjective": "google/gemini-2.5-pro"
+  },
+  "global_info": null,
+  "beats": [],
+  "downbeats": [],
+  "chords": [],
+  "notes": [],
+  "sections": [],
+  "lyrics": [],
+  "subjective": {
+    "genre_tags": [
+      "pop",
+      "r&b",
+      "electronic-pop",
+      "dance-pop"
+    ],
+    "instrumentation": [
+      "synth bass",
+      "electronic drum machine (kick, snap, hi-hats)",
+      "synth pads",
+      "reverberant plucked synth",
+      "sampled crowd noise"
+    ],
+    "timbre": "Warm, smooth, and polished. The synths are rounded and the bass is deep and pillowy, creating a clean, modern electronic sound.",
+    "vocal_character": "A clear, smooth male tenor voice, often using a breathy falsetto for flourishes. Phrasing is rhythmic and precise. The lead vocal is frequently supported by dense layers of doubles and harmonies, especially in the chorus, creating a thick, polished vocal stack.",
+    "vocal_gender": "male",
+    "production": "Highly polished and contemporary. The production features a wide stereo image, with centered lead vocals and panned harmonies/synths. Heavy compression is used to maintain a consistent, powerful dynamic level. Vocals and synths are treated with prominent but clean reverb, creating a sense of large, produced space.",
+    "emotional_arc": "The song begins with a feeling of intimate, gentle devotion. This builds with the introduction of the beat into a more confident and celebratory declaration, culminating in an exuberant and joyful chorus.",
+    "arrangement_density": [
+      {
+        "start": 0.0,
+        "end": 10.0,
+        "description": "Sampled crowd noise and a solo, reverberant plucked synth melody."
+      },
+      {
+        "start": 10.0,
+        "end": 22.0,
+        "description": "Lead vocal and layered harmonies enter over the plucked synth."
+      },
+      {
+        "start": 22.0,
+        "end": 62.0,
+        "description": "A full electronic beat (kick, snap) and synth bass enter, creating a dense, driving arrangement that continues to the end of the clip."
+      }
+    ],
+    "sections": [
+      {
+        "label": "intro",
+        "start": 0.0,
+        "end": 10.0
+      },
+      {
+        "label": "chorus",
+        "start": 10.0,
+        "end": 22.0
+      },
+      {
+        "label": "verse",
+        "start": 22.0,
+        "end": 44.0
+      },
+      {
+        "label": "chorus",
+        "start": 44.0,
+        "end": 62.0
+      }
+    ]
+  }
+}

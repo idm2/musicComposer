@@ -50,6 +50,10 @@ The music-analysis ecosystem lags badly and several key libraries break on 3.13.
 
 Output goes to this repo's `out/<song>/`. Never copied into another project's tree.
 
+`work/` and `out/` are git-ignored (large, regenerable). The small permanent record of each song — brief, analysis,
+spec, takes manifest, song sheet, charts — is archived into the versioned **`songs/<song>/`** by
+`uv run python tools/archive-song.py <song>`. Do that when a song is finished; see `songs/README.md`.
+
 ---
 
 ## Environment

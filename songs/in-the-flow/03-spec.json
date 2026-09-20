@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "title": "In the Flow",
+  "style_prompt": "tender modern acoustic R&B pop love song, 88 BPM, A major, plucked fingerpicked acoustic guitar loop up front with clean wide reverb, smooth sensitive soft male tenor vocal, close and breathy, gentle falsetto lifts, deep soft sub bass, gentle electronic kick and finger-snap beat, airy pads, thick stacked vocal harmonies on the chorus, polished spacious production, intimate then joyful and soaring",
+  "negative_style": "aggressive drums, distorted guitars, harsh synths, shouted vocals, autotune artifacts, lo-fi, retro production, rap verse",
+  "vocal_gender": "male",
+  "target_duration_s": 218.0,
+  "sections": [
+    {
+      "name": "Intro",
+      "lines": [],
+      "duration_s": 10.9,
+      "style_notes": "solo fingerpicked acoustic guitar, clean reverb, no drums"
+    },
+    {
+      "name": "Hook",
+      "lines": [
+        "Felt the whole world slow its spin",
+        "Just to let your light come in",
+        "With you, I'm in the flow",
+        "And I'm never letting go"
+      ],
+      "duration_s": 21.8,
+      "style_notes": "lead vocal over guitar only, intimate, close, gentle"
+    },
+    {
+      "name": "Verse 1",
+      "lines": [
+        "I was running every road",
+        "Chasing signs I didn't know",
+        "Living loud and sleeping light",
+        "Looking for you every night",
+        "Every city, every shore",
+        "Always reaching out for more",
+        "Couldn't see the current then",
+        "It was carrying me to when"
+      ],
+      "duration_s": 21.8,
+      "style_notes": "soft kick and snap beat enters, deep sub bass, rhythmic precise phrasing"
+    },
+    {
+      "name": "Pre-Chorus",
+      "lines": [
+        "You walked in like morning does",
+        "Quiet, golden, sure, because",
+        "Something bigger than us two",
+        "Had been pulling me to you"
+      ],
+      "duration_s": 10.9,
+      "style_notes": "airy pads swell, tension builds, drums thin out on the last bar"
+    },
+    {
+      "name": "Chorus",
+      "lines": [
+        "Felt the whole world slow its spin",
+        "Just to let your light come in",
+        "With you, I'm in the flow",
+        "And I'm never letting go",
+        "Every door just opens wide",
+        "Every star is on our side",
+        "With you, I'm in the flow",
+        "And I'm never letting go"
+      ],
+      "duration_s": 21.8,
+      "style_notes": "full arrangement, joyful soaring lead, thick stacked harmonies"
+    },
+    {
+      "name": "Verse 2",
+      "lines": [
+        "Now your hand is in my hand",
+        "And I finally understand",
+        "When you stop the push and fight",
+        "Everything just falls in line",
+        "Coffee steam and window rain",
+        "Even Mondays feel the same",
+        "Like the universe said yes",
+        "And it's wearing your blue dress"
+      ],
+      "duration_s": 21.8,
+      "style_notes": "groove continues, vocal more settled and confident, light harmony answers"
+    },
+    {
+      "name": "Pre-Chorus",
+      "lines": [
+        "You laugh and the whole room glows",
+        "Where it comes from, no one knows",
+        "The same love that lights the sky",
+        "Is looking at me through your eyes"
+      ],
+      "duration_s": 10.9,
+      "style_notes": "pads swell, harmonies enter early, lift into the chorus"
+    },
+    {
+      "name": "Chorus",
+      "lines": [
+        "Felt the whole world slow its spin",
+        "Just to let your light come in",
+        "With you, I'm in the flow",
+        "And I'm never letting go",
+        "Every door just opens wide",
+        "Every star is on our side",
+        "With you, I'm in the flow",
+        "And I'm never letting go"
+      ],
+      "duration_s": 21.8,
+      "style_notes": "full arrangement, big energy, layered vocals, falsetto ad-lib"
+    },
+    {
+      "name": "Bridge",
+      "lines": [
+        "There's a river under everything",
+        "It carried me through the wandering",
+        "I don't need to know how far it goes",
+        "I just hold you close and let it flow",
+        "Love like the sun loves, asking nothing back",
+        "I'll love you like that, I'll love you like that"
+      ],
+      "duration_s": 21.8,
+      "style_notes": "beat and bass drop out, guitar and pads only, reflective, most spiritual moment, builds on the last line"
+    },
+    {
+      "name": "Final Chorus",
+      "lines": [
+        "Felt the whole world slow its spin",
+        "Just to let your light come in",
+        "With you, I'm in the flow",
+        "And I'm never letting go",
+        "Every door just opens wide",
+        "Every star is on our side",
+        "With you, I'm in the flow",
+        "And I'm never letting go",
+        "Felt the whole world slow its spin",
+        "Just to let your light come in",
+        "With you, I'm in the flow",
+        "And I'm never letting go",
+        "Every door just opens wide",
+        "Every star is on our side",
+        "With you, I'm in the flow",
+        "No, I'm never letting go"
+      ],
+      "duration_s": 43.6,
+      "style_notes": "beat and bass return, biggest most joyful chorus, full harmonies, passionate ad-libs, sung twice"
+    },
+    {
+      "name": "Outro",
+      "lines": [
+        "In the flow",
+        "With you, I'm home"
+      ],
+      "duration_s": 10.9,
+      "style_notes": "guitar figure alone again, sparse reverberant vocal, gentle fade"
+    }
+  ],
+  "fidelity": "loose",
+  "fidelity_note": "",
+  "writer_model": "google/gemini-2.5-pro draft, lyrics rewritten and re-barred by Claude"
+}
