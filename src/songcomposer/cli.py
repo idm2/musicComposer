@@ -59,3 +59,14 @@ def compose(song: str, force: bool = typer.Option(False, "--force", help="rewrit
     """Brief + analysis → lyrics and song spec (work/<song>/03-spec.json). Edit the file freely afterwards."""
     from .compose import run_compose
     run_compose(song, force=force)
+
+
+@app.command()
+def generate(song: str,
+             provider: str = typer.Option(None, "--provider", help="suno | elevenlabs (default: songcomposer.toml)"),
+             regen: bool = typer.Option(False, "--regen", help="pay for fresh takes from this provider"),
+             fidelity: str = typer.Option(None, "--fidelity", help="loose | medium | close (asked if omitted)"),
+             note: str = typer.Option("", "--note", help="extra direction for this run")) -> None:
+    """Spec → takes. Validates, prints estimated cost, and waits for an explicit 'yes' before spending."""
+    from .generate import run_generate
+    run_generate(song, provider_name=provider, regen=regen, fidelity=fidelity, note=note)
