@@ -43,3 +43,12 @@ def analyze(song: str,
     chosen = {e.strip() for e in ears.split(",") if e.strip()} or None
     write_model(p.analysis, run(wav, p.cache, load_config(), chosen))
     print(f"  → {p.analysis}")
+
+
+@app.command()
+def brief(song: str,
+          from_: str = typer.Option(None, "--from", help="markdown/text file"),
+          text: str = typer.Option(None, "--text", help="inline brief or one-liner")) -> None:
+    """Your brief → work/<song>/02-brief.json."""
+    from .brief import run_brief
+    run_brief(song, from_file=from_, text=text)
