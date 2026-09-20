@@ -1,5 +1,6 @@
 import subprocess
 from pathlib import Path
+from types import SimpleNamespace
 
 import pytest
 
@@ -20,3 +21,15 @@ def sine_wav(tmp_path) -> Path:
         check=True,
     )
     return out
+
+
+@pytest.fixture(scope="session")
+def synth_song(tmp_path_factory):
+    pytest.importorskip("soundfile")
+    import synth
+    d = tmp_path_factory.mktemp("synth")
+    return SimpleNamespace(
+        mix=synth.write(d / "mix.wav"),
+        harmonic=synth.write(d / "harmonic.wav", {"harmony", "bass"}),
+        melody=synth.write(d / "melody.wav", {"melody"}),
+        truth=synth.TRUTH)
