@@ -1,0 +1,11 @@
+# User-editable defaults. default_provider is set by the Task 12 bake-off.
+default_provider = "suno"
+# OpenRouter slugs. Both verified present in GET https://openrouter.ai/api/v1/models on 2026-09-20.
+# listener_model MUST list "audio" in its input_modalities. Newer option: google/gemini-3.1-pro-preview.
+writer_model = "google/gemini-2.5-pro"
+listener_model = "google/gemini-2.5-pro"
+whisper_model = "large-v3"
+# Kie.ai marks V5_5 and below "Discontinued" (checked 2026-09-20). Current: V6 | V6_MINI | V6_WILD.
+suno_model = "V6"
+# music_v1 | music_v2 | music_v2_5. The v2 family requires the chunks[] plan format (Task 11).
+elevenlabs_model = "music_v2_5"
