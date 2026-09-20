@@ -1,0 +1,32 @@
+# Environment / secrets
+.env
+.env.local
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Node (if the lib.mjs client layer gets ported rather than rewritten)
+node_modules/
+
+# Model weights and caches — large, re-downloadable
+models/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+.cache/
+
+# Pipeline intermediates and deliverables — large audio, regenerable.
+# Deliverables still live here on disk (see CLAUDE.md), they just aren't versioned.
+work/
+out/
+
+# OS
+.DS_Store
+Thumbs.db
