@@ -118,11 +118,20 @@ def run_generate(song: str, provider_name: str | None = None, regen: bool = Fals
         print("aborted — nothing was generated, nothing was spent")
         raise SystemExit(1)
 
-    if regen:
-        for old in [r for r in manifest.runs if r.provider == provider.name]:
-            for t in old.takes:
-                (paths.takes_dir / t.file).unlink(missing_ok=True)
-            manifest.runs.remove(old)
+    # Old takes are backed up (renamed to .bak), never deleted, until the new ones are confirmed to
+    # exist — a provider failing mid-run must not leave the user with neither the old paid takes nor
+    # a complete set of new ones. Their manifest records stay put too (deferred, not removed) so the
+    # start index below never collides with a name still sitting under its old .mp3 filename.
+    old_runs = [r for r in manifest.runs if r.provider == provider.name] if regen else []
+    backups: list[tuple[Path, Path]] = []
+    for old in old_runs:
+        for t in old.takes:
+            src = paths.takes_dir / t.file
+            if src.exists():
+                bak = src.with_name(src.name + ".bak")
+                src.replace(bak)
+                backups.append((src, bak))
+
     start = max([t.index for t in manifest.all_takes()], default=0) + 1
     run = GenerationRun(provider=provider.name, request_hash=request_hash, fidelity=fidelity, fidelity_note=note,
                         style_prompt=req.style_prompt, payload=payload, cost_estimate_usd=est.usd,
@@ -151,7 +160,17 @@ def run_generate(song: str, provider_name: str | None = None, regen: bool = Fals
         # even though few or no takes landed — a cost ledger must never under-state spend.
         run.cost_actual_usd = round(est.usd, 4)
         run.warnings.append("actual cost unknown after failure — recorded the full estimate as an upper bound")
+        if backups:
+            for src, bak in backups:
+                bak.replace(src)
+            print(f"! generation failed — restored {len(backups)} previous take(s), nothing was lost")
         raise
+    else:
+        if regen:
+            for old in old_runs:
+                manifest.runs.remove(old)
+            for _, bak in backups:
+                bak.unlink(missing_ok=True)
     finally:
         write_model(paths.takes_json, manifest)
 

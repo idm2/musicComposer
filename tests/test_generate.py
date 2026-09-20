@@ -140,6 +140,33 @@ def test_regen_replaces_only_that_providers_takes(song, mp3_bytes):
     assert not song.take(1).exists() and song.take(4).exists()
 
 
+def test_regen_with_a_provider_that_raises_leaves_the_original_takes_recoverable_and_the_manifest_consistent(song, mp3_bytes, capsys):
+    generate.run_generate("demo", fidelity="loose", provider=FakeProvider("suno", mp3_bytes, n=2), input_fn=answers("yes"))
+    original = song.take(1).read_bytes()
+
+    with pytest.raises(RuntimeError, match="blew up"):
+        generate.run_generate("demo", fidelity="loose", regen=True,
+                              provider=FakeProvider("suno", mp3_bytes, n=2, fail_after=0), input_fn=answers("yes"))
+
+    # the old, already-paid-for takes are back under their original names, unharmed
+    assert song.take(1).exists() and song.take(1).read_bytes() == original
+    assert song.take(2).exists()
+    assert not (song.takes_dir / "take-1.mp3.bak").exists() and not (song.takes_dir / "take-2.mp3.bak").exists()
+    assert "restored 2 previous take" in capsys.readouterr().out
+
+    # the manifest still lists the old run — nothing was removed since the new run never landed
+    m = read_json(song.takes_json)
+    assert [t["file"] for r in m["runs"] for t in r["takes"]] == ["take-1.mp3", "take-2.mp3"]
+
+
+def test_regen_with_a_working_provider_leaves_no_bak_files(song, mp3_bytes):
+    generate.run_generate("demo", fidelity="loose", provider=FakeProvider("suno", mp3_bytes, n=2), input_fn=answers("yes"))
+    m = generate.run_generate("demo", fidelity="loose", regen=True, provider=FakeProvider("suno", mp3_bytes, n=2),
+                              input_fn=answers("yes"))
+    assert [(t.index, t.provider) for t in m.all_takes()] == [(3, "suno"), (4, "suno")]
+    assert not any(p.suffix == ".bak" for p in song.takes_dir.iterdir())
+
+
 def test_paid_takes_survive_a_mid_run_failure(song, mp3_bytes):
     with pytest.raises(RuntimeError, match="blew up"):
         generate.run_generate("demo", fidelity="loose", provider=FakeProvider("fake", mp3_bytes, fail_after=1),

@@ -92,6 +92,23 @@ def test_generate_polls_saves_raw_downloads_and_measures_cost(tmp_path):
     assert cost == pytest.approx(24 * 0.005)
 
 
+def test_pre_existing_take_file_is_overwritten_not_raised(tmp_path):
+    """I4: Path.rename raises FileExistsError on Windows when the destination already exists (an
+    unrecorded take-N.mp3 from a previous run makes the next run's index collide). The already
+    downloaded, already-paid-for audio must survive that — Path.replace overwrites instead."""
+    ok = lambda a, b: {"state": "success", "resultJson": json.dumps(
+        {"sunoData": [{"id": a, "audio_url": f"https://cdn/{a}.mp3", "duration": 151.2},
+                      {"id": b, "audio_url": f"https://cdn/{b}.mp3", "duration": 149.0}]})}
+    handler, _ = _server({"t1": [ok("a", "b")], "t2": [ok("c", "d")]}, credits=[1000, 976])
+    existing = tmp_path / "take-1.mp3"
+    existing.write_bytes(b"old paid audio that must not be lost")
+    provider = SunoProvider("V6", client=httpx.Client(transport=httpx.MockTransport(handler)), sleep=lambda s: None)
+    got = []
+    provider.generate(REQ, tmp_path, 1, got.append)                # must not raise FileExistsError
+    assert existing.read_bytes().startswith(b"ID3")                 # overwritten with the freshly downloaded take
+    assert not (tmp_path / "take-1.mp3.part").exists()
+
+
 def test_failed_task_raises_with_provider_message(tmp_path):
     handler, _ = _server({"t1": [{"state": "fail", "failMsg": "SENSITIVE_WORD_ERROR"}], "t2": []}, credits=[10, 10])
     provider = SunoProvider("V6", client=httpx.Client(transport=httpx.MockTransport(handler)), sleep=lambda s: None)

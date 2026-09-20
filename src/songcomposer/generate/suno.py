@@ -92,7 +92,8 @@ class SunoProvider:
                             with open(part, "wb") as f:
                                 for block in res.iter_bytes():
                                     f.write(block)
-                        part.rename(path)                           # atomic: no half-written take-N.mp3 on failure
+                        part.replace(path)                          # atomic; Path.rename raises FileExistsError
+                                                                     # on Windows when `path` already exists
                     except Exception:
                         part.unlink(missing_ok=True)
                         raise
