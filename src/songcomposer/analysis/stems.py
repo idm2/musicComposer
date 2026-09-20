@@ -14,17 +14,6 @@ MODEL = "htdemucs"
 VERSION = "1"
 NAMES = ("vocals", "drums", "bass", "other")
 
-# Imported at module load time, not lazily inside _device(): torch's Windows DLL
-# loading shells out internally (platform.machine() -> `ver`), and a test that
-# monkeypatches subprocess.run globally (see test_stems.py) would otherwise catch
-# that call the first time _device() runs. Importing once here, before any test
-# monkeypatch is installed, keeps that DLL-loading subprocess call outside the
-# patched window; later `torch.cuda.is_available()` calls do not shell out.
-try:
-    import torch
-except ImportError:
-    torch = None
-
 
 class Stems(BaseModel):
     vocals: Path
@@ -35,7 +24,11 @@ class Stems(BaseModel):
 
 
 def _device() -> str:
-    return "cuda" if torch is not None and torch.cuda.is_available() else "cpu"
+    try:
+        import torch
+        return "cuda" if torch.cuda.is_available() else "cpu"
+    except ImportError:
+        return "cpu"
 
 
 def separate(audio: Path, cache_dir: Path) -> Stems:
