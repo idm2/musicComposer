@@ -1,7 +1,7 @@
 """<song>.musicxml — melody, lyrics and chord symbols. Opens in MuseScore and Guitar Pro."""
 from pathlib import Path
 
-from ..models import Transcription
+from ..models import LOW_CONFIDENCE, Transcription
 from .leadsheet import chord_events, melody_events
 from .timing import BeatMap
 
@@ -56,7 +56,7 @@ def write_musicxml(title: str, t: Transcription, dest: Path) -> None:
         if e.chord.bass:
             kw["bass"] = _m21_name(e.chord.bass)
         part.insert(e.start_beat, harmony.ChordSymbol(**kw))
-        if e.chord.confidence < 0.5 or e.chord.quality not in KIND:
+        if e.chord.confidence < LOW_CONFIDENCE or e.chord.quality not in KIND:
             part.insert(e.start_beat, expressions.TextExpression("?"))
     score = stream.Score()
     score.insert(0, metadata.Metadata(title=title, composer=f"Song Composer — transcribed from take {t.take}"))

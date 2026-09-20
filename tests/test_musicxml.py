@@ -46,6 +46,9 @@ def test_musicxml_roundtrip(t, tmp_path):
     assert [s.root().name for s in symbols] == ["C", "B-"] and symbols[1].chordKind == "minor-seventh"
     pitched = [n for n in score.recurse().notes if isinstance(n, m21.note.Note)]
     assert [n.pitch.midi for n in pitched] == [64, 67] and pitched[0].lyric == "Glass"
+    # confidence must survive for a NOTE too, not just a chord: pitch 67 (confidence 0.3) is the
+    # low-confidence note write_musicxml marks with notehead="x"; pitch 64 (confidence 0.9) must not be.
+    assert pitched[1].notehead == "x" and pitched[0].notehead != "x"
     assert "?" in [e.content for e in score.recurse().getElementsByClass(m21.expressions.TextExpression)]
     # music21's MusicXML importer deletes metadata.title when it equals movementName (it assumes the
     # writer duplicated a work-title into movement-title, which is exactly what our writer does) —
