@@ -9,7 +9,6 @@ import httpx
 
 from ..audio import probe_duration
 from ..clients.kie import kie_get, kie_post, poll_job
-from ..env import require_env
 from ..jsonio import write_json
 from .provider import CostEstimate, GenerationRequest, ProviderLimits, TakeResult
 
@@ -81,8 +80,10 @@ class SunoProvider:
                                    f"{raw}; add its shape to extract_tracks()")
             for track in tracks:
                 path = dest_dir / f"take-{index}.mp3"
-                headers = {"Authorization": f"Bearer {require_env('KIE_API_KEY')}"}
-                with client.stream("GET", track["url"], headers=headers) as res:
+                # No Authorization header here: the URL points at an arbitrary CDN host
+                # named by the provider's result JSON, never at api.kie.ai — the key must
+                # not be sent to it.
+                with client.stream("GET", track["url"]) as res:
                     res.raise_for_status()
                     with open(path, "wb") as f:
                         for block in res.iter_bytes():

@@ -58,7 +58,10 @@ def _server(states, credits):
     created, credit_iter = [], iter(credits)
 
     def handler(req: httpx.Request):
-        assert req.headers["authorization"] == "Bearer kie-test"
+        if req.url.host == "api.kie.ai":
+            assert req.headers["authorization"] == "Bearer kie-test"
+        else:
+            assert "authorization" not in req.headers      # audio CDN host must never see the key
         url = str(req.url)
         if url.endswith("/chat/credit"):
             return httpx.Response(200, json={"code": 200, "data": next(credit_iter)})
@@ -111,3 +114,23 @@ def test_insufficient_credits_code_in_200_body_is_an_error(tmp_path):
     provider = SunoProvider("V6", client=httpx.Client(transport=httpx.MockTransport(handler)), sleep=lambda s: None)
     with pytest.raises(RuntimeError, match="402"):
         provider.generate(REQ, tmp_path, 1, lambda t: None)
+
+
+def test_api_key_is_never_sent_to_the_audio_host(tmp_path):
+    """The download URL comes out of the provider's result JSON and points at an arbitrary
+    CDN host, not api.kie.ai. The KIE_API_KEY must never be attached to that request."""
+    ok = lambda a, b: {"state": "success", "resultJson": json.dumps(
+        {"sunoData": [{"id": a, "audio_url": f"https://cdn/{a}.mp3", "duration": 151.2},
+                      {"id": b, "audio_url": f"https://cdn/{b}.mp3", "duration": 149.0}]})}
+    base_handler, _ = _server({"t1": [ok("a", "b")], "t2": [ok("c", "d")]}, credits=[1000, 976])
+    download_headers = []
+
+    def handler(req: httpx.Request):
+        if req.url.host != "api.kie.ai":
+            download_headers.append(req.headers)
+        return base_handler(req)
+
+    provider = SunoProvider("V6", client=httpx.Client(transport=httpx.MockTransport(handler)), sleep=lambda s: None)
+    provider.generate(REQ, tmp_path, 1, lambda t: None)
+    assert download_headers, "no download requests were recorded"
+    assert all("authorization" not in h for h in download_headers)
