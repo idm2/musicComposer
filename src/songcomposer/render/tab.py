@@ -2,7 +2,7 @@
 from ..models import LOW_CONFIDENCE, Transcription
 from . import guitar
 from .chordsheet import label
-from .leadsheet import MELODY_MIN_CONFIDENCE, selected_melody
+from .leadsheet import MELODY_MIN_CONFIDENCE, melody_selection_note, selected_melody
 from .timing import BeatMap
 
 STRINGS = "EADGBe"
@@ -65,7 +65,7 @@ def _melody_block(t: Transcription, beatmap: BeatMap) -> list[str]:
         header = ("MELODY (vocal line in guitar range; (n) = low-confidence note; "
                    "no lyric timing detected — notes not clipped to sung spans)")
     dropped = total - kept
-    out = [header, f"{kept} of {total} transcribed vocal notes shown "
+    out = [header, f"{melody_selection_note(kept, total)} "
                     f"({dropped} outside sung spans or below confidence {MELODY_MIN_CONFIDENCE})."]
     if not melody:
         return out + ["no melody notes were transcribed"]

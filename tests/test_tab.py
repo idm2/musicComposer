@@ -126,7 +126,7 @@ def test_melody_is_clipped_to_sung_spans_and_reports_what_was_dropped():
     with_artefact = render_tab("T", Transcription(take=1, analysis=make_analysis([before, inside]), lines=[line]))
     without_artefact = render_tab("T", Transcription(take=1, analysis=make_analysis([inside]), lines=[line]))
 
-    assert "1 of 2 transcribed vocal notes shown (1 outside sung spans or below confidence 0.3)." in with_artefact
+    assert "1 of 2 transcribed vocal notes selected for the melody line (1 outside sung spans or below confidence 0.3)." in with_artefact
     # the pre-line note must be fully excluded from the tabbed grid, not merely uncounted
     grid_with = with_artefact.split("MELODY")[1].split("\n", 2)[2]
     grid_without = without_artefact.split("MELODY")[1].split("\n", 2)[2]
@@ -139,7 +139,7 @@ def test_melody_without_lyric_timing_falls_back_to_all_notes_and_says_so():
     a = make_analysis([note])
     out = render_tab("T", Transcription(take=1, analysis=a, lines=[line]))
     assert "no lyric timing detected — notes not clipped to sung spans" in out
-    assert "1 of 1 transcribed vocal notes shown (0 outside sung spans or below confidence 0.3)." in out
+    assert "1 of 1 transcribed vocal notes selected for the melody line (0 outside sung spans or below confidence 0.3)." in out
 
 
 def test_confidence_floor_drops_very_low_confidence_notes_but_keeps_moderate_ones():
@@ -147,7 +147,7 @@ def test_confidence_floor_drops_very_low_confidence_notes_but_keeps_moderate_one
     kept_note = Note(pitch=67, onset=1.6, duration=0.3, confidence=0.4, stem="vocals")       # above the floor, still low
     a = make_analysis([dropped_note, kept_note])
     out = render_tab("T", Transcription(take=1, analysis=a, lines=[]))
-    assert "1 of 2 transcribed vocal notes shown (1 outside sung spans or below confidence 0.3)." in out
+    assert "1 of 2 transcribed vocal notes selected for the melody line (1 outside sung spans or below confidence 0.3)." in out
     melody_block = out.split("MELODY")[1]
     assert "(3)" in melody_block                                  # surviving note (fret 3) still shown as low-confidence
 

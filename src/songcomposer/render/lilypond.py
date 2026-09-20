@@ -6,7 +6,7 @@ from pathlib import Path
 from ..chordsym import pitch_class
 from ..models import LOW_CONFIDENCE, Chord, Transcription
 from .guitar import into_range
-from .leadsheet import chord_events, melody_events, selected_melody
+from .leadsheet import chord_events, melody_events, melody_selection_note, selected_melody
 from .timing import BeatMap, split_at_bars, split_sixteenths
 
 SHARP = ["c", "cis", "d", "dis", "e", "f", "fis", "g", "gis", "a", "ais", "b"]
@@ -90,7 +90,7 @@ def build_ly(title: str, t: Transcription) -> str:
         setup.append(f"\\tempo 4 = {round(g.tempo_bpm)}")
     _, kept, total = selected_melody(t)
     tagline = ("Grey chord names and parenthesised notes are low-confidence detections. Melody is shown in "
-              f"guitar range. {kept} of {total} transcribed vocal notes shown.")
+              f"guitar range. {melody_selection_note(kept, total)}.")
     return f"""\\version "2.24.0"
 \\header {{
   title = {_quote(title)}

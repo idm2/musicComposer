@@ -17,7 +17,7 @@ def make_analysis(notes: list[Note]) -> Analysis:
 
 
 def _tab_kept_total(out: str) -> tuple[int, int]:
-    m = re.search(r"(\d+) of (\d+) transcribed vocal notes shown", out)
+    m = re.search(r"(\d+) of (\d+) transcribed vocal notes selected for the melody line", out)
     assert m, out
     return int(m.group(1)), int(m.group(2))
 
@@ -71,3 +71,25 @@ def test_no_timed_lines_keeps_every_note_above_the_floor_in_both():
     assert {e.pitch for e in events if e.pitch is not None} == {64}
 
     assert _tab_kept_total(render_tab("T", t)) == (1, 2)
+
+
+def test_disclosure_reports_the_selected_count_even_when_fewer_are_actually_emitted():
+    """Follow-up finding on I1: melody_events() drops a note whose quantised slot collides with the
+    previous one, and tab.py's ASCII grid can overwrite a colliding slot with a later note — so what
+    each renderer actually EMITS can be fewer than what selected_melody() SELECTED. The shared
+    disclosure must keep reporting the selection count (the number genuinely identical everywhere),
+    never an emitted count that would silently re-diverge between renderers."""
+    a_note = Note(pitch=64, onset=10.00, duration=0.3, confidence=0.9, stem="vocals")
+    b_note = Note(pitch=67, onset=10.02, duration=0.3, confidence=0.9, stem="vocals")  # same 16th-note slot as a_note
+    line = LyricLine(section="Verse 1", text="la la", start=10.0, end=11.0, words=[], confidence=0.9)
+    t = Transcription(take=1, analysis=make_analysis([a_note, b_note]), lines=[line])
+
+    melody, kept, total = selected_melody(t)
+    assert (total, kept) == (2, 2)                                # both notes are selected
+
+    beatmap = BeatMap.from_analysis(t.analysis)
+    assert beatmap.sixteenth(a_note.onset) == beatmap.sixteenth(b_note.onset)     # confirm the collision
+    emitted = [e for e in melody_events(t, beatmap) if e.pitch is not None]
+    assert len(emitted) == 1                                      # but only one survives quantisation
+
+    assert _tab_kept_total(render_tab("T", t)) == (2, 2)          # disclosure still says 2 of 2, not 1

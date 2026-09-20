@@ -2,7 +2,7 @@
 from pathlib import Path
 
 from ..models import LOW_CONFIDENCE, Transcription
-from .leadsheet import chord_events, melody_events, selected_melody
+from .leadsheet import chord_events, melody_events, melody_selection_note, selected_melody
 from .timing import BeatMap
 
 KIND = {"maj": "major", "min": "minor", "dim": "diminished", "aug": "augmented", "5": "power", "1": "power",
@@ -64,7 +64,7 @@ def write_musicxml(title: str, t: Transcription, dest: Path) -> None:
     score = stream.Score()
     score.insert(0, metadata.Metadata(
         title=title,
-        composer=f"Song Composer — transcribed from take {t.take} — melody: {kept} of {total} notes shown"))
+        composer=f"Song Composer — transcribed from take {t.take} — {melody_selection_note(kept, total)}"))
     score.insert(0, part)
     score.makeNotation(inPlace=True)
     dest.parent.mkdir(parents=True, exist_ok=True)

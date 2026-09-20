@@ -46,6 +46,17 @@ def selected_melody(t: Transcription) -> tuple[list[Note], int, int]:
     return melody, len(melody), total
 
 
+def melody_selection_note(kept: int, total: int) -> str:
+    """The one disclosure sentence shared by every renderer. It describes what selected_melody()
+    KEPT, not what each renderer goes on to actually emit — melody_events() can still merge/drop a
+    note whose quantised slot collides with the previous one, and tab.py's ASCII grid can overwrite
+    a colliding slot with a later note — so a downstream renderer's own emitted count is a few notes
+    lower than this and would silently disagree between tab.txt/MusicXML/LilyPond if reported
+    separately (the exact bug this shared helper exists to prevent). "Selected" is the number that
+    is genuinely identical across all three outputs; "shown" would overstate it."""
+    return f"{kept} of {total} transcribed vocal notes selected for the melody line"
+
+
 def melody_events(t: Transcription, beatmap: BeatMap) -> list[MelodyEvent]:
     notes, _, _ = selected_melody(t)
     words = [w for line in t.lines for w in line.words]
@@ -55,7 +66,9 @@ def melody_events(t: Transcription, beatmap: BeatMap) -> list[MelodyEvent]:
         end = max(start + 1, beatmap.sixteenth(n.onset + n.duration))
         if placed and start < placed[-1].start16 + placed[-1].len16:
             if start <= placed[-1].start16:
-                continue                                           # two notes on one slot: keep the first
+                # two notes on one slot: keep the first, drop the second — the emitted event count
+                # can therefore be lower than selected_melody()'s kept count (see melody_selection_note).
+                continue
             placed[-1].len16 = start - placed[-1].start16
         near = [w for w in words if abs(w.start - n.onset) <= LYRIC_SNAP_S]
         lyric = min(near, key=lambda w: abs(w.start - n.onset)).word if near else None
