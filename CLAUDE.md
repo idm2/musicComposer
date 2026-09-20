@@ -4,7 +4,7 @@ A **songwriter and proof-of-concept generator**. Takes a reference song (audio f
 
 **Read `docs/BUILD-SPEC.md` first** — it is the authoritative design. `docs/DECISIONS.md` records why each choice was made and what was deliberately rejected.
 
-Status: **design approved, not yet implemented.**
+Status: **v1 implemented — see docs/superpowers/plans/2026-09-20-song-composer-v1.md.**
 
 ---
 

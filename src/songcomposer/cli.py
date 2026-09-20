@@ -97,3 +97,31 @@ def chart(song: str, force: bool = typer.Option(False, "--force", help="re-trans
     """Chosen take → chords.txt, tab.txt, chart.pdf, <song>.musicxml, lyrics.json in out/<song>/."""
     from .chart import run_chart
     run_chart(song, force=force)
+
+
+@app.command()
+def run(song: str,
+        from_: str = typer.Option(..., "--from", help="URL, audio file or video file"),
+        brief: str = typer.Option(None, "--brief", help="brief markdown file"),
+        text: str = typer.Option(None, "--text", help="inline brief"),
+        provider: str = typer.Option(None, "--provider")) -> None:
+    """Whole pipeline. Still stops to confirm cost, and to ask which take you want."""
+    from .pipeline import run_all
+    run_all(song, from_, brief_file=brief, brief_text=text, provider_name=provider)
+
+
+@app.command()
+def accuracy(song: str,
+             truth: str = typer.Option(..., "--truth", help=".lab file: 'onset end C:maj' per line"),
+             which: str = typer.Option("reference", "--of", help="reference | take")) -> None:
+    """Score detected chords against a published chart."""
+    from pathlib import Path
+
+    from .accuracy import parse_lab, score_chords
+    from .jsonio import read_json
+    from .models import Analysis, Transcription
+    from .paths import SongPaths
+    p = SongPaths(song)
+    found = (Analysis(**read_json(p.analysis)) if which == "reference" else Transcription(**read_json(p.transcription)).analysis).chords
+    s = score_chords(found, parse_lab(Path(truth).read_text(encoding="utf-8")))
+    print(f"root {s['root']:.0%}   root+quality {s['full']:.0%}   wrong-but-confident {s['high_confidence_wrong']:.0%}")
