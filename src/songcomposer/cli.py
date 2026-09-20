@@ -70,3 +70,10 @@ def generate(song: str,
     """Spec → takes. Validates, prints estimated cost, and waits for an explicit 'yes' before spending."""
     from .generate import run_generate
     run_generate(song, provider_name=provider, regen=regen, fidelity=fidelity, note=note)
+
+
+@app.command()
+def pick(song: str, take: int = typer.Option(..., "--take", help="take number from 04-takes/")) -> None:
+    """Choose a take → 05-chosen.json and out/<song>/<song>.mp3."""
+    from .pick import run_pick
+    run_pick(song, take)
