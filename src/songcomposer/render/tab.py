@@ -2,13 +2,12 @@
 from ..models import LOW_CONFIDENCE, Transcription
 from . import guitar
 from .chordsheet import label
+from .leadsheet import MELODY_MIN_CONFIDENCE, selected_melody
 from .timing import BeatMap
 
 STRINGS = "EADGBe"
 BARS_PER_SYSTEM = 4
 SLOT = 4                                    # characters per sixteenth
-MELODY_MIN_CONFIDENCE = 0.3                 # below this, a "vocal" note is more likely a transcription artefact
-MELODY_SPAN_PAD_S = 0.5                     # widen each sung line's span by this much on each side
 
 
 def _shapes_block(t: Transcription) -> list[str]:
@@ -57,23 +56,16 @@ def _rhythm_block(t: Transcription, beatmap: BeatMap) -> list[str]:
 
 
 def _melody_block(t: Transcription, beatmap: BeatMap) -> list[str]:
-    a = t.analysis
-    all_vocals = sorted((n for n in a.notes if n.stem == "vocals"), key=lambda n: n.onset)
-    total = len(all_vocals)
-    conf_ok = [n for n in all_vocals if n.confidence >= MELODY_MIN_CONFIDENCE]
-    timed = [line for line in t.lines if line.start is not None]
-    if timed:
-        spans = [(line.start - MELODY_SPAN_PAD_S, line.end + MELODY_SPAN_PAD_S) for line in timed]
-        melody = [n for n in conf_ok if any(start <= n.onset <= end for start, end in spans)]
+    melody, kept, total = selected_melody(t)
+    if any(line.start is not None for line in t.lines):
         header = "MELODY (vocal line in guitar range; (n) = low-confidence note)"
     else:
         # no lyric line has timing at all: we cannot clip to sung spans, so show every note that
         # clears the confidence floor and say plainly that instrumental-section artefacts may be included.
-        melody = conf_ok
         header = ("MELODY (vocal line in guitar range; (n) = low-confidence note; "
                    "no lyric timing detected — notes not clipped to sung spans)")
-    dropped = total - len(melody)
-    out = [header, f"{len(melody)} of {total} transcribed vocal notes shown "
+    dropped = total - kept
+    out = [header, f"{kept} of {total} transcribed vocal notes shown "
                     f"({dropped} outside sung spans or below confidence {MELODY_MIN_CONFIDENCE})."]
     if not melody:
         return out + ["no melody notes were transcribed"]

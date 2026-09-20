@@ -1,10 +1,13 @@
-"""Quantise the transcription onto the beat grid once, for both engraved outputs (MusicXML and LilyPond)."""
+"""Quantise the transcription onto the beat grid once, for both engraved outputs (MusicXML and LilyPond)
+AND for tab.py's plain-text melody — one selection, shared, so every renderer describes the same music."""
 from dataclasses import dataclass
 
-from ..models import LOW_CONFIDENCE, Chord, Transcription
+from ..models import LOW_CONFIDENCE, Chord, Note, Transcription
 from .timing import BeatMap
 
 LYRIC_SNAP_S = 0.2
+MELODY_MIN_CONFIDENCE = 0.3                 # below this, a "vocal" note is more likely a transcription artefact
+MELODY_SPAN_PAD_S = 0.5                     # widen each sung line's span by this much on each side
 
 
 @dataclass
@@ -23,8 +26,28 @@ class ChordEvent:
     chord: Chord | None
 
 
+def selected_melody(t: Transcription) -> tuple[list[Note], int, int]:
+    """The vocal notes worth engraving: above the confidence floor, and — when we know where lines
+    were sung — inside a sung line's span padded on each side. Below the floor a "vocal" note is more
+    likely a transcription artefact than something to notate; outside every sung span it is almost
+    always basic-pitch picking up an instrumental section. Returns (kept notes, kept count, total count).
+    Shared by every renderer (tab.txt, MusicXML, LilyPond) so they can never disagree about the melody."""
+    all_vocals = sorted((n for n in t.analysis.notes if n.stem == "vocals"), key=lambda n: n.onset)
+    total = len(all_vocals)
+    conf_ok = [n for n in all_vocals if n.confidence >= MELODY_MIN_CONFIDENCE]
+    timed = [line for line in t.lines if line.start is not None]
+    if timed:
+        spans = [(line.start - MELODY_SPAN_PAD_S, line.end + MELODY_SPAN_PAD_S) for line in timed]
+        melody = [n for n in conf_ok if any(start <= n.onset <= end for start, end in spans)]
+    else:
+        # no lyric line has timing at all: we cannot clip to sung spans, so keep every note that
+        # clears the confidence floor rather than silently dropping everything.
+        melody = conf_ok
+    return melody, len(melody), total
+
+
 def melody_events(t: Transcription, beatmap: BeatMap) -> list[MelodyEvent]:
-    notes = sorted((n for n in t.analysis.notes if n.stem == "vocals"), key=lambda n: n.onset)
+    notes, _, _ = selected_melody(t)
     words = [w for line in t.lines for w in line.words]
     placed: list[MelodyEvent] = []
     for n in notes:

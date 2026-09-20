@@ -2,7 +2,7 @@
 from pathlib import Path
 
 from ..models import LOW_CONFIDENCE, Transcription
-from .leadsheet import chord_events, melody_events
+from .leadsheet import chord_events, melody_events, selected_melody
 from .timing import BeatMap
 
 KIND = {"maj": "major", "min": "minor", "dim": "diminished", "aug": "augmented", "5": "power", "1": "power",
@@ -58,8 +58,11 @@ def write_musicxml(title: str, t: Transcription, dest: Path) -> None:
         part.insert(e.start_beat, harmony.ChordSymbol(**kw))
         if e.chord.confidence < LOW_CONFIDENCE or e.chord.quality not in KIND:
             part.insert(e.start_beat, expressions.TextExpression("?"))
+    _, kept, total = selected_melody(t)
     score = stream.Score()
-    score.insert(0, metadata.Metadata(title=title, composer=f"Song Composer — transcribed from take {t.take}"))
+    score.insert(0, metadata.Metadata(
+        title=title,
+        composer=f"Song Composer — transcribed from take {t.take} — melody: {kept} of {total} notes shown"))
     score.insert(0, part)
     score.makeNotation(inPlace=True)
     dest.parent.mkdir(parents=True, exist_ok=True)
