@@ -90,3 +90,10 @@ def pick(song: str, take: int = typer.Option(..., "--take", help="take number fr
     """Choose a take → 05-chosen.json and out/<song>/<song>.mp3."""
     from .pick import run_pick
     run_pick(song, take)
+
+
+@app.command()
+def chart(song: str, force: bool = typer.Option(False, "--force", help="re-transcribe the chosen take")) -> None:
+    """Chosen take → chords.txt, tab.txt, chart.pdf, <song>.musicxml, lyrics.json in out/<song>/."""
+    from .chart import run_chart
+    run_chart(song, force=force)
