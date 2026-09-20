@@ -27,6 +27,7 @@ def test_chords_sit_above_the_word_they_land_on():
     out = render_chordsheet("Glass Hour", t).splitlines()
     i = out.index("Glass hour hold me still")
     assert out[i - 2] == "[Verse 1]"
+    assert out[i - 1] == "C" + " " * 15 + "Am"
     assert out[i - 1].index("Am") == out[i].index("me")
 
 
@@ -69,6 +70,28 @@ def test_trailing_chords_after_an_outro_section_do_not_duplicate_its_header():
     out = render_chordsheet("T", t)
     assert out.count("[Outro]") == 1
     assert out.rstrip("\n").splitlines()[-1] == "D"
+
+
+def test_chords_shown_under_an_honest_heading_when_no_lyric_line_has_timing():
+    # the take sang something quite different from the spec: nothing aligned, but the chords are real
+    lines = [LyricLine(section="Verse 1", text="one two", start=None, end=None, words=[], confidence=0.0)]
+    chords = [ch("C:maj", "C", 0.0, 2.0), ch("F:maj", "F", 2.0, 2.0, conf=0.3)]
+    out = render_chordsheet("T", make(chords, lines))
+    assert "[Chords — no lyric timing detected, not placed against words]" in out
+    assert "C  F?" in out
+    assert "one two   (timing not detected — chords not placed)" in out
+
+
+def test_no_heading_when_there_is_neither_timing_nor_chords():
+    lines = [LyricLine(section="Verse 1", text="one two", start=None, end=None, words=[], confidence=0.0)]
+    out = render_chordsheet("T", make([], lines))
+    assert "[Chords — no lyric timing detected" not in out
+
+
+def test_chords_still_shown_when_there_are_no_lyric_lines_at_all():
+    out = render_chordsheet("T", make([ch("G:maj", "G", 0.0, 4.0)], []))
+    assert "[Chords — no lyric timing detected, not placed against words]" in out
+    assert "G" in out.splitlines()
 
 
 def test_importing_chordsheet_does_not_import_heavy_deps():

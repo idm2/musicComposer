@@ -44,6 +44,11 @@ def render_chordsheet(title: str, t: Transcription) -> str:
         intro = [c for c in chords if c.onset < timed[0].start - LEAD_S]
         if intro:
             out += ["[Intro]", "  ".join(label(c) for c in intro), ""]
+    elif chords:
+        # no lyric line could be aligned at all (e.g. the take sang something quite different from
+        # the spec) — never silently drop the chords just because they have nowhere to sit above a word
+        out += ["[Chords — no lyric timing detected, not placed against words]",
+                "  ".join(label(c) for c in chords), ""]
     section = None
     for line in t.lines:
         if line.section != section:
