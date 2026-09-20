@@ -39,7 +39,7 @@ no-op once its output exists (see "Resuming" below).
 | `songcomposer compose <song> [--force]` | Brief + analysis -> lyrics and song spec (`work/<song>/03-spec.json`). Edit the file freely afterwards. |
 | `songcomposer generate <song> [--provider] [--fidelity] [--regen]` | Spec -> takes. Validates, prints estimated cost, and waits for an explicit `yes` before spending. |
 | `songcomposer pick <song> --take N` | Choose a take -> `05-chosen.json` and `out/<song>/<song>.mp3`. |
-| `songcomposer chart <song> [--force]` | Chosen take -> `chords.txt`, `tab.txt`, `chart.pdf`, `<song>.musicxml`, `lyrics.json` in `out/<song>/`. |
+| `songcomposer chart <song> [--force]` | Chosen take -> `chords.txt`, `tab.txt`, `<song>.musicxml`, `lyrics.json` in `out/<song>/` (plus `chart.pdf` when LilyPond is installed and the renderer succeeds). |
 | `songcomposer run <song> --from <url> [--brief file \| --text ...] [--provider]` | Whole pipeline. Still stops to confirm cost, and to ask which take you want. |
 | `songcomposer accuracy <song> --truth <file.lab> [--of reference\|take]` | Score detected chords against a published chart (MIREX `.lab` format). |
 
