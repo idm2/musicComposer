@@ -28,3 +28,18 @@ def ingest(song: str,
     """Reference -> work/<song>/00-source.wav + 00-source.json."""
     from .ingest import run_ingest
     run_ingest(song, from_, force=force)
+
+
+@app.command()
+def analyze(song: str,
+            ears: str = typer.Option("", "--ears", help="comma list; default = every ear installed")) -> None:
+    """Two-ear analysis of the reference → work/<song>/01-analysis.json."""
+    from .analysis import analyze as run
+    from .config import load_config
+    from .jsonio import write_model
+    from .paths import SongPaths
+    p = SongPaths(song)
+    wav = p.require(p.source_wav, "ingest")
+    chosen = {e.strip() for e in ears.split(",") if e.strip()} or None
+    write_model(p.analysis, run(wav, p.cache, load_config(), chosen))
+    print(f"  → {p.analysis}")
