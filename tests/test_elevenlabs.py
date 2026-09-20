@@ -76,3 +76,53 @@ def test_rejected_plan_saves_the_suggestion_and_raises(tmp_path):
     with pytest.raises(RuntimeError, match="bad_composition_plan"):
         provider.generate(REQ, tmp_path, 1, lambda t: None)
     assert read_json(tmp_path / "elevenlabs-plan-suggestion.json") == suggestion
+
+
+class _TrackingClient(httpx.Client):
+    """httpx.Client that records every close() call on a list passed in by the test."""
+
+    def __init__(self, closed: list, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._closed_sink = closed
+
+    def close(self):
+        self._closed_sink.append(self)
+        super().close()
+
+
+def _ok_handler(req):
+    return httpx.Response(200, content=b"ID3" + b"\x00" * 1000)
+
+
+def _rejected_handler(req):
+    suggestion = {"chunks": [{"text": "[Verse]\nsafe", "duration_ms": 10000, "positive_styles": ["folk"]}]}
+    return httpx.Response(400, json={"detail": {"status": "bad_composition_plan", "message": "copyright",
+                                                "data": {"composition_plan_suggestion": suggestion}}})
+
+
+@pytest.mark.parametrize("handler,expect_raise", [(_ok_handler, False), (_rejected_handler, True)])
+def test_owned_client_is_closed_on_success_and_on_raise(tmp_path, monkeypatch, handler, expect_raise):
+    from songcomposer.generate import elevenlabs as mod
+    monkeypatch.setattr(mod, "probe_duration", lambda p: 10.0)
+    closed: list = []
+    monkeypatch.setattr(mod.httpx, "Client",
+                        lambda *a, **k: _TrackingClient(closed, transport=httpx.MockTransport(handler)))
+
+    provider = ElevenLabsProvider("music_v2_5")   # no client injected — provider owns the one it creates
+    if expect_raise:
+        with pytest.raises(RuntimeError, match="bad_composition_plan"):
+            provider.generate(REQ, tmp_path, 1, lambda t: None)
+    else:
+        provider.generate(REQ, tmp_path, 1, lambda t: None)
+    assert len(closed) == 1
+
+
+def test_injected_client_is_not_closed(tmp_path, monkeypatch):
+    from songcomposer.generate import elevenlabs as mod
+    monkeypatch.setattr(mod, "probe_duration", lambda p: 10.0)
+    closed: list = []
+    injected = _TrackingClient(closed, transport=httpx.MockTransport(_ok_handler))
+
+    ElevenLabsProvider("music_v2_5", client=injected).generate(REQ, tmp_path, 1, lambda t: None)
+    assert closed == []
+    injected.close()   # caller-owned — clean up what the test opened

@@ -54,22 +54,27 @@ class ElevenLabsProvider:
 
     def generate(self, req: GenerationRequest, dest_dir: Path, start_index: int,
                  on_take: Callable[[TakeResult], None]) -> float:
+        own = self._client is None
         client = self._client or httpx.Client(timeout=900.0)
-        dest_dir.mkdir(parents=True, exist_ok=True)
-        spec = self.payload(req)
-        minutes = 0.0
-        for i, seed in enumerate(spec["seeds"]):
-            print(f"  [elevenlabs] take {i + 1}/{len(spec['seeds'])} (seed {seed}) …")
-            body = {"model_id": spec["model_id"], "composition_plan": spec["composition_plan"], "seed": seed}
-            res = eleven_post("/music", body, client, params={"output_format": "mp3_44100_192"})
-            if res.status_code != 200:
-                self._raise(res, dest_dir)
-            path = dest_dir / f"take-{start_index + i}.mp3"
-            path.write_bytes(res.content)
-            duration = probe_duration(path)
-            minutes += duration / 60
-            on_take(TakeResult(provider_ref=res.headers.get("song-id", f"seed-{seed}"), path=path, duration_s=duration))
-        return minutes * USD_PER_MINUTE
+        try:
+            dest_dir.mkdir(parents=True, exist_ok=True)
+            spec = self.payload(req)
+            minutes = 0.0
+            for i, seed in enumerate(spec["seeds"]):
+                print(f"  [elevenlabs] take {i + 1}/{len(spec['seeds'])} (seed {seed}) …")
+                body = {"model_id": spec["model_id"], "composition_plan": spec["composition_plan"], "seed": seed}
+                res = eleven_post("/music", body, client, params={"output_format": "mp3_44100_192"})
+                if res.status_code != 200:
+                    self._raise(res, dest_dir)
+                path = dest_dir / f"take-{start_index + i}.mp3"
+                path.write_bytes(res.content)
+                duration = probe_duration(path)
+                minutes += duration / 60
+                on_take(TakeResult(provider_ref=res.headers.get("song-id", f"seed-{seed}"), path=path, duration_s=duration))
+            return minutes * USD_PER_MINUTE
+        finally:
+            if own:
+                client.close()
 
     @staticmethod
     def _raise(res: httpx.Response, dest_dir: Path) -> None:
