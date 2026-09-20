@@ -48,12 +48,22 @@ def validate_request(req: GenerationRequest, limits: ProviderLimits,
         problems.append("style_prompt: empty")
     if len(req.style_prompt) > limits.max_style_chars:
         problems.append(f"style_prompt: {len(req.style_prompt)} chars > limit {limits.max_style_chars}")
-    if STYLE_OF.search(req.style_prompt):
-        problems.append(f"style_prompt: says '{STYLE_OF.search(req.style_prompt).group(0)}' — describe the sound, do not name a style of someone")
-    for field, text in (("title", req.title), ("style_prompt", req.style_prompt)):
+    if len(req.negative_style) > limits.max_style_chars:
+        problems.append(f"negative_style: {len(req.negative_style)} chars > limit {limits.max_style_chars}")
+
+    for field, text in (("style_prompt", req.style_prompt), ("negative_style", req.negative_style)):
+        style_of = STYLE_OF.search(text)
+        if style_of:
+            problems.append(f"{field}: says '{style_of.group(0)}' — describe the sound, do not name a style of someone")
+
+    for field, text in (("title", req.title), ("style_prompt", req.style_prompt), ("negative_style", req.negative_style)):
         for term in banned:
             if re.search(rf"(?i)\b{re.escape(term)}\b", text):
                 problems.append(f"{field}: contains banned term {term!r} (the reference's artist/title)")
+        for name, rx in LINE_VALIDATORS:
+            m = rx.search(text)
+            if m:
+                problems.append(f"{field}: {name}: ...{text[max(0, m.start() - 20):m.end() + 20]}...")
 
     if not 2 <= len(req.sections) <= limits.max_sections:
         problems.append(f"sections: need at least 2 sections and at most {limits.max_sections}, got {len(req.sections)}")

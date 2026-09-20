@@ -78,6 +78,31 @@ def test_lines_copied_from_the_reference_are_caught():
     assert any("copies the reference" in p and "streetlights" in p for p in out)
 
 
+@pytest.mark.parametrize("field", ["title", "style_prompt", "negative_style"])
+@pytest.mark.parametrize("text,rule", [
+    ("Hold me <break/> still", "markup"),
+    ("Broken � char", "replacement-char"),
+    ("TODO write this line", "placeholder"),
+])
+def test_prompt_fields_get_pattern_checks(field, text, rule):
+    r = req(**{field: text})
+    assert any(p.startswith(f"{field}: {rule}") for p in problems(r)), problems(r)
+
+
+def test_negative_style_banned_term_and_style_of():
+    assert any("banned term" in p for p in problems(req(negative_style="not like Bon Iver"), banned=["Bon Iver"]))
+    assert any("style of" in p for p in problems(req(negative_style="in the style of someone")))
+
+
+def test_negative_style_length_limit():
+    over_limit = "x" * (GENERIC_LIMITS.max_style_chars + 1)
+    assert any(p.startswith("negative_style:") and "chars > limit" in p for p in problems(req(negative_style=over_limit)))
+
+
+def test_negative_style_edm_autotune_still_passes():
+    assert problems(req(negative_style="edm, autotune")) == []
+
+
 def test_banned_terms_from_source_title():
     src = SourceInfo(origin="u", kind="url", title="Bon Iver - Holocene (Official Video)", uploader="Bon Iver",
                      duration_s=1, sample_rate=44100, sha1="a" * 40, ingested_at="now")
