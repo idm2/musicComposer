@@ -4,7 +4,7 @@ import sys
 import pytest
 
 from songcomposer import transcribe
-from songcomposer.models import SongSpec, SpecSection, Word
+from songcomposer.models import LyricLine, SongSpec, SpecSection, Word
 
 SPEC = SongSpec(title="T", style_prompt="s", target_duration_s=60, sections=[
     SpecSection(name="Verse 1", duration_s=30, lines=["Glass hour, hold me still", "Turn the morning down"]),
@@ -44,6 +44,39 @@ def test_sections_follow_the_aligned_lines():
               ("until", 20.0, 20.4), ("you", 20.4, 20.6), ("come", 20.6, 21.0), ("around", 21.0, 22.0))
     secs = transcribe.sections_from_lines(transcribe.align_lines(SPEC, h), 40.0)
     assert [(s.label, s.start, s.end) for s in secs] == [("Verse 1", 1.0, 20.0), ("Chorus", 20.0, 40.0)]
+
+
+def _line(section, start, end, confidence):
+    return LyricLine(section=section, text="x", start=start, end=end, words=[], confidence=confidence)
+
+
+def test_a_fully_unaligned_middle_section_is_reported_not_dropped():
+    """Reviewer's exact repro: Verse 1 aligned -> Hook (0 aligned lines) -> Verse 2 aligned.
+    Hook must not disappear, and Verse 1 must not silently swallow its span."""
+    lines = [_line("Verse 1", 1.0, 3.0, 0.9),
+             _line("Hook", None, None, 0.0),
+             _line("Hook", None, None, 0.0),
+             _line("Verse 2", 50.0, 52.0, 0.8)]
+    secs = transcribe.sections_from_lines(lines, 120.0)
+    assert [(s.label, s.start, s.end) for s in secs] == [
+        ("Verse 1", 1.0, 50.0), ("Hook", 50.0, 50.0), ("Verse 2", 50.0, 120.0)]
+    assert secs[1].start == secs[1].end and secs[1].confidence == 0.0
+
+
+def test_a_fully_unaligned_first_section_appears_before_the_first_aligned_one():
+    lines = [_line("Hook", None, None, 0.0),
+             _line("Verse 1", 5.0, 7.0, 0.9)]
+    secs = transcribe.sections_from_lines(lines, 60.0)
+    assert [(s.label, s.start, s.end) for s in secs] == [("Hook", 5.0, 5.0), ("Verse 1", 5.0, 60.0)]
+    assert secs[0].confidence == 0.0
+
+
+def test_a_fully_unaligned_last_section_sits_at_the_end():
+    lines = [_line("Verse 1", 2.0, 4.0, 1.0),
+             _line("Outro", None, None, 0.0)]
+    secs = transcribe.sections_from_lines(lines, 90.0)
+    assert [(s.label, s.start, s.end) for s in secs] == [("Verse 1", 2.0, 90.0), ("Outro", 90.0, 90.0)]
+    assert secs[1].confidence == 0.0
 
 
 def test_importing_transcribe_does_not_import_the_analysis_stack():

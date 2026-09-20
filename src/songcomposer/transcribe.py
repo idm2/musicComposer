@@ -71,16 +71,42 @@ def align_lines(spec: SongSpec, heard: list[Word]) -> list[LyricLine]:
 
 
 def sections_from_lines(lines: list[LyricLine], duration_s: float) -> list[Section]:
-    firsts: list[tuple[str, float, list[float]]] = []
+    """Emit every spec section, in spec order — never drop one just because none of its lines
+    aligned. A section with no aligned line is a zero-length marker (start == end) at the point
+    where it would have sat: the end of whatever section was emitted before it, or the first
+    aligned start (0.0 if nothing ever aligned) when it precedes everything. Zero length says
+    "we don't know where this ran"; it never borrows or inflates a neighbour's span."""
+    groups: list[tuple[str, list[LyricLine]]] = []
     for line in lines:
-        if line.start is None:
-            continue
-        if firsts and firsts[-1][0] == line.section:
-            firsts[-1][2].append(line.confidence)
+        if groups and groups[-1][0] == line.section:
+            groups[-1][1].append(line)
         else:
-            firsts.append((line.section, line.start, [line.confidence]))
-    return [Section(label=name, start=start, end=firsts[i + 1][1] if i + 1 < len(firsts) else duration_s,
-                    confidence=round(sum(confs) / len(confs), 3)) for i, (name, start, confs) in enumerate(firsts)]
+            groups.append((line.section, [line]))
+
+    aligned: dict[int, tuple[float, list[float]]] = {}
+    for idx, (_, glines) in enumerate(groups):
+        hits = [l for l in glines if l.start is not None]
+        if hits:
+            aligned[idx] = (hits[0].start, [l.confidence for l in hits])
+
+    aligned_order = sorted(aligned)
+    ends = {idx: (aligned[aligned_order[pos + 1]][0] if pos + 1 < len(aligned_order) else duration_s)
+           for pos, idx in enumerate(aligned_order)}
+    first_aligned_start = aligned[aligned_order[0]][0] if aligned_order else 0.0
+
+    sections: list[Section] = []
+    prev_end: float | None = None
+    for idx, (name, _) in enumerate(groups):
+        if idx in aligned:
+            start, confs = aligned[idx]
+            end = ends[idx]
+            confidence = round(sum(confs) / len(confs), 3)
+        else:
+            start = end = first_aligned_start if prev_end is None else prev_end
+            confidence = 0.0
+        sections.append(Section(label=name, start=start, end=end, confidence=confidence))
+        prev_end = end
+    return sections
 
 
 def run_transcribe(song: str, force: bool = False) -> Transcription:
