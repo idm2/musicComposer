@@ -3,6 +3,7 @@ import subprocess
 import pytest
 
 from songcomposer import generate
+from songcomposer.config import Config
 from songcomposer.generate.provider import GENERIC_LIMITS, CostEstimate, TakeResult
 from songcomposer.jsonio import read_json, write_model
 from songcomposer.models import SongSpec, SpecSection
@@ -135,6 +136,30 @@ def test_paid_takes_survive_a_mid_run_failure(song, mp3_bytes):
                               input_fn=answers("yes"))
     run = read_json(song.takes_json)["runs"][0]
     assert len(run["takes"]) == 1 and "stopped early" in run["warnings"][0]
+    assert run["cost_actual_usd"] == 0.12
+    assert any("upper bound" in w for w in run["warnings"])
+
+
+def test_cost_recorded_as_upper_bound_when_nothing_lands(song, mp3_bytes):
+    with pytest.raises(RuntimeError, match="blew up"):
+        generate.run_generate("demo", fidelity="loose", provider=FakeProvider("fake", mp3_bytes, fail_after=0),
+                              input_fn=answers("yes"))
+    run = read_json(song.takes_json)["runs"][0]
+    assert run["takes"] == []
+    assert run["cost_actual_usd"] == 0.12
+    assert any("stopped early" in w for w in run["warnings"])
+    assert any("upper bound" in w for w in run["warnings"])
+
+    # a run with zero takes is not treated as cached — retrying must still gate on pre-flight/confirmation
+    # and actually call the provider again.
+    m = generate.run_generate("demo", fidelity="loose", provider=FakeProvider("fake", mp3_bytes),
+                              input_fn=answers("yes"))
+    assert [t.file for t in m.all_takes()] == ["take-1.mp3", "take-2.mp3", "take-3.mp3"]
+
+
+def test_get_provider_rejects_unknown_name():
+    with pytest.raises(ValueError, match="suno"):
+        generate.get_provider("nope", Config())
 
 
 def test_sanity_check_flags_short_and_tiny(tmp_path, mp3_bytes):

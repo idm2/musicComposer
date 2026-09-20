@@ -114,6 +114,10 @@ def run_generate(song: str, provider_name: str | None = None, regen: bool = Fals
         run.cost_actual_usd = round(provider.generate(req, paths.takes_dir, start, on_take), 4)
     except Exception as e:
         run.warnings.append(f"generation stopped early: {e}")
+        # The provider may have submitted (and been charged for) the whole request up front,
+        # even though few or no takes landed — a cost ledger must never under-state spend.
+        run.cost_actual_usd = round(est.usd, 4)
+        run.warnings.append("actual cost unknown after failure — recorded the full estimate as an upper bound")
         raise
     finally:
         write_model(paths.takes_json, manifest)
