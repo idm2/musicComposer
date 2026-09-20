@@ -105,13 +105,17 @@ def chart(song: str, force: bool = typer.Option(False, "--force", help="re-trans
 
 @app.command()
 def run(song: str,
-        from_: str = typer.Option(..., "--from", help="URL, audio file or video file"),
+        from_: str = typer.Option(None, "--from",
+                                  help="URL, audio file or video file — optional; omit it to compose from "
+                                       "--brief/--text alone, with no reference"),
         brief: str = typer.Option(None, "--brief", help="brief markdown file"),
         text: str = typer.Option(None, "--text", help="inline brief"),
         provider: str = typer.Option(None, "--provider"),
         takes: int = typer.Option(None, "--takes",
                                   help="how many takes to generate, 1-6 (asked if omitted, default 3)")) -> None:
     """Whole pipeline. Still stops to confirm cost, and to ask which take you want."""
+    if from_ is None and brief is None and text is None:
+        raise ValueError("give --from <reference> or a brief (--brief <file> / --text \"...\") — at least one is required")
     from .pipeline import run_all
     run_all(song, from_, brief_file=brief, brief_text=text, provider_name=provider, takes=takes)
 

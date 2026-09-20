@@ -1,8 +1,9 @@
 # Song Composer
 
-A songwriter and proof-of-concept generator. Takes a reference song (audio file, video, or link) plus a
-brief, genuinely analyses the reference, writes an original song in that vein, generates human-sounding
-vocal audio, and produces the guitar chords and tab for what it generated. The analysis engine runs twice
+A songwriter and proof-of-concept generator. Takes a brief, plus — optionally — a reference song (audio
+file, video, or link), genuinely analyses any reference given, writes an original song in that vein (or,
+with no reference, straight from the brief), generates human-sounding vocal audio, and produces the
+guitar chords and tab for what it generated. When there is a reference, the analysis engine runs twice
 — once over the reference, once over our own generated audio — so the chart it produces is derived from
 the actual recording and can never disagree with it.
 
@@ -33,14 +34,14 @@ no-op once its output exists (see "Resuming" below).
 
 | Command | What it does |
 |---|---|
-| `songcomposer ingest <song> --from <url\|path>` | Reference -> `work/<song>/00-source.wav` + `00-source.json`. |
+| `songcomposer ingest <song> --from <url\|path>` | Reference -> `work/<song>/00-source.wav` + `00-source.json`. Skip this (and `analyze`) entirely for a brief-only song. |
 | `songcomposer analyze <song> [--ears ...]` | Two-ear analysis of the reference -> `work/<song>/01-analysis.json`. |
 | `songcomposer brief <song> --from <file.md> \| --text "..."` | Your brief -> `work/<song>/02-brief.json`. |
-| `songcomposer compose <song> [--force]` | Brief + analysis -> lyrics and song spec (`work/<song>/03-spec.json`). Edit the file freely afterwards. |
-| `songcomposer generate <song> [--provider] [--fidelity] [--regen]` | Spec -> takes. Validates, prints estimated cost, and waits for an explicit `yes` before spending. |
+| `songcomposer compose <song> [--force]` | Brief (+ analysis, if there is one) -> lyrics and song spec (`work/<song>/03-spec.json`). With no reference, composes from the brief alone and says so. Edit the file freely afterwards. |
+| `songcomposer generate <song> [--provider] [--fidelity] [--takes N] [--regen]` | Spec -> takes. Validates, prints estimated cost, and waits for an explicit `yes` before spending. `--takes` picks how many takes to generate (1-6, default 3; asked if omitted). `--fidelity` is asked if omitted **and there is a reference to track** — with no reference it is fixed to `loose` and must not be passed explicitly. |
 | `songcomposer pick <song> --take N` | Choose a take -> `05-chosen.json` and `out/<song>/<song>.mp3`. |
-| `songcomposer chart <song> [--force]` | Chosen take -> `chords.txt`, `tab.txt`, `<song>.musicxml`, `lyrics.json` in `out/<song>/` (plus `chart.pdf` when LilyPond is installed and the renderer succeeds). |
-| `songcomposer run <song> --from <url> [--brief file \| --text ...] [--provider]` | Whole pipeline. Still stops to confirm cost, and to ask which take you want. |
+| `songcomposer chart <song> [--force]` | Chosen take -> `chords.txt`, `tab.txt`, `<song>.musicxml`, `lyrics.json` in `out/<song>/` (plus `chart.pdf` when LilyPond is installed and the renderer succeeds). Works the same with or without a reference — it transcribes the take you generated, not the reference. |
+| `songcomposer run <song> [--from <url>] [--brief file \| --text ...] [--provider] [--takes N]` | Whole pipeline. `--from` is optional — omit it for a brief-only song, but give at least one of `--from`/`--brief`/`--text`. Still stops to confirm cost, and to ask which take you want (and, interactively, how many takes and — with a reference — how closely to track it). |
 | `songcomposer accuracy <song> --truth <file.lab> [--of reference\|take]` | Score detected chords against a published chart (MIREX `.lab` format). |
 
 Run any command with `--help` for its full option list.
@@ -51,13 +52,14 @@ Every stage keeps its own no-op-if-done behaviour, so `run` — and re-running a
 resumes rather than repeating expensive work:
 
 - `ingest` skips re-downloading/re-encoding if `00-source.wav`/`.json` already exist (`--force` overrides).
+  `run` skips `ingest` and `analyze` entirely when no `--from` is given — there is nothing to ingest.
 - `run` itself skips the objective+subjective `analyze` call if `01-analysis.json` exists, and skips
   `brief` if `02-brief.json` exists.
 - `compose` refuses to overwrite an existing `03-spec.json` unless `--force` (so your hand-edits to the
   lyrics survive a re-run).
-- `generate` is a no-op for a request it already generated takes for (same spec + fidelity + provider);
-  `--regen` forces fresh, paid takes. **This is the one stage that still stops for the cost estimate and
-  a typed `yes` even under `run` — there is no bypass flag.**
+- `generate` is a no-op for a request it already generated takes for (same spec + fidelity + provider +
+  take count); `--regen` forces fresh, paid takes. **This is the one stage that still stops for the cost
+  estimate and a typed `yes` even under `run` — there is no bypass flag.**
 - `pick` is cheap (a copy + a JSON write) and simply redoes it if asked again.
 - `chart` re-runs the (fast, deterministic) renderers every time, but skips the expensive part — the
   `analyze` re-run over the chosen take — if `06-transcription.json` already matches the chosen take.

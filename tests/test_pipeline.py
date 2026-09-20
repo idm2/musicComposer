@@ -25,24 +25,40 @@ def fake_analyze(audio, cache_dir, config, ears=None, lyrics_hint=""):
                               vocal_gender="female", production="dry", emotional_arc="", arrangement_density=[], sections=[]))
 
 
-def test_whole_pipeline_contracts(root, sine_wav, mp3_bytes, monkeypatch):  # noqa: F811
+@pytest.mark.parametrize("with_reference", [True, False], ids=["with-reference", "brief-only"])
+def test_whole_pipeline_contracts(root, sine_wav, mp3_bytes, monkeypatch, with_reference):  # noqa: F811
     pytest.importorskip("music21")
     monkeypatch.setattr(pipeline, "analyze", fake_analyze)
     monkeypatch.setattr(transcribe, "analyze", fake_analyze)
+
     def fake_to_wav(src, dst):
         dst.parent.mkdir(parents=True, exist_ok=True)
         dst.write_bytes(b"wav")
 
     monkeypatch.setattr(transcribe, "to_wav", fake_to_wav)
     monkeypatch.setattr(compose, "chat_json", lambda *a, **k: GOOD)
-    replies = iter(["yes", "2"])
-    pipeline.run_all("demo", str(sine_wav), brief_text="A song about insomnia after a breakup.",
-                     provider=FakeProvider("fake", mp3_bytes), fidelity="loose", input_fn=lambda prompt: next(replies))
+
+    if with_reference:
+        src, fidelity, chosen_take, replies = str(sine_wav), "loose", 2, iter(["yes", "2"])
+    else:
+        # No --from at all (Task 29): ingest and analyze never run. fidelity is left unset — with no
+        # analysis, run_generate must not ask for it (and must not ask to spend before the fake 'yes').
+        src, fidelity, chosen_take, replies = None, None, 1, iter(["yes", "1"])
+
+    pipeline.run_all("demo", src, brief_text="A song about insomnia after a breakup.",
+                     provider=FakeProvider("fake", mp3_bytes), fidelity=fidelity,
+                     input_fn=lambda prompt: next(replies))
     p = SongPaths("demo")
-    for path, model in ((p.source_json, SourceInfo), (p.analysis, Analysis), (p.brief, Brief), (p.spec, SongSpec),
-                        (p.takes_json, TakesManifest), (p.chosen, Chosen), (p.transcription, Transcription)):
+    expected = [(p.brief, Brief), (p.spec, SongSpec), (p.takes_json, TakesManifest), (p.chosen, Chosen),
+                (p.transcription, Transcription)]
+    if with_reference:
+        expected = [(p.source_json, SourceInfo), (p.analysis, Analysis)] + expected
+    for path, model in expected:
         model.model_validate(read_json(path))                     # raises if any stage broke its contract
-    assert read_json(p.chosen)["take"] == 2
+    if not with_reference:
+        assert not p.source_wav.exists() and not p.source_json.exists() and not p.analysis.exists()
+        assert read_json(p.spec)["fidelity"] == "loose"
+    assert read_json(p.chosen)["take"] == chosen_take
     assert p.out_mp3.exists() and p.chords_txt.exists() and p.tab_txt.exists() and p.lyrics_json.exists()
     assert read_json(p.lyrics_json)["lines"][0]["words"][0]["word"] == "The"
 

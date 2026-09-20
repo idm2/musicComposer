@@ -1,4 +1,5 @@
 import io
+import json
 import os
 import subprocess
 import sys
@@ -41,6 +42,36 @@ def test_invalid_song_name_prints_friendly_error_not_a_traceback(tmp_path):
     stderr = result.stderr.decode("utf-8")
     assert "error:" in stderr
     assert "kebab-case" in stderr
+    assert "Traceback" not in stderr
+
+
+def test_run_without_from_or_brief_prints_friendly_error_not_a_traceback(tmp_path):
+    result = _run_cli(["run", "demo"], cwd=tmp_path)
+    assert result.returncode == 1
+    stderr = result.stderr.decode("utf-8")
+    assert "error:" in stderr
+    assert "--from" in stderr and "--brief" in stderr
+    assert "Traceback" not in stderr
+
+
+def test_run_help_says_from_is_optional(tmp_path):
+    result = _run_cli(["run", "--help"], cwd=tmp_path)
+    assert result.returncode == 0
+    stdout = result.stdout.decode("utf-8")
+    assert "optional" in stdout.lower()
+
+
+def test_generate_with_fidelity_but_no_reference_prints_friendly_error(tmp_path):
+    spec_dir = tmp_path / "work" / "demo"
+    spec_dir.mkdir(parents=True)
+    (spec_dir / "03-spec.json").write_text(json.dumps({
+        "title": "T", "style_prompt": "folk", "target_duration_s": 120,
+        "sections": [{"name": "Verse 1", "lines": ["a"], "duration_s": 60},
+                     {"name": "Chorus", "lines": ["b"], "duration_s": 60}]}), encoding="utf-8")
+    result = _run_cli(["generate", "demo", "--fidelity", "medium"], cwd=tmp_path)
+    assert result.returncode == 1
+    stderr = result.stderr.decode("utf-8")
+    assert "error:" in stderr and "reference" in stderr
     assert "Traceback" not in stderr
 
 

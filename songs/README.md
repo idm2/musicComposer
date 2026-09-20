@@ -22,17 +22,29 @@ Audio is not versioned — takes live in `work/<song>/04-takes/` and the chosen 
 
 ## Making a new song
 
-The recipe is `templates/first-song.md`. The short version:
+The recipe is `templates/first-song.md`. The short version, with a reference:
 
 ```bash
 uv run songcomposer ingest   <song> --from "<youtube url | audio file | video file>"
 uv run songcomposer analyze  <song>
 uv run songcomposer brief    <song> --from songs/<song>/brief.source.md
 uv run songcomposer compose  <song>          # then EDIT work/<song>/03-spec.json — the lyrics are yours
-uv run songcomposer generate <song> --provider suno --fidelity loose   # prints cost, waits for a typed "yes"
+uv run songcomposer generate <song> --provider suno --fidelity loose --takes 3   # prints cost, waits for a typed "yes"
 uv run songcomposer pick     <song> --take N
 uv run songcomposer chart    <song>          # available from Task 26
 ```
+
+Or, with no reference — a song from a brief alone — skip `ingest`/`analyze`, omit `--fidelity`
+(it's meaningless with nothing to track; `generate` fixes it to `loose` and says so), and `run` will
+compose from the brief on its own:
+
+```bash
+uv run songcomposer run <song> --brief songs/<song>/brief.source.md --provider suno --takes 3
+```
+
+`--takes` (1-6, default 3) controls how many takes any provider makes; if you omit it, `generate`/`run`
+asks. ElevenLabs makes exactly that many; Suno returns tracks in pairs, so an odd count still pays for
+the next even one (the cost confirmation says so before you spend anything).
 
 Then copy the artefacts here:
 

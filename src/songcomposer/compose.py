@@ -23,11 +23,10 @@ class ComposedSong(BaseModel):
     sections: list[SpecSection]
 
 
-SYSTEM = """You are a professional songwriter. Write an ORIGINAL song that lives in the same musical
-world as the reference described below, fulfilling the user's brief.
-
-Rules:
-- Original lyrics only. Never quote or closely paraphrase the reference's lyrics.
+# Shared by both prompts below — SYSTEM (a reference exists) and SYSTEM_NO_REFERENCE (brief only).
+# Written to stand on its own, so it never needs to name a reference either way.
+SONGWRITING_RULES = """Rules:
+- Original lyrics only. Never quote or closely paraphrase an existing song's lyrics.
 - Concrete images over abstractions. Singable lines: natural stresses, 4-10 words per line, consistent
   metre within a section, real rhymes or deliberate near-rhymes. A chorus that earns its repetition.
 - style_prompt: 10-25 words describing genre, mood, instrumentation and vocal delivery for a music
@@ -39,6 +38,17 @@ Rules:
   style_notes: a short arrangement direction for that section ("drums drop out", "full band, harmonies").
 - No brackets, braces or angle brackets inside lyric lines. Max 200 characters per line, max 30 lines per section.
 - target_duration_s: follow the brief; otherwise 150-210."""
+
+SYSTEM = f"""You are a professional songwriter. Write an ORIGINAL song that lives in the same musical
+world as the reference described below, fulfilling the user's brief.
+
+{SONGWRITING_RULES}"""
+
+SYSTEM_NO_REFERENCE = f"""You are a professional songwriter. Write an ORIGINAL song that fulfils the user's
+brief below, in whatever musical world best serves it — there is nothing else to go on, so invent it
+from the ground up.
+
+{SONGWRITING_RULES}"""
 
 
 def summarise_analysis(a: Analysis) -> str:
@@ -74,15 +84,21 @@ def run_compose(song: str, force: bool = False) -> SongSpec:
     if paths.spec.exists() and not force:
         print(f"- spec exists at {paths.spec} (use --force to rewrite)")
         return SongSpec(**read_json(paths.spec))
-    analysis = Analysis(**read_json(paths.require(paths.analysis, "analyze")))
+    analysis = Analysis(**read_json(paths.analysis)) if paths.analysis.exists() else None
     brief = Brief(**read_json(paths.require(paths.brief, "brief")))
     source = SourceInfo(**read_json(paths.source_json)) if paths.source_json.exists() else None
     config = load_config()
     banned = banned_terms(source)
-    ref_lyrics = [w.word for w in analysis.lyrics]
+    ref_lyrics = [w.word for w in analysis.lyrics] if analysis else []
 
-    user = f"## Brief\n{brief.text}\n\n## The reference, as analysed\n{summarise_analysis(analysis)}"
-    messages = [{"role": "system", "content": SYSTEM}, {"role": "user", "content": user}]
+    if analysis is not None:
+        system = SYSTEM
+        user = f"## Brief\n{brief.text}\n\n## The reference, as analysed\n{summarise_analysis(analysis)}"
+    else:
+        system = SYSTEM_NO_REFERENCE
+        user = f"## Brief\n{brief.text}"
+        print("> composing without a reference — from the brief alone")
+    messages = [{"role": "system", "content": system}, {"role": "user", "content": user}]
     print(f"> composing with {config.writer_model}")
     for attempt in range(2):
         composed = chat_json(messages, config.writer_model, ComposedSong)

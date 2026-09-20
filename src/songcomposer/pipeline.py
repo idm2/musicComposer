@@ -14,13 +14,14 @@ from .paths import SongPaths
 from .pick import run_pick
 
 
-def run_all(song: str, src: str, brief_file: str | None = None, brief_text: str | None = None,
+def run_all(song: str, src: str | None, brief_file: str | None = None, brief_text: str | None = None,
             provider_name: str | None = None, fidelity: str | None = None, takes: int | None = None,
             input_fn: Callable[[str], str] = input, provider=None) -> None:
     paths = SongPaths(song)
-    run_ingest(song, src)
-    if not paths.analysis.exists():
-        write_model(paths.analysis, analyze(paths.source_wav, paths.cache, load_config()))
+    if src is not None:
+        run_ingest(song, src)
+        if not paths.analysis.exists():
+            write_model(paths.analysis, analyze(paths.source_wav, paths.cache, load_config()))
     if not paths.brief.exists():
         run_brief(song, from_file=brief_file, text=brief_text)
     run_compose(song)

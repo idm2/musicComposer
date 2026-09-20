@@ -38,6 +38,14 @@ def song(root):
     return p
 
 
+@pytest.fixture
+def song_without_reference(root):
+    """No 00-source.json, no 01-analysis.json — a brief-only song (Task 29)."""
+    p = SongPaths("demo")
+    write_model(p.brief, Brief(text="A song about insomnia after a breakup.", origin="inline"))
+    return p
+
+
 def test_summary_includes_measured_facts_and_marks_low_confidence_chords():
     s = compose.summarise_analysis(ANALYSIS)
     assert "A minor" in s and "92" in s and "breathy" in s
@@ -87,3 +95,43 @@ def test_compose_is_noop_when_spec_exists(song, monkeypatch):
     compose.run_compose("demo")
     monkeypatch.setattr(compose, "chat_json", lambda *a, **k: pytest.fail("should not be called"))
     compose.run_compose("demo")
+
+
+def test_system_prompts_share_the_songwriting_rules():
+    """The reference-specific framing paragraph differs, but the actual songwriting rules are one
+    block shared by both prompts — not two near-identical copies."""
+    shared_snippet = "10-25 words describing genre, mood, instrumentation and vocal delivery"
+    assert shared_snippet in compose.SYSTEM
+    assert shared_snippet in compose.SYSTEM_NO_REFERENCE
+    assert compose.SYSTEM != compose.SYSTEM_NO_REFERENCE
+
+
+def test_compose_without_reference_writes_spec_and_says_so(song_without_reference, monkeypatch, capsys):
+    monkeypatch.setattr(compose, "chat_json", lambda *a, **k: GOOD)
+    spec = compose.run_compose("demo")
+    assert spec.title == "Glass Hour"
+    assert read_json(song_without_reference.spec)["title"] == "Glass Hour"
+    assert "without a reference" in capsys.readouterr().out
+
+
+def test_compose_without_reference_prompt_never_mentions_a_reference(song_without_reference, monkeypatch):
+    seen = {}
+
+    def fake(messages, model, out_type, **kw):
+        seen["messages"] = messages
+        return GOOD
+
+    monkeypatch.setattr(compose, "chat_json", fake)
+    compose.run_compose("demo")
+    combined = " ".join(m["content"] for m in seen["messages"]).lower()
+    assert "reference" not in combined
+    assert "insomnia" in combined                             # the brief still reaches the writer
+
+
+def test_compose_without_reference_still_feeds_preflight_problems_back(song_without_reference, monkeypatch):
+    bad = GOOD.model_copy(deep=True)
+    bad.sections[0].lines[0] = "TODO write this"
+    replies = iter([bad, GOOD])
+    monkeypatch.setattr(compose, "chat_json", lambda *a, **k: next(replies))
+    spec = compose.run_compose("demo")
+    assert spec.title == "Glass Hour"
