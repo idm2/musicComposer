@@ -70,3 +70,26 @@ def parse_harte(label: str) -> ParsedChord | None:
     adds = "".join(f"add{e}" for e in extensions if not e.startswith("*"))
     symbol = f"{root}{suffix}{adds}" + (f"/{bass}" if bass else "")
     return ParsedChord(root=root, quality=quality, extensions=extensions, bass=bass, symbol=symbol)
+
+
+_QUALITY_INTERVALS = {
+    "maj": (0, 4, 7), "min": (0, 3, 7), "dim": (0, 3, 6), "aug": (0, 4, 8), "5": (0, 7), "1": (0,),
+    "7": (0, 4, 7, 10), "maj7": (0, 4, 7, 11), "min7": (0, 3, 7, 10), "minmaj7": (0, 3, 7, 11),
+    "dim7": (0, 3, 6, 9), "hdim7": (0, 3, 6, 10), "6": (0, 4, 7, 9), "maj6": (0, 4, 7, 9), "min6": (0, 3, 7, 9),
+    "9": (0, 4, 7, 10, 2), "maj9": (0, 4, 7, 11, 2), "min9": (0, 3, 7, 10, 2),
+    "11": (0, 4, 7, 10, 2, 5), "min11": (0, 3, 7, 10, 2, 5),
+    "13": (0, 4, 7, 10, 2, 9), "maj13": (0, 4, 7, 11, 2, 9), "min13": (0, 3, 7, 10, 2, 9),
+    "sus2": (0, 2, 7), "sus4": (0, 5, 7),
+}
+
+
+def chord_pitch_classes(parsed: ParsedChord) -> set[int]:
+    """Pitch classes sounding in the chord. Unknown qualities fall back to a major triad on the root."""
+    root = pitch_class(parsed.root)
+    intervals = set(_QUALITY_INTERVALS.get(parsed.quality, (0, 4, 7)))
+    for ext in parsed.extensions:
+        if ext.startswith("*"):
+            intervals.discard(_INTERVAL.get(ext[1:], -1))
+        elif ext in _INTERVAL:
+            intervals.add(_INTERVAL[ext])
+    return {(root + i) % 12 for i in intervals}
