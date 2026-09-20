@@ -7,6 +7,8 @@ from .timing import BeatMap
 STRINGS = "EADGBe"
 BARS_PER_SYSTEM = 4
 SLOT = 4                                    # characters per sixteenth
+MELODY_MIN_CONFIDENCE = 0.3                 # below this, a "vocal" note is more likely a transcription artefact
+MELODY_SPAN_PAD_S = 0.5                     # widen each sung line's span by this much on each side
 
 
 def _shapes_block(t: Transcription) -> list[str]:
@@ -16,8 +18,13 @@ def _shapes_block(t: Transcription) -> list[str]:
             continue
         seen.add(c.symbol)
         shape = guitar.shape_for(c)
-        out.append(f"{label(c):<11}{shape}" if shape else
-                   f"{label(c):<11}(no shape in dictionary — work it out from the chord name)")
+        if not shape:
+            out.append(f"{label(c):<11}(no shape in dictionary — work it out from the chord name)")
+            continue
+        line = f"{label(c):<11}{shape}"
+        if c.bass:
+            line += "  (bass note not shown — let the bass carry it)"
+        out.append(line)
     return out
 
 
@@ -31,12 +38,17 @@ def _rhythm_block(t: Transcription, beatmap: BeatMap) -> list[str]:
             # neighbouring bar be misread as "detected" for a section that doesn't exist in the audio.
             out.append(f"{s.label}: not detected in the audio")
             continue
-        first, last = beatmap.sixteenth(s.start) // beatmap.bar16, beatmap.sixteenth(s.end) // beatmap.bar16
+        first = beatmap.sixteenth(s.start) // beatmap.bar16
+        end16 = beatmap.sixteenth(s.end)
+        last = (end16 - 1) // beatmap.bar16 + 1                    # ceil(end16 / bar16): include the bar s.end falls in
         patterns = [guitar.bar_pattern(strums, bar * beatmap.bar16, beatmap) for bar in range(first, max(first + 1, last))]
-        pattern = guitar.common_pattern(patterns)
+        pattern = guitar.common_pattern(patterns, min_hits=guitar.MIN_PATTERN_HITS, min_coverage=guitar.MIN_PATTERN_COVERAGE)
+        strums_here = any(p.strip("-") for p in patterns)
         picked = sum(1 for n in a.notes if n.stem == "other" and s.start <= n.onset < s.end)
         if pattern:
             out.append(f"{s.label}: strummed   | {pattern} |")
+        elif strums_here:
+            out.append(f"{s.label}: strums detected but no consistent pattern — listen and choose your own")
         elif picked:
             out.append(f"{s.label}: picked / arpeggiated — no full strums detected; arpeggiate the chord shapes")
         else:
@@ -45,8 +57,24 @@ def _rhythm_block(t: Transcription, beatmap: BeatMap) -> list[str]:
 
 
 def _melody_block(t: Transcription, beatmap: BeatMap) -> list[str]:
-    melody = sorted((n for n in t.analysis.notes if n.stem == "vocals"), key=lambda n: n.onset)
-    out = ["MELODY (vocal line in guitar range; (n) = low-confidence note)"]
+    a = t.analysis
+    all_vocals = sorted((n for n in a.notes if n.stem == "vocals"), key=lambda n: n.onset)
+    total = len(all_vocals)
+    conf_ok = [n for n in all_vocals if n.confidence >= MELODY_MIN_CONFIDENCE]
+    timed = [line for line in t.lines if line.start is not None]
+    if timed:
+        spans = [(line.start - MELODY_SPAN_PAD_S, line.end + MELODY_SPAN_PAD_S) for line in timed]
+        melody = [n for n in conf_ok if any(start <= n.onset <= end for start, end in spans)]
+        header = "MELODY (vocal line in guitar range; (n) = low-confidence note)"
+    else:
+        # no lyric line has timing at all: we cannot clip to sung spans, so show every note that
+        # clears the confidence floor and say plainly that instrumental-section artefacts may be included.
+        melody = conf_ok
+        header = ("MELODY (vocal line in guitar range; (n) = low-confidence note; "
+                   "no lyric timing detected — notes not clipped to sung spans)")
+    dropped = total - len(melody)
+    out = [header, f"{len(melody)} of {total} transcribed vocal notes shown "
+                    f"({dropped} outside sung spans or below confidence {MELODY_MIN_CONFIDENCE})."]
     if not melody:
         return out + ["no melody notes were transcribed"]
     positions = guitar.fret_positions([n.pitch for n in melody])

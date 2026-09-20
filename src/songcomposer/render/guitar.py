@@ -102,6 +102,19 @@ def bar_pattern(onsets: list[float], bar_start16: int, beatmap: BeatMap) -> str:
     return "".join(("D" if slot % 2 == 0 else "U") if slot in hit else "-" for slot in range(beatmap.bar16 // 2))
 
 
-def common_pattern(patterns: list[str]) -> str | None:
+MIN_PATTERN_HITS = 3           # a pattern must place at least this many strokes in its 8-slot bar to count as "strummed"
+MIN_PATTERN_COVERAGE = 0.5     # ...and be the detected pattern in at least this fraction of the section's played bars
+
+
+def common_pattern(patterns: list[str], min_hits: int = 0, min_coverage: float = 0.0) -> str | None:
+    """The most common non-empty bar pattern, or None if there isn't one — or, when thresholds are given,
+    None unless that pattern also clears a minimum stroke count and a minimum share of the played bars.
+    A single stray onset (one stroke in one bar out of many) must never be reported as "strummed"."""
     played = [p for p in patterns if p.strip("-")]
-    return Counter(played).most_common(1)[0][0] if played else None
+    if not played:
+        return None
+    pattern, count = Counter(played).most_common(1)[0]
+    hits = len(pattern) - pattern.count("-")
+    if hits < min_hits or count / len(played) < min_coverage:
+        return None
+    return pattern
