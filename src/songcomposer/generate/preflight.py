@@ -32,7 +32,11 @@ def banned_terms(source: SourceInfo | None) -> list[str]:
     terms: list[str] = []
     for raw in filter(None, [source.uploader, source.title]):
         cleaned = re.sub(r"[\(\[].*?[\)\]]", "", raw)
-        for piece in re.split(r"\s+[-–—|]\s+", cleaned):
+        # YouTube Shorts titles often run hashtags together with no separating space
+        # ("#love#cinek #floating#song") — split on '#' too, or an artist tag hiding inside one
+        # never gets checked. This over-generates short junk terms ("song", "beats"); that is the
+        # safe direction, since over-blocking just surfaces as an actionable pre-flight message.
+        for piece in re.split(r"#|\s+[-–—|]\s+", cleaned):
             piece = piece.strip()
             if len(piece) >= 4 and piece not in terms:
                 terms.append(piece)

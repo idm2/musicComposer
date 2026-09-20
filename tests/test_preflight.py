@@ -110,6 +110,23 @@ def test_banned_terms_from_source_title():
     assert banned_terms(None) == []
 
 
+def test_banned_terms_splits_on_hashtags_in_a_real_youtube_shorts_title():
+    """I3: the project's own reference (songs/in-the-flow/00-source.json) has a title where hashtags
+    run together with no separating space — the artist tag 'cinek' hides inside one long,
+    never-matchable term unless '#' is also a delimiter."""
+    src = SourceInfo(
+        origin="u", kind="url",
+        title="No one can beat you\U0001f495 #trending #love#cinek #floating#song#concert "
+              "#obessed#shorts#beats#singer#baby",
+        uploader="Favori Videolarim ",
+        duration_s=1, sample_rate=44100, sha1="a" * 40, ingested_at="now")
+    terms = banned_terms(src)
+    assert "cinek" in terms
+
+    style_prompt_with_artist_name = req(style_prompt="acoustic folk featuring cinek's voice")
+    assert any("cinek" in p for p in problems(style_prompt_with_artist_name, banned=terms))
+
+
 def test_preflight_exits_and_says_nothing_was_generated(capsys):
     with pytest.raises(SystemExit) as e:
         preflight(req(title=""), GENERIC_LIMITS, [], [])
