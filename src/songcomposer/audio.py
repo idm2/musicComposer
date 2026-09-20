@@ -5,7 +5,7 @@ from pathlib import Path
 
 def _run(args: list[str]) -> str:
     try:
-        return subprocess.run(args, capture_output=True, text=True, check=True, encoding="utf-8").stdout
+        return subprocess.run(args, capture_output=True, text=True, check=True, encoding="utf-8", errors="replace").stdout
     except FileNotFoundError as e:
         raise RuntimeError(f"{args[0]} not found on PATH — install with `scoop install ffmpeg`") from e
     except subprocess.CalledProcessError as e:

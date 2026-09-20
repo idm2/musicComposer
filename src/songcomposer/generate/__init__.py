@@ -131,7 +131,8 @@ def run_generate(song: str, provider_name: str | None = None, regen: bool = Fals
 
     def on_take(result: TakeResult) -> None:
         index = start + len(run.takes)
-        assert result.path.name == f"take-{index}.mp3", f"provider wrote {result.path.name}, expected take-{index}.mp3"
+        if result.path.name != f"take-{index}.mp3":
+            raise RuntimeError(f"provider wrote {result.path.name}, expected take-{index}.mp3")
         warning = sanity_check(result.path, result.duration_s, req.target_duration_s)
         if warning:
             run.warnings.append(warning)

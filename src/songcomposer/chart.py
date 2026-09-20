@@ -21,11 +21,15 @@ def run_chart(song: str, force: bool = False) -> dict[str, Path]:
 
     def attempt(name: str, path: Path, render) -> None:
         """A renderer that raises must not take the rest of the stage down with it — a chord chart
-        derived from probabilistic transcription data is genuinely fallible (music21 especially).
-        Print an actionable line, leave `written` (and the file) alone, and let the caller carry on."""
+        derived from probabilistic transcription data is genuinely fallible (music21 especially,
+        and write_pdf shells out to an external binary). Print an actionable line, leave `written`
+        alone, and let the caller carry on. `written[name]` is only ever set when `path` actually
+        landed on disk — write_pdf can return False (no PDF) without raising, and that must not be
+        reported as a crash either."""
         try:
             render()
-            written[name] = path
+            if path.exists():
+                written[name] = path
         except Exception as e:  # noqa: BLE001 — deliberately broad: any renderer may raise on messy data
             print(f"! {name} failed: {e} — the other deliverables were still written")
 
@@ -38,8 +42,7 @@ def run_chart(song: str, force: bool = False) -> dict[str, Path]:
 
     if len(t.analysis.beats) >= 2:
         attempt("musicxml", paths.out_musicxml, lambda: write_musicxml(title, t, paths.out_musicxml))
-        if write_pdf(title, t, paths.chart_ly, paths.chart_pdf):
-            written["pdf"] = paths.chart_pdf
+        attempt("pdf", paths.chart_pdf, lambda: write_pdf(title, t, paths.chart_ly, paths.chart_pdf))
     else:
         print("! no beat grid detected — skipped MusicXML and PDF (they need bar positions)")
 

@@ -37,7 +37,7 @@ def _download(url: str, dest_dir: Path) -> tuple[Path, dict]:
     proc = subprocess.run(
         [sys.executable, "-m", "yt_dlp", "--no-playlist", "-f", "bestaudio/best",
          "-o", str(dest_dir / "download.%(ext)s"), "-j", "--no-simulate", url],
-        capture_output=True, text=True, encoding="utf-8")
+        capture_output=True, text=True, encoding="utf-8", errors="replace")
     if proc.returncode != 0:
         raise RuntimeError(f"yt-dlp failed: {proc.stderr[-600:]}")
     files = [f for f in dest_dir.glob("download.*") if f.suffix != ".part"]

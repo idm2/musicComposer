@@ -40,7 +40,7 @@ def separate(audio: Path, cache_dir: Path) -> Stems:
     out.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory() as tmp:
         proc = subprocess.run([sys.executable, "-m", "demucs", "-n", MODEL, "-d", _device(), "-o", tmp, str(audio)],
-                              capture_output=True, text=True, encoding="utf-8")
+                              capture_output=True, text=True, encoding="utf-8", errors="replace")
         if proc.returncode != 0:
             raise RuntimeError(f"demucs failed: {proc.stderr[-800:]}")
         produced = Path(tmp) / MODEL / audio.stem

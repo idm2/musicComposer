@@ -118,7 +118,7 @@ def write_pdf(title: str, t: Transcription, ly_path: Path, pdf_path: Path) -> bo
         print(f"! lilypond not found — wrote {ly_path} but no PDF. Install with `scoop install lilypond` and re-run `chart`.")
         return False
     proc = subprocess.run(["lilypond", "-o", str(pdf_path.with_suffix("")), str(ly_path)],
-                          capture_output=True, text=True, encoding="utf-8")
+                          capture_output=True, text=True, encoding="utf-8", errors="replace")
     if proc.returncode != 0 or not pdf_path.exists():
         print(f"! lilypond failed — {ly_path} is kept for inspection:\n{proc.stderr[-800:]}")
         return False

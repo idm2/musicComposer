@@ -77,6 +77,41 @@ def test_tab_failure_does_not_abort_the_other_deliverables(root, t, monkeypatch,
     assert "chart:" in out
 
 
+def test_pdf_failure_does_not_abort_the_other_deliverables(root, t, monkeypatch, capsys):  # noqa: F811
+    """write_pdf is the only renderer that shells out to an external binary, so it is the likeliest
+    to raise. It must go through the same `attempt()` guard as every other renderer: the deliverables
+    that already succeeded stay on disk and the summary block still runs."""
+    pytest.importorskip("music21")
+    p = _write_demo_spec()
+    monkeypatch.setattr(chart, "run_transcribe", lambda song, force=False: t)
+
+    def boom(title, t, ly_path, pdf_path):
+        raise RuntimeError("lilypond blew up")
+    monkeypatch.setattr(chart, "write_pdf", boom)
+
+    written = chart.run_chart("demo")
+
+    assert p.chords_txt.exists() and p.tab_txt.exists() and p.lyrics_json.exists() and p.out_musicxml.exists()
+    assert "pdf" not in written and "musicxml" in written
+    out = capsys.readouterr().out
+    assert "pdf" in out and "lilypond blew up" in out
+    assert "chart:" in out              # the final summary block still ran
+
+
+def test_pdf_returning_false_is_not_reported_as_a_crash(root, t, monkeypatch, capsys):  # noqa: F811
+    """write_pdf can legitimately return False (e.g. lilypond not installed) without raising —
+    that must leave 'pdf' out of `written` without printing the '! pdf failed' crash message."""
+    pytest.importorskip("music21")
+    _write_demo_spec()
+    monkeypatch.setattr(chart, "run_transcribe", lambda song, force=False: t)
+    monkeypatch.setattr(chart, "write_pdf", lambda title, t, ly_path, pdf_path: False)
+
+    written = chart.run_chart("demo")
+
+    assert "pdf" not in written
+    assert "! pdf failed" not in capsys.readouterr().out
+
+
 def test_import_chart_does_not_import_heavy_libs():
     """Architectural pin: chart.py wires up renderers but every heavy dependency they use
     (music21, torch, librosa, demucs, faster_whisper, basic_pitch, lv_chordia) must stay lazy."""
