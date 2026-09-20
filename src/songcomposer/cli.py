@@ -21,6 +21,19 @@ def _main() -> None:
     _force_utf8_console()
 
 
+def main() -> None:
+    """Console-script entry point. Forces UTF-8 before Typer renders anything (--help is an
+    eager option that runs before the callback), and turns expected failures (missing
+    upstream files, bad input, pre-flight rejections) into a one-line message instead of
+    a raw traceback."""
+    _force_utf8_console()
+    try:
+        app()
+    except (FileNotFoundError, ValueError, RuntimeError) as e:
+        print(f"error: {e}", file=sys.stderr)
+        raise SystemExit(1)
+
+
 @app.command()
 def ingest(song: str,
            from_: str = typer.Option(..., "--from", help="URL, audio file or video file"),

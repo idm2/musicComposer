@@ -11,7 +11,7 @@ dependencies = [
 ]
 
 [project.scripts]
-songcomposer = "songcomposer.cli:app"
+songcomposer = "songcomposer.cli:main"
 
 [dependency-groups]
 dev = ["pytest>=8.0"]
