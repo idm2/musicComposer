@@ -59,3 +59,12 @@ explicit = true
 testpaths = ["tests"]
 pythonpath = ["tests"]
 markers = ["gpu: needs the local GPU analysis stack and model downloads (deselect with -m 'not gpu')"]
+filterwarnings = [
+    # librosa's optional audioread fallback imports these stdlib modules at import time on every
+    # Python version; they are only actually removed in 3.13, which this project never runs on.
+    "ignore:'aifc' is deprecated and slated for removal in Python 3.13:DeprecationWarning:audioread.rawread",
+    "ignore:'audioop' is deprecated and slated for removal in Python 3.13:DeprecationWarning:audioread.rawread",
+    "ignore:'sunau' is deprecated and slated for removal in Python 3.13:DeprecationWarning:audioread.rawread",
+    # resampy (a librosa/demucs transitive dependency) still imports pkg_resources at module load time.
+    "ignore:pkg_resources is deprecated as an API:UserWarning:resampy.filters",
+]
