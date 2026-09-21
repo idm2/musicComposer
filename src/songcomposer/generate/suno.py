@@ -35,7 +35,8 @@ class SunoProvider:
     name = "suno"
     limits = ProviderLimits(max_title_chars=80, max_style_chars=1000, max_lyrics_chars=5000, max_line_chars=200,
                             max_lines_per_section=60, max_sections=30, min_section_s=3, max_section_s=360,
-                            min_total_s=30, max_total_s=360)
+                            min_total_s=30, max_total_s=360,
+                            max_negative_chars=200)   # Kie.ai 422: "negativeStyle cannot exceed 200 characters"
 
     def __init__(self, model: str, client: httpx.Client | None = None,
                  sleep: Callable[[float], None] = time.sleep):

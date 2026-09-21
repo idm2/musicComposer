@@ -95,8 +95,16 @@ def test_negative_style_banned_term_and_style_of():
 
 
 def test_negative_style_length_limit():
-    over_limit = "x" * (GENERIC_LIMITS.max_style_chars + 1)
+    over_limit = "x" * (GENERIC_LIMITS.max_negative_chars + 1)
     assert any(p.startswith("negative_style:") and "chars > limit" in p for p in problems(req(negative_style=over_limit)))
+
+
+def test_suno_negative_style_limit_is_200_not_the_style_limit():
+    # Kie.ai rejected a 237-char negativeStyle with 422 after pre-flight had passed it against the 1000-char style limit.
+    from songcomposer.generate.suno import SunoProvider
+    assert validate_request(req(negative_style="x" * 200), SunoProvider.limits, [], []) == []
+    over = validate_request(req(negative_style="x" * 201), SunoProvider.limits, [], [])
+    assert any(p == "negative_style: 201 chars > limit 200" for p in over)
 
 
 def test_negative_style_edm_autotune_still_passes():

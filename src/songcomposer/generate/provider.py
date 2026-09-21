@@ -19,14 +19,15 @@ class ProviderLimits(BaseModel):
     max_section_s: float
     min_total_s: float
     max_total_s: float
+    max_negative_chars: int | None = None   # None: same limit as max_style_chars
 
 
-# Intersection of Suno V6 (title 80, style 1000, lyrics 5000, 10–360 s) and
+# Intersection of Suno V6 (title 80, style 1000, negative 200, lyrics 5000, 10–360 s) and
 # ElevenLabs music_v2_5 (30 chunks, 30 lines × 200 chars, chunk 3–120 s, total ≤ 600 s).
 GENERIC_LIMITS = ProviderLimits(
     max_title_chars=80, max_style_chars=1000, max_lyrics_chars=5000, max_line_chars=200,
     max_lines_per_section=30, max_sections=30, min_section_s=3, max_section_s=120,
-    min_total_s=30, max_total_s=360)
+    min_total_s=30, max_total_s=360, max_negative_chars=200)
 
 
 class GenerationRequest(BaseModel):

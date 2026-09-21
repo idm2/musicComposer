@@ -77,8 +77,9 @@ def validate_request(req: GenerationRequest, limits: ProviderLimits,
         problems.append("style_prompt: empty")
     if len(req.style_prompt) > limits.max_style_chars:
         problems.append(f"style_prompt: {len(req.style_prompt)} chars > limit {limits.max_style_chars}")
-    if len(req.negative_style) > limits.max_style_chars:
-        problems.append(f"negative_style: {len(req.negative_style)} chars > limit {limits.max_style_chars}")
+    neg_limit = limits.max_negative_chars or limits.max_style_chars
+    if len(req.negative_style) > neg_limit:
+        problems.append(f"negative_style: {len(req.negative_style)} chars > limit {neg_limit}")
 
     for field, text in (("style_prompt", req.style_prompt), ("negative_style", req.negative_style)):
         style_of = STYLE_OF.search(text)
