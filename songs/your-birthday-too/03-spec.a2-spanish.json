@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "title": "Your Birthday Too",
+  "style_prompt": "one repeating four-chord loop Bm - G - D - A, one chord per bar, the same four chords in the same order through the entire song and never anything else, bittersweet acoustic pop love song, 90 BPM, D major, fingerpicked nylon-string guitar up front with a slight Spanish feel, short Spanish-style guitar fills between vocal lines, cajon, soft handclaps, upright bass, warm emotional male tenor, close and breathy in the verses, aching and open in the chorus, gentle falsetto lifts, strong unforgettable vocal melody that lingers sweetly on the major third, big singable chorus hook, warm natural room sound, nostalgic and tender, quiet opening that builds to a full-hearted chorus",
+  "negative_style": "flamenco harmony, chord substitutions, jazz chords, key change, harsh synths, distorted guitars, aggressive drums, autotune artifacts, lo-fi, rap verse, EDM drop",
+  "vocal_gender": "male",
+  "target_duration_s": 202.6,
+  "sections": [
+    {
+      "name": "Intro",
+      "lines": [],
+      "duration_s": 10.7,
+      "style_notes": "solo nylon guitar, slow and tender, lots of space"
+    },
+    {
+      "name": "Verse 1",
+      "lines": [
+        "Five a.m., the sea at Hua Hin like glass",
+        "We'd swim out before the town woke up",
+        "A fresh fish from the market in a plastic bag",
+        "We'd eat it at the condo, and that was enough"
+      ],
+      "duration_s": 21.3,
+      "style_notes": "voice and one guitar only, intimate, no percussion"
+    },
+    {
+      "name": "Pre-Chorus",
+      "lines": [
+        "We were fire and fire, we could burn the whole night down",
+        "Then water, the calmest sea around"
+      ],
+      "duration_s": 10.7,
+      "style_notes": "cajon enters softly, tension rising"
+    },
+    {
+      "name": "Chorus",
+      "lines": [
+        "Ten years on, another life, another shore",
+        "I don't think about the fights anymore",
+        "I think about the markets, and the five a.m. blue",
+        "And every year they light the candles, and I think of you",
+        "'Cause it's your birthday too",
+        "It's your birthday too"
+      ],
+      "duration_s": 21.3,
+      "style_notes": "open strumming, handclaps, upright bass, harmonies join, full-hearted"
+    },
+    {
+      "name": "Verse 2",
+      "lines": [
+        "Drunk at the bar at the end of our street",
+        "Something from a food stall, too late to eat",
+        "Back home you'd put Faded on, we'd sing along",
+        "And pass out halfway through the song"
+      ],
+      "duration_s": 21.3,
+      "style_notes": "lighter groove, playful, guitar fills answer the vocal"
+    },
+    {
+      "name": "Verse 3",
+      "lines": [
+        "We built a house, it's yours now, and that's right",
+        "I left, and it's the hardest thing I've done in my life",
+        "I've been married since, and I'll tell you something true",
+        "I don't think of her the way I think of you"
+      ],
+      "duration_s": 21.3,
+      "style_notes": "groove drops to guitar and soft cajon, confessional"
+    },
+    {
+      "name": "Pre-Chorus",
+      "lines": [
+        "We were fire and fire, I can still feel the heat",
+        "Then water, that's the part I keep"
+      ],
+      "duration_s": 10.7,
+      "style_notes": "building again"
+    },
+    {
+      "name": "Chorus",
+      "lines": [
+        "Ten years on, another life, another shore",
+        "I don't think about the fights anymore",
+        "I think about the markets, and the five a.m. blue",
+        "And every year they light the candles, and I think of you",
+        "'Cause it's your birthday too",
+        "It's your birthday too"
+      ],
+      "duration_s": 21.3,
+      "style_notes": "full band, wider harmonies"
+    },
+    {
+      "name": "Bridge",
+      "lines": [
+        "I'm in Australia now, I built a life, I'm fine",
+        "I'm not asking for you back, I'm not rewriting time",
+        "I just want you to know, wherever you are",
+        "You're the most alive I've ever been, by far"
+      ],
+      "duration_s": 21.3,
+      "style_notes": "everything drops out, one guitar and one voice, the quietest and most honest moment"
+    },
+    {
+      "name": "Final Chorus",
+      "lines": [
+        "Ten years on, another life, another shore",
+        "I don't think about the fights anymore",
+        "I think about the markets, and the five a.m. blue",
+        "And every year they light the candles, and I think of you",
+        "'Cause it's your birthday too",
+        "It's your birthday too",
+        "'Cause it's your birthday too",
+        "It's your birthday too"
+      ],
+      "duration_s": 32.0,
+      "style_notes": "biggest moment, full band, passionate ad-libs, Spanish guitar soaring"
+    },
+    {
+      "name": "Outro",
+      "lines": [
+        "Happy birthday to you",
+        "And me"
+      ],
+      "duration_s": 10.7,
+      "style_notes": "solo guitar again, almost whispered, slow fade"
+    }
+  ],
+  "fidelity": "loose",
+  "fidelity_note": "",
+  "writer_model": "lyrics and arrangement by Claude from Sam's true story (songs/your-birthday-too/brief.source.md)"
+}

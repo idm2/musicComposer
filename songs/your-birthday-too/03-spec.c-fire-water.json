@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "title": "Fire, Then Water",
+  "style_prompt": "intimate live acoustic folk-pop love song recorded in a warm room, 88 BPM, C major, one repeating four-chord loop Am - F - C - G, one chord per bar, the same loop all the way through, steel-string acoustic guitar strummed softly, a second nylon Spanish guitar playing a lyrical lead melody, shaker and soft kick drum, a small string section on the last chorus, warm emotional male tenor, close and breathy in the verses, aching and open in the chorus, gentle falsetto lifts, a tender female harmony voice joins on the choruses, strong unforgettable vocal melody that lingers sweetly on the major third, big singable chorus hook, raw heartfelt performance, nostalgic, bittersweet, builds gently",
+  "negative_style": "harsh synths, distorted guitars, aggressive drums, autotune artifacts, lo-fi, rap verse, key change, abrupt chord changes, EDM drop",
+  "vocal_gender": "male",
+  "target_duration_s": 207.1,
+  "sections": [
+    {
+      "name": "Intro",
+      "lines": [],
+      "duration_s": 10.9,
+      "style_notes": "Spanish guitar lead melody over soft strumming"
+    },
+    {
+      "name": "Verse 1",
+      "lines": [
+        "Drunk at the bar at the end of our street",
+        "Something from a food stall, too late to eat",
+        "Back home you'd put Faded on, we'd sing along",
+        "And pass out halfway through the song"
+      ],
+      "duration_s": 21.8,
+      "style_notes": "one voice, soft strumming, warm and a little playful"
+    },
+    {
+      "name": "Verse 2",
+      "lines": [
+        "Five a.m., the sea at Hua Hin like glass",
+        "We'd swim out before the town woke up",
+        "A fresh fish from the market in a plastic bag",
+        "We'd eat it at the condo, and that was enough"
+      ],
+      "duration_s": 21.8,
+      "style_notes": "second guitar joins with gentle fills, tender"
+    },
+    {
+      "name": "Pre-Chorus",
+      "lines": [
+        "We were fire and fire, we could burn the whole night down",
+        "Then water, the calmest sea around"
+      ],
+      "duration_s": 10.9,
+      "style_notes": "shaker enters, lifting"
+    },
+    {
+      "name": "Chorus",
+      "lines": [
+        "We were fire, then water",
+        "Burning down, then calm as the sea",
+        "Ten years gone, and I still wonder",
+        "If you ever think of me",
+        "We were fire, then water",
+        "And I'd do it all again",
+        "Every fight, and every five a.m."
+      ],
+      "duration_s": 21.8,
+      "style_notes": "female harmony joins, soft kick, open strumming"
+    },
+    {
+      "name": "Verse 3",
+      "lines": [
+        "We built a house, it's yours now, and that's right",
+        "I left, and it's the hardest thing I've done in my life",
+        "I'm in Australia now, I built a life, I'm fine",
+        "But you're the most alive I've ever been, by far"
+      ],
+      "duration_s": 21.8,
+      "style_notes": "back to one guitar and one voice, confessional"
+    },
+    {
+      "name": "Pre-Chorus",
+      "lines": [
+        "We were fire and fire, I can still feel the heat",
+        "Then water, that's the part I keep"
+      ],
+      "duration_s": 10.9,
+      "style_notes": "lifting again"
+    },
+    {
+      "name": "Chorus",
+      "lines": [
+        "We were fire, then water",
+        "Burning down, then calm as the sea",
+        "Ten years gone, and I still wonder",
+        "If you ever think of me",
+        "We were fire, then water",
+        "And I'd do it all again",
+        "Every fight, and every five a.m."
+      ],
+      "duration_s": 21.8,
+      "style_notes": "both voices, fuller strumming"
+    },
+    {
+      "name": "Bridge",
+      "lines": [
+        "Every year the same day comes around",
+        "They sing to me, and I think of you",
+        "Same day, same candles, different towns",
+        "'Cause it's your birthday too"
+      ],
+      "duration_s": 21.8,
+      "style_notes": "almost silent, fingerpicked, the reveal, strings enter under the last line"
+    },
+    {
+      "name": "Final Chorus",
+      "lines": [
+        "We were fire, then water",
+        "Burning down, then calm as the sea",
+        "Ten years gone, and I still wonder",
+        "If you ever think of me",
+        "We were fire, then water",
+        "And I'd do it all again",
+        "Every fight, and every five a.m.",
+        "'Cause it's your birthday too"
+      ],
+      "duration_s": 32.7,
+      "style_notes": "strings, both voices, the emotional peak, then falling away"
+    },
+    {
+      "name": "Outro",
+      "lines": [
+        "Happy birthday to you",
+        "And me"
+      ],
+      "duration_s": 10.9,
+      "style_notes": "two guitars, his voice alone, her harmony on the last word, fade"
+    }
+  ],
+  "fidelity": "loose",
+  "fidelity_note": "",
+  "writer_model": "lyrics and arrangement by Claude from Sam's true story (songs/your-birthday-too/brief.source.md)"
+}
