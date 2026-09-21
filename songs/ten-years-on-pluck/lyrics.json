@@ -1,0 +1,2986 @@
+{
+  "schema_version": 1,
+  "song": "ten-years-on-pluck",
+  "title": "Ten Years On",
+  "audio": "ten-years-on-pluck.mp3",
+  "duration_s": 245.144,
+  "lines": [
+    {
+      "section": "Hook",
+      "text": "Ten years on, another life, another shore",
+      "start": 1.94,
+      "end": 5.48,
+      "confidence": 0.875,
+      "words": [
+        {
+          "word": "Ten",
+          "start": 1.94,
+          "end": 2.74,
+          "confidence": 0.216
+        },
+        {
+          "word": "years",
+          "start": 2.74,
+          "end": 3.2,
+          "confidence": 0.983
+        },
+        {
+          "word": "on,",
+          "start": 3.2,
+          "end": 3.5,
+          "confidence": 0.992
+        },
+        {
+          "word": "another",
+          "start": 3.54,
+          "end": 3.8,
+          "confidence": 0.948
+        },
+        {
+          "word": "life,",
+          "start": 3.8,
+          "end": 4.48,
+          "confidence": 0.996
+        },
+        {
+          "word": "another",
+          "start": 4.48,
+          "end": 5.06,
+          "confidence": 0.989
+        },
+        {
+          "word": "shore",
+          "start": 5.06,
+          "end": 5.48,
+          "confidence": 0.999
+        }
+      ]
+    },
+    {
+      "section": "Hook",
+      "text": "I don't think about the fights anymore",
+      "start": 5.48,
+      "end": 10.64,
+      "confidence": 0.956,
+      "words": [
+        {
+          "word": "I",
+          "start": 5.48,
+          "end": 7.54,
+          "confidence": 0.868
+        },
+        {
+          "word": "don't",
+          "start": 7.54,
+          "end": 7.9,
+          "confidence": 0.996
+        },
+        {
+          "word": "think",
+          "start": 7.9,
+          "end": 8.28,
+          "confidence": 0.999
+        },
+        {
+          "word": "about",
+          "start": 8.28,
+          "end": 8.7,
+          "confidence": 0.996
+        },
+        {
+          "word": "the",
+          "start": 8.7,
+          "end": 9.02,
+          "confidence": 0.998
+        },
+        {
+          "word": "fights",
+          "start": 9.02,
+          "end": 9.54,
+          "confidence": 0.984
+        },
+        {
+          "word": "anymore",
+          "start": 9.54,
+          "end": 10.64,
+          "confidence": 0.853
+        }
+      ]
+    },
+    {
+      "section": "Hook",
+      "text": "I think about the roads, and the beaches we found",
+      "start": 10.64,
+      "end": 16.06,
+      "confidence": 0.938,
+      "words": [
+        {
+          "word": "I",
+          "start": 10.64,
+          "end": 12.88,
+          "confidence": 0.972
+        },
+        {
+          "word": "think",
+          "start": 12.88,
+          "end": 13.34,
+          "confidence": 0.999
+        },
+        {
+          "word": "about",
+          "start": 13.34,
+          "end": 13.9,
+          "confidence": 0.995
+        },
+        {
+          "word": "the",
+          "start": 13.9,
+          "end": 14.26,
+          "confidence": 0.994
+        },
+        {
+          "word": "roads,",
+          "start": 14.26,
+          "end": 14.66,
+          "confidence": 0.997
+        },
+        {
+          "word": "and",
+          "start": 14.76,
+          "end": 14.94,
+          "confidence": 0.938
+        },
+        {
+          "word": "the",
+          "start": 14.94,
+          "end": 15.04,
+          "confidence": 0.991
+        },
+        {
+          "word": "beaches",
+          "start": 15.04,
+          "end": 15.36,
+          "confidence": 0.996
+        },
+        {
+          "word": "we",
+          "start": 15.36,
+          "end": 15.6,
+          "confidence": 0.986
+        },
+        {
+          "word": "found",
+          "start": 15.6,
+          "end": 16.06,
+          "confidence": 0.507
+        }
+      ]
+    },
+    {
+      "section": "Hook",
+      "text": "Sitting side by side while the sun went down",
+      "start": 16.06,
+      "end": 22.46,
+      "confidence": 0.901,
+      "words": [
+        {
+          "word": "Sitting",
+          "start": 16.06,
+          "end": 18.22,
+          "confidence": 0.847
+        },
+        {
+          "word": "side",
+          "start": 18.22,
+          "end": 18.56,
+          "confidence": 0.995
+        },
+        {
+          "word": "by",
+          "start": 18.56,
+          "end": 19.04,
+          "confidence": 0.849
+        },
+        {
+          "word": "side",
+          "start": 19.04,
+          "end": 19.58,
+          "confidence": 1.0
+        },
+        {
+          "word": "while",
+          "start": 19.58,
+          "end": 20.2,
+          "confidence": 0.436
+        },
+        {
+          "word": "the",
+          "start": 20.2,
+          "end": 20.46,
+          "confidence": 0.994
+        },
+        {
+          "word": "sun",
+          "start": 20.46,
+          "end": 20.86,
+          "confidence": 0.99
+        },
+        {
+          "word": "went",
+          "start": 20.86,
+          "end": 21.56,
+          "confidence": 0.996
+        },
+        {
+          "word": "down",
+          "start": 21.56,
+          "end": 22.46,
+          "confidence": 0.999
+        }
+      ]
+    },
+    {
+      "section": "Verse 1",
+      "text": "Five a.m. at Hua Hin, the sea as calm as glass",
+      "start": 22.46,
+      "end": 27.42,
+      "confidence": 0.717,
+      "words": [
+        {
+          "word": "Five",
+          "start": 22.46,
+          "end": 24.1,
+          "confidence": 0.552
+        },
+        {
+          "word": "a.m.",
+          "start": 24.1,
+          "end": 24.48,
+          "confidence": 0.0
+        },
+        {
+          "word": "at",
+          "start": 24.48,
+          "end": 24.62,
+          "confidence": 0.618
+        },
+        {
+          "word": "Hua",
+          "start": 24.62,
+          "end": 24.84,
+          "confidence": 0.883
+        },
+        {
+          "word": "Hin,",
+          "start": 24.84,
+          "end": 25.12,
+          "confidence": 0.923
+        },
+        {
+          "word": "the",
+          "start": 25.28,
+          "end": 25.66,
+          "confidence": 0.898
+        },
+        {
+          "word": "sea",
+          "start": 25.66,
+          "end": 25.76,
+          "confidence": 0.938
+        },
+        {
+          "word": "as",
+          "start": 25.76,
+          "end": 26.16,
+          "confidence": 0.086
+        },
+        {
+          "word": "calm",
+          "start": 26.16,
+          "end": 26.46,
+          "confidence": 0.999
+        },
+        {
+          "word": "as",
+          "start": 26.46,
+          "end": 26.94,
+          "confidence": 0.997
+        },
+        {
+          "word": "glass",
+          "start": 26.94,
+          "end": 27.42,
+          "confidence": 0.99
+        }
+      ]
+    },
+    {
+      "section": "Verse 1",
+      "text": "So beautiful, we'd swim before the town woke up",
+      "start": 27.42,
+      "end": 32.76,
+      "confidence": 0.869,
+      "words": [
+        {
+          "word": "So",
+          "start": 27.42,
+          "end": 28.74,
+          "confidence": 0.267
+        },
+        {
+          "word": "beautiful,",
+          "start": 28.74,
+          "end": 29.22,
+          "confidence": 0.988
+        },
+        {
+          "word": "we'd",
+          "start": 29.22,
+          "end": 30.0,
+          "confidence": 0.737
+        },
+        {
+          "word": "swim",
+          "start": 30.0,
+          "end": 30.28,
+          "confidence": 0.985
+        },
+        {
+          "word": "before",
+          "start": 30.28,
+          "end": 30.88,
+          "confidence": 0.984
+        },
+        {
+          "word": "the",
+          "start": 30.88,
+          "end": 31.4,
+          "confidence": 0.987
+        },
+        {
+          "word": "town",
+          "start": 31.4,
+          "end": 31.68,
+          "confidence": 0.96
+        },
+        {
+          "word": "woke",
+          "start": 31.68,
+          "end": 32.12,
+          "confidence": 0.945
+        },
+        {
+          "word": "up",
+          "start": 32.12,
+          "end": 32.76,
+          "confidence": 0.969
+        }
+      ]
+    },
+    {
+      "section": "Verse 1",
+      "text": "Fruit from the market in a plastic bag",
+      "start": 33.42,
+      "end": 37.68,
+      "confidence": 0.927,
+      "words": [
+        {
+          "word": "Fruit",
+          "start": 33.42,
+          "end": 34.56,
+          "confidence": 0.462
+        },
+        {
+          "word": "from",
+          "start": 34.56,
+          "end": 34.86,
+          "confidence": 0.997
+        },
+        {
+          "word": "the",
+          "start": 34.86,
+          "end": 35.06,
+          "confidence": 0.998
+        },
+        {
+          "word": "market",
+          "start": 35.06,
+          "end": 35.82,
+          "confidence": 0.996
+        },
+        {
+          "word": "in",
+          "start": 35.82,
+          "end": 36.28,
+          "confidence": 0.974
+        },
+        {
+          "word": "a",
+          "start": 36.28,
+          "end": 36.54,
+          "confidence": 0.992
+        },
+        {
+          "word": "plastic",
+          "start": 36.54,
+          "end": 37.18,
+          "confidence": 1.0
+        },
+        {
+          "word": "bag",
+          "start": 37.18,
+          "end": 37.68,
+          "confidence": 0.999
+        }
+      ]
+    },
+    {
+      "section": "Verse 1",
+      "text": "We'd eat it on the motorbike, and that was enough",
+      "start": 37.94,
+      "end": 43.1,
+      "confidence": 0.931,
+      "words": [
+        {
+          "word": "We'd",
+          "start": 37.94,
+          "end": 39.12,
+          "confidence": 0.954
+        },
+        {
+          "word": "eat",
+          "start": 39.12,
+          "end": 39.16,
+          "confidence": 0.995
+        },
+        {
+          "word": "it",
+          "start": 39.16,
+          "end": 39.32,
+          "confidence": 0.998
+        },
+        {
+          "word": "on",
+          "start": 39.32,
+          "end": 39.54,
+          "confidence": 0.999
+        },
+        {
+          "word": "the",
+          "start": 39.54,
+          "end": 39.74,
+          "confidence": 0.995
+        },
+        {
+          "word": "motorbike,",
+          "start": 39.74,
+          "end": 40.56,
+          "confidence": 0.987
+        },
+        {
+          "word": "and",
+          "start": 40.56,
+          "end": 41.76,
+          "confidence": 0.383
+        },
+        {
+          "word": "that",
+          "start": 41.76,
+          "end": 42.12,
+          "confidence": 0.999
+        },
+        {
+          "word": "was",
+          "start": 42.12,
+          "end": 42.46,
+          "confidence": 0.999
+        },
+        {
+          "word": "enough",
+          "start": 42.46,
+          "end": 43.1,
+          "confidence": 0.999
+        }
+      ]
+    },
+    {
+      "section": "Pre-Chorus",
+      "text": "We were fire and fire, we could burn the whole night down",
+      "start": 43.1,
+      "end": 50.08,
+      "confidence": 0.956,
+      "words": [
+        {
+          "word": "We",
+          "start": 43.1,
+          "end": 45.1,
+          "confidence": 0.991
+        },
+        {
+          "word": "were",
+          "start": 45.1,
+          "end": 45.34,
+          "confidence": 0.999
+        },
+        {
+          "word": "fire",
+          "start": 45.34,
+          "end": 46.12,
+          "confidence": 0.966
+        },
+        {
+          "word": "and",
+          "start": 46.12,
+          "end": 46.58,
+          "confidence": 0.664
+        },
+        {
+          "word": "fire,",
+          "start": 46.58,
+          "end": 47.04,
+          "confidence": 0.998
+        },
+        {
+          "word": "we",
+          "start": 47.04,
+          "end": 47.64,
+          "confidence": 0.862
+        },
+        {
+          "word": "could",
+          "start": 47.64,
+          "end": 47.78,
+          "confidence": 0.997
+        },
+        {
+          "word": "burn",
+          "start": 47.78,
+          "end": 48.16,
+          "confidence": 0.999
+        },
+        {
+          "word": "the",
+          "start": 48.16,
+          "end": 48.38,
+          "confidence": 0.998
+        },
+        {
+          "word": "whole",
+          "start": 48.38,
+          "end": 48.94,
+          "confidence": 1.0
+        },
+        {
+          "word": "night",
+          "start": 48.94,
+          "end": 49.42,
+          "confidence": 1.0
+        },
+        {
+          "word": "down",
+          "start": 49.42,
+          "end": 50.08,
+          "confidence": 0.998
+        }
+      ]
+    },
+    {
+      "section": "Pre-Chorus",
+      "text": "Then water, the calmest sea around",
+      "start": 50.34,
+      "end": 53.82,
+      "confidence": 0.657,
+      "words": [
+        {
+          "word": "Then",
+          "start": 50.34,
+          "end": 50.64,
+          "confidence": 0.0
+        },
+        {
+          "word": "water,",
+          "start": 50.64,
+          "end": 51.16,
+          "confidence": 0.988
+        },
+        {
+          "word": "the",
+          "start": 51.16,
+          "end": 52.24,
+          "confidence": 0.981
+        },
+        {
+          "word": "calmest",
+          "start": 52.24,
+          "end": 52.8,
+          "confidence": 0.0
+        },
+        {
+          "word": "sea",
+          "start": 52.8,
+          "end": 53.26,
+          "confidence": 0.974
+        },
+        {
+          "word": "around",
+          "start": 53.26,
+          "end": 53.82,
+          "confidence": 0.998
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "Ten years on, another life, another shore",
+      "start": 54.42,
+      "end": 57.84,
+      "confidence": 0.884,
+      "words": [
+        {
+          "word": "Ten",
+          "start": 54.42,
+          "end": 55.18,
+          "confidence": 0.915
+        },
+        {
+          "word": "years",
+          "start": 55.18,
+          "end": 55.62,
+          "confidence": 1.0
+        },
+        {
+          "word": "on,",
+          "start": 55.62,
+          "end": 55.92,
+          "confidence": 0.997
+        },
+        {
+          "word": "another",
+          "start": 55.92,
+          "end": 56.18,
+          "confidence": 0.978
+        },
+        {
+          "word": "life,",
+          "start": 56.18,
+          "end": 56.7,
+          "confidence": 0.996
+        },
+        {
+          "word": "another",
+          "start": 56.7,
+          "end": 57.42,
+          "confidence": 0.342
+        },
+        {
+          "word": "shore",
+          "start": 57.42,
+          "end": 57.84,
+          "confidence": 0.962
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "I don't think about the fights anymore",
+      "start": 57.84,
+      "end": 63.02,
+      "confidence": 0.954,
+      "words": [
+        {
+          "word": "I",
+          "start": 57.84,
+          "end": 59.1,
+          "confidence": 0.853
+        },
+        {
+          "word": "don't",
+          "start": 59.1,
+          "end": 60.3,
+          "confidence": 0.992
+        },
+        {
+          "word": "think",
+          "start": 60.3,
+          "end": 60.56,
+          "confidence": 0.999
+        },
+        {
+          "word": "about",
+          "start": 60.56,
+          "end": 61.02,
+          "confidence": 0.991
+        },
+        {
+          "word": "the",
+          "start": 61.02,
+          "end": 61.42,
+          "confidence": 0.985
+        },
+        {
+          "word": "fights",
+          "start": 61.42,
+          "end": 61.9,
+          "confidence": 0.96
+        },
+        {
+          "word": "anymore",
+          "start": 61.9,
+          "end": 63.02,
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "I think about the roads, and the beaches we found",
+      "start": 64.44,
+      "end": 68.46,
+      "confidence": 0.931,
+      "words": [
+        {
+          "word": "I",
+          "start": 64.44,
+          "end": 65.28,
+          "confidence": 0.964
+        },
+        {
+          "word": "think",
+          "start": 65.28,
+          "end": 65.78,
+          "confidence": 0.999
+        },
+        {
+          "word": "about",
+          "start": 65.78,
+          "end": 66.26,
+          "confidence": 0.998
+        },
+        {
+          "word": "the",
+          "start": 66.26,
+          "end": 66.64,
+          "confidence": 0.995
+        },
+        {
+          "word": "roads,",
+          "start": 66.64,
+          "end": 67.02,
+          "confidence": 0.999
+        },
+        {
+          "word": "and",
+          "start": 67.02,
+          "end": 67.34,
+          "confidence": 0.893
+        },
+        {
+          "word": "the",
+          "start": 67.34,
+          "end": 67.44,
+          "confidence": 0.99
+        },
+        {
+          "word": "beaches",
+          "start": 67.44,
+          "end": 67.76,
+          "confidence": 0.998
+        },
+        {
+          "word": "we",
+          "start": 67.76,
+          "end": 68.0,
+          "confidence": 0.998
+        },
+        {
+          "word": "found",
+          "start": 68.0,
+          "end": 68.46,
+          "confidence": 0.478
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "Sitting side by side while the sun went down",
+      "start": 69.78,
+      "end": 74.72,
+      "confidence": 0.951,
+      "words": [
+        {
+          "word": "Sitting",
+          "start": 69.78,
+          "end": 70.62,
+          "confidence": 0.902
+        },
+        {
+          "word": "side",
+          "start": 70.62,
+          "end": 71.02,
+          "confidence": 0.999
+        },
+        {
+          "word": "by",
+          "start": 71.02,
+          "end": 71.44,
+          "confidence": 0.948
+        },
+        {
+          "word": "side",
+          "start": 71.44,
+          "end": 71.98,
+          "confidence": 1.0
+        },
+        {
+          "word": "while",
+          "start": 71.98,
+          "end": 72.6,
+          "confidence": 0.721
+        },
+        {
+          "word": "the",
+          "start": 72.6,
+          "end": 72.86,
+          "confidence": 0.998
+        },
+        {
+          "word": "sun",
+          "start": 72.86,
+          "end": 73.28,
+          "confidence": 0.995
+        },
+        {
+          "word": "went",
+          "start": 73.28,
+          "end": 73.94,
+          "confidence": 0.998
+        },
+        {
+          "word": "down",
+          "start": 73.94,
+          "end": 74.72,
+          "confidence": 0.999
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "And every year they light the candles, and I think of you",
+      "start": 74.72,
+      "end": 79.72,
+      "confidence": 0.955,
+      "words": [
+        {
+          "word": "And",
+          "start": 74.72,
+          "end": 75.68,
+          "confidence": 0.978
+        },
+        {
+          "word": "every",
+          "start": 75.68,
+          "end": 75.96,
+          "confidence": 0.997
+        },
+        {
+          "word": "year",
+          "start": 75.96,
+          "end": 76.3,
+          "confidence": 0.996
+        },
+        {
+          "word": "they",
+          "start": 76.3,
+          "end": 76.5,
+          "confidence": 0.982
+        },
+        {
+          "word": "light",
+          "start": 76.5,
+          "end": 76.9,
+          "confidence": 1.0
+        },
+        {
+          "word": "the",
+          "start": 76.9,
+          "end": 77.14,
+          "confidence": 0.994
+        },
+        {
+          "word": "candles,",
+          "start": 77.14,
+          "end": 77.84,
+          "confidence": 0.999
+        },
+        {
+          "word": "and",
+          "start": 77.84,
+          "end": 78.2,
+          "confidence": 0.529
+        },
+        {
+          "word": "I",
+          "start": 78.2,
+          "end": 78.48,
+          "confidence": 0.996
+        },
+        {
+          "word": "think",
+          "start": 78.48,
+          "end": 79.0,
+          "confidence": 0.999
+        },
+        {
+          "word": "of",
+          "start": 79.0,
+          "end": 79.32,
+          "confidence": 0.995
+        },
+        {
+          "word": "you",
+          "start": 79.32,
+          "end": 79.72,
+          "confidence": 0.999
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "'Cause it's your birthday too",
+      "start": 80.28,
+      "end": 82.42,
+      "confidence": 0.798,
+      "words": [
+        {
+          "word": "'Cause",
+          "start": 80.28,
+          "end": 80.58,
+          "confidence": 0.0
+        },
+        {
+          "word": "it's",
+          "start": 80.58,
+          "end": 80.88,
+          "confidence": 0.998
+        },
+        {
+          "word": "your",
+          "start": 80.88,
+          "end": 81.08,
+          "confidence": 1.0
+        },
+        {
+          "word": "birthday",
+          "start": 81.08,
+          "end": 81.8,
+          "confidence": 0.999
+        },
+        {
+          "word": "too",
+          "start": 81.8,
+          "end": 82.42,
+          "confidence": 0.992
+        }
+      ]
+    },
+    {
+      "section": "Verse 2",
+      "text": "Riding down the coastline on the motorbike",
+      "start": 86.9,
+      "end": 89.68,
+      "confidence": 0.96,
+      "words": [
+        {
+          "word": "Riding",
+          "start": 86.9,
+          "end": 87.4,
+          "confidence": 0.791
+        },
+        {
+          "word": "down",
+          "start": 87.4,
+          "end": 87.64,
+          "confidence": 0.996
+        },
+        {
+          "word": "the",
+          "start": 87.64,
+          "end": 87.78,
+          "confidence": 0.998
+        },
+        {
+          "word": "coastline",
+          "start": 87.78,
+          "end": 88.38,
+          "confidence": 0.992
+        },
+        {
+          "word": "on",
+          "start": 88.72,
+          "end": 88.94,
+          "confidence": 0.992
+        },
+        {
+          "word": "the",
+          "start": 88.94,
+          "end": 89.1,
+          "confidence": 0.96
+        },
+        {
+          "word": "motorbike",
+          "start": 89.1,
+          "end": 89.68,
+          "confidence": 0.993
+        }
+      ]
+    },
+    {
+      "section": "Verse 2",
+      "text": "Any makeshift room would do for the night",
+      "start": 89.68,
+      "end": 92.28,
+      "confidence": 0.714,
+      "words": [
+        {
+          "word": "Any",
+          "start": 89.68,
+          "end": 89.98,
+          "confidence": 0.723
+        },
+        {
+          "word": "makeshift",
+          "start": 89.98,
+          "end": 90.64,
+          "confidence": 0.994
+        },
+        {
+          "word": "room",
+          "start": 90.64,
+          "end": 91.0,
+          "confidence": 0.992
+        },
+        {
+          "word": "would",
+          "start": 91.0,
+          "end": 91.26,
+          "confidence": 0.0
+        },
+        {
+          "word": "do",
+          "start": 91.26,
+          "end": 91.52,
+          "confidence": 0.0
+        },
+        {
+          "word": "for",
+          "start": 91.52,
+          "end": 91.8,
+          "confidence": 0.999
+        },
+        {
+          "word": "the",
+          "start": 91.8,
+          "end": 92.02,
+          "confidence": 1.0
+        },
+        {
+          "word": "night",
+          "start": 92.02,
+          "end": 92.28,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Verse 2",
+      "text": "We had next to nothing, and we had it all",
+      "start": 92.28,
+      "end": 94.32,
+      "confidence": 0.992,
+      "words": [
+        {
+          "word": "We",
+          "start": 92.28,
+          "end": 92.56,
+          "confidence": 0.992
+        },
+        {
+          "word": "had",
+          "start": 92.56,
+          "end": 92.72,
+          "confidence": 0.987
+        },
+        {
+          "word": "next",
+          "start": 92.72,
+          "end": 92.94,
+          "confidence": 0.998
+        },
+        {
+          "word": "to",
+          "start": 92.94,
+          "end": 93.04,
+          "confidence": 1.0
+        },
+        {
+          "word": "nothing,",
+          "start": 93.04,
+          "end": 93.34,
+          "confidence": 0.993
+        },
+        {
+          "word": "and",
+          "start": 93.34,
+          "end": 93.48,
+          "confidence": 0.953
+        },
+        {
+          "word": "we",
+          "start": 93.48,
+          "end": 93.66,
+          "confidence": 0.998
+        },
+        {
+          "word": "had",
+          "start": 93.66,
+          "end": 93.88,
+          "confidence": 1.0
+        },
+        {
+          "word": "it",
+          "start": 93.88,
+          "end": 94.06,
+          "confidence": 1.0
+        },
+        {
+          "word": "all",
+          "start": 94.06,
+          "end": 94.32,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Verse 2",
+      "text": "Another empty beach, watching the sun fall",
+      "start": 94.32,
+      "end": 96.84,
+      "confidence": 0.992,
+      "words": [
+        {
+          "word": "Another",
+          "start": 94.32,
+          "end": 95.08,
+          "confidence": 0.998
+        },
+        {
+          "word": "empty",
+          "start": 95.08,
+          "end": 95.52,
+          "confidence": 1.0
+        },
+        {
+          "word": "beach,",
+          "start": 95.52,
+          "end": 95.84,
+          "confidence": 1.0
+        },
+        {
+          "word": "watching",
+          "start": 95.84,
+          "end": 96.12,
+          "confidence": 0.968
+        },
+        {
+          "word": "the",
+          "start": 96.12,
+          "end": 96.24,
+          "confidence": 1.0
+        },
+        {
+          "word": "sun",
+          "start": 96.24,
+          "end": 96.46,
+          "confidence": 0.999
+        },
+        {
+          "word": "fall",
+          "start": 96.46,
+          "end": 96.84,
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "section": "Verse 3",
+      "text": "We could do it cheap, we could do it grand",
+      "start": 97.24,
+      "end": 99.52,
+      "confidence": 1.0,
+      "words": [
+        {
+          "word": "We",
+          "start": 97.24,
+          "end": 97.74,
+          "confidence": 0.999
+        },
+        {
+          "word": "could",
+          "start": 97.74,
+          "end": 97.9,
+          "confidence": 1.0
+        },
+        {
+          "word": "do",
+          "start": 97.9,
+          "end": 98.1,
+          "confidence": 1.0
+        },
+        {
+          "word": "it",
+          "start": 98.1,
+          "end": 98.24,
+          "confidence": 1.0
+        },
+        {
+          "word": "cheap,",
+          "start": 98.24,
+          "end": 98.5,
+          "confidence": 1.0
+        },
+        {
+          "word": "we",
+          "start": 98.62,
+          "end": 98.74,
+          "confidence": 1.0
+        },
+        {
+          "word": "could",
+          "start": 98.74,
+          "end": 98.88,
+          "confidence": 1.0
+        },
+        {
+          "word": "do",
+          "start": 98.88,
+          "end": 99.08,
+          "confidence": 1.0
+        },
+        {
+          "word": "it",
+          "start": 99.08,
+          "end": 99.26,
+          "confidence": 1.0
+        },
+        {
+          "word": "grand",
+          "start": 99.26,
+          "end": 99.52,
+          "confidence": 0.999
+        }
+      ]
+    },
+    {
+      "section": "Verse 3",
+      "text": "You were just as happy with a street-food stand",
+      "start": 99.52,
+      "end": 102.38,
+      "confidence": 0.885,
+      "words": [
+        {
+          "word": "You",
+          "start": 99.52,
+          "end": 100.3,
+          "confidence": 0.987
+        },
+        {
+          "word": "were",
+          "start": 100.3,
+          "end": 100.52,
+          "confidence": 0.999
+        },
+        {
+          "word": "just",
+          "start": 100.52,
+          "end": 100.74,
+          "confidence": 1.0
+        },
+        {
+          "word": "as",
+          "start": 100.74,
+          "end": 100.9,
+          "confidence": 1.0
+        },
+        {
+          "word": "happy",
+          "start": 100.9,
+          "end": 101.18,
+          "confidence": 1.0
+        },
+        {
+          "word": "with",
+          "start": 101.18,
+          "end": 101.4,
+          "confidence": 0.999
+        },
+        {
+          "word": "a",
+          "start": 101.4,
+          "end": 101.5,
+          "confidence": 0.982
+        },
+        {
+          "word": "street-food",
+          "start": 101.5,
+          "end": 102.02,
+          "confidence": 0.0
+        },
+        {
+          "word": "stand",
+          "start": 102.02,
+          "end": 102.38,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Verse 3",
+      "text": "A few drinks deep, then home, and you'd put Faded on",
+      "start": 102.38,
+      "end": 105.68,
+      "confidence": 0.624,
+      "words": [
+        {
+          "word": "A",
+          "start": 102.38,
+          "end": 102.8,
+          "confidence": 0.992
+        },
+        {
+          "word": "few",
+          "start": 102.8,
+          "end": 102.96,
+          "confidence": 1.0
+        },
+        {
+          "word": "drinks",
+          "start": 102.96,
+          "end": 103.3,
+          "confidence": 1.0
+        },
+        {
+          "word": "deep,",
+          "start": 103.3,
+          "end": 103.54,
+          "confidence": 0.974
+        },
+        {
+          "word": "then",
+          "start": 103.62,
+          "end": 103.82,
+          "confidence": 1.0
+        },
+        {
+          "word": "home,",
+          "start": 103.82,
+          "end": 104.22,
+          "confidence": 1.0
+        },
+        {
+          "word": "and",
+          "start": 104.22,
+          "end": 104.48,
+          "confidence": 0.9
+        },
+        {
+          "word": "you'd",
+          "start": 104.48,
+          "end": 104.78,
+          "confidence": 0.0
+        },
+        {
+          "word": "put",
+          "start": 104.78,
+          "end": 105.08,
+          "confidence": 0.0
+        },
+        {
+          "word": "Faded",
+          "start": 105.08,
+          "end": 105.38,
+          "confidence": 0.0
+        },
+        {
+          "word": "on",
+          "start": 105.38,
+          "end": 105.68,
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "section": "Verse 3",
+      "text": "We'd be asleep before the end of the song",
+      "start": 105.5,
+      "end": 107.54,
+      "confidence": 1.0,
+      "words": [
+        {
+          "word": "We'd",
+          "start": 105.5,
+          "end": 105.84,
+          "confidence": 0.999
+        },
+        {
+          "word": "be",
+          "start": 105.84,
+          "end": 105.92,
+          "confidence": 1.0
+        },
+        {
+          "word": "asleep",
+          "start": 105.92,
+          "end": 106.2,
+          "confidence": 1.0
+        },
+        {
+          "word": "before",
+          "start": 106.2,
+          "end": 106.46,
+          "confidence": 1.0
+        },
+        {
+          "word": "the",
+          "start": 106.46,
+          "end": 106.74,
+          "confidence": 1.0
+        },
+        {
+          "word": "end",
+          "start": 106.74,
+          "end": 106.98,
+          "confidence": 1.0
+        },
+        {
+          "word": "of",
+          "start": 106.98,
+          "end": 107.14,
+          "confidence": 1.0
+        },
+        {
+          "word": "the",
+          "start": 107.14,
+          "end": 107.22,
+          "confidence": 1.0
+        },
+        {
+          "word": "song",
+          "start": 107.22,
+          "end": 107.54,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Pre-Chorus",
+      "text": "We were fire and fire, I can still feel the heat",
+      "start": 107.54,
+      "end": 112.6,
+      "confidence": 0.924,
+      "words": [
+        {
+          "word": "We",
+          "start": 107.54,
+          "end": 107.94,
+          "confidence": 0.997
+        },
+        {
+          "word": "were",
+          "start": 107.94,
+          "end": 108.22,
+          "confidence": 1.0
+        },
+        {
+          "word": "fire",
+          "start": 108.22,
+          "end": 108.9,
+          "confidence": 0.701
+        },
+        {
+          "word": "and",
+          "start": 108.9,
+          "end": 109.42,
+          "confidence": 0.849
+        },
+        {
+          "word": "fire,",
+          "start": 109.42,
+          "end": 109.92,
+          "confidence": 1.0
+        },
+        {
+          "word": "I",
+          "start": 110.5,
+          "end": 111.0,
+          "confidence": 0.619
+        },
+        {
+          "word": "can",
+          "start": 111.0,
+          "end": 111.16,
+          "confidence": 1.0
+        },
+        {
+          "word": "still",
+          "start": 111.16,
+          "end": 111.5,
+          "confidence": 1.0
+        },
+        {
+          "word": "feel",
+          "start": 111.5,
+          "end": 111.92,
+          "confidence": 1.0
+        },
+        {
+          "word": "the",
+          "start": 111.92,
+          "end": 112.22,
+          "confidence": 1.0
+        },
+        {
+          "word": "heat",
+          "start": 112.22,
+          "end": 112.6,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Pre-Chorus",
+      "text": "Then water, that's the part I keep",
+      "start": 112.6,
+      "end": 116.46,
+      "confidence": 0.855,
+      "words": [
+        {
+          "word": "Then",
+          "start": 112.6,
+          "end": 113.48,
+          "confidence": 0.068
+        },
+        {
+          "word": "water,",
+          "start": 113.48,
+          "end": 114.12,
+          "confidence": 0.97
+        },
+        {
+          "word": "that's",
+          "start": 114.12,
+          "end": 115.18,
+          "confidence": 0.996
+        },
+        {
+          "word": "the",
+          "start": 115.18,
+          "end": 115.24,
+          "confidence": 0.999
+        },
+        {
+          "word": "part",
+          "start": 115.24,
+          "end": 115.56,
+          "confidence": 0.971
+        },
+        {
+          "word": "I",
+          "start": 115.56,
+          "end": 116.02,
+          "confidence": 0.992
+        },
+        {
+          "word": "keep",
+          "start": 116.02,
+          "end": 116.46,
+          "confidence": 0.988
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "Ten years on, another life, another shore",
+      "start": 117.64,
+      "end": 120.72,
+      "confidence": 0.972,
+      "words": [
+        {
+          "word": "Ten",
+          "start": 117.64,
+          "end": 118.08,
+          "confidence": 0.812
+        },
+        {
+          "word": "years",
+          "start": 118.08,
+          "end": 118.48,
+          "confidence": 1.0
+        },
+        {
+          "word": "on,",
+          "start": 118.48,
+          "end": 118.76,
+          "confidence": 0.999
+        },
+        {
+          "word": "another",
+          "start": 118.76,
+          "end": 119.06,
+          "confidence": 0.996
+        },
+        {
+          "word": "life,",
+          "start": 119.06,
+          "end": 119.56,
+          "confidence": 1.0
+        },
+        {
+          "word": "another",
+          "start": 119.8,
+          "end": 120.34,
+          "confidence": 0.999
+        },
+        {
+          "word": "shore",
+          "start": 120.34,
+          "end": 120.72,
+          "confidence": 0.996
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "I don't think about the fights anymore",
+      "start": 120.72,
+      "end": 125.8,
+      "confidence": 0.998,
+      "words": [
+        {
+          "word": "I",
+          "start": 120.72,
+          "end": 121.98,
+          "confidence": 0.992
+        },
+        {
+          "word": "don't",
+          "start": 121.98,
+          "end": 123.18,
+          "confidence": 1.0
+        },
+        {
+          "word": "think",
+          "start": 123.18,
+          "end": 123.42,
+          "confidence": 1.0
+        },
+        {
+          "word": "about",
+          "start": 123.42,
+          "end": 123.86,
+          "confidence": 1.0
+        },
+        {
+          "word": "the",
+          "start": 123.86,
+          "end": 124.28,
+          "confidence": 1.0
+        },
+        {
+          "word": "fights",
+          "start": 124.28,
+          "end": 124.82,
+          "confidence": 0.996
+        },
+        {
+          "word": "anymore",
+          "start": 124.82,
+          "end": 125.8,
+          "confidence": 0.998
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "I think about the roads, and the beaches we found",
+      "start": 127.28,
+      "end": 131.34,
+      "confidence": 0.957,
+      "words": [
+        {
+          "word": "I",
+          "start": 127.28,
+          "end": 128.16,
+          "confidence": 0.997
+        },
+        {
+          "word": "think",
+          "start": 128.16,
+          "end": 128.6,
+          "confidence": 1.0
+        },
+        {
+          "word": "about",
+          "start": 128.6,
+          "end": 129.08,
+          "confidence": 1.0
+        },
+        {
+          "word": "the",
+          "start": 129.08,
+          "end": 129.5,
+          "confidence": 1.0
+        },
+        {
+          "word": "roads,",
+          "start": 129.5,
+          "end": 129.84,
+          "confidence": 0.999
+        },
+        {
+          "word": "and",
+          "start": 129.84,
+          "end": 130.2,
+          "confidence": 0.996
+        },
+        {
+          "word": "the",
+          "start": 130.2,
+          "end": 130.3,
+          "confidence": 0.999
+        },
+        {
+          "word": "beaches",
+          "start": 130.3,
+          "end": 130.64,
+          "confidence": 1.0
+        },
+        {
+          "word": "we",
+          "start": 130.64,
+          "end": 130.88,
+          "confidence": 1.0
+        },
+        {
+          "word": "found",
+          "start": 130.88,
+          "end": 131.34,
+          "confidence": 0.581
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "Sitting side by side while the sun went down",
+      "start": 132.62,
+      "end": 137.52,
+      "confidence": 0.988,
+      "words": [
+        {
+          "word": "Sitting",
+          "start": 132.62,
+          "end": 133.5,
+          "confidence": 0.986
+        },
+        {
+          "word": "side",
+          "start": 133.5,
+          "end": 133.82,
+          "confidence": 1.0
+        },
+        {
+          "word": "by",
+          "start": 133.82,
+          "end": 134.3,
+          "confidence": 0.994
+        },
+        {
+          "word": "side",
+          "start": 134.3,
+          "end": 134.8,
+          "confidence": 1.0
+        },
+        {
+          "word": "while",
+          "start": 134.8,
+          "end": 135.44,
+          "confidence": 0.91
+        },
+        {
+          "word": "the",
+          "start": 135.44,
+          "end": 135.74,
+          "confidence": 1.0
+        },
+        {
+          "word": "sun",
+          "start": 135.74,
+          "end": 136.14,
+          "confidence": 1.0
+        },
+        {
+          "word": "went",
+          "start": 136.14,
+          "end": 136.78,
+          "confidence": 1.0
+        },
+        {
+          "word": "down",
+          "start": 136.78,
+          "end": 137.52,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "And every year they light the candles, and I think of you",
+      "start": 137.52,
+      "end": 142.6,
+      "confidence": 0.925,
+      "words": [
+        {
+          "word": "And",
+          "start": 137.52,
+          "end": 138.48,
+          "confidence": 0.709
+        },
+        {
+          "word": "every",
+          "start": 138.48,
+          "end": 138.82,
+          "confidence": 0.965
+        },
+        {
+          "word": "year",
+          "start": 138.82,
+          "end": 139.12,
+          "confidence": 0.922
+        },
+        {
+          "word": "they",
+          "start": 139.12,
+          "end": 139.36,
+          "confidence": 0.956
+        },
+        {
+          "word": "light",
+          "start": 139.36,
+          "end": 139.74,
+          "confidence": 0.994
+        },
+        {
+          "word": "the",
+          "start": 139.74,
+          "end": 139.96,
+          "confidence": 0.989
+        },
+        {
+          "word": "candles,",
+          "start": 139.96,
+          "end": 140.66,
+          "confidence": 0.998
+        },
+        {
+          "word": "and",
+          "start": 140.66,
+          "end": 141.06,
+          "confidence": 0.591
+        },
+        {
+          "word": "I",
+          "start": 141.06,
+          "end": 141.32,
+          "confidence": 0.987
+        },
+        {
+          "word": "think",
+          "start": 141.32,
+          "end": 141.82,
+          "confidence": 0.998
+        },
+        {
+          "word": "of",
+          "start": 141.82,
+          "end": 142.14,
+          "confidence": 0.994
+        },
+        {
+          "word": "you",
+          "start": 142.14,
+          "end": 142.6,
+          "confidence": 0.999
+        }
+      ]
+    },
+    {
+      "section": "Chorus",
+      "text": "'Cause it's your birthday too",
+      "start": 143.1,
+      "end": 145.26,
+      "confidence": 0.796,
+      "words": [
+        {
+          "word": "'Cause",
+          "start": 143.1,
+          "end": 143.4,
+          "confidence": 0.0
+        },
+        {
+          "word": "it's",
+          "start": 143.4,
+          "end": 143.7,
+          "confidence": 1.0
+        },
+        {
+          "word": "your",
+          "start": 143.7,
+          "end": 143.92,
+          "confidence": 1.0
+        },
+        {
+          "word": "birthday",
+          "start": 143.92,
+          "end": 144.62,
+          "confidence": 0.999
+        },
+        {
+          "word": "too",
+          "start": 144.62,
+          "end": 145.26,
+          "confidence": 0.98
+        }
+      ]
+    },
+    {
+      "section": "Verse 4",
+      "text": "I was the one who left, and it broke me too",
+      "start": 147.68,
+      "end": 153.12,
+      "confidence": 0.928,
+      "words": [
+        {
+          "word": "I",
+          "start": 147.68,
+          "end": 148.54,
+          "confidence": 0.995
+        },
+        {
+          "word": "was",
+          "start": 148.54,
+          "end": 148.9,
+          "confidence": 1.0
+        },
+        {
+          "word": "the",
+          "start": 148.9,
+          "end": 149.14,
+          "confidence": 1.0
+        },
+        {
+          "word": "one",
+          "start": 149.14,
+          "end": 149.58,
+          "confidence": 1.0
+        },
+        {
+          "word": "who",
+          "start": 149.58,
+          "end": 149.9,
+          "confidence": 0.998
+        },
+        {
+          "word": "left,",
+          "start": 149.9,
+          "end": 150.34,
+          "confidence": 0.93
+        },
+        {
+          "word": "and",
+          "start": 150.34,
+          "end": 151.4,
+          "confidence": 0.389
+        },
+        {
+          "word": "it",
+          "start": 151.4,
+          "end": 151.92,
+          "confidence": 0.998
+        },
+        {
+          "word": "broke",
+          "start": 151.92,
+          "end": 152.16,
+          "confidence": 0.905
+        },
+        {
+          "word": "me",
+          "start": 152.16,
+          "end": 152.6,
+          "confidence": 1.0
+        },
+        {
+          "word": "too",
+          "start": 152.6,
+          "end": 153.12,
+          "confidence": 0.995
+        }
+      ]
+    },
+    {
+      "section": "Verse 4",
+      "text": "It's the hardest thing I've ever had to do",
+      "start": 153.12,
+      "end": 158.36,
+      "confidence": 0.997,
+      "words": [
+        {
+          "word": "It's",
+          "start": 153.12,
+          "end": 153.76,
+          "confidence": 0.999
+        },
+        {
+          "word": "the",
+          "start": 153.76,
+          "end": 153.86,
+          "confidence": 1.0
+        },
+        {
+          "word": "hardest",
+          "start": 153.86,
+          "end": 154.34,
+          "confidence": 1.0
+        },
+        {
+          "word": "thing",
+          "start": 154.34,
+          "end": 154.74,
+          "confidence": 1.0
+        },
+        {
+          "word": "I've",
+          "start": 154.74,
+          "end": 155.28,
+          "confidence": 0.977
+        },
+        {
+          "word": "ever",
+          "start": 155.28,
+          "end": 155.7,
+          "confidence": 1.0
+        },
+        {
+          "word": "had",
+          "start": 155.7,
+          "end": 156.22,
+          "confidence": 1.0
+        },
+        {
+          "word": "to",
+          "start": 156.22,
+          "end": 157.66,
+          "confidence": 1.0
+        },
+        {
+          "word": "do",
+          "start": 157.66,
+          "end": 158.36,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Verse 4",
+      "text": "I've lived a lot since, and I'll tell you something true",
+      "start": 158.36,
+      "end": 163.22,
+      "confidence": 0.995,
+      "words": [
+        {
+          "word": "I've",
+          "start": 158.36,
+          "end": 159.12,
+          "confidence": 0.999
+        },
+        {
+          "word": "lived",
+          "start": 159.12,
+          "end": 159.46,
+          "confidence": 1.0
+        },
+        {
+          "word": "a",
+          "start": 159.46,
+          "end": 159.68,
+          "confidence": 0.999
+        },
+        {
+          "word": "lot",
+          "start": 159.68,
+          "end": 159.98,
+          "confidence": 0.996
+        },
+        {
+          "word": "since,",
+          "start": 159.98,
+          "end": 160.32,
+          "confidence": 1.0
+        },
+        {
+          "word": "and",
+          "start": 160.32,
+          "end": 160.62,
+          "confidence": 0.962
+        },
+        {
+          "word": "I'll",
+          "start": 160.62,
+          "end": 161.02,
+          "confidence": 1.0
+        },
+        {
+          "word": "tell",
+          "start": 161.02,
+          "end": 161.3,
+          "confidence": 1.0
+        },
+        {
+          "word": "you",
+          "start": 161.3,
+          "end": 161.82,
+          "confidence": 1.0
+        },
+        {
+          "word": "something",
+          "start": 161.82,
+          "end": 162.4,
+          "confidence": 0.994
+        },
+        {
+          "word": "true",
+          "start": 162.4,
+          "end": 163.22,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Verse 4",
+      "text": "Nobody's ever come close to you",
+      "start": 164.36,
+      "end": 169.04,
+      "confidence": 0.951,
+      "words": [
+        {
+          "word": "Nobody's",
+          "start": 164.36,
+          "end": 165.16,
+          "confidence": 0.755
+        },
+        {
+          "word": "ever",
+          "start": 165.16,
+          "end": 165.34,
+          "confidence": 0.992
+        },
+        {
+          "word": "come",
+          "start": 165.34,
+          "end": 165.9,
+          "confidence": 0.989
+        },
+        {
+          "word": "close",
+          "start": 165.9,
+          "end": 167.0,
+          "confidence": 0.995
+        },
+        {
+          "word": "to",
+          "start": 167.0,
+          "end": 167.82,
+          "confidence": 0.994
+        },
+        {
+          "word": "you",
+          "start": 167.82,
+          "end": 169.04,
+          "confidence": 0.979
+        }
+      ]
+    },
+    {
+      "section": "Bridge",
+      "text": "I'm in Australia now, I built a life, I'm fine",
+      "start": 169.04,
+      "end": 174.12,
+      "confidence": 0.99,
+      "words": [
+        {
+          "word": "I'm",
+          "start": 169.04,
+          "end": 169.96,
+          "confidence": 0.979
+        },
+        {
+          "word": "in",
+          "start": 169.96,
+          "end": 170.1,
+          "confidence": 1.0
+        },
+        {
+          "word": "Australia",
+          "start": 170.1,
+          "end": 170.58,
+          "confidence": 0.998
+        },
+        {
+          "word": "now,",
+          "start": 170.58,
+          "end": 171.46,
+          "confidence": 0.998
+        },
+        {
+          "word": "I",
+          "start": 171.66,
+          "end": 172.5,
+          "confidence": 0.996
+        },
+        {
+          "word": "built",
+          "start": 172.5,
+          "end": 172.76,
+          "confidence": 0.931
+        },
+        {
+          "word": "a",
+          "start": 172.76,
+          "end": 172.92,
+          "confidence": 1.0
+        },
+        {
+          "word": "life,",
+          "start": 172.92,
+          "end": 173.32,
+          "confidence": 1.0
+        },
+        {
+          "word": "I'm",
+          "start": 173.34,
+          "end": 173.72,
+          "confidence": 1.0
+        },
+        {
+          "word": "fine",
+          "start": 173.72,
+          "end": 174.12,
+          "confidence": 0.998
+        }
+      ]
+    },
+    {
+      "section": "Bridge",
+      "text": "I'm not asking for you back, I'm not rewriting time",
+      "start": 174.12,
+      "end": 179.34,
+      "confidence": 0.967,
+      "words": [
+        {
+          "word": "I'm",
+          "start": 174.12,
+          "end": 175.2,
+          "confidence": 0.997
+        },
+        {
+          "word": "not",
+          "start": 175.2,
+          "end": 175.44,
+          "confidence": 1.0
+        },
+        {
+          "word": "asking",
+          "start": 175.44,
+          "end": 176.0,
+          "confidence": 0.996
+        },
+        {
+          "word": "for",
+          "start": 176.0,
+          "end": 176.28,
+          "confidence": 1.0
+        },
+        {
+          "word": "you",
+          "start": 176.28,
+          "end": 176.58,
+          "confidence": 0.679
+        },
+        {
+          "word": "back,",
+          "start": 176.58,
+          "end": 176.88,
+          "confidence": 1.0
+        },
+        {
+          "word": "I'm",
+          "start": 177.12,
+          "end": 177.42,
+          "confidence": 1.0
+        },
+        {
+          "word": "not",
+          "start": 177.42,
+          "end": 177.72,
+          "confidence": 1.0
+        },
+        {
+          "word": "rewriting",
+          "start": 177.72,
+          "end": 178.66,
+          "confidence": 0.999
+        },
+        {
+          "word": "time",
+          "start": 178.66,
+          "end": 179.34,
+          "confidence": 0.996
+        }
+      ]
+    },
+    {
+      "section": "Bridge",
+      "text": "But if this ever finds you, wherever you are",
+      "start": 179.34,
+      "end": 184.68,
+      "confidence": 0.999,
+      "words": [
+        {
+          "word": "But",
+          "start": 179.34,
+          "end": 180.44,
+          "confidence": 0.998
+        },
+        {
+          "word": "if",
+          "start": 180.44,
+          "end": 180.64,
+          "confidence": 1.0
+        },
+        {
+          "word": "this",
+          "start": 180.64,
+          "end": 180.82,
+          "confidence": 0.995
+        },
+        {
+          "word": "ever",
+          "start": 180.82,
+          "end": 181.26,
+          "confidence": 1.0
+        },
+        {
+          "word": "finds",
+          "start": 181.26,
+          "end": 182.04,
+          "confidence": 1.0
+        },
+        {
+          "word": "you,",
+          "start": 182.04,
+          "end": 182.68,
+          "confidence": 1.0
+        },
+        {
+          "word": "wherever",
+          "start": 182.7,
+          "end": 183.46,
+          "confidence": 1.0
+        },
+        {
+          "word": "you",
+          "start": 183.46,
+          "end": 184.06,
+          "confidence": 1.0
+        },
+        {
+          "word": "are",
+          "start": 184.06,
+          "end": 184.68,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Bridge",
+      "text": "You'll know it's you, you were the best of it, by far",
+      "start": 185.4,
+      "end": 190.2,
+      "confidence": 0.993,
+      "words": [
+        {
+          "word": "You'll",
+          "start": 185.4,
+          "end": 185.94,
+          "confidence": 0.941
+        },
+        {
+          "word": "know",
+          "start": 185.94,
+          "end": 186.26,
+          "confidence": 1.0
+        },
+        {
+          "word": "it's",
+          "start": 186.26,
+          "end": 186.7,
+          "confidence": 1.0
+        },
+        {
+          "word": "you,",
+          "start": 186.7,
+          "end": 187.2,
+          "confidence": 1.0
+        },
+        {
+          "word": "you",
+          "start": 187.46,
+          "end": 187.82,
+          "confidence": 1.0
+        },
+        {
+          "word": "were",
+          "start": 187.82,
+          "end": 188.1,
+          "confidence": 0.983
+        },
+        {
+          "word": "the",
+          "start": 188.1,
+          "end": 188.5,
+          "confidence": 1.0
+        },
+        {
+          "word": "best",
+          "start": 188.5,
+          "end": 189.0,
+          "confidence": 1.0
+        },
+        {
+          "word": "of",
+          "start": 189.0,
+          "end": 189.18,
+          "confidence": 0.986
+        },
+        {
+          "word": "it,",
+          "start": 189.18,
+          "end": 189.38,
+          "confidence": 1.0
+        },
+        {
+          "word": "by",
+          "start": 189.38,
+          "end": 189.64,
+          "confidence": 1.0
+        },
+        {
+          "word": "far",
+          "start": 189.64,
+          "end": 190.2,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Final Chorus",
+      "text": "Ten years on, another life, another shore",
+      "start": 190.2,
+      "end": 194.14,
+      "confidence": 0.941,
+      "words": [
+        {
+          "word": "Ten",
+          "start": 190.2,
+          "end": 191.5,
+          "confidence": 0.598
+        },
+        {
+          "word": "years",
+          "start": 191.5,
+          "end": 191.84,
+          "confidence": 0.999
+        },
+        {
+          "word": "on,",
+          "start": 191.84,
+          "end": 192.14,
+          "confidence": 0.997
+        },
+        {
+          "word": "another",
+          "start": 192.14,
+          "end": 192.46,
+          "confidence": 0.999
+        },
+        {
+          "word": "life,",
+          "start": 192.46,
+          "end": 192.98,
+          "confidence": 0.998
+        },
+        {
+          "word": "another",
+          "start": 193.24,
+          "end": 193.72,
+          "confidence": 0.996
+        },
+        {
+          "word": "shore",
+          "start": 193.72,
+          "end": 194.14,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Final Chorus",
+      "text": "I don't think about the fights anymore",
+      "start": 195.38,
+      "end": 199.34,
+      "confidence": 0.964,
+      "words": [
+        {
+          "word": "I",
+          "start": 195.38,
+          "end": 196.22,
+          "confidence": 0.89
+        },
+        {
+          "word": "don't",
+          "start": 196.22,
+          "end": 196.6,
+          "confidence": 0.999
+        },
+        {
+          "word": "think",
+          "start": 196.6,
+          "end": 196.84,
+          "confidence": 1.0
+        },
+        {
+          "word": "about",
+          "start": 196.84,
+          "end": 197.32,
+          "confidence": 1.0
+        },
+        {
+          "word": "the",
+          "start": 197.32,
+          "end": 197.72,
+          "confidence": 1.0
+        },
+        {
+          "word": "fights",
+          "start": 197.72,
+          "end": 198.2,
+          "confidence": 0.863
+        },
+        {
+          "word": "anymore",
+          "start": 198.2,
+          "end": 199.34,
+          "confidence": 0.994
+        }
+      ]
+    },
+    {
+      "section": "Final Chorus",
+      "text": "I think about the roads, and the beaches we found",
+      "start": 200.76,
+      "end": 204.86,
+      "confidence": 0.845,
+      "words": [
+        {
+          "word": "I",
+          "start": 200.76,
+          "end": 201.6,
+          "confidence": 0.992
+        },
+        {
+          "word": "think",
+          "start": 201.6,
+          "end": 202.08,
+          "confidence": 1.0
+        },
+        {
+          "word": "about",
+          "start": 202.08,
+          "end": 202.54,
+          "confidence": 0.999
+        },
+        {
+          "word": "the",
+          "start": 202.54,
+          "end": 202.98,
+          "confidence": 0.999
+        },
+        {
+          "word": "roads,",
+          "start": 202.98,
+          "end": 203.34,
+          "confidence": 1.0
+        },
+        {
+          "word": "and",
+          "start": 203.34,
+          "end": 203.68,
+          "confidence": 0.992
+        },
+        {
+          "word": "the",
+          "start": 203.68,
+          "end": 203.8,
+          "confidence": 0.999
+        },
+        {
+          "word": "beaches",
+          "start": 203.8,
+          "end": 204.12,
+          "confidence": 1.0
+        },
+        {
+          "word": "we",
+          "start": 204.12,
+          "end": 204.42,
+          "confidence": 0.0
+        },
+        {
+          "word": "found",
+          "start": 204.42,
+          "end": 204.86,
+          "confidence": 0.472
+        }
+      ]
+    },
+    {
+      "section": "Final Chorus",
+      "text": "Sitting side by side while the sun went down",
+      "start": 206.12,
+      "end": 211.08,
+      "confidence": 0.993,
+      "words": [
+        {
+          "word": "Sitting",
+          "start": 206.12,
+          "end": 206.96,
+          "confidence": 0.979
+        },
+        {
+          "word": "side",
+          "start": 206.96,
+          "end": 207.34,
+          "confidence": 1.0
+        },
+        {
+          "word": "by",
+          "start": 207.34,
+          "end": 207.82,
+          "confidence": 0.976
+        },
+        {
+          "word": "side",
+          "start": 207.82,
+          "end": 208.48,
+          "confidence": 1.0
+        },
+        {
+          "word": "while",
+          "start": 208.48,
+          "end": 209.0,
+          "confidence": 0.986
+        },
+        {
+          "word": "the",
+          "start": 209.0,
+          "end": 209.26,
+          "confidence": 1.0
+        },
+        {
+          "word": "sun",
+          "start": 209.26,
+          "end": 209.64,
+          "confidence": 0.999
+        },
+        {
+          "word": "went",
+          "start": 209.64,
+          "end": 210.28,
+          "confidence": 0.999
+        },
+        {
+          "word": "down",
+          "start": 210.28,
+          "end": 211.08,
+          "confidence": 0.996
+        }
+      ]
+    },
+    {
+      "section": "Final Chorus",
+      "text": "And every year they light the candles, and I think of you",
+      "start": 211.08,
+      "end": 216.14,
+      "confidence": 0.993,
+      "words": [
+        {
+          "word": "And",
+          "start": 211.08,
+          "end": 212.06,
+          "confidence": 0.99
+        },
+        {
+          "word": "every",
+          "start": 212.06,
+          "end": 212.34,
+          "confidence": 0.999
+        },
+        {
+          "word": "year",
+          "start": 212.34,
+          "end": 212.66,
+          "confidence": 0.999
+        },
+        {
+          "word": "they",
+          "start": 212.66,
+          "end": 212.88,
+          "confidence": 0.997
+        },
+        {
+          "word": "light",
+          "start": 212.88,
+          "end": 213.3,
+          "confidence": 1.0
+        },
+        {
+          "word": "the",
+          "start": 213.3,
+          "end": 213.48,
+          "confidence": 0.974
+        },
+        {
+          "word": "candles,",
+          "start": 213.48,
+          "end": 214.18,
+          "confidence": 1.0
+        },
+        {
+          "word": "and",
+          "start": 214.18,
+          "end": 214.56,
+          "confidence": 0.962
+        },
+        {
+          "word": "I",
+          "start": 214.56,
+          "end": 214.84,
+          "confidence": 1.0
+        },
+        {
+          "word": "think",
+          "start": 214.84,
+          "end": 215.28,
+          "confidence": 1.0
+        },
+        {
+          "word": "of",
+          "start": 215.28,
+          "end": 215.68,
+          "confidence": 1.0
+        },
+        {
+          "word": "you",
+          "start": 215.68,
+          "end": 216.14,
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "section": "Final Chorus",
+      "text": "'Cause it's your birthday too",
+      "start": 216.64,
+      "end": 218.8,
+      "confidence": 0.799,
+      "words": [
+        {
+          "word": "'Cause",
+          "start": 216.64,
+          "end": 216.94,
+          "confidence": 0.0
+        },
+        {
+          "word": "it's",
+          "start": 216.94,
+          "end": 217.3,
+          "confidence": 1.0
+        },
+        {
+          "word": "your",
+          "start": 217.3,
+          "end": 217.42,
+          "confidence": 1.0
+        },
+        {
+          "word": "birthday",
+          "start": 217.42,
+          "end": 218.16,
+          "confidence": 1.0
+        },
+        {
+          "word": "too",
+          "start": 218.16,
+          "end": 218.8,
+          "confidence": 0.994
+        }
+      ]
+    },
+    {
+      "section": "Final Chorus",
+      "text": "'Cause it's your birthday too",
+      "start": 221.88,
+      "end": 224.16,
+      "confidence": 0.769,
+      "words": [
+        {
+          "word": "'Cause",
+          "start": 221.88,
+          "end": 222.18,
+          "confidence": 0.0
+        },
+        {
+          "word": "it's",
+          "start": 222.18,
+          "end": 222.5,
+          "confidence": 0.979
+        },
+        {
+          "word": "your",
+          "start": 222.5,
+          "end": 222.7,
+          "confidence": 0.994
+        },
+        {
+          "word": "birthday",
+          "start": 222.7,
+          "end": 223.48,
+          "confidence": 0.993
+        },
+        {
+          "word": "too",
+          "start": 223.48,
+          "end": 224.16,
+          "confidence": 0.877
+        }
+      ]
+    },
+    {
+      "section": "Final Chorus",
+      "text": "It's your birthday too",
+      "start": 226.46,
+      "end": 229.36,
+      "confidence": 0.97,
+      "words": [
+        {
+          "word": "It's",
+          "start": 226.46,
+          "end": 227.82,
+          "confidence": 0.886
+        },
+        {
+          "word": "your",
+          "start": 227.82,
+          "end": 227.96,
+          "confidence": 0.998
+        },
+        {
+          "word": "birthday",
+          "start": 227.96,
+          "end": 228.74,
+          "confidence": 0.999
+        },
+        {
+          "word": "too",
+          "start": 228.74,
+          "end": 229.36,
+          "confidence": 0.998
+        }
+      ]
+    },
+    {
+      "section": "Outro",
+      "text": "Happy birthday to you",
+      "start": 231.76,
+      "end": 235.16,
+      "confidence": 0.973,
+      "words": [
+        {
+          "word": "Happy",
+          "start": 231.76,
+          "end": 233.12,
+          "confidence": 0.961
+        },
+        {
+          "word": "birthday",
+          "start": 233.12,
+          "end": 234.04,
+          "confidence": 0.934
+        },
+        {
+          "word": "to",
+          "start": 234.04,
+          "end": 234.64,
+          "confidence": 0.997
+        },
+        {
+          "word": "you",
+          "start": 234.64,
+          "end": 235.16,
+          "confidence": 0.999
+        }
+      ]
+    },
+    {
+      "section": "Outro",
+      "text": "And me",
+      "start": 236.6,
+      "end": 238.34,
+      "confidence": 0.738,
+      "words": [
+        {
+          "word": "And",
+          "start": 236.6,
+          "end": 237.96,
+          "confidence": 0.479
+        },
+        {
+          "word": "me",
+          "start": 237.96,
+          "end": 238.34,
+          "confidence": 0.996
+        }
+      ]
+    }
+  ],
+  "unaligned_lines": []
+}

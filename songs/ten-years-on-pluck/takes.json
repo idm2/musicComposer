@@ -1,0 +1,66 @@
+{
+  "runs": [
+    {
+      "provider": "suno",
+      "request_hash": "1c60f3fc870c0d6a",
+      "fidelity": "loose",
+      "fidelity_note": "",
+      "style_prompt": "one repeating four-chord loop Em - C - G - D, one chord per bar, the same four chords in the same order through the entire song and never anything else, modern acoustic pop love song, 91 BPM, G major, reverberant plucked acoustic guitar loop up front with clean wide reverb, a nylon Spanish guitar answering with short melodic fills, warm emotional male tenor, close and breathy in the verses, aching and open in the chorus, gentle falsetto lifts, thick stacked harmonies on the chorus, strong unforgettable vocal melody that lingers sweetly on the major third, big singable chorus hook, deep pillowy sub bass, gentle electronic kick and finger-snap beat held back until the first chorus, airy pads, polished spacious production, nostalgic then soaring",
+      "payload": {
+        "n_requests": 1,
+        "body": {
+          "model": "ai-music-api/generate",
+          "input": {
+            "prompt": "[Intro: one plucked guitar alone, lots of space, no drums, no bass]\n\n[Hook: whispered close vocal over the pluck only, no drums]\nTen years on, another life, another shore\nI don't think about the fights anymore\nI think about the roads, and the beaches we found\nSitting side by side while the sun went down\n\n[Verse 1: still no drums, single intimate vocal, soft pad fades in]\nFive a.m., the sea at Hua Hin like glass\nWe'd swim out before the town woke up\nFruit from the market in a plastic bag\nWe'd eat it on the motorbike, and that was enough\n\n[Pre-Chorus: finger snaps enter, a harmony joins, tension rising]\nWe were fire and fire, we could burn the whole night down\nThen water, the calmest sea around\n\n[Chorus: full beat and deep bass drop in all at once, wide stacked harmonies]\nTen years on, another life, another shore\nI don't think about the fights anymore\nI think about the roads, and the beaches we found\nSitting side by side while the sun went down\nAnd every year they light the candles, and I think of you\n'Cause it's your birthday too\n\n[Verse 2: beat thins to kick and snaps, rolling, like the open road]\nForty kilometres on the motorbike\nAny makeshift room would do for the night\nWe had next to nothing, and we had it all\nAnother empty beach, watching the sun fall\n\n[Verse 3: same light groove, playful and warm]\nWe could do it cheap, we could do it grand\nYou were just as happy with a street-food stand\nA few drinks deep, then home, and you'd put Faded on\nWe'd be asleep before the end of the song\n\n[Pre-Chorus: snaps and harmony, building]\nWe were fire and fire, I can still feel the heat\nThen water, that's the part I keep\n\n[Chorus: full beat, widest harmonies]\nTen years on, another life, another shore\nI don't think about the fights anymore\nI think about the roads, and the beaches we found\nSitting side by side while the sun went down\nAnd every year they light the candles, and I think of you\n'Cause it's your birthday too\n\n[Verse 4: beat drops out to a heartbeat kick, confessional, almost spoken]\nWe built a house, it's yours now, and that's right\nI left, and it's the hardest thing I've done in my life\nI've been married since, and I'll tell you something true\nI don't think of her the way I think of you\n\n[Bridge: pluck and one voice only, the quietest moment, slowly rebuilding]\nI'm in Australia now, I built a life, I'm fine\nI'm not asking for you back, I'm not rewriting time\nBut if this ever finds you, wherever you are\nYou'll know it's you, you were the best of it, by far\n\n[Final Chorus: biggest moment, euphoric and aching at once, ad-libs]\nTen years on, another life, another shore\nI don't think about the fights anymore\nI think about the roads, and the beaches we found\nSitting side by side while the sun went down\nAnd every year they light the candles, and I think of you\n'Cause it's your birthday too\n'Cause it's your birthday too\nIt's your birthday too\n\n[Outro: pluck alone again, one soft voice, fade]\nHappy birthday to you\nAnd me",
+            "custom_mode": true,
+            "instrumental": false,
+            "model": "V6",
+            "style": "one repeating four-chord loop Em - C - G - D, one chord per bar, the same four chords in the same order through the entire song and never anything else, modern acoustic pop love song, 91 BPM, G major, reverberant plucked acoustic guitar loop up front with clean wide reverb, a nylon Spanish guitar answering with short melodic fills, warm emotional male tenor, close and breathy in the verses, aching and open in the chorus, gentle falsetto lifts, thick stacked harmonies on the chorus, strong unforgettable vocal melody that lingers sweetly on the major third, big singable chorus hook, deep pillowy sub bass, gentle electronic kick and finger-snap beat held back until the first chorus, airy pads, polished spacious production, nostalgic then soaring",
+            "title": "Ten Years On",
+            "duration": 242,
+            "negative_tags": "chord substitutions, flamenco harmony, jazz chords, key change, harsh synths, distorted guitars, aggressive drums, autotune artifacts, lo-fi, rap verse, EDM drop",
+            "vocal_gender": "m"
+          }
+        }
+      },
+      "cost_estimate_usd": 0.06,
+      "cost_actual_usd": 0.06,
+      "created_at": "2026-09-21T11:40:35.547810+00:00",
+      "warnings": [],
+      "takes": [
+        {
+          "index": 1,
+          "file": "take-1.mp3",
+          "provider": "suno",
+          "provider_ref": "ff23248d-8cff-4055-8a15-c3e91c17a0f8",
+          "duration_s": 240.92,
+          "bytes": 5439143
+        },
+        {
+          "index": 2,
+          "file": "take-2.mp3",
+          "provider": "suno",
+          "provider_ref": "89be288a-505f-40e9-bdd1-acdccb482d5c",
+          "duration_s": 242.64,
+          "bytes": 5538071
+        },
+        {
+          "index": 3,
+          "file": "take-2-final.mp3",
+          "provider": "suno",
+          "provider_ref": "89be288a-505f-40e9-bdd1-acdccb482d5c+verse4-splice",
+          "duration_s": 245.16,
+          "bytes": 5538071
+        },
+        {
+          "index": 4,
+          "file": "take-2-final-v3.mp3",
+          "provider": "suno",
+          "provider_ref": "89be288a-505f-40e9-bdd1-acdccb482d5c+v1+v2+v4-splice",
+          "duration_s": 245.14,
+          "bytes": 5885118
+        }
+      ]
+    }
+  ]
+}

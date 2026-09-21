@@ -34,10 +34,10 @@ Back home you'd put Faded on, we'd sing along
 And pass out halfway through the song  
 
 *Verse 3*  
-We built a house, it's yours now, and that's right  
+(line removed at Sam's request)  
 I left, and it's the hardest thing I've done in my life  
-I've been married since, and I'll tell you something true  
-I don't think of her the way I think of you  
+(line removed at Sam's request)  
+(line removed at Sam's request)  
 
 *Pre-Chorus*  
 We were fire and fire, I can still feel the heat  
@@ -104,10 +104,10 @@ Back home you'd put Faded on, we'd sing along
 And pass out halfway through the song  
 
 *Verse 3*  
-We built a house, it's yours now, and that's right  
+(line removed at Sam's request)  
 I left, and it's the hardest thing I've done in my life  
-I've been married since, and I'll tell you something true  
-I don't think of her the way I think of you  
+(line removed at Sam's request)  
+(line removed at Sam's request)  
 
 *Pre-Chorus*  
 We were fire and fire, I can still feel the heat  
@@ -180,10 +180,10 @@ Back home you'd put Faded on, we'd sing along
 And pass out halfway through the song  
 
 *Verse 3*  
-We built a house, it's yours now, and that's right  
+(line removed at Sam's request)  
 I left, and it's the hardest thing I've done in my life  
-I've been married since, and I'll tell you something true  
-I don't think of her the way I think of you  
+(line removed at Sam's request)  
+(line removed at Sam's request)  
 
 *Pre-Chorus*  
 We were fire and fire, I can still feel the heat  
@@ -251,7 +251,7 @@ And I'd do it all again
 Every fight, and every five a.m.  
 
 *Verse 3*  
-We built a house, it's yours now, and that's right  
+(line removed at Sam's request)  
 I left, and it's the hardest thing I've done in my life  
 I'm in Australia now, I built a life, I'm fine  
 But you're the most alive I've ever been, by far  

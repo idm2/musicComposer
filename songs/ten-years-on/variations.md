@@ -52,10 +52,10 @@ And every year they light the candles, and I think of you
 'Cause it's your birthday too  
 
 *Verse 4*  
-We built a house, it's yours now, and that's right  
+(line removed at Sam's request)  
 I left, and it's the hardest thing I've done in my life  
-I've been married since, and I'll tell you something true  
-I don't think of her the way I think of you  
+(line removed at Sam's request)  
+(line removed at Sam's request)  
 
 *Bridge*  
 I'm in Australia now, I built a life, I'm fine  
@@ -134,10 +134,10 @@ And every year they light the candles, and I think of you
 'Cause it's your birthday too  
 
 *Verse 4*  
-We built a house, it's yours now, and that's right  
+(line removed at Sam's request)  
 I left, and it's the hardest thing I've done in my life  
-I've been married since, and I'll tell you something true  
-I don't think of her the way I think of you  
+(line removed at Sam's request)  
+(line removed at Sam's request)  
 
 *Bridge*  
 I'm in Australia now, I built a life, I'm fine  

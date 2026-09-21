@@ -7,11 +7,10 @@ factual: no invented scenes, nothing hypothetical, nothing surreal.
 
 A girl I met once. We were so connected, but we left each other, and ever since I can't stop thinking about
 her. She was the most amazing thing in my life. I've moved on — I'm 10 years ahead now, living my own life in
-Australia — but I still think about her. I was married once, and I don't think about my ex-wife as much as I
-think about this girl I left.
+Australia — but I still think about her.
 
 - **Our birthdays are on the same day.**
-- We lived in **Thailand** together and **built a house together** there. She owns it now.
+- We lived in **Thailand** together.
 - **I chose to leave her**, and it really hurt. (Reason to confirm with Sam: supporting her family on the job I had.)
 - We used to fight a LOT — that was part of us. **She was fire, I was fire — and then we were water, smooth as the calmest sea.**
 - We would **swim in the calm ocean at Hua Hin at 5am**, go to markets and festivals, and have so much fun.
@@ -20,6 +19,13 @@ think about this girl I left.
   - getting drunk at a bar, buying makeshift food from a stall
   - chilling out watching YouTube music — **Alan Walker, "Faded"** — before we passed out
 - I really miss her. REALLY miss her.
+
+## Lyric rules (from Sam, 2026-09-21)
+
+- Personal emotion only. **Never mention a previous marriage. Never mention the house, money or investments.**
+- No statistics or abbreviations (no distances like "forty kilometres") — describe the experience instead.
+- Every image must explain itself: say the sea was calm and beautiful, do not just say "glass".
+- Anonymous: no name, no description of her. She should recognise it from the context alone.
 
 ## The music
 
