@@ -114,6 +114,15 @@ def validate_request(req: GenerationRequest, limits: ProviderLimits,
         if s.lines and s.duration_s > 0 and not MIN_WPS <= words / s.duration_s <= MAX_WPS:
             problems.append(f"{s.name}: {words} words in {s.duration_s}s = {words / s.duration_s:.1f} words/sec "
                             f"(expected {MIN_WPS}–{MAX_WPS})")
+        # style_notes reach the provider too (Suno section headers, ElevenLabs chunk styles) — same rules as a prompt
+        for name, rx in LINE_VALIDATORS:
+            if rx.search(s.style_notes):
+                problems.append(f"{s.name} style_notes: {name}")
+        if STYLE_OF.search(s.style_notes):
+            problems.append(f"{s.name} style_notes: names another work ('in the style of' / 'sounds like')")
+        for term in banned:
+            if re.search(rf"(?i)\b{re.escape(term)}\b", s.style_notes):
+                problems.append(f"{s.name} style_notes: contains banned term {term!r}")
         for i, line in enumerate(s.lines, start=1):
             where = f"{s.name} line {i}"
             if not line.strip():
@@ -134,8 +143,9 @@ def validate_request(req: GenerationRequest, limits: ProviderLimits,
         problems.append(f"duration: sections total {total}s outside {limits.min_total_s}–{limits.max_total_s}s")
     if req.target_duration_s and abs(total - req.target_duration_s) > 0.15 * req.target_duration_s:
         problems.append(f"duration: sections sum to {total}s but target_duration_s is {req.target_duration_s}s (>15% apart)")
-    if len(req.lyrics_text()) > limits.max_lyrics_chars:
-        problems.append(f"lyrics: {len(req.lyrics_text())} chars > limit {limits.max_lyrics_chars}")
+    sent = len(req.lyrics_text(with_notes=True))          # the longest form any provider sends
+    if sent > limits.max_lyrics_chars:
+        problems.append(f"lyrics: {sent} chars > limit {limits.max_lyrics_chars}")
     return problems
 
 

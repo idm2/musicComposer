@@ -201,3 +201,12 @@ def test_preflight_exits_and_says_nothing_was_generated(capsys):
 def test_preflight_passes_quietly(capsys):
     preflight(req(), GENERIC_LIMITS, [], [])
     assert "pre-flight passed" in capsys.readouterr().out
+
+
+def test_section_style_notes_are_validated_like_a_prompt():
+    def with_notes(notes):
+        r = req(); r.sections[0].style_notes = notes; return r
+    assert problems(with_notes("guitar only, intimate")) == []
+    assert any("style_notes: markup" in p for p in problems(with_notes("drop [beat]")))
+    assert any("style_notes" in p and "banned term" in p for p in problems(with_notes("like Bon Iver"), banned=["Bon Iver"]))
+    assert any("style_notes" in p and "names another work" in p for p in problems(with_notes("sounds like that one hit")))

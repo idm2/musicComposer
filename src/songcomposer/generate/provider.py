@@ -39,8 +39,13 @@ class GenerationRequest(BaseModel):
     target_duration_s: float
     n_takes: int = 3
 
-    def lyrics_text(self) -> str:
-        return "\n\n".join("\n".join([f"[{s.name}]"] + s.lines) for s in self.sections)
+    def lyrics_text(self, with_notes: bool = False) -> str:
+        """with_notes folds each section's style_notes into its header — "[Verse 1: sparse, guitar only]" — the
+        only per-section direction a lyrics-prompt provider (Suno) ever sees."""
+        def header(s: SpecSection) -> str:
+            notes = s.style_notes.strip() if with_notes else ""
+            return f"[{s.name}: {notes}]" if notes else f"[{s.name}]"
+        return "\n\n".join("\n".join([header(s)] + s.lines) for s in self.sections)
 
 
 class CostEstimate(BaseModel):

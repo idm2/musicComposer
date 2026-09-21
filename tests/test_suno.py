@@ -252,3 +252,12 @@ def test_redirected_download_is_followed_and_carries_no_auth_on_either_hop(tmp_p
     assert all("authorization" not in h.headers for h in hops)
     assert (tmp_path / "take-1.mp3").exists()
     assert [t.path.name for t in got] == ["take-1.mp3", "take-2.mp3", "take-3.mp3", "take-4.mp3"]
+
+
+def test_section_style_notes_reach_suno_as_header_tags():
+    # Suno sees only the lyrics prompt and the global style — per-section direction has to ride in the header.
+    noted = REQ.model_copy(update={"sections": [
+        SpecSection(name="Verse 1", lines=["a b c"], duration_s=75, style_notes="guitar only, intimate"),
+        SpecSection(name="Chorus", lines=["g h i"], duration_s=75)]})
+    assert SunoProvider("V6").payload(noted)["body"]["input"]["prompt"] == (
+        "[Verse 1: guitar only, intimate]\na b c\n\n[Chorus]\ng h i")

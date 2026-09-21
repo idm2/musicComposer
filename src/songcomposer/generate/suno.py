@@ -46,7 +46,7 @@ class SunoProvider:
         return math.ceil(req.n_takes / TRACKS_PER_REQUEST)
 
     def payload(self, req: GenerationRequest) -> dict:
-        inp = {"prompt": req.lyrics_text(), "custom_mode": True, "instrumental": False, "model": self.model,
+        inp = {"prompt": req.lyrics_text(with_notes=True), "custom_mode": True, "instrumental": False, "model": self.model,
                "style": req.style_prompt, "title": req.title,
                "duration": int(min(360, max(10, round(req.target_duration_s))))}
         if req.negative_style:
