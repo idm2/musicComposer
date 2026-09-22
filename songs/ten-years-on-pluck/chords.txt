@@ -1,7 +1,7 @@
 Ten Years On
 ============
-Key: D major (confidence 0.92)   Tempo: 91 BPM   Time: 4/4
-Transcribed from take 4. ? = low-confidence chord (below 0.5): 16 of 60 chords.
+Key: D major (confidence 0.95)   Tempo: 91 BPM   Time: 4/4
+Transcribed from take 5. ? = low-confidence chord (below 0.5): 16 of 66 chords.
 
 [Hook]
                             D
@@ -34,9 +34,9 @@ Then water, the calmest sea around
 Ten years on, another life, another shore
                     A/C#?      Bm7
 I don't think about the fights anymore
-              A          G?
+              A          Gmaj7?
 I think about the roads, and the beaches we found
-                           D
+             G?            D
 Sitting side by side while the sun went down
 A                                      Em?                 A
 And every year they light the candles, and I think of you
@@ -57,7 +57,7 @@ We could do it cheap, we could do it grand
 You were just as happy with a street-food stand
                    D
 A few drinks deep, then home, and you'd put Faded on
-                              A?
+                          A?
 We'd be asleep before the end of the song
 
 [Pre-Chorus]
@@ -89,9 +89,13 @@ I've lived a lot since, and I'll tell you something true
 Nobody's ever come close to you
 
 [Bridge]
-I'm in Australia now, I built a life, I'm fine
-I'm not asking for you back, I'm not rewriting time
-But if this ever finds you, wherever you are
+        D
+There's an ocean now between your world and mine
+                   Bm                 Bm7
+I've made my peace with distance, and with time
+                                  G
+But if this song should find you, wherever you are
+                      A
 You'll know it's you, you were the best of it, by far
 
 [Final Chorus]
@@ -102,7 +106,7 @@ I don't think about the fights anymore
 I think about the roads, and the beaches we found
                      D
 Sitting side by side while the sun went down
-A                                      A/E?                A
+A                                      Em                  A
 And every year they light the candles, and I think of you
                                D
 'Cause it's your birthday too
@@ -112,7 +116,6 @@ And every year they light the candles, and I think of you
 It's your birthday too
 
 [Outro]
-                       D  A/C#?
+                       D  A/C#?  Bm?
 Happy birthday to you
-    Bm?
 And me
