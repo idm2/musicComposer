@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "title": "Ten Years On",
+  "style_prompt": "one repeating four-chord loop Em - C - G - D, one chord per bar, the same four chords in the same order through the entire song and never anything else, modern acoustic pop love song, 91 BPM, G major, reverberant plucked acoustic guitar loop up front with clean wide reverb, a nylon Spanish guitar answering with short melodic fills, warm emotional male tenor, close and breathy in the verses, aching and open in the chorus, gentle falsetto lifts, thick stacked harmonies on the chorus, strong unforgettable vocal melody that lingers sweetly on the major third, big singable chorus hook, deep pillowy sub bass, gentle electronic kick and finger-snap beat held back until the first chorus, airy pads, polished spacious production, nostalgic then soaring",
+  "negative_style": "chord substitutions, flamenco harmony, jazz chords, key change, harsh synths, distorted guitars, aggressive drums, autotune artifacts, lo-fi, rap verse, EDM drop",
+  "vocal_gender": "male",
+  "target_duration_s": 253.0,
+  "sections": [
+    {
+      "name": "Intro",
+      "lines": [],
+      "duration_s": 10.5,
+      "style_notes": "one plucked guitar alone, lots of space, no drums, no bass"
+    },
+    {
+      "name": "Hook",
+      "lines": [
+        "Ten years on, another life, another shore",
+        "I don't think about the fights anymore",
+        "I think about the roads, and the beaches we found",
+        "Sitting side by side while the sun went down"
+      ],
+      "duration_s": 21.1,
+      "style_notes": "whispered close vocal over the pluck only, no drums, the melody stays in one register through the last line, no octave drop on 'the sun went down', the melody stays in one register through the last line, no octave drop on 'the sun went down'"
+    },
+    {
+      "name": "Verse 1",
+      "lines": [
+        "Five a.m. at Hua Hin, the sea as calm as glass",
+        "So beautiful, we'd swim before the town woke up",
+        "Fruit from the market in a plastic bag",
+        "We'd eat it on the motorbike, and that was enough"
+      ],
+      "duration_s": 21.1,
+      "style_notes": "still no drums, single intimate vocal, soft pad fades in"
+    },
+    {
+      "name": "Pre-Chorus",
+      "lines": [
+        "We were fire and fire, we could burn the whole night down",
+        "Then water, the calmest sea around"
+      ],
+      "duration_s": 10.5,
+      "style_notes": "finger snaps enter, a harmony joins, tension rising"
+    },
+    {
+      "name": "Chorus",
+      "lines": [
+        "Ten years on, another life, another shore",
+        "I don't think about the fights anymore",
+        "I think about the roads, and the beaches we found",
+        "Sitting side by side while the sun went down",
+        "And every year they light the candles, and I think of you",
+        "'Cause it's your birthday too"
+      ],
+      "duration_s": 21.1,
+      "style_notes": "full beat and deep bass drop in all at once, wide stacked harmonies, the melody stays in one register through the last line, no octave drop on 'the sun went down', the melody stays in one register through the last line, no octave drop on 'the sun went down'"
+    },
+    {
+      "name": "Verse 2",
+      "lines": [
+        "We'd turn the key on the motorbike",
+        "Any makeshift room would do for the night",
+        "We had next to nothing, and we had it all",
+        "Another empty beach, watching the sun fall"
+      ],
+      "duration_s": 21.1,
+      "style_notes": "beat thins to kick and snaps, rolling, like the open road"
+    },
+    {
+      "name": "Verse 3",
+      "lines": [
+        "We could do it cheap, we could do it grand",
+        "You were just as happy with a street-food stand",
+        "We'd dance the night till we were drunk, then put Faded on",
+        "And we'd be asleep before the end of the song"
+      ],
+      "duration_s": 21.1,
+      "style_notes": "same light groove, playful and warm"
+    },
+    {
+      "name": "Pre-Chorus",
+      "lines": [
+        "We were fire and fire, I can still feel the heat",
+        "Then water, that's the part I keep"
+      ],
+      "duration_s": 10.5,
+      "style_notes": "snaps and harmony, building"
+    },
+    {
+      "name": "Chorus",
+      "lines": [
+        "Ten years on, another life, another shore",
+        "I don't think about the fights anymore",
+        "I think about the roads, and the beaches we found",
+        "Sitting side by side while the sun went down",
+        "And every year they light the candles, and I think of you",
+        "'Cause it's your birthday too"
+      ],
+      "duration_s": 21.1,
+      "style_notes": "full beat, widest harmonies, the melody stays in one register through the last line, no octave drop on 'the sun went down', the melody stays in one register through the last line, no octave drop on 'the sun went down'"
+    },
+    {
+      "name": "Final Chorus",
+      "lines": [
+        "Ten years on, another life, another shore",
+        "I don't think about the fights anymore",
+        "I think about the roads, and the beaches we found",
+        "Sitting side by side while the sun went down",
+        "And every year they light the candles, and I think of you",
+        "'Cause it's your birthday too",
+        "'Cause it's your birthday too",
+        "It's your birthday too"
+      ],
+      "duration_s": 31.6,
+      "style_notes": "biggest moment, euphoric and aching at once, ad-libs, the melody stays in one register through the last line, no octave drop on 'the sun went down', the melody stays in one register through the last line, no octave drop on 'the sun went down'"
+    },
+    {
+      "name": "Outro",
+      "lines": [
+        "Happy birthday to you"
+      ],
+      "duration_s": 10.5,
+      "style_notes": "pluck alone again, one soft voice, fade"
+    }
+  ],
+  "fidelity": "loose",
+  "fidelity_note": "",
+  "writer_model": "lyrics by Claude with Sam, final wording 2026-09-22 (memories only); from Sam's true story",
+  "edit_note": "Final (2026-09-23): Suno cover of work/ten-years-on-pluck take 2 (takes 17/18 of work/ten-years-on-final), then edited without regeneration: Verse 4 and Bridge removed by jumping from chorus 2 into the final chorus mid-line where both are equally loud; 'And me' trimmed from the outro. Sam's pick recommended: song-B."
+}

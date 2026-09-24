@@ -26,6 +26,12 @@ Australia — but I still think about her.
 - No statistics or abbreviations (no distances like "forty kilometres") — describe the experience instead.
 - Every image must explain itself: say the sea was calm and beautiful, do not just say "glass".
 - Anonymous: no name, no description of her. She should recognise it from the context alone.
+- **Memories only (2026-09-22).** Nothing that reads as asking her back: no "I hope you…", no "if this song finds
+  you", no "I'd still do the same", nothing addressed to her now. Past tense; the memories are a place, not a request.
+- Show what she did, never label the feeling. Facts must be true as told: the koala was seen while *walking*
+  in Inverloch; on the point she crouched in Sam's hoodie holding her hair out of the wind; at a city lake she
+  asked if there were crocodiles and Sam said *yes* as a joke and she believed him; a month in, Sam let his flight
+  home leave Bangkok without him and stayed. Nights out: dance until closing, home, "Faded", asleep before it ended.
 
 ## The music
 
@@ -39,3 +45,8 @@ Australia — but I still think about her.
 ## How Sam wants to work
 
 Discuss first, agree lyrics in chat, then a ~90-second **sample** before any full song. Patience over volume.
+
+## Final decision (2026-09-23)
+
+- The Bangkok and Australia verses were tried many ways and dropped: every version came out either crammed or corny.
+  The song stays with the Thailand memories and the birthday. The outro ends on "Happy birthday to you".
