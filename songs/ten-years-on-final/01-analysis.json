@@ -1,0 +1,5843 @@
+{
+  "schema_version": 1,
+  "audio_sha1": "782514332cd96202d87a57759f70190f218cc523",
+  "engines": {
+    "stems": "htdemucs",
+    "beats": "beat_this",
+    "chords": "lv-chordia 1.1.0",
+    "key": "krumhansl/librosa",
+    "notes": "basic-pitch 0.4.0",
+    "lyrics": "faster-whisper large-v3",
+    "structure": "librosa agglomerative + heard labels",
+    "subjective": "google/gemini-2.5-pro"
+  },
+  "global_info": {
+    "key": "F# major",
+    "key_confidence": 0.872,
+    "tempo_bpm": 90.91,
+    "time_signature": "4/4",
+    "loudness_lufs": -14.97,
+    "duration_s": 72.086
+  },
+  "beats": [
+    0.22,
+    0.88,
+    1.54,
+    2.18,
+    2.84,
+    3.5,
+    4.16,
+    4.82,
+    5.48,
+    6.12,
+    6.78,
+    7.44,
+    8.1,
+    8.78,
+    9.44,
+    10.1,
+    10.78,
+    11.44,
+    12.12,
+    12.78,
+    13.46,
+    14.12,
+    14.78,
+    15.44,
+    16.12,
+    16.8,
+    17.44,
+    18.1,
+    18.76,
+    19.4,
+    20.06,
+    20.74,
+    21.4,
+    22.06,
+    22.72,
+    23.36,
+    24.02,
+    24.68,
+    25.34,
+    26.0,
+    26.66,
+    27.32,
+    27.98,
+    28.62,
+    29.28,
+    29.94,
+    30.58,
+    31.24,
+    31.9,
+    32.56,
+    33.2,
+    33.86,
+    34.52,
+    35.18,
+    35.82,
+    36.48,
+    37.12,
+    37.78,
+    38.44,
+    39.1,
+    39.74,
+    40.4,
+    41.06,
+    41.7,
+    42.36,
+    43.0,
+    43.66,
+    44.3,
+    44.96,
+    45.6,
+    46.26,
+    46.92,
+    47.58,
+    48.22,
+    48.88,
+    49.54,
+    50.2,
+    50.86,
+    51.52,
+    52.18,
+    52.84,
+    53.5,
+    54.14,
+    54.8,
+    55.46,
+    56.12,
+    56.78,
+    57.42,
+    58.08,
+    58.74,
+    59.38,
+    60.06,
+    60.7,
+    61.36,
+    62.02,
+    62.66,
+    63.32,
+    63.98,
+    64.64,
+    65.28,
+    65.94,
+    66.58,
+    67.24,
+    67.92,
+    68.56,
+    69.22,
+    69.88,
+    70.54,
+    71.18,
+    71.82
+  ],
+  "downbeats": [
+    0.22,
+    2.84,
+    5.48,
+    8.1,
+    10.78,
+    13.46,
+    16.12,
+    18.76,
+    21.4,
+    24.02,
+    26.66,
+    29.28,
+    31.9,
+    34.52,
+    37.12,
+    39.74,
+    42.36,
+    44.96,
+    47.58,
+    50.2,
+    52.84,
+    55.46,
+    58.08,
+    60.7,
+    63.32,
+    65.94,
+    68.56,
+    71.18
+  ],
+  "chords": [
+    {
+      "symbol": "Ebm",
+      "harte": "Eb:min",
+      "root": "Eb",
+      "quality": "min",
+      "extensions": [],
+      "bass": null,
+      "onset": 0.22,
+      "duration": 1.96,
+      "confidence": 0.978
+    },
+    {
+      "symbol": "F#",
+      "harte": "F#:maj",
+      "root": "F#",
+      "quality": "maj",
+      "extensions": [],
+      "bass": null,
+      "onset": 2.18,
+      "duration": 0.66,
+      "confidence": 0.6
+    },
+    {
+      "symbol": "B",
+      "harte": "B:maj",
+      "root": "B",
+      "quality": "maj",
+      "extensions": [],
+      "bass": null,
+      "onset": 2.84,
+      "duration": 2.8,
+      "confidence": 0.929
+    },
+    {
+      "symbol": "F#",
+      "harte": "F#:maj",
+      "root": "F#",
+      "quality": "maj",
+      "extensions": [],
+      "bass": null,
+      "onset": 5.64,
+      "duration": 2.46,
+      "confidence": 0.971
+    },
+    {
+      "symbol": "C#",
+      "harte": "C#:maj",
+      "root": "C#",
+      "quality": "maj",
+      "extensions": [],
+      "bass": null,
+      "onset": 8.1,
+      "duration": 2.68,
+      "confidence": 0.968
+    },
+    {
+      "symbol": "Ebm",
+      "harte": "Eb:min",
+      "root": "Eb",
+      "quality": "min",
+      "extensions": [],
+      "bass": null,
+      "onset": 10.78,
+      "duration": 2.68,
+      "confidence": 0.866
+    },
+    {
+      "symbol": "B",
+      "harte": "B:maj",
+      "root": "B",
+      "quality": "maj",
+      "extensions": [],
+      "bass": null,
+      "onset": 13.46,
+      "duration": 2.66,
+      "confidence": 0.78
+    },
+    {
+      "symbol": "F#",
+      "harte": "F#:maj",
+      "root": "F#",
+      "quality": "maj",
+      "extensions": [],
+      "bass": null,
+      "onset": 16.12,
+      "duration": 2.64,
+      "confidence": 0.877
+    },
+    {
+      "symbol": "C#",
+      "harte": "C#:maj",
+      "root": "C#",
+      "quality": "maj",
+      "extensions": [],
+      "bass": null,
+      "onset": 18.76,
+      "duration": 2.64,
+      "confidence": 0.794
+    },
+    {
+      "symbol": "Ebm",
+      "harte": "Eb:min",
+      "root": "Eb",
+      "quality": "min",
+      "extensions": [],
+      "bass": null,
+      "onset": 21.4,
+      "duration": 2.62,
+      "confidence": 0.86
+    },
+    {
+      "symbol": "B",
+      "harte": "B:maj",
+      "root": "B",
+      "quality": "maj",
+      "extensions": [],
+      "bass": null,
+      "onset": 24.02,
+      "duration": 2.64,
+      "confidence": 0.689
+    },
+    {
+      "symbol": "F#",
+      "harte": "F#:maj",
+      "root": "F#",
+      "quality": "maj",
+      "extensions": [],
+      "bass": null,
+      "onset": 26.66,
+      "duration": 2.62,
+      "confidence": 0.789
+    },
+    {
+      "symbol": "C#",
+      "harte": "C#:maj",
+      "root": "C#",
+      "quality": "maj",
+      "extensions": [],
+      "bass": null,
+      "onset": 29.28,
+      "duration": 2.62,
+      "confidence": 0.786
+    },
+    {
+      "symbol": "Ebm",
+      "harte": "Eb:min",
+      "root": "Eb",
+      "quality": "min",
+      "extensions": [],
+      "bass": null,
+      "onset": 31.9,
+      "duration": 2.62,
+      "confidence": 0.699
+    },
+    {
+      "symbol": "B",
+      "harte": "B:maj",
+      "root": "B",
+      "quality": "maj",
+      "extensions": [],
+      "bass": null,
+      "onset": 34.52,
+      "duration": 2.6,
+      "confidence": 0.698
+    },
+    {
+      "symbol": "F#",
+      "harte": "F#:maj",
+      "root": "F#",
+      "quality": "maj",
+      "extensions": [],
+      "bass": null,
+      "onset": 37.12,
+      "duration": 2.62,
+      "confidence": 0.828
+    },
+    {
+      "symbol": "C#",
+      "harte": "C#:maj",
+      "root": "C#",
+      "quality": "maj",
+      "extensions": [],
+      "bass": null,
+      "onset": 39.74,
+      "duration": 2.62,
+      "confidence": 0.871
+    },
+    {
+      "symbol": "Ebm",
+      "harte": "Eb:min",
+      "root": "Eb",
+      "quality": "min",
+      "extensions": [],
+      "bass": null,
+      "onset": 42.36,
+      "duration": 2.6,
+      "confidence": 0.448
+    },
+    {
+      "symbol": "B",
+      "harte": "B:maj",
+      "root": "B",
+      "quality": "maj",
+      "extensions": [],
+      "bass": null,
+      "onset": 44.96,
+      "duration": 2.62,
+      "confidence": 0.768
+    },
+    {
+      "symbol": "F#",
+      "harte": "F#:maj",
+      "root": "F#",
+      "quality": "maj",
+      "extensions": [],
+      "bass": null,
+      "onset": 47.58,
+      "duration": 2.62,
+      "confidence": 0.853
+    },
+    {
+      "symbol": "C#",
+      "harte": "C#:maj",
+      "root": "C#",
+      "quality": "maj",
+      "extensions": [],
+      "bass": null,
+      "onset": 50.2,
+      "duration": 2.64,
+      "confidence": 0.666
+    },
+    {
+      "symbol": "Ebm",
+      "harte": "Eb:min",
+      "root": "Eb",
+      "quality": "min",
+      "extensions": [],
+      "bass": null,
+      "onset": 52.84,
+      "duration": 2.62,
+      "confidence": 0.778
+    },
+    {
+      "symbol": "B",
+      "harte": "B:maj",
+      "root": "B",
+      "quality": "maj",
+      "extensions": [],
+      "bass": null,
+      "onset": 55.46,
+      "duration": 2.62,
+      "confidence": 0.856
+    },
+    {
+      "symbol": "F#",
+      "harte": "F#:maj",
+      "root": "F#",
+      "quality": "maj",
+      "extensions": [],
+      "bass": null,
+      "onset": 58.08,
+      "duration": 2.62,
+      "confidence": 0.846
+    },
+    {
+      "symbol": "C#",
+      "harte": "C#:maj",
+      "root": "C#",
+      "quality": "maj",
+      "extensions": [],
+      "bass": null,
+      "onset": 60.7,
+      "duration": 2.62,
+      "confidence": 0.804
+    },
+    {
+      "symbol": "Ebm",
+      "harte": "Eb:min",
+      "root": "Eb",
+      "quality": "min",
+      "extensions": [],
+      "bass": null,
+      "onset": 63.32,
+      "duration": 2.62,
+      "confidence": 0.814
+    },
+    {
+      "symbol": "B",
+      "harte": "B:maj",
+      "root": "B",
+      "quality": "maj",
+      "extensions": [],
+      "bass": null,
+      "onset": 65.94,
+      "duration": 2.62,
+      "confidence": 0.863
+    },
+    {
+      "symbol": "F#",
+      "harte": "F#:maj",
+      "root": "F#",
+      "quality": "maj",
+      "extensions": [],
+      "bass": null,
+      "onset": 68.56,
+      "duration": 2.62,
+      "confidence": 0.822
+    },
+    {
+      "symbol": "C#",
+      "harte": "C#:maj",
+      "root": "C#",
+      "quality": "maj",
+      "extensions": [],
+      "bass": null,
+      "onset": 71.18,
+      "duration": 0.92,
+      "confidence": 0.761
+    }
+  ],
+  "notes": [
+    {
+      "pitch": 66,
+      "onset": 0.2322,
+      "duration": 0.9636,
+      "confidence": 0.671,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 0.2322,
+      "duration": 0.9868,
+      "confidence": 0.534,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 0.2322,
+      "duration": 1.0217,
+      "confidence": 0.579,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 0.2554,
+      "duration": 0.1858,
+      "confidence": 0.557,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 70,
+      "onset": 0.2554,
+      "duration": 1.0217,
+      "confidence": 0.451,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 0.5224,
+      "duration": 0.5805,
+      "confidence": 0.483,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 66,
+      "onset": 1.1958,
+      "duration": 0.1509,
+      "confidence": 0.65,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 1.2771,
+      "duration": 0.3715,
+      "confidence": 0.549,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 66,
+      "onset": 1.3468,
+      "duration": 0.1741,
+      "confidence": 0.773,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 1.5209,
+      "duration": 0.3367,
+      "confidence": 0.782,
+      "stem": "other"
+    },
+    {
+      "pitch": 78,
+      "onset": 1.8576,
+      "duration": 0.129,
+      "confidence": 0.257,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 1.8576,
+      "duration": 0.3264,
+      "confidence": 0.753,
+      "stem": "other"
+    },
+    {
+      "pitch": 70,
+      "onset": 2.1723,
+      "duration": 0.8243,
+      "confidence": 0.633,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 2.1723,
+      "duration": 0.3251,
+      "confidence": 0.384,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 2.184,
+      "duration": 0.8591,
+      "confidence": 0.476,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 2.4974,
+      "duration": 0.4296,
+      "confidence": 0.41,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 2.509,
+      "duration": 0.3251,
+      "confidence": 0.611,
+      "stem": "other"
+    },
+    {
+      "pitch": 42,
+      "onset": 2.5439,
+      "duration": 0.2206,
+      "confidence": 0.379,
+      "stem": "other"
+    },
+    {
+      "pitch": 63,
+      "onset": 2.8341,
+      "duration": 1.7312,
+      "confidence": 0.57,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 2.8341,
+      "duration": 0.476,
+      "confidence": 0.449,
+      "stem": "other"
+    },
+    {
+      "pitch": 47,
+      "onset": 2.8341,
+      "duration": 1.2552,
+      "confidence": 0.572,
+      "stem": "other"
+    },
+    {
+      "pitch": 47,
+      "onset": 2.927,
+      "duration": 0.2902,
+      "confidence": 0.5,
+      "stem": "bass"
+    },
+    {
+      "pitch": 42,
+      "onset": 2.927,
+      "duration": 0.1393,
+      "confidence": 0.393,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 3.3333,
+      "duration": 0.7792,
+      "confidence": 0.565,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 3.3333,
+      "duration": 0.1625,
+      "confidence": 0.397,
+      "stem": "other"
+    },
+    {
+      "pitch": 47,
+      "onset": 3.3682,
+      "duration": 0.6166,
+      "confidence": 0.463,
+      "stem": "bass"
+    },
+    {
+      "pitch": 66,
+      "onset": 3.4843,
+      "duration": 0.2554,
+      "confidence": 0.392,
+      "stem": "other"
+    },
+    {
+      "pitch": 59,
+      "onset": 3.5075,
+      "duration": 0.3947,
+      "confidence": 0.371,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 3.7629,
+      "duration": 0.209,
+      "confidence": 0.546,
+      "stem": "other"
+    },
+    {
+      "pitch": 42,
+      "onset": 3.879,
+      "duration": 0.1638,
+      "confidence": 0.405,
+      "stem": "other"
+    },
+    {
+      "pitch": 71,
+      "onset": 4.1473,
+      "duration": 0.4876,
+      "confidence": 0.693,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 4.1473,
+      "duration": 0.4876,
+      "confidence": 0.515,
+      "stem": "other"
+    },
+    {
+      "pitch": 59,
+      "onset": 4.1473,
+      "duration": 0.3367,
+      "confidence": 0.556,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 4.1473,
+      "duration": 0.6153,
+      "confidence": 0.378,
+      "stem": "other"
+    },
+    {
+      "pitch": 47,
+      "onset": 4.1473,
+      "duration": 0.4644,
+      "confidence": 0.474,
+      "stem": "other"
+    },
+    {
+      "pitch": 59,
+      "onset": 4.484,
+      "duration": 0.1509,
+      "confidence": 0.486,
+      "stem": "other"
+    },
+    {
+      "pitch": 71,
+      "onset": 4.6349,
+      "duration": 0.3367,
+      "confidence": 0.737,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 4.6349,
+      "duration": 0.3367,
+      "confidence": 0.524,
+      "stem": "other"
+    },
+    {
+      "pitch": 59,
+      "onset": 4.6349,
+      "duration": 0.7546,
+      "confidence": 0.46,
+      "stem": "other"
+    },
+    {
+      "pitch": 47,
+      "onset": 4.6349,
+      "duration": 0.5805,
+      "confidence": 0.44,
+      "stem": "other"
+    },
+    {
+      "pitch": 43,
+      "onset": 4.96,
+      "duration": 0.1393,
+      "confidence": 0.314,
+      "stem": "bass"
+    },
+    {
+      "pitch": 70,
+      "onset": 4.9716,
+      "duration": 0.3251,
+      "confidence": 0.683,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 4.9716,
+      "duration": 0.3251,
+      "confidence": 0.46,
+      "stem": "other"
+    },
+    {
+      "pitch": 63,
+      "onset": 4.9716,
+      "duration": 0.2438,
+      "confidence": 0.43,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 5.2735,
+      "duration": 0.2206,
+      "confidence": 0.366,
+      "stem": "bass"
+    },
+    {
+      "pitch": 70,
+      "onset": 5.2967,
+      "duration": 1.1971,
+      "confidence": 0.525,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 5.2967,
+      "duration": 0.814,
+      "confidence": 0.423,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 5.2967,
+      "duration": 0.1858,
+      "confidence": 0.481,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 5.2967,
+      "duration": 0.3019,
+      "confidence": 0.356,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 5.4825,
+      "duration": 0.5005,
+      "confidence": 0.581,
+      "stem": "other"
+    },
+    {
+      "pitch": 42,
+      "onset": 5.4825,
+      "duration": 0.547,
+      "confidence": 0.443,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 5.4941,
+      "duration": 0.1625,
+      "confidence": 0.569,
+      "stem": "bass"
+    },
+    {
+      "pitch": 61,
+      "onset": 5.7959,
+      "duration": 0.3031,
+      "confidence": 0.462,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 6.0991,
+      "duration": 0.1974,
+      "confidence": 0.4,
+      "stem": "bass"
+    },
+    {
+      "pitch": 66,
+      "onset": 6.1107,
+      "duration": 0.6734,
+      "confidence": 0.769,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 6.1107,
+      "duration": 0.5805,
+      "confidence": 0.391,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 6.4474,
+      "duration": 0.3367,
+      "confidence": 0.622,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 6.6912,
+      "duration": 0.2206,
+      "confidence": 0.484,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 6.7144,
+      "duration": 0.1509,
+      "confidence": 0.499,
+      "stem": "bass"
+    },
+    {
+      "pitch": 70,
+      "onset": 6.7841,
+      "duration": 0.4992,
+      "confidence": 0.735,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 6.7841,
+      "duration": 0.4876,
+      "confidence": 0.605,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 6.7841,
+      "duration": 0.4876,
+      "confidence": 0.422,
+      "stem": "other"
+    },
+    {
+      "pitch": 42,
+      "onset": 6.8305,
+      "duration": 0.3715,
+      "confidence": 0.394,
+      "stem": "other"
+    },
+    {
+      "pitch": 73,
+      "onset": 7.2717,
+      "duration": 0.6734,
+      "confidence": 0.548,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 7.2717,
+      "duration": 0.4992,
+      "confidence": 0.503,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 7.2717,
+      "duration": 0.4992,
+      "confidence": 0.539,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 7.2717,
+      "duration": 0.1858,
+      "confidence": 0.516,
+      "stem": "other"
+    },
+    {
+      "pitch": 70,
+      "onset": 7.2833,
+      "duration": 0.4412,
+      "confidence": 0.475,
+      "stem": "other"
+    },
+    {
+      "pitch": 42,
+      "onset": 7.3414,
+      "duration": 0.2206,
+      "confidence": 0.378,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 7.7709,
+      "duration": 0.338,
+      "confidence": 0.692,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 7.7709,
+      "duration": 0.4309,
+      "confidence": 0.506,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 7.7709,
+      "duration": 0.4541,
+      "confidence": 0.441,
+      "stem": "other"
+    },
+    {
+      "pitch": 52,
+      "onset": 8.1089,
+      "duration": 0.5108,
+      "confidence": 0.435,
+      "stem": "bass"
+    },
+    {
+      "pitch": 65,
+      "onset": 8.1089,
+      "duration": 1.8112,
+      "confidence": 0.652,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 8.1089,
+      "duration": 1.7647,
+      "confidence": 0.726,
+      "stem": "other"
+    },
+    {
+      "pitch": 56,
+      "onset": 8.1321,
+      "duration": 0.685,
+      "confidence": 0.348,
+      "stem": "other"
+    },
+    {
+      "pitch": 56,
+      "onset": 9.0145,
+      "duration": 0.3599,
+      "confidence": 0.337,
+      "stem": "other"
+    },
+    {
+      "pitch": 56,
+      "onset": 9.7691,
+      "duration": 0.1393,
+      "confidence": 0.626,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 9.9084,
+      "duration": 0.2335,
+      "confidence": 0.722,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 49,
+      "onset": 10.0374,
+      "duration": 0.1509,
+      "confidence": 0.286,
+      "stem": "bass"
+    },
+    {
+      "pitch": 53,
+      "onset": 10.1419,
+      "duration": 0.1393,
+      "confidence": 0.45,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 53,
+      "onset": 10.5251,
+      "duration": 0.2554,
+      "confidence": 0.833,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 53,
+      "onset": 10.7805,
+      "duration": 0.4412,
+      "confidence": 0.76,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 10.7805,
+      "duration": 1.4525,
+      "confidence": 0.587,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 10.7921,
+      "duration": 0.6966,
+      "confidence": 0.33,
+      "stem": "other"
+    },
+    {
+      "pitch": 63,
+      "onset": 10.7921,
+      "duration": 0.9985,
+      "confidence": 0.533,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 10.7921,
+      "duration": 1.2784,
+      "confidence": 0.633,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 11.3261,
+      "duration": 0.5108,
+      "confidence": 0.423,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 66,
+      "onset": 11.4887,
+      "duration": 0.3251,
+      "confidence": 0.457,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 11.837,
+      "duration": 0.3031,
+      "confidence": 0.761,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 54,
+      "onset": 11.9183,
+      "duration": 0.338,
+      "confidence": 0.389,
+      "stem": "bass"
+    },
+    {
+      "pitch": 54,
+      "onset": 12.1401,
+      "duration": 0.5224,
+      "confidence": 0.67,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 51,
+      "onset": 12.7787,
+      "duration": 0.1509,
+      "confidence": 0.514,
+      "stem": "bass"
+    },
+    {
+      "pitch": 58,
+      "onset": 12.8948,
+      "duration": 0.209,
+      "confidence": 0.62,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 51,
+      "onset": 13.1038,
+      "duration": 0.1509,
+      "confidence": 0.359,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 48,
+      "onset": 13.4637,
+      "duration": 0.1161,
+      "confidence": 0.435,
+      "stem": "bass"
+    },
+    {
+      "pitch": 54,
+      "onset": 13.4753,
+      "duration": 1.2087,
+      "confidence": 0.477,
+      "stem": "other"
+    },
+    {
+      "pitch": 47,
+      "onset": 13.4753,
+      "duration": 2.4045,
+      "confidence": 0.699,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 13.4869,
+      "duration": 0.4063,
+      "confidence": 0.734,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 42,
+      "onset": 13.4869,
+      "duration": 0.2206,
+      "confidence": 0.476,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 13.5798,
+      "duration": 0.1625,
+      "confidence": 0.399,
+      "stem": "bass"
+    },
+    {
+      "pitch": 49,
+      "onset": 13.9758,
+      "duration": 0.1625,
+      "confidence": 0.595,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 47,
+      "onset": 13.9874,
+      "duration": 0.2554,
+      "confidence": 0.431,
+      "stem": "bass"
+    },
+    {
+      "pitch": 63,
+      "onset": 14.1267,
+      "duration": 0.5457,
+      "confidence": 0.426,
+      "stem": "other"
+    },
+    {
+      "pitch": 59,
+      "onset": 14.9046,
+      "duration": 0.3715,
+      "confidence": 0.676,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 47,
+      "onset": 14.9394,
+      "duration": 0.5108,
+      "confidence": 0.521,
+      "stem": "bass"
+    },
+    {
+      "pitch": 59,
+      "onset": 15.2761,
+      "duration": 0.1509,
+      "confidence": 0.633,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 15.427,
+      "duration": 0.1858,
+      "confidence": 0.659,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 15.6128,
+      "duration": 0.3264,
+      "confidence": 0.543,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 15.9392,
+      "duration": 0.5341,
+      "confidence": 0.637,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 61,
+      "onset": 16.1133,
+      "duration": 1.0333,
+      "confidence": 0.488,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 16.1133,
+      "duration": 1.0913,
+      "confidence": 0.584,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 16.1714,
+      "duration": 0.6037,
+      "confidence": 0.403,
+      "stem": "other"
+    },
+    {
+      "pitch": 42,
+      "onset": 16.1946,
+      "duration": 1.3119,
+      "confidence": 0.537,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 16.3339,
+      "duration": 0.5341,
+      "confidence": 0.545,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 16.4036,
+      "duration": 0.4063,
+      "confidence": 0.447,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 16.9028,
+      "duration": 0.209,
+      "confidence": 0.783,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 16.9028,
+      "duration": 0.5689,
+      "confidence": 0.509,
+      "stem": "bass"
+    },
+    {
+      "pitch": 58,
+      "onset": 17.1118,
+      "duration": 0.6501,
+      "confidence": 0.738,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 49,
+      "onset": 17.1582,
+      "duration": 0.1509,
+      "confidence": 0.314,
+      "stem": "other"
+    },
+    {
+      "pitch": 53,
+      "onset": 17.669,
+      "duration": 0.1741,
+      "confidence": 0.485,
+      "stem": "bass"
+    },
+    {
+      "pitch": 58,
+      "onset": 17.7619,
+      "duration": 0.2915,
+      "confidence": 0.54,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 61,
+      "onset": 18.1928,
+      "duration": 0.1974,
+      "confidence": 0.487,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 56,
+      "onset": 18.7617,
+      "duration": 0.8011,
+      "confidence": 0.469,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 18.7617,
+      "duration": 2.3581,
+      "confidence": 0.693,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 18.7733,
+      "duration": 0.685,
+      "confidence": 0.427,
+      "stem": "bass"
+    },
+    {
+      "pitch": 53,
+      "onset": 18.7849,
+      "duration": 0.1509,
+      "confidence": 0.782,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 53,
+      "onset": 18.9358,
+      "duration": 0.3251,
+      "confidence": 0.707,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 51,
+      "onset": 19.2609,
+      "duration": 0.1393,
+      "confidence": 0.626,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 49,
+      "onset": 19.4118,
+      "duration": 0.1509,
+      "confidence": 0.509,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 49,
+      "onset": 19.4583,
+      "duration": 0.2322,
+      "confidence": 0.443,
+      "stem": "bass"
+    },
+    {
+      "pitch": 56,
+      "onset": 19.7253,
+      "duration": 0.4076,
+      "confidence": 0.345,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 20.4232,
+      "duration": 0.209,
+      "confidence": 0.328,
+      "stem": "bass"
+    },
+    {
+      "pitch": 58,
+      "onset": 20.4928,
+      "duration": 0.2554,
+      "confidence": 0.705,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 49,
+      "onset": 20.8411,
+      "duration": 0.3367,
+      "confidence": 0.353,
+      "stem": "bass"
+    },
+    {
+      "pitch": 53,
+      "onset": 21.1198,
+      "duration": 0.7443,
+      "confidence": 0.753,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 21.41,
+      "duration": 0.4657,
+      "confidence": 0.405,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 21.41,
+      "duration": 0.4773,
+      "confidence": 0.726,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 21.4216,
+      "duration": 0.1741,
+      "confidence": 0.308,
+      "stem": "bass"
+    },
+    {
+      "pitch": 63,
+      "onset": 21.4565,
+      "duration": 0.5237,
+      "confidence": 0.516,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 21.8757,
+      "duration": 0.1974,
+      "confidence": 0.429,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 21.8873,
+      "duration": 0.3251,
+      "confidence": 0.624,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 21.8873,
+      "duration": 0.209,
+      "confidence": 0.612,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 21.9686,
+      "duration": 0.1741,
+      "confidence": 0.328,
+      "stem": "bass"
+    },
+    {
+      "pitch": 51,
+      "onset": 22.2356,
+      "duration": 0.1393,
+      "confidence": 0.433,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 22.3865,
+      "duration": 0.952,
+      "confidence": 0.523,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 22.3865,
+      "duration": 1.0333,
+      "confidence": 0.698,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 22.3982,
+      "duration": 0.3134,
+      "confidence": 0.511,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 63,
+      "onset": 22.4214,
+      "duration": 0.3251,
+      "confidence": 0.323,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 22.4678,
+      "duration": 0.2786,
+      "confidence": 0.543,
+      "stem": "bass"
+    },
+    {
+      "pitch": 54,
+      "onset": 22.7116,
+      "duration": 0.3715,
+      "confidence": 0.718,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 54,
+      "onset": 23.0831,
+      "duration": 0.2322,
+      "confidence": 0.659,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 23.5011,
+      "duration": 0.209,
+      "confidence": 0.653,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 51,
+      "onset": 23.7101,
+      "duration": 0.3263,
+      "confidence": 0.786,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 51,
+      "onset": 23.9784,
+      "duration": 0.0929,
+      "confidence": 0.361,
+      "stem": "bass"
+    },
+    {
+      "pitch": 51,
+      "onset": 24.0364,
+      "duration": 0.1974,
+      "confidence": 0.773,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 54,
+      "onset": 24.0364,
+      "duration": 0.4644,
+      "confidence": 0.564,
+      "stem": "other"
+    },
+    {
+      "pitch": 47,
+      "onset": 24.0481,
+      "duration": 0.9636,
+      "confidence": 0.607,
+      "stem": "other"
+    },
+    {
+      "pitch": 59,
+      "onset": 24.0481,
+      "duration": 0.4644,
+      "confidence": 0.428,
+      "stem": "other"
+    },
+    {
+      "pitch": 47,
+      "onset": 24.0713,
+      "duration": 0.2438,
+      "confidence": 0.434,
+      "stem": "bass"
+    },
+    {
+      "pitch": 51,
+      "onset": 24.2338,
+      "duration": 0.2787,
+      "confidence": 0.73,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 47,
+      "onset": 24.408,
+      "duration": 0.1509,
+      "confidence": 0.292,
+      "stem": "bass"
+    },
+    {
+      "pitch": 54,
+      "onset": 24.5008,
+      "duration": 0.209,
+      "confidence": 0.641,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 24.5125,
+      "duration": 0.209,
+      "confidence": 0.618,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 59,
+      "onset": 24.5241,
+      "duration": 0.2322,
+      "confidence": 0.395,
+      "stem": "other"
+    },
+    {
+      "pitch": 47,
+      "onset": 24.5589,
+      "duration": 0.1509,
+      "confidence": 0.447,
+      "stem": "bass"
+    },
+    {
+      "pitch": 59,
+      "onset": 25.0117,
+      "duration": 0.4644,
+      "confidence": 0.713,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 47,
+      "onset": 25.0117,
+      "duration": 0.9185,
+      "confidence": 0.615,
+      "stem": "other"
+    },
+    {
+      "pitch": 42,
+      "onset": 25.0117,
+      "duration": 0.209,
+      "confidence": 0.378,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 25.0233,
+      "duration": 0.5689,
+      "confidence": 0.437,
+      "stem": "other"
+    },
+    {
+      "pitch": 59,
+      "onset": 25.0233,
+      "duration": 0.1393,
+      "confidence": 0.408,
+      "stem": "other"
+    },
+    {
+      "pitch": 47,
+      "onset": 25.0581,
+      "duration": 0.3367,
+      "confidence": 0.379,
+      "stem": "bass"
+    },
+    {
+      "pitch": 59,
+      "onset": 25.4064,
+      "duration": 0.1858,
+      "confidence": 0.318,
+      "stem": "other"
+    },
+    {
+      "pitch": 59,
+      "onset": 25.6967,
+      "duration": 0.4308,
+      "confidence": 0.783,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 47,
+      "onset": 25.6967,
+      "duration": 0.1638,
+      "confidence": 0.366,
+      "stem": "bass"
+    },
+    {
+      "pitch": 59,
+      "onset": 25.7431,
+      "duration": 0.1406,
+      "confidence": 0.444,
+      "stem": "other"
+    },
+    {
+      "pitch": 43,
+      "onset": 26.023,
+      "duration": 0.2322,
+      "confidence": 0.431,
+      "stem": "other"
+    },
+    {
+      "pitch": 47,
+      "onset": 26.0811,
+      "duration": 0.1741,
+      "confidence": 0.371,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 26.1275,
+      "duration": 0.1974,
+      "confidence": 0.775,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 26.3249,
+      "duration": 0.3599,
+      "confidence": 0.764,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 42,
+      "onset": 26.5339,
+      "duration": 0.1393,
+      "confidence": 0.383,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 26.65,
+      "duration": 0.6153,
+      "confidence": 0.374,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 26.6732,
+      "duration": 0.5805,
+      "confidence": 0.397,
+      "stem": "other"
+    },
+    {
+      "pitch": 42,
+      "onset": 26.6732,
+      "duration": 0.4876,
+      "confidence": 0.613,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 26.6848,
+      "duration": 0.3947,
+      "confidence": 0.51,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 26.859,
+      "duration": 0.2786,
+      "confidence": 0.44,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 27.1492,
+      "duration": 0.1393,
+      "confidence": 0.484,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 27.1608,
+      "duration": 0.209,
+      "confidence": 0.669,
+      "stem": "other"
+    },
+    {
+      "pitch": 42,
+      "onset": 27.1608,
+      "duration": 0.1741,
+      "confidence": 0.48,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 27.4395,
+      "duration": 0.2322,
+      "confidence": 0.702,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 49,
+      "onset": 27.6484,
+      "duration": 0.8953,
+      "confidence": 0.466,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 27.66,
+      "duration": 0.3844,
+      "confidence": 0.419,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 27.6717,
+      "duration": 0.3031,
+      "confidence": 0.783,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 42,
+      "onset": 27.6833,
+      "duration": 0.9185,
+      "confidence": 0.597,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 27.6949,
+      "duration": 0.4773,
+      "confidence": 0.397,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 27.9748,
+      "duration": 0.3135,
+      "confidence": 0.793,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 61,
+      "onset": 28.0096,
+      "duration": 0.2902,
+      "confidence": 0.414,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 28.2883,
+      "duration": 0.3019,
+      "confidence": 0.674,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 43,
+      "onset": 28.6482,
+      "duration": 0.1974,
+      "confidence": 0.63,
+      "stem": "bass"
+    },
+    {
+      "pitch": 61,
+      "onset": 28.7411,
+      "duration": 0.1974,
+      "confidence": 0.618,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 49,
+      "onset": 28.9384,
+      "duration": 0.3251,
+      "confidence": 0.411,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 28.95,
+      "duration": 0.2902,
+      "confidence": 0.426,
+      "stem": "bass"
+    },
+    {
+      "pitch": 53,
+      "onset": 29.0429,
+      "duration": 0.2438,
+      "confidence": 0.807,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 49,
+      "onset": 29.2519,
+      "duration": 0.6747,
+      "confidence": 0.526,
+      "stem": "bass"
+    },
+    {
+      "pitch": 56,
+      "onset": 29.2751,
+      "duration": 0.9881,
+      "confidence": 0.406,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 29.2751,
+      "duration": 1.9053,
+      "confidence": 0.753,
+      "stem": "other"
+    },
+    {
+      "pitch": 53,
+      "onset": 29.2867,
+      "duration": 0.5109,
+      "confidence": 0.751,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 51,
+      "onset": 29.7976,
+      "duration": 0.1406,
+      "confidence": 0.673,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 49,
+      "onset": 29.9266,
+      "duration": 0.3135,
+      "confidence": 0.543,
+      "stem": "bass"
+    },
+    {
+      "pitch": 49,
+      "onset": 29.9382,
+      "duration": 0.2786,
+      "confidence": 0.671,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 68,
+      "onset": 30.0659,
+      "duration": 0.1393,
+      "confidence": 0.354,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 30.2749,
+      "duration": 0.1625,
+      "confidence": 0.638,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 49,
+      "onset": 30.4026,
+      "duration": 0.1625,
+      "confidence": 0.409,
+      "stem": "bass"
+    },
+    {
+      "pitch": 58,
+      "onset": 31.2385,
+      "duration": 0.1509,
+      "confidence": 0.689,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 56,
+      "onset": 31.3894,
+      "duration": 0.1974,
+      "confidence": 0.699,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 31.5868,
+      "duration": 0.3264,
+      "confidence": 0.579,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 51,
+      "onset": 31.8783,
+      "duration": 0.4876,
+      "confidence": 0.715,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 31.8899,
+      "duration": 0.476,
+      "confidence": 0.393,
+      "stem": "other"
+    },
+    {
+      "pitch": 63,
+      "onset": 31.8899,
+      "duration": 0.1625,
+      "confidence": 0.318,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 31.9132,
+      "duration": 0.1741,
+      "confidence": 0.722,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 51,
+      "onset": 31.9828,
+      "duration": 0.3599,
+      "confidence": 0.489,
+      "stem": "bass"
+    },
+    {
+      "pitch": 58,
+      "onset": 32.0409,
+      "duration": 0.4063,
+      "confidence": 0.584,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 32.3659,
+      "duration": 0.3831,
+      "confidence": 0.563,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 32.3659,
+      "duration": 0.1974,
+      "confidence": 0.608,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 32.5401,
+      "duration": 0.1625,
+      "confidence": 0.678,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 43,
+      "onset": 32.5401,
+      "duration": 0.1858,
+      "confidence": 0.282,
+      "stem": "other"
+    },
+    {
+      "pitch": 56,
+      "onset": 32.7258,
+      "duration": 0.1858,
+      "confidence": 0.697,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 32.8652,
+      "duration": 0.1974,
+      "confidence": 0.358,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 32.8652,
+      "duration": 0.1974,
+      "confidence": 0.794,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 32.9116,
+      "duration": 0.2438,
+      "confidence": 0.689,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 66,
+      "onset": 32.9813,
+      "duration": 0.1741,
+      "confidence": 0.322,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 33.0509,
+      "duration": 0.2786,
+      "confidence": 0.518,
+      "stem": "bass"
+    },
+    {
+      "pitch": 58,
+      "onset": 33.0625,
+      "duration": 0.267,
+      "confidence": 0.392,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 33.0625,
+      "duration": 0.7675,
+      "confidence": 0.635,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 33.3063,
+      "duration": 0.547,
+      "confidence": 0.786,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 54,
+      "onset": 34.0158,
+      "duration": 0.1625,
+      "confidence": 0.712,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 54,
+      "onset": 34.1784,
+      "duration": 0.3483,
+      "confidence": 0.597,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 47,
+      "onset": 34.5151,
+      "duration": 0.476,
+      "confidence": 0.721,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 34.5267,
+      "duration": 0.1741,
+      "confidence": 0.637,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 54,
+      "onset": 34.5267,
+      "duration": 0.3135,
+      "confidence": 0.549,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 34.8518,
+      "duration": 0.267,
+      "confidence": 0.449,
+      "stem": "other"
+    },
+    {
+      "pitch": 47,
+      "onset": 34.9911,
+      "duration": 0.2322,
+      "confidence": 0.532,
+      "stem": "other"
+    },
+    {
+      "pitch": 63,
+      "onset": 35.0027,
+      "duration": 0.209,
+      "confidence": 0.664,
+      "stem": "other"
+    },
+    {
+      "pitch": 45,
+      "onset": 35.1072,
+      "duration": 0.1625,
+      "confidence": 0.309,
+      "stem": "bass"
+    },
+    {
+      "pitch": 59,
+      "onset": 35.2813,
+      "duration": 0.2206,
+      "confidence": 0.821,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 54,
+      "onset": 35.3278,
+      "duration": 0.1625,
+      "confidence": 0.347,
+      "stem": "other"
+    },
+    {
+      "pitch": 47,
+      "onset": 35.4323,
+      "duration": 0.1509,
+      "confidence": 0.603,
+      "stem": "other"
+    },
+    {
+      "pitch": 59,
+      "onset": 35.5019,
+      "duration": 0.1741,
+      "confidence": 0.654,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 54,
+      "onset": 35.5019,
+      "duration": 0.6863,
+      "confidence": 0.536,
+      "stem": "other"
+    },
+    {
+      "pitch": 47,
+      "onset": 35.5251,
+      "duration": 0.7211,
+      "confidence": 0.322,
+      "stem": "bass"
+    },
+    {
+      "pitch": 59,
+      "onset": 35.5832,
+      "duration": 0.3496,
+      "confidence": 0.479,
+      "stem": "other"
+    },
+    {
+      "pitch": 47,
+      "onset": 35.5832,
+      "duration": 0.9533,
+      "confidence": 0.606,
+      "stem": "other"
+    },
+    {
+      "pitch": 59,
+      "onset": 35.9212,
+      "duration": 0.2438,
+      "confidence": 0.735,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 59,
+      "onset": 36.165,
+      "duration": 0.3018,
+      "confidence": 0.717,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 59,
+      "onset": 36.2811,
+      "duration": 0.1393,
+      "confidence": 0.482,
+      "stem": "other"
+    },
+    {
+      "pitch": 59,
+      "onset": 36.4668,
+      "duration": 0.1741,
+      "confidence": 0.628,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 36.641,
+      "duration": 0.3135,
+      "confidence": 0.682,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 42,
+      "onset": 37.0822,
+      "duration": 0.6269,
+      "confidence": 0.357,
+      "stem": "bass"
+    },
+    {
+      "pitch": 54,
+      "onset": 37.1286,
+      "duration": 0.476,
+      "confidence": 0.449,
+      "stem": "other"
+    },
+    {
+      "pitch": 42,
+      "onset": 37.1286,
+      "duration": 0.476,
+      "confidence": 0.72,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 37.1518,
+      "duration": 0.4412,
+      "confidence": 0.48,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 37.1634,
+      "duration": 0.209,
+      "confidence": 0.651,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 37.3608,
+      "duration": 0.2322,
+      "confidence": 0.463,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 37.6046,
+      "duration": 0.2219,
+      "confidence": 0.689,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 37.6046,
+      "duration": 0.1393,
+      "confidence": 0.48,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 37.6046,
+      "duration": 0.1406,
+      "confidence": 0.429,
+      "stem": "other"
+    },
+    {
+      "pitch": 42,
+      "onset": 37.6046,
+      "duration": 0.3496,
+      "confidence": 0.487,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 37.931,
+      "duration": 1.1726,
+      "confidence": 0.701,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 42,
+      "onset": 37.9542,
+      "duration": 0.1509,
+      "confidence": 0.41,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 38.0935,
+      "duration": 0.9056,
+      "confidence": 0.388,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 38.1051,
+      "duration": 0.952,
+      "confidence": 0.467,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 38.1051,
+      "duration": 0.9288,
+      "confidence": 0.497,
+      "stem": "other"
+    },
+    {
+      "pitch": 42,
+      "onset": 38.1051,
+      "duration": 1.0101,
+      "confidence": 0.646,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 38.5115,
+      "duration": 0.3367,
+      "confidence": 0.317,
+      "stem": "other"
+    },
+    {
+      "pitch": 59,
+      "onset": 39.1036,
+      "duration": 0.1509,
+      "confidence": 0.707,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 49,
+      "onset": 39.2429,
+      "duration": 0.1858,
+      "confidence": 0.404,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 39.2545,
+      "duration": 0.3483,
+      "confidence": 0.702,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 56,
+      "onset": 39.6028,
+      "duration": 0.4889,
+      "confidence": 0.753,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 65,
+      "onset": 39.7434,
+      "duration": 0.2554,
+      "confidence": 0.428,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 39.755,
+      "duration": 0.476,
+      "confidence": 0.488,
+      "stem": "bass"
+    },
+    {
+      "pitch": 49,
+      "onset": 39.755,
+      "duration": 0.7895,
+      "confidence": 0.716,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 39.7666,
+      "duration": 0.1858,
+      "confidence": 0.386,
+      "stem": "other"
+    },
+    {
+      "pitch": 73,
+      "onset": 39.8015,
+      "duration": 0.3715,
+      "confidence": 0.425,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 40.0917,
+      "duration": 0.2786,
+      "confidence": 0.645,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 49,
+      "onset": 40.231,
+      "duration": 0.4412,
+      "confidence": 0.392,
+      "stem": "bass"
+    },
+    {
+      "pitch": 56,
+      "onset": 40.231,
+      "duration": 0.3135,
+      "confidence": 0.391,
+      "stem": "other"
+    },
+    {
+      "pitch": 65,
+      "onset": 40.2426,
+      "duration": 0.4644,
+      "confidence": 0.62,
+      "stem": "other"
+    },
+    {
+      "pitch": 56,
+      "onset": 40.5445,
+      "duration": 0.1858,
+      "confidence": 0.412,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 40.5445,
+      "duration": 0.1858,
+      "confidence": 0.624,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 40.6954,
+      "duration": 0.2902,
+      "confidence": 0.473,
+      "stem": "bass"
+    },
+    {
+      "pitch": 58,
+      "onset": 40.7303,
+      "duration": 0.267,
+      "confidence": 0.645,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 56,
+      "onset": 40.7303,
+      "duration": 0.4296,
+      "confidence": 0.451,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 40.7303,
+      "duration": 1.2668,
+      "confidence": 0.678,
+      "stem": "other"
+    },
+    {
+      "pitch": 65,
+      "onset": 40.8347,
+      "duration": 0.3831,
+      "confidence": 0.403,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 41.1018,
+      "duration": 0.3019,
+      "confidence": 0.622,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 56,
+      "onset": 41.1598,
+      "duration": 0.4528,
+      "confidence": 0.433,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 41.4152,
+      "duration": 0.1741,
+      "confidence": 0.614,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 61,
+      "onset": 41.4849,
+      "duration": 0.209,
+      "confidence": 0.563,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 41.73,
+      "duration": 0.2322,
+      "confidence": 0.528,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 42.0202,
+      "duration": 0.1741,
+      "confidence": 0.405,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 51,
+      "onset": 42.3685,
+      "duration": 0.4644,
+      "confidence": 0.582,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 42.3685,
+      "duration": 0.4528,
+      "confidence": 0.5,
+      "stem": "other"
+    },
+    {
+      "pitch": 27,
+      "onset": 42.4034,
+      "duration": 0.7663,
+      "confidence": 0.569,
+      "stem": "bass"
+    },
+    {
+      "pitch": 58,
+      "onset": 42.415,
+      "duration": 0.3251,
+      "confidence": 0.421,
+      "stem": "other"
+    },
+    {
+      "pitch": 63,
+      "onset": 42.4614,
+      "duration": 0.1625,
+      "confidence": 0.562,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 42.7052,
+      "duration": 0.2902,
+      "confidence": 0.807,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 66,
+      "onset": 42.8329,
+      "duration": 0.2438,
+      "confidence": 0.712,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 42.8329,
+      "duration": 0.3367,
+      "confidence": 0.504,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 42.9955,
+      "duration": 0.1509,
+      "confidence": 0.791,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 43.1464,
+      "duration": 0.209,
+      "confidence": 0.754,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 43.3554,
+      "duration": 0.3135,
+      "confidence": 0.73,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 61,
+      "onset": 43.6689,
+      "duration": 0.2335,
+      "confidence": 0.649,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 43.9372,
+      "duration": 0.1741,
+      "confidence": 0.659,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 61,
+      "onset": 44.2971,
+      "duration": 0.1393,
+      "confidence": 0.61,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 44.4596,
+      "duration": 0.1974,
+      "confidence": 0.697,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 61,
+      "onset": 44.657,
+      "duration": 0.4063,
+      "confidence": 0.722,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 35,
+      "onset": 44.9821,
+      "duration": 0.6385,
+      "confidence": 0.451,
+      "stem": "bass"
+    },
+    {
+      "pitch": 54,
+      "onset": 44.9937,
+      "duration": 0.2902,
+      "confidence": 0.383,
+      "stem": "other"
+    },
+    {
+      "pitch": 47,
+      "onset": 45.0169,
+      "duration": 0.418,
+      "confidence": 0.681,
+      "stem": "other"
+    },
+    {
+      "pitch": 63,
+      "onset": 45.0633,
+      "duration": 0.2206,
+      "confidence": 0.651,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 59,
+      "onset": 45.2839,
+      "duration": 0.1974,
+      "confidence": 0.65,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 54,
+      "onset": 45.2955,
+      "duration": 0.1509,
+      "confidence": 0.55,
+      "stem": "other"
+    },
+    {
+      "pitch": 47,
+      "onset": 45.4349,
+      "duration": 0.3496,
+      "confidence": 0.48,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 45.4465,
+      "duration": 0.2206,
+      "confidence": 0.639,
+      "stem": "other"
+    },
+    {
+      "pitch": 59,
+      "onset": 45.6322,
+      "duration": 0.3264,
+      "confidence": 0.691,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 59,
+      "onset": 45.9586,
+      "duration": 0.1393,
+      "confidence": 0.602,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 54,
+      "onset": 46.005,
+      "duration": 0.6734,
+      "confidence": 0.482,
+      "stem": "other"
+    },
+    {
+      "pitch": 47,
+      "onset": 46.0166,
+      "duration": 0.9288,
+      "confidence": 0.604,
+      "stem": "other"
+    },
+    {
+      "pitch": 59,
+      "onset": 46.0979,
+      "duration": 0.1741,
+      "confidence": 0.794,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 59,
+      "onset": 46.2721,
+      "duration": 0.1741,
+      "confidence": 0.665,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 59,
+      "onset": 46.4462,
+      "duration": 0.4528,
+      "confidence": 0.707,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 59,
+      "onset": 46.899,
+      "duration": 0.1741,
+      "confidence": 0.74,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 47.0732,
+      "duration": 0.2089,
+      "confidence": 0.678,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 47.2821,
+      "duration": 0.3019,
+      "confidence": 0.532,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 47,
+      "onset": 47.4098,
+      "duration": 0.1509,
+      "confidence": 0.476,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 47.584,
+      "duration": 0.129,
+      "confidence": 0.589,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 49,
+      "onset": 47.5956,
+      "duration": 0.5702,
+      "confidence": 0.424,
+      "stem": "other"
+    },
+    {
+      "pitch": 30,
+      "onset": 47.6072,
+      "duration": 0.7792,
+      "confidence": 0.717,
+      "stem": "bass"
+    },
+    {
+      "pitch": 42,
+      "onset": 47.6898,
+      "duration": 0.3599,
+      "confidence": 0.54,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 47.6898,
+      "duration": 0.3251,
+      "confidence": 0.369,
+      "stem": "other"
+    },
+    {
+      "pitch": 56,
+      "onset": 47.713,
+      "duration": 0.1858,
+      "confidence": 0.634,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 47.713,
+      "duration": 0.3367,
+      "confidence": 0.402,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 47.7478,
+      "duration": 0.3019,
+      "confidence": 0.388,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 47.8988,
+      "duration": 0.1393,
+      "confidence": 0.548,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 66,
+      "onset": 48.0613,
+      "duration": 0.2438,
+      "confidence": 0.746,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 48.0613,
+      "duration": 0.1858,
+      "confidence": 0.509,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 48.0613,
+      "duration": 0.5341,
+      "confidence": 0.384,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 48.3283,
+      "duration": 0.2322,
+      "confidence": 0.728,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 48.5605,
+      "duration": 0.3599,
+      "confidence": 0.397,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 54,
+      "onset": 48.5953,
+      "duration": 0.8475,
+      "confidence": 0.506,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 48.607,
+      "duration": 0.1625,
+      "confidence": 0.386,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 48.6186,
+      "duration": 0.9288,
+      "confidence": 0.568,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 48.6302,
+      "duration": 0.1974,
+      "confidence": 0.417,
+      "stem": "other"
+    },
+    {
+      "pitch": 42,
+      "onset": 48.6418,
+      "duration": 0.1858,
+      "confidence": 0.492,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 48.665,
+      "duration": 0.4063,
+      "confidence": 0.422,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 48.9204,
+      "duration": 0.4296,
+      "confidence": 0.566,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 49.35,
+      "duration": 0.1974,
+      "confidence": 0.779,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 49.5474,
+      "duration": 0.3147,
+      "confidence": 0.527,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 49.8621,
+      "duration": 0.3483,
+      "confidence": 0.53,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 49,
+      "onset": 50.0247,
+      "duration": 0.1858,
+      "confidence": 0.59,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 50.2104,
+      "duration": 0.1277,
+      "confidence": 0.616,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 56,
+      "onset": 50.2104,
+      "duration": 0.1625,
+      "confidence": 0.402,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 50.2104,
+      "duration": 2.2652,
+      "confidence": 0.676,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 50.2569,
+      "duration": 0.5224,
+      "confidence": 0.476,
+      "stem": "bass"
+    },
+    {
+      "pitch": 56,
+      "onset": 50.3381,
+      "duration": 0.5108,
+      "confidence": 0.755,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 50.9186,
+      "duration": 0.1277,
+      "confidence": 0.675,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 52,
+      "onset": 50.9418,
+      "duration": 0.2554,
+      "confidence": 0.35,
+      "stem": "bass"
+    },
+    {
+      "pitch": 56,
+      "onset": 51.0463,
+      "duration": 0.1509,
+      "confidence": 0.646,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 56,
+      "onset": 51.2205,
+      "duration": 0.605,
+      "confidence": 0.439,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 51.2437,
+      "duration": 0.1509,
+      "confidence": 0.403,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 51.663,
+      "duration": 0.1393,
+      "confidence": 0.397,
+      "stem": "bass"
+    },
+    {
+      "pitch": 58,
+      "onset": 51.9532,
+      "duration": 0.2322,
+      "confidence": 0.677,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 53,
+      "onset": 52.2551,
+      "duration": 0.3018,
+      "confidence": 0.553,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 53,
+      "onset": 52.5569,
+      "duration": 0.3251,
+      "confidence": 0.78,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 52.8472,
+      "duration": 0.4876,
+      "confidence": 0.542,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 52.8704,
+      "duration": 0.4644,
+      "confidence": 0.478,
+      "stem": "other"
+    },
+    {
+      "pitch": 53,
+      "onset": 52.882,
+      "duration": 0.2554,
+      "confidence": 0.777,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 51,
+      "onset": 52.8936,
+      "duration": 0.4412,
+      "confidence": 0.644,
+      "stem": "other"
+    },
+    {
+      "pitch": 63,
+      "onset": 52.8936,
+      "duration": 0.4296,
+      "confidence": 0.419,
+      "stem": "other"
+    },
+    {
+      "pitch": 27,
+      "onset": 52.9284,
+      "duration": 0.9417,
+      "confidence": 0.57,
+      "stem": "bass"
+    },
+    {
+      "pitch": 53,
+      "onset": 53.1374,
+      "duration": 0.1625,
+      "confidence": 0.665,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 66,
+      "onset": 53.3348,
+      "duration": 0.2206,
+      "confidence": 0.469,
+      "stem": "other"
+    },
+    {
+      "pitch": 63,
+      "onset": 53.3348,
+      "duration": 0.2554,
+      "confidence": 0.456,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 53.3348,
+      "duration": 0.338,
+      "confidence": 0.558,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 53.3348,
+      "duration": 0.1974,
+      "confidence": 0.462,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 53.3348,
+      "duration": 0.3148,
+      "confidence": 0.71,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 53.3812,
+      "duration": 0.1741,
+      "confidence": 0.602,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 63,
+      "onset": 53.6495,
+      "duration": 0.4644,
+      "confidence": 0.358,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 53.6495,
+      "duration": 0.2206,
+      "confidence": 0.729,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 53.6728,
+      "duration": 1.0565,
+      "confidence": 0.477,
+      "stem": "other"
+    },
+    {
+      "pitch": 27,
+      "onset": 53.8701,
+      "duration": 1.6254,
+      "confidence": 0.677,
+      "stem": "bass"
+    },
+    {
+      "pitch": 51,
+      "onset": 53.8701,
+      "duration": 0.952,
+      "confidence": 0.701,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 53.8701,
+      "duration": 0.1974,
+      "confidence": 0.318,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 53.9746,
+      "duration": 0.1509,
+      "confidence": 0.787,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 39,
+      "onset": 53.9746,
+      "duration": 0.3251,
+      "confidence": 0.358,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 54.1255,
+      "duration": 0.6153,
+      "confidence": 0.681,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 46,
+      "onset": 54.2881,
+      "duration": 0.1625,
+      "confidence": 0.378,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 54.3461,
+      "duration": 0.2786,
+      "confidence": 0.459,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 54.5319,
+      "duration": 0.267,
+      "confidence": 0.397,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 54.6364,
+      "duration": 0.1741,
+      "confidence": 0.608,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 54.8105,
+      "duration": 0.3715,
+      "confidence": 0.579,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 54.8105,
+      "duration": 0.1393,
+      "confidence": 0.483,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 54.8221,
+      "duration": 0.2554,
+      "confidence": 0.667,
+      "stem": "other"
+    },
+    {
+      "pitch": 63,
+      "onset": 54.8338,
+      "duration": 0.4412,
+      "confidence": 0.474,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 54.9266,
+      "duration": 0.267,
+      "confidence": 0.675,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 51,
+      "onset": 55.0776,
+      "duration": 0.2438,
+      "confidence": 0.543,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 55.2749,
+      "duration": 0.1393,
+      "confidence": 0.508,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 55.2982,
+      "duration": 0.2206,
+      "confidence": 0.628,
+      "stem": "other"
+    },
+    {
+      "pitch": 42,
+      "onset": 55.3098,
+      "duration": 0.1509,
+      "confidence": 0.376,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 55.5071,
+      "duration": 0.1406,
+      "confidence": 0.694,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 54,
+      "onset": 55.5187,
+      "duration": 0.4425,
+      "confidence": 0.543,
+      "stem": "other"
+    },
+    {
+      "pitch": 47,
+      "onset": 55.5652,
+      "duration": 0.4425,
+      "confidence": 0.735,
+      "stem": "other"
+    },
+    {
+      "pitch": 35,
+      "onset": 55.5884,
+      "duration": 0.547,
+      "confidence": 0.582,
+      "stem": "bass"
+    },
+    {
+      "pitch": 51,
+      "onset": 55.6477,
+      "duration": 0.2902,
+      "confidence": 0.711,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 66,
+      "onset": 55.938,
+      "duration": 0.1393,
+      "confidence": 0.444,
+      "stem": "other"
+    },
+    {
+      "pitch": 63,
+      "onset": 55.9496,
+      "duration": 0.5108,
+      "confidence": 0.406,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 55.9612,
+      "duration": 0.3135,
+      "confidence": 0.524,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 55.996,
+      "duration": 0.209,
+      "confidence": 0.535,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 51,
+      "onset": 56.0076,
+      "duration": 0.209,
+      "confidence": 0.339,
+      "stem": "other"
+    },
+    {
+      "pitch": 47,
+      "onset": 56.0076,
+      "duration": 1.7312,
+      "confidence": 0.522,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 56.2747,
+      "duration": 0.2322,
+      "confidence": 0.539,
+      "stem": "other"
+    },
+    {
+      "pitch": 63,
+      "onset": 56.4604,
+      "duration": 1.3364,
+      "confidence": 0.448,
+      "stem": "other"
+    },
+    {
+      "pitch": 59,
+      "onset": 56.4837,
+      "duration": 0.3715,
+      "confidence": 0.418,
+      "stem": "other"
+    },
+    {
+      "pitch": 35,
+      "onset": 56.4953,
+      "duration": 1.3829,
+      "confidence": 0.716,
+      "stem": "bass"
+    },
+    {
+      "pitch": 54,
+      "onset": 56.5069,
+      "duration": 0.4528,
+      "confidence": 0.556,
+      "stem": "other"
+    },
+    {
+      "pitch": 59,
+      "onset": 56.9481,
+      "duration": 0.325,
+      "confidence": 0.616,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 54,
+      "onset": 56.9597,
+      "duration": 0.7792,
+      "confidence": 0.501,
+      "stem": "other"
+    },
+    {
+      "pitch": 59,
+      "onset": 57.2731,
+      "duration": 0.1625,
+      "confidence": 0.682,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 57.4357,
+      "duration": 0.187,
+      "confidence": 0.622,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 66,
+      "onset": 57.4937,
+      "duration": 0.4657,
+      "confidence": 0.327,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 57.6227,
+      "duration": 0.1625,
+      "confidence": 0.595,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 59,
+      "onset": 57.6808,
+      "duration": 0.1509,
+      "confidence": 0.379,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 57.7388,
+      "duration": 0.1741,
+      "confidence": 0.612,
+      "stem": "other"
+    },
+    {
+      "pitch": 47,
+      "onset": 57.7388,
+      "duration": 0.1741,
+      "confidence": 0.54,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 57.913,
+      "duration": 0.1858,
+      "confidence": 0.63,
+      "stem": "other"
+    },
+    {
+      "pitch": 42,
+      "onset": 57.9246,
+      "duration": 0.2322,
+      "confidence": 0.369,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 57.9362,
+      "duration": 0.6385,
+      "confidence": 0.593,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 57.9478,
+      "duration": 0.3135,
+      "confidence": 0.639,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 30,
+      "onset": 57.9478,
+      "duration": 0.209,
+      "confidence": 0.592,
+      "stem": "bass"
+    },
+    {
+      "pitch": 54,
+      "onset": 58.0987,
+      "duration": 0.476,
+      "confidence": 0.568,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 58.0987,
+      "duration": 0.1741,
+      "confidence": 0.442,
+      "stem": "other"
+    },
+    {
+      "pitch": 42,
+      "onset": 58.1568,
+      "duration": 0.4296,
+      "confidence": 0.586,
+      "stem": "other"
+    },
+    {
+      "pitch": 30,
+      "onset": 58.1684,
+      "duration": 0.952,
+      "confidence": 0.612,
+      "stem": "bass"
+    },
+    {
+      "pitch": 56,
+      "onset": 58.2613,
+      "duration": 0.1393,
+      "confidence": 0.637,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 58.4006,
+      "duration": 0.1858,
+      "confidence": 0.574,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 58.5747,
+      "duration": 0.1974,
+      "confidence": 0.583,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 58.5747,
+      "duration": 0.3135,
+      "confidence": 0.425,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 58.5747,
+      "duration": 0.3135,
+      "confidence": 0.518,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 58.5747,
+      "duration": 0.1509,
+      "confidence": 0.545,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 58.5863,
+      "duration": 0.1741,
+      "confidence": 0.546,
+      "stem": "other"
+    },
+    {
+      "pitch": 42,
+      "onset": 58.5863,
+      "duration": 0.3019,
+      "confidence": 0.46,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 58.7257,
+      "duration": 0.1625,
+      "confidence": 0.5,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 58.8882,
+      "duration": 0.209,
+      "confidence": 0.792,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 61,
+      "onset": 58.8882,
+      "duration": 0.1858,
+      "confidence": 0.411,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 58.8882,
+      "duration": 0.2438,
+      "confidence": 0.642,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 58.8882,
+      "duration": 0.2554,
+      "confidence": 0.662,
+      "stem": "other"
+    },
+    {
+      "pitch": 42,
+      "onset": 58.8882,
+      "duration": 0.7908,
+      "confidence": 0.52,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 59.0972,
+      "duration": 0.6282,
+      "confidence": 0.701,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 30,
+      "onset": 59.1204,
+      "duration": 1.1971,
+      "confidence": 0.711,
+      "stem": "bass"
+    },
+    {
+      "pitch": 54,
+      "onset": 59.132,
+      "duration": 0.4412,
+      "confidence": 0.613,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 59.1436,
+      "duration": 0.9185,
+      "confidence": 0.587,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 59.2829,
+      "duration": 1.1971,
+      "confidence": 0.5,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 59.5384,
+      "duration": 0.4425,
+      "confidence": 0.406,
+      "stem": "other"
+    },
+    {
+      "pitch": 70,
+      "onset": 59.5616,
+      "duration": 0.1406,
+      "confidence": 0.316,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 59.5732,
+      "duration": 0.5005,
+      "confidence": 0.648,
+      "stem": "other"
+    },
+    {
+      "pitch": 42,
+      "onset": 59.679,
+      "duration": 0.3019,
+      "confidence": 0.422,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 59.7254,
+      "duration": 0.1858,
+      "confidence": 0.685,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 49,
+      "onset": 60.0621,
+      "duration": 0.476,
+      "confidence": 0.587,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 60.0737,
+      "duration": 0.2786,
+      "confidence": 0.465,
+      "stem": "other"
+    },
+    {
+      "pitch": 42,
+      "onset": 60.0737,
+      "duration": 0.5573,
+      "confidence": 0.365,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 60.1201,
+      "duration": 0.1509,
+      "confidence": 0.394,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 60.1666,
+      "duration": 0.209,
+      "confidence": 0.697,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 54,
+      "onset": 60.3523,
+      "duration": 0.1858,
+      "confidence": 0.543,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 60.364,
+      "duration": 0.1625,
+      "confidence": 0.339,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 60.4104,
+      "duration": 0.1509,
+      "confidence": 0.457,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 56,
+      "onset": 60.5265,
+      "duration": 0.3251,
+      "confidence": 0.314,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 60.5381,
+      "duration": 0.418,
+      "confidence": 0.46,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 60.5381,
+      "duration": 0.1625,
+      "confidence": 0.534,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 60.5381,
+      "duration": 0.1625,
+      "confidence": 0.681,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 60.7006,
+      "duration": 0.6502,
+      "confidence": 0.726,
+      "stem": "other"
+    },
+    {
+      "pitch": 53,
+      "onset": 60.7587,
+      "duration": 0.2438,
+      "confidence": 0.733,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 37,
+      "onset": 60.7935,
+      "duration": 0.9533,
+      "confidence": 0.599,
+      "stem": "bass"
+    },
+    {
+      "pitch": 53,
+      "onset": 61.0141,
+      "duration": 0.1858,
+      "confidence": 0.691,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 51,
+      "onset": 61.1999,
+      "duration": 0.1625,
+      "confidence": 0.542,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 65,
+      "onset": 61.1999,
+      "duration": 0.4889,
+      "confidence": 0.511,
+      "stem": "other"
+    },
+    {
+      "pitch": 56,
+      "onset": 61.1999,
+      "duration": 0.3135,
+      "confidence": 0.394,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 61.3508,
+      "duration": 0.1625,
+      "confidence": 0.718,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 61.3624,
+      "duration": 0.2206,
+      "confidence": 0.559,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 61,
+      "onset": 61.3624,
+      "duration": 0.3148,
+      "confidence": 0.452,
+      "stem": "other"
+    },
+    {
+      "pitch": 68,
+      "onset": 61.5133,
+      "duration": 0.7792,
+      "confidence": 0.38,
+      "stem": "other"
+    },
+    {
+      "pitch": 56,
+      "onset": 61.5133,
+      "duration": 0.187,
+      "confidence": 0.55,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 61.5133,
+      "duration": 0.1754,
+      "confidence": 0.656,
+      "stem": "other"
+    },
+    {
+      "pitch": 65,
+      "onset": 61.6888,
+      "duration": 0.476,
+      "confidence": 0.671,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 61.6888,
+      "duration": 0.4876,
+      "confidence": 0.495,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 61.6888,
+      "duration": 0.476,
+      "confidence": 0.766,
+      "stem": "other"
+    },
+    {
+      "pitch": 56,
+      "onset": 61.7004,
+      "duration": 0.476,
+      "confidence": 0.557,
+      "stem": "other"
+    },
+    {
+      "pitch": 37,
+      "onset": 61.7468,
+      "duration": 0.6966,
+      "confidence": 0.744,
+      "stem": "bass"
+    },
+    {
+      "pitch": 73,
+      "onset": 61.7584,
+      "duration": 0.1741,
+      "confidence": 0.341,
+      "stem": "other"
+    },
+    {
+      "pitch": 65,
+      "onset": 62.1648,
+      "duration": 0.2322,
+      "confidence": 0.5,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 62.1648,
+      "duration": 0.6734,
+      "confidence": 0.629,
+      "stem": "other"
+    },
+    {
+      "pitch": 77,
+      "onset": 62.1764,
+      "duration": 0.2438,
+      "confidence": 0.456,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 62.1764,
+      "duration": 0.9404,
+      "confidence": 0.537,
+      "stem": "other"
+    },
+    {
+      "pitch": 56,
+      "onset": 62.1764,
+      "duration": 0.4412,
+      "confidence": 0.471,
+      "stem": "other"
+    },
+    {
+      "pitch": 73,
+      "onset": 62.188,
+      "duration": 0.4412,
+      "confidence": 0.439,
+      "stem": "other"
+    },
+    {
+      "pitch": 37,
+      "onset": 62.4434,
+      "duration": 0.9056,
+      "confidence": 0.68,
+      "stem": "bass"
+    },
+    {
+      "pitch": 58,
+      "onset": 62.455,
+      "duration": 0.2902,
+      "confidence": 0.698,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 65,
+      "onset": 62.7105,
+      "duration": 0.3019,
+      "confidence": 0.323,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 62.8382,
+      "duration": 0.1625,
+      "confidence": 0.592,
+      "stem": "other"
+    },
+    {
+      "pitch": 53,
+      "onset": 62.8382,
+      "duration": 0.1741,
+      "confidence": 0.414,
+      "stem": "other"
+    },
+    {
+      "pitch": 77,
+      "onset": 62.873,
+      "duration": 0.209,
+      "confidence": 0.373,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 62.9891,
+      "duration": 0.1741,
+      "confidence": 0.701,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 63.0007,
+      "duration": 0.2206,
+      "confidence": 0.546,
+      "stem": "other"
+    },
+    {
+      "pitch": 53,
+      "onset": 63.0355,
+      "duration": 0.547,
+      "confidence": 0.802,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 66,
+      "onset": 63.1516,
+      "duration": 0.1858,
+      "confidence": 0.475,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 63.1632,
+      "duration": 0.1858,
+      "confidence": 0.699,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 63.1632,
+      "duration": 0.1509,
+      "confidence": 0.519,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 63.3142,
+      "duration": 0.2554,
+      "confidence": 0.603,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 63.3374,
+      "duration": 0.4657,
+      "confidence": 0.614,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 63.349,
+      "duration": 0.4657,
+      "confidence": 0.646,
+      "stem": "other"
+    },
+    {
+      "pitch": 39,
+      "onset": 63.4071,
+      "duration": 0.2683,
+      "confidence": 0.358,
+      "stem": "other"
+    },
+    {
+      "pitch": 27,
+      "onset": 63.4303,
+      "duration": 0.6747,
+      "confidence": 0.638,
+      "stem": "bass"
+    },
+    {
+      "pitch": 51,
+      "onset": 63.5696,
+      "duration": 0.2335,
+      "confidence": 0.631,
+      "stem": "other"
+    },
+    {
+      "pitch": 53,
+      "onset": 63.5825,
+      "duration": 0.1625,
+      "confidence": 0.685,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 63,
+      "onset": 63.6986,
+      "duration": 0.4876,
+      "confidence": 0.349,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 63.8031,
+      "duration": 0.3251,
+      "confidence": 0.547,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 63.8031,
+      "duration": 0.3135,
+      "confidence": 0.644,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 63.8147,
+      "duration": 0.3135,
+      "confidence": 0.716,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 63.8263,
+      "duration": 0.1974,
+      "confidence": 0.642,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 54,
+      "onset": 64.1049,
+      "duration": 0.1741,
+      "confidence": 0.351,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 64.1165,
+      "duration": 0.2902,
+      "confidence": 0.677,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 64.1282,
+      "duration": 0.3715,
+      "confidence": 0.569,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 64.1282,
+      "duration": 0.6618,
+      "confidence": 0.616,
+      "stem": "other"
+    },
+    {
+      "pitch": 27,
+      "onset": 64.3139,
+      "duration": 1.6499,
+      "confidence": 0.666,
+      "stem": "bass"
+    },
+    {
+      "pitch": 54,
+      "onset": 64.3371,
+      "duration": 0.4412,
+      "confidence": 0.575,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 63,
+      "onset": 64.3487,
+      "duration": 1.3829,
+      "confidence": 0.406,
+      "stem": "other"
+    },
+    {
+      "pitch": 46,
+      "onset": 64.372,
+      "duration": 0.3831,
+      "confidence": 0.456,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 64.4068,
+      "duration": 0.418,
+      "confidence": 0.691,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 64.4997,
+      "duration": 0.4296,
+      "confidence": 0.538,
+      "stem": "other"
+    },
+    {
+      "pitch": 46,
+      "onset": 64.7667,
+      "duration": 0.1858,
+      "confidence": 0.344,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 64.7783,
+      "duration": 0.2206,
+      "confidence": 0.63,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 64.7899,
+      "duration": 0.1741,
+      "confidence": 0.673,
+      "stem": "other"
+    },
+    {
+      "pitch": 39,
+      "onset": 64.8131,
+      "duration": 0.8604,
+      "confidence": 0.455,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 64.8248,
+      "duration": 0.9417,
+      "confidence": 0.512,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 64.9292,
+      "duration": 0.5921,
+      "confidence": 0.49,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 64.9525,
+      "duration": 0.2554,
+      "confidence": 0.376,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 64.9641,
+      "duration": 0.5934,
+      "confidence": 0.497,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 64.9989,
+      "duration": 0.1625,
+      "confidence": 0.635,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 65.3704,
+      "duration": 0.1393,
+      "confidence": 0.736,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 65.5214,
+      "duration": 0.1173,
+      "confidence": 0.552,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 65.5575,
+      "duration": 0.2786,
+      "confidence": 0.399,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 65.5575,
+      "duration": 0.209,
+      "confidence": 0.471,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 65.6387,
+      "duration": 0.3251,
+      "confidence": 0.767,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 54,
+      "onset": 65.7781,
+      "duration": 0.6966,
+      "confidence": 0.621,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 65.7781,
+      "duration": 0.1393,
+      "confidence": 0.483,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 65.7897,
+      "duration": 0.1509,
+      "confidence": 0.49,
+      "stem": "other"
+    },
+    {
+      "pitch": 59,
+      "onset": 65.9406,
+      "duration": 0.5341,
+      "confidence": 0.523,
+      "stem": "other"
+    },
+    {
+      "pitch": 51,
+      "onset": 65.9638,
+      "duration": 0.476,
+      "confidence": 0.756,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 47,
+      "onset": 65.9754,
+      "duration": 0.4992,
+      "confidence": 0.653,
+      "stem": "other"
+    },
+    {
+      "pitch": 35,
+      "onset": 65.9986,
+      "duration": 0.9636,
+      "confidence": 0.601,
+      "stem": "bass"
+    },
+    {
+      "pitch": 51,
+      "onset": 66.0335,
+      "duration": 0.3831,
+      "confidence": 0.46,
+      "stem": "other"
+    },
+    {
+      "pitch": 63,
+      "onset": 66.0799,
+      "duration": 0.6153,
+      "confidence": 0.413,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 66.4398,
+      "duration": 0.1974,
+      "confidence": 0.552,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 54,
+      "onset": 66.4747,
+      "duration": 0.267,
+      "confidence": 0.598,
+      "stem": "other"
+    },
+    {
+      "pitch": 47,
+      "onset": 66.4747,
+      "duration": 0.209,
+      "confidence": 0.627,
+      "stem": "other"
+    },
+    {
+      "pitch": 59,
+      "onset": 66.4863,
+      "duration": 0.2438,
+      "confidence": 0.5,
+      "stem": "other"
+    },
+    {
+      "pitch": 47,
+      "onset": 66.6836,
+      "duration": 0.2902,
+      "confidence": 0.612,
+      "stem": "other"
+    },
+    {
+      "pitch": 63,
+      "onset": 66.6952,
+      "duration": 0.6269,
+      "confidence": 0.542,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 66.7417,
+      "duration": 0.2322,
+      "confidence": 0.682,
+      "stem": "other"
+    },
+    {
+      "pitch": 59,
+      "onset": 66.9507,
+      "duration": 0.4528,
+      "confidence": 0.728,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 35,
+      "onset": 66.9623,
+      "duration": 0.6979,
+      "confidence": 0.738,
+      "stem": "bass"
+    },
+    {
+      "pitch": 54,
+      "onset": 66.9739,
+      "duration": 0.4528,
+      "confidence": 0.522,
+      "stem": "other"
+    },
+    {
+      "pitch": 47,
+      "onset": 66.9739,
+      "duration": 0.4644,
+      "confidence": 0.592,
+      "stem": "other"
+    },
+    {
+      "pitch": 59,
+      "onset": 67.0435,
+      "duration": 0.1741,
+      "confidence": 0.404,
+      "stem": "other"
+    },
+    {
+      "pitch": 63,
+      "onset": 67.3222,
+      "duration": 0.9997,
+      "confidence": 0.515,
+      "stem": "other"
+    },
+    {
+      "pitch": 59,
+      "onset": 67.3918,
+      "duration": 0.2915,
+      "confidence": 0.492,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 67.4267,
+      "duration": 0.1406,
+      "confidence": 0.663,
+      "stem": "other"
+    },
+    {
+      "pitch": 47,
+      "onset": 67.4383,
+      "duration": 0.814,
+      "confidence": 0.516,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 67.5673,
+      "duration": 0.6269,
+      "confidence": 0.522,
+      "stem": "other"
+    },
+    {
+      "pitch": 59,
+      "onset": 67.6253,
+      "duration": 0.3019,
+      "confidence": 0.807,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 35,
+      "onset": 67.6602,
+      "duration": 0.7546,
+      "confidence": 0.68,
+      "stem": "bass"
+    },
+    {
+      "pitch": 59,
+      "onset": 67.9272,
+      "duration": 0.1509,
+      "confidence": 0.78,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 66,
+      "onset": 67.9504,
+      "duration": 0.7779,
+      "confidence": 0.373,
+      "stem": "other"
+    },
+    {
+      "pitch": 59,
+      "onset": 68.0665,
+      "duration": 0.1741,
+      "confidence": 0.588,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 68.0781,
+      "duration": 0.1625,
+      "confidence": 0.801,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 54,
+      "onset": 68.1942,
+      "duration": 0.1974,
+      "confidence": 0.627,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 68.2407,
+      "duration": 0.325,
+      "confidence": 0.764,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 47,
+      "onset": 68.2523,
+      "duration": 0.1393,
+      "confidence": 0.476,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 68.3916,
+      "duration": 0.2322,
+      "confidence": 0.585,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 68.4032,
+      "duration": 0.1509,
+      "confidence": 0.352,
+      "stem": "other"
+    },
+    {
+      "pitch": 42,
+      "onset": 68.4148,
+      "duration": 0.2206,
+      "confidence": 0.546,
+      "stem": "other"
+    },
+    {
+      "pitch": 30,
+      "onset": 68.438,
+      "duration": 0.209,
+      "confidence": 0.492,
+      "stem": "bass"
+    },
+    {
+      "pitch": 58,
+      "onset": 68.5657,
+      "duration": 0.1858,
+      "confidence": 0.693,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 49,
+      "onset": 68.6006,
+      "duration": 0.4644,
+      "confidence": 0.54,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 68.6238,
+      "duration": 0.4412,
+      "confidence": 0.54,
+      "stem": "other"
+    },
+    {
+      "pitch": 42,
+      "onset": 68.6354,
+      "duration": 0.418,
+      "confidence": 0.696,
+      "stem": "other"
+    },
+    {
+      "pitch": 30,
+      "onset": 68.6586,
+      "duration": 0.9881,
+      "confidence": 0.663,
+      "stem": "bass"
+    },
+    {
+      "pitch": 56,
+      "onset": 68.7515,
+      "duration": 0.1393,
+      "confidence": 0.605,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 58,
+      "onset": 68.8328,
+      "duration": 0.2438,
+      "confidence": 0.663,
+      "stem": "other"
+    },
+    {
+      "pitch": 42,
+      "onset": 69.0534,
+      "duration": 0.5005,
+      "confidence": 0.57,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 69.065,
+      "duration": 0.3135,
+      "confidence": 0.55,
+      "stem": "other"
+    },
+    {
+      "pitch": 78,
+      "onset": 69.0766,
+      "duration": 0.1393,
+      "confidence": 0.397,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 69.0766,
+      "duration": 0.6979,
+      "confidence": 0.344,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 69.0766,
+      "duration": 0.2438,
+      "confidence": 0.653,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 69.0766,
+      "duration": 0.3019,
+      "confidence": 0.552,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 69.3204,
+      "duration": 0.2451,
+      "confidence": 0.671,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 54,
+      "onset": 69.3784,
+      "duration": 0.8836,
+      "confidence": 0.432,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 69.3784,
+      "duration": 0.1987,
+      "confidence": 0.525,
+      "stem": "other"
+    },
+    {
+      "pitch": 42,
+      "onset": 69.5539,
+      "duration": 0.4876,
+      "confidence": 0.562,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 69.5655,
+      "duration": 0.4528,
+      "confidence": 0.743,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 49,
+      "onset": 69.5771,
+      "duration": 0.8243,
+      "confidence": 0.49,
+      "stem": "other"
+    },
+    {
+      "pitch": 66,
+      "onset": 69.5771,
+      "duration": 0.4528,
+      "confidence": 0.492,
+      "stem": "other"
+    },
+    {
+      "pitch": 30,
+      "onset": 69.6468,
+      "duration": 1.1146,
+      "confidence": 0.678,
+      "stem": "bass"
+    },
+    {
+      "pitch": 58,
+      "onset": 70.0183,
+      "duration": 0.4528,
+      "confidence": 0.662,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 42,
+      "onset": 70.0415,
+      "duration": 0.1974,
+      "confidence": 0.545,
+      "stem": "other"
+    },
+    {
+      "pitch": 42,
+      "onset": 70.2389,
+      "duration": 0.685,
+      "confidence": 0.475,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 70.2621,
+      "duration": 0.3367,
+      "confidence": 0.596,
+      "stem": "other"
+    },
+    {
+      "pitch": 58,
+      "onset": 70.3666,
+      "duration": 0.6153,
+      "confidence": 0.492,
+      "stem": "other"
+    },
+    {
+      "pitch": 49,
+      "onset": 70.4014,
+      "duration": 0.476,
+      "confidence": 0.686,
+      "stem": "other"
+    },
+    {
+      "pitch": 54,
+      "onset": 70.5988,
+      "duration": 0.2786,
+      "confidence": 0.559,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 70.6452,
+      "duration": 0.2554,
+      "confidence": 0.498,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 49,
+      "onset": 70.8774,
+      "duration": 0.3947,
+      "confidence": 0.567,
+      "stem": "other"
+    },
+    {
+      "pitch": 53,
+      "onset": 70.9006,
+      "duration": 0.3599,
+      "confidence": 0.765,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 56,
+      "onset": 71.0283,
+      "duration": 0.1974,
+      "confidence": 0.277,
+      "stem": "other"
+    },
+    {
+      "pitch": 73,
+      "onset": 71.0399,
+      "duration": 0.2786,
+      "confidence": 0.407,
+      "stem": "other"
+    },
+    {
+      "pitch": 61,
+      "onset": 71.0399,
+      "duration": 0.1858,
+      "confidence": 0.6,
+      "stem": "other"
+    },
+    {
+      "pitch": 37,
+      "onset": 71.1212,
+      "duration": 0.1393,
+      "confidence": 0.546,
+      "stem": "bass"
+    },
+    {
+      "pitch": 61,
+      "onset": 71.2257,
+      "duration": 0.3612,
+      "confidence": 0.673,
+      "stem": "other"
+    },
+    {
+      "pitch": 56,
+      "onset": 71.2257,
+      "duration": 0.3612,
+      "confidence": 0.456,
+      "stem": "other"
+    },
+    {
+      "pitch": 53,
+      "onset": 71.2605,
+      "duration": 0.3264,
+      "confidence": 0.771,
+      "stem": "vocals"
+    },
+    {
+      "pitch": 37,
+      "onset": 71.2721,
+      "duration": 0.3148,
+      "confidence": 0.78,
+      "stem": "bass"
+    },
+    {
+      "pitch": 49,
+      "onset": 71.2721,
+      "duration": 0.3148,
+      "confidence": 0.748,
+      "stem": "other"
+    }
+  ],
+  "sections": [
+    {
+      "label": "part 1",
+      "start": 0.0,
+      "end": 8.081,
+      "confidence": 0.0
+    },
+    {
+      "label": "part 2",
+      "start": 8.081,
+      "end": 52.825,
+      "confidence": 0.0
+    },
+    {
+      "label": "part 3",
+      "start": 52.825,
+      "end": 72.086,
+      "confidence": 0.0
+    }
+  ],
+  "lyrics": [
+    {
+      "word": "No",
+      "start": 9.0,
+      "end": 9.76,
+      "confidence": 0.742
+    },
+    {
+      "word": "one",
+      "start": 9.76,
+      "end": 10.18,
+      "confidence": 0.906
+    },
+    {
+      "word": "can",
+      "start": 10.18,
+      "end": 10.5,
+      "confidence": 0.994
+    },
+    {
+      "word": "beat",
+      "start": 10.5,
+      "end": 10.88,
+      "confidence": 0.996
+    },
+    {
+      "word": "you,",
+      "start": 10.88,
+      "end": 11.34,
+      "confidence": 0.998
+    },
+    {
+      "word": "baby",
+      "start": 11.42,
+      "end": 11.86,
+      "confidence": 0.987
+    },
+    {
+      "word": "let",
+      "start": 11.86,
+      "end": 12.06,
+      "confidence": 0.714
+    },
+    {
+      "word": "me",
+      "start": 12.06,
+      "end": 12.48,
+      "confidence": 1.0
+    },
+    {
+      "word": "pull",
+      "start": 12.48,
+      "end": 12.86,
+      "confidence": 0.998
+    },
+    {
+      "word": "you",
+      "start": 12.86,
+      "end": 13.14,
+      "confidence": 0.999
+    },
+    {
+      "word": "closer",
+      "start": 13.14,
+      "end": 13.86,
+      "confidence": 0.999
+    },
+    {
+      "word": "Before",
+      "start": 13.86,
+      "end": 14.72,
+      "confidence": 0.987
+    },
+    {
+      "word": "it",
+      "start": 14.72,
+      "end": 15.16,
+      "confidence": 0.999
+    },
+    {
+      "word": "all",
+      "start": 15.16,
+      "end": 15.36,
+      "confidence": 1.0
+    },
+    {
+      "word": "goes",
+      "start": 15.36,
+      "end": 15.66,
+      "confidence": 0.999
+    },
+    {
+      "word": "down,",
+      "start": 15.66,
+      "end": 16.12,
+      "confidence": 1.0
+    },
+    {
+      "word": "when",
+      "start": 16.3,
+      "end": 16.88,
+      "confidence": 0.999
+    },
+    {
+      "word": "I'm",
+      "start": 16.88,
+      "end": 17.24,
+      "confidence": 0.999
+    },
+    {
+      "word": "with",
+      "start": 17.24,
+      "end": 17.5,
+      "confidence": 1.0
+    },
+    {
+      "word": "you,",
+      "start": 17.5,
+      "end": 17.8,
+      "confidence": 1.0
+    },
+    {
+      "word": "swear",
+      "start": 17.84,
+      "end": 18.06,
+      "confidence": 0.981
+    },
+    {
+      "word": "I'm",
+      "start": 18.06,
+      "end": 18.5,
+      "confidence": 0.993
+    },
+    {
+      "word": "floating",
+      "start": 18.5,
+      "end": 19.12,
+      "confidence": 0.974
+    },
+    {
+      "word": "No",
+      "start": 19.12,
+      "end": 20.48,
+      "confidence": 1.0
+    },
+    {
+      "word": "one",
+      "start": 20.48,
+      "end": 20.78,
+      "confidence": 1.0
+    },
+    {
+      "word": "can",
+      "start": 20.78,
+      "end": 21.12,
+      "confidence": 1.0
+    },
+    {
+      "word": "reach",
+      "start": 21.12,
+      "end": 21.58,
+      "confidence": 0.869
+    },
+    {
+      "word": "you,",
+      "start": 21.58,
+      "end": 22.0,
+      "confidence": 0.994
+    },
+    {
+      "word": "we're",
+      "start": 22.04,
+      "end": 22.46,
+      "confidence": 0.999
+    },
+    {
+      "word": "bound",
+      "start": 22.46,
+      "end": 22.78,
+      "confidence": 0.998
+    },
+    {
+      "word": "through",
+      "start": 22.78,
+      "end": 23.1,
+      "confidence": 0.999
+    },
+    {
+      "word": "every",
+      "start": 23.1,
+      "end": 23.56,
+      "confidence": 1.0
+    },
+    {
+      "word": "moment",
+      "start": 23.56,
+      "end": 24.16,
+      "confidence": 0.997
+    },
+    {
+      "word": "Only",
+      "start": 24.16,
+      "end": 25.08,
+      "confidence": 0.996
+    },
+    {
+      "word": "us",
+      "start": 25.08,
+      "end": 25.42,
+      "confidence": 0.997
+    },
+    {
+      "word": "two",
+      "start": 25.42,
+      "end": 25.68,
+      "confidence": 1.0
+    },
+    {
+      "word": "in",
+      "start": 25.68,
+      "end": 26.08,
+      "confidence": 1.0
+    },
+    {
+      "word": "my",
+      "start": 26.08,
+      "end": 26.36,
+      "confidence": 1.0
+    },
+    {
+      "word": "mind,",
+      "start": 26.36,
+      "end": 26.86,
+      "confidence": 1.0
+    },
+    {
+      "word": "every",
+      "start": 26.96,
+      "end": 27.48,
+      "confidence": 0.999
+    },
+    {
+      "word": "night",
+      "start": 27.48,
+      "end": 28.06,
+      "confidence": 1.0
+    },
+    {
+      "word": "and",
+      "start": 28.06,
+      "end": 28.4,
+      "confidence": 1.0
+    },
+    {
+      "word": "every",
+      "start": 28.4,
+      "end": 28.78,
+      "confidence": 1.0
+    },
+    {
+      "word": "morning",
+      "start": 28.78,
+      "end": 29.78,
+      "confidence": 1.0
+    },
+    {
+      "word": "There's",
+      "start": 30.52,
+      "end": 31.12,
+      "confidence": 0.848
+    },
+    {
+      "word": "no",
+      "start": 31.12,
+      "end": 31.18,
+      "confidence": 0.998
+    },
+    {
+      "word": "one",
+      "start": 31.18,
+      "end": 31.42,
+      "confidence": 0.996
+    },
+    {
+      "word": "like",
+      "start": 31.42,
+      "end": 31.72,
+      "confidence": 0.999
+    },
+    {
+      "word": "you,",
+      "start": 31.72,
+      "end": 32.0,
+      "confidence": 0.998
+    },
+    {
+      "word": "need",
+      "start": 32.08,
+      "end": 32.56,
+      "confidence": 0.997
+    },
+    {
+      "word": "you",
+      "start": 32.56,
+      "end": 32.74,
+      "confidence": 1.0
+    },
+    {
+      "word": "on",
+      "start": 32.74,
+      "end": 32.96,
+      "confidence": 0.929
+    },
+    {
+      "word": "me",
+      "start": 32.96,
+      "end": 33.22,
+      "confidence": 1.0
+    },
+    {
+      "word": "all",
+      "start": 33.22,
+      "end": 33.6,
+      "confidence": 0.997
+    },
+    {
+      "word": "night,",
+      "start": 33.6,
+      "end": 33.96,
+      "confidence": 1.0
+    },
+    {
+      "word": "all",
+      "start": 34.06,
+      "end": 34.24,
+      "confidence": 1.0
+    },
+    {
+      "word": "day",
+      "start": 34.24,
+      "end": 34.56,
+      "confidence": 1.0
+    },
+    {
+      "word": "You're",
+      "start": 34.56,
+      "end": 35.02,
+      "confidence": 0.872
+    },
+    {
+      "word": "so",
+      "start": 35.02,
+      "end": 35.2,
+      "confidence": 1.0
+    },
+    {
+      "word": "much",
+      "start": 35.2,
+      "end": 35.54,
+      "confidence": 1.0
+    },
+    {
+      "word": "more",
+      "start": 35.54,
+      "end": 35.94,
+      "confidence": 1.0
+    },
+    {
+      "word": "than",
+      "start": 35.94,
+      "end": 36.24,
+      "confidence": 1.0
+    },
+    {
+      "word": "body",
+      "start": 36.24,
+      "end": 36.56,
+      "confidence": 1.0
+    },
+    {
+      "word": "and",
+      "start": 36.56,
+      "end": 36.82,
+      "confidence": 1.0
+    },
+    {
+      "word": "face",
+      "start": 36.82,
+      "end": 37.26,
+      "confidence": 1.0
+    },
+    {
+      "word": "Oh,",
+      "start": 37.26,
+      "end": 38.06,
+      "confidence": 0.204
+    },
+    {
+      "word": "wanna",
+      "start": 38.06,
+      "end": 40.7,
+      "confidence": 0.705
+    },
+    {
+      "word": "fly",
+      "start": 40.7,
+      "end": 41.06,
+      "confidence": 1.0
+    },
+    {
+      "word": "in",
+      "start": 41.06,
+      "end": 41.4,
+      "confidence": 1.0
+    },
+    {
+      "word": "a",
+      "start": 41.4,
+      "end": 41.5,
+      "confidence": 0.929
+    },
+    {
+      "word": "jet",
+      "start": 41.5,
+      "end": 41.8,
+      "confidence": 1.0
+    },
+    {
+      "word": "by",
+      "start": 41.8,
+      "end": 42.0,
+      "confidence": 0.869
+    },
+    {
+      "word": "the",
+      "start": 42.0,
+      "end": 42.16,
+      "confidence": 1.0
+    },
+    {
+      "word": "skyline",
+      "start": 42.16,
+      "end": 42.74,
+      "confidence": 0.999
+    },
+    {
+      "word": "now",
+      "start": 42.74,
+      "end": 43.06,
+      "confidence": 0.946
+    },
+    {
+      "word": "Do",
+      "start": 43.06,
+      "end": 43.3,
+      "confidence": 0.98
+    },
+    {
+      "word": "you",
+      "start": 43.3,
+      "end": 43.46,
+      "confidence": 1.0
+    },
+    {
+      "word": "wanna",
+      "start": 43.46,
+      "end": 43.72,
+      "confidence": 0.998
+    },
+    {
+      "word": "see",
+      "start": 43.72,
+      "end": 43.96,
+      "confidence": 1.0
+    },
+    {
+      "word": "Miami",
+      "start": 43.96,
+      "end": 44.32,
+      "confidence": 1.0
+    },
+    {
+      "word": "or",
+      "start": 44.32,
+      "end": 44.7,
+      "confidence": 0.999
+    },
+    {
+      "word": "Malibu?",
+      "start": 44.7,
+      "end": 45.46,
+      "confidence": 0.983
+    },
+    {
+      "word": "Doesn't",
+      "start": 45.68,
+      "end": 46.1,
+      "confidence": 0.869
+    },
+    {
+      "word": "matter",
+      "start": 46.1,
+      "end": 46.4,
+      "confidence": 1.0
+    },
+    {
+      "word": "as",
+      "start": 46.4,
+      "end": 46.74,
+      "confidence": 0.989
+    },
+    {
+      "word": "long",
+      "start": 46.74,
+      "end": 46.92,
+      "confidence": 1.0
+    },
+    {
+      "word": "as",
+      "start": 46.92,
+      "end": 47.16,
+      "confidence": 1.0
+    },
+    {
+      "word": "you",
+      "start": 47.16,
+      "end": 47.3,
+      "confidence": 1.0
+    },
+    {
+      "word": "by",
+      "start": 47.3,
+      "end": 47.52,
+      "confidence": 0.932
+    },
+    {
+      "word": "my",
+      "start": 47.52,
+      "end": 47.88,
+      "confidence": 1.0
+    },
+    {
+      "word": "side",
+      "start": 47.88,
+      "end": 48.34,
+      "confidence": 1.0
+    },
+    {
+      "word": "Nicole,",
+      "start": 48.34,
+      "end": 48.82,
+      "confidence": 0.37
+    },
+    {
+      "word": "gotta",
+      "start": 49.08,
+      "end": 49.3,
+      "confidence": 0.875
+    },
+    {
+      "word": "match",
+      "start": 49.3,
+      "end": 49.58,
+      "confidence": 0.996
+    },
+    {
+      "word": "how",
+      "start": 49.58,
+      "end": 49.84,
+      "confidence": 0.998
+    },
+    {
+      "word": "you",
+      "start": 49.84,
+      "end": 49.96,
+      "confidence": 1.0
+    },
+    {
+      "word": "shine",
+      "start": 49.96,
+      "end": 50.28,
+      "confidence": 0.985
+    },
+    {
+      "word": "right",
+      "start": 50.28,
+      "end": 50.54,
+      "confidence": 1.0
+    },
+    {
+      "word": "now",
+      "start": 50.54,
+      "end": 50.94,
+      "confidence": 1.0
+    },
+    {
+      "word": "No",
+      "start": 50.94,
+      "end": 51.94,
+      "confidence": 0.994
+    },
+    {
+      "word": "one",
+      "start": 51.94,
+      "end": 52.22,
+      "confidence": 0.995
+    },
+    {
+      "word": "can",
+      "start": 52.22,
+      "end": 52.54,
+      "confidence": 1.0
+    },
+    {
+      "word": "beat",
+      "start": 52.54,
+      "end": 52.96,
+      "confidence": 0.999
+    },
+    {
+      "word": "you,",
+      "start": 52.96,
+      "end": 53.38,
+      "confidence": 1.0
+    },
+    {
+      "word": "baby",
+      "start": 53.48,
+      "end": 53.92,
+      "confidence": 0.971
+    },
+    {
+      "word": "let",
+      "start": 53.92,
+      "end": 54.1,
+      "confidence": 0.686
+    },
+    {
+      "word": "me",
+      "start": 54.1,
+      "end": 54.48,
+      "confidence": 1.0
+    },
+    {
+      "word": "pull",
+      "start": 54.48,
+      "end": 54.9,
+      "confidence": 0.998
+    },
+    {
+      "word": "you",
+      "start": 54.9,
+      "end": 55.2,
+      "confidence": 1.0
+    },
+    {
+      "word": "closer",
+      "start": 55.2,
+      "end": 55.92,
+      "confidence": 0.999
+    },
+    {
+      "word": "Before",
+      "start": 55.92,
+      "end": 56.72,
+      "confidence": 0.598
+    },
+    {
+      "word": "it",
+      "start": 56.72,
+      "end": 57.16,
+      "confidence": 0.982
+    },
+    {
+      "word": "all",
+      "start": 57.16,
+      "end": 57.34,
+      "confidence": 0.999
+    },
+    {
+      "word": "goes",
+      "start": 57.34,
+      "end": 57.68,
+      "confidence": 0.998
+    },
+    {
+      "word": "down,",
+      "start": 57.68,
+      "end": 58.08,
+      "confidence": 0.999
+    },
+    {
+      "word": "when",
+      "start": 58.32,
+      "end": 58.84,
+      "confidence": 0.984
+    },
+    {
+      "word": "I'm",
+      "start": 58.84,
+      "end": 59.24,
+      "confidence": 0.997
+    },
+    {
+      "word": "with",
+      "start": 59.24,
+      "end": 59.48,
+      "confidence": 1.0
+    },
+    {
+      "word": "you,",
+      "start": 59.48,
+      "end": 59.8,
+      "confidence": 1.0
+    },
+    {
+      "word": "swear",
+      "start": 59.82,
+      "end": 60.06,
+      "confidence": 0.961
+    },
+    {
+      "word": "I'm",
+      "start": 60.06,
+      "end": 60.5,
+      "confidence": 0.996
+    },
+    {
+      "word": "floating",
+      "start": 60.5,
+      "end": 61.12,
+      "confidence": 0.908
+    },
+    {
+      "word": "No,",
+      "start": 61.12,
+      "end": 62.44,
+      "confidence": 0.785
+    },
+    {
+      "word": "I",
+      "start": 62.5,
+      "end": 62.78,
+      "confidence": 1.0
+    },
+    {
+      "word": "can't",
+      "start": 62.78,
+      "end": 63.28,
+      "confidence": 0.999
+    },
+    {
+      "word": "reach",
+      "start": 63.28,
+      "end": 63.48,
+      "confidence": 0.966
+    },
+    {
+      "word": "you,",
+      "start": 63.48,
+      "end": 63.92,
+      "confidence": 0.997
+    },
+    {
+      "word": "we're",
+      "start": 63.98,
+      "end": 64.4,
+      "confidence": 1.0
+    },
+    {
+      "word": "bound",
+      "start": 64.4,
+      "end": 64.7,
+      "confidence": 1.0
+    },
+    {
+      "word": "through",
+      "start": 64.7,
+      "end": 65.04,
+      "confidence": 0.784
+    },
+    {
+      "word": "every",
+      "start": 65.04,
+      "end": 65.62,
+      "confidence": 1.0
+    },
+    {
+      "word": "morning",
+      "start": 65.62,
+      "end": 66.36,
+      "confidence": 0.85
+    },
+    {
+      "word": "Only",
+      "start": 66.36,
+      "end": 67.06,
+      "confidence": 0.941
+    },
+    {
+      "word": "us",
+      "start": 67.06,
+      "end": 67.34,
+      "confidence": 0.949
+    },
+    {
+      "word": "two",
+      "start": 67.34,
+      "end": 67.62,
+      "confidence": 1.0
+    },
+    {
+      "word": "in",
+      "start": 67.62,
+      "end": 68.02,
+      "confidence": 0.998
+    },
+    {
+      "word": "my",
+      "start": 68.02,
+      "end": 68.28,
+      "confidence": 1.0
+    },
+    {
+      "word": "mind,",
+      "start": 68.28,
+      "end": 68.74,
+      "confidence": 1.0
+    },
+    {
+      "word": "every",
+      "start": 68.88,
+      "end": 69.38,
+      "confidence": 1.0
+    },
+    {
+      "word": "night",
+      "start": 69.38,
+      "end": 70.0,
+      "confidence": 1.0
+    },
+    {
+      "word": "and",
+      "start": 70.0,
+      "end": 70.32,
+      "confidence": 0.999
+    },
+    {
+      "word": "every",
+      "start": 70.32,
+      "end": 70.66,
+      "confidence": 1.0
+    },
+    {
+      "word": "morning",
+      "start": 70.66,
+      "end": 71.68,
+      "confidence": 1.0
+    }
+  ],
+  "subjective": {
+    "genre_tags": [
+      "pop",
+      "r&b",
+      "electronic-pop",
+      "dance-pop"
+    ],
+    "instrumentation": [
+      "synth bass",
+      "electronic drum machine (kick, snap, hi-hats)",
+      "synth pads",
+      "reverberant plucked synth",
+      "sampled crowd noise"
+    ],
+    "timbre": "Warm, smooth, and polished. The synths are rounded and the bass is deep and pillowy, creating a clean, modern electronic sound.",
+    "vocal_character": "A clear, smooth male tenor voice, often using a breathy falsetto for flourishes. Phrasing is rhythmic and precise. The lead vocal is frequently supported by dense layers of doubles and harmonies, especially in the chorus, creating a thick, polished vocal stack.",
+    "vocal_gender": "male",
+    "production": "Highly polished and contemporary. The production features a wide stereo image, with centered lead vocals and panned harmonies/synths. Heavy compression is used to maintain a consistent, powerful dynamic level. Vocals and synths are treated with prominent but clean reverb, creating a sense of large, produced space.",
+    "emotional_arc": "The song begins with a feeling of intimate, gentle devotion. This builds with the introduction of the beat into a more confident and celebratory declaration, culminating in an exuberant and joyful chorus.",
+    "arrangement_density": [
+      {
+        "start": 0.0,
+        "end": 10.0,
+        "description": "Sampled crowd noise and a solo, reverberant plucked synth melody."
+      },
+      {
+        "start": 10.0,
+        "end": 22.0,
+        "description": "Lead vocal and layered harmonies enter over the plucked synth."
+      },
+      {
+        "start": 22.0,
+        "end": 62.0,
+        "description": "A full electronic beat (kick, snap) and synth bass enter, creating a dense, driving arrangement that continues to the end of the clip."
+      }
+    ],
+    "sections": [
+      {
+        "label": "intro",
+        "start": 0.0,
+        "end": 10.0
+      },
+      {
+        "label": "chorus",
+        "start": 10.0,
+        "end": 22.0
+      },
+      {
+        "label": "verse",
+        "start": 22.0,
+        "end": 44.0
+      },
+      {
+        "label": "chorus",
+        "start": 44.0,
+        "end": 62.0
+      }
+    ]
+  }
+}

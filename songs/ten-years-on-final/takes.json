@@ -1,0 +1,334 @@
+{
+  "runs": [
+    {
+      "provider": "suno",
+      "request_hash": "776d6a97038672df",
+      "fidelity": "loose",
+      "fidelity_note": "",
+      "style_prompt": "one repeating four-chord loop Em - C - G - D, one chord per bar, the same four chords in the same order through the entire song and never anything else, modern acoustic pop love song, 91 BPM, G major, reverberant plucked acoustic guitar loop up front with clean wide reverb, a nylon Spanish guitar answering with short melodic fills, warm emotional male tenor, close and breathy in the verses, aching and open in the chorus, gentle falsetto lifts, thick stacked harmonies on the chorus, strong unforgettable vocal melody that lingers sweetly on the major third, big singable chorus hook, deep pillowy sub bass, gentle electronic kick and finger-snap beat held back until the first chorus, airy pads, polished spacious production, nostalgic then soaring",
+      "payload": {
+        "note": "request body removed from the archive (it carried abandoned lyric drafts)"
+      },
+      "cost_estimate_usd": 0.06,
+      "cost_actual_usd": 0.06,
+      "created_at": "2026-09-22T02:02:57.887226+00:00",
+      "warnings": [],
+      "takes": [
+        {
+          "index": 1,
+          "file": "take-1.mp3",
+          "provider": "suno",
+          "provider_ref": "73e72e56-a1eb-4a87-9a2d-be89c73b137b",
+          "duration_s": 240.0,
+          "bytes": 5393956
+        },
+        {
+          "index": 2,
+          "file": "take-2.mp3",
+          "provider": "suno",
+          "provider_ref": "f314d234-e3ca-4e01-898e-6b74e507d2c7",
+          "duration_s": 239.88,
+          "bytes": 5308180
+        }
+      ]
+    },
+    {
+      "provider": "suno",
+      "request_hash": "bbc0d61fdb18441d",
+      "fidelity": "loose",
+      "fidelity_note": "",
+      "style_prompt": "one repeating four-chord loop Em - C - G - D, one chord per bar, the same four chords in the same order through the entire song and never anything else, modern acoustic pop love song, 91 BPM, G major, reverberant plucked acoustic guitar loop up front with clean wide reverb, a nylon Spanish guitar answering with short melodic fills, warm emotional male tenor, close and breathy in the verses, aching and open in the chorus, gentle falsetto lifts, thick stacked harmonies on the chorus, strong unforgettable vocal melody that lingers sweetly on the major third, big singable chorus hook, deep pillowy sub bass, gentle electronic kick and finger-snap beat held back until the first chorus, airy pads, polished spacious production, nostalgic then soaring",
+      "payload": {
+        "note": "request body removed from the archive (it carried abandoned lyric drafts)"
+      },
+      "cost_estimate_usd": 0.06,
+      "cost_actual_usd": 0.06,
+      "created_at": "2026-09-22T02:37:38.547071+00:00",
+      "warnings": [
+        "take 4 downloaded afterwards from the saved raw job (console encoding crash mid-run)"
+      ],
+      "takes": [
+        {
+          "index": 3,
+          "file": "take-3.mp3",
+          "provider": "suno",
+          "provider_ref": "59d7bbcd-5d35-41bc-b0c1-92fd074a2497",
+          "duration_s": 262.8,
+          "bytes": 5972736
+        },
+        {
+          "index": 4,
+          "file": "take-4.mp3",
+          "provider": "suno",
+          "provider_ref": "017486df-8606-48e1-a08d-2280018caa17",
+          "duration_s": 263.78,
+          "bytes": 5808480
+        }
+      ]
+    },
+    {
+      "provider": "suno",
+      "request_hash": "bbc0d61fdb18441d",
+      "fidelity": "loose",
+      "fidelity_note": "",
+      "style_prompt": "one repeating four-chord loop Em - C - G - D, one chord per bar, the same four chords in the same order through the entire song and never anything else, modern acoustic pop love song, 91 BPM, G major, reverberant plucked acoustic guitar loop up front with clean wide reverb, a nylon Spanish guitar answering with short melodic fills, warm emotional male tenor, close and breathy in the verses, aching and open in the chorus, gentle falsetto lifts, thick stacked harmonies on the chorus, strong unforgettable vocal melody that lingers sweetly on the major third, big singable chorus hook, deep pillowy sub bass, gentle electronic kick and finger-snap beat held back until the first chorus, airy pads, polished spacious production, nostalgic then soaring",
+      "cost_estimate_usd": 0.06,
+      "cost_actual_usd": 0.06,
+      "created_at": "2026-09-22T02:37:38.547071+00:00",
+      "payload": {
+        "note": "request body removed from the archive (it carried abandoned lyric drafts)"
+      },
+      "warnings": [
+        "Suno cover (upload-and-cover-audio) of work/ten-years-on-pluck take 2, task 784ad16cb921f871dc9b4059f923f8fb"
+      ],
+      "takes": [
+        {
+          "index": 5,
+          "file": "take-5.mp3",
+          "provider": "suno",
+          "provider_ref": "9f86dfc3-5c2e-410b-b19c-519d269732ee",
+          "duration_s": 249.19,
+          "bytes": 5714275
+        },
+        {
+          "index": 6,
+          "file": "take-6.mp3",
+          "provider": "suno",
+          "provider_ref": "45f5c986-e57c-4eb7-b3e4-efeb639840f4",
+          "duration_s": 239.88,
+          "bytes": 5471683
+        }
+      ]
+    },
+    {
+      "provider": "suno",
+      "request_hash": "bbc0d61fdb18441d",
+      "fidelity": "loose",
+      "fidelity_note": "",
+      "style_prompt": "one repeating four-chord loop Em - C - G - D, one chord per bar, the same four chords in the same order through the entire song and never anything else, modern acoustic pop love song, 91 BPM, G major, reverberant plucked acoustic guitar loop up front with clean wide reverb, a nylon Spanish guitar answering with short melodic fills, warm emotional male tenor, close and breathy in the verses, aching and open in the chorus, gentle falsetto lifts, thick stacked harmonies on the chorus, strong unforgettable vocal melody that lingers sweetly on the major third, big singable chorus hook, deep pillowy sub bass, gentle electronic kick and finger-snap beat held back until the first chorus, airy pads, polished spacious production, nostalgic then soaring",
+      "cost_estimate_usd": 0.06,
+      "cost_actual_usd": 0.06,
+      "created_at": "2026-09-22T02:37:38.547071+00:00",
+      "payload": {
+        "note": "request body removed from the archive (it carried abandoned lyric drafts)"
+      },
+      "warnings": [
+        "Suno cover (upload-and-cover-audio) of work/ten-years-on-pluck take 2, task 526f138ca852e29ed7118ff48bcf43de"
+      ],
+      "takes": [
+        {
+          "index": 7,
+          "file": "take-7.mp3",
+          "provider": "suno",
+          "provider_ref": "feb18b78-dc3c-4874-acf8-3686f7ac5367",
+          "duration_s": 232.7,
+          "bytes": 5243465
+        },
+        {
+          "index": 8,
+          "file": "take-8.mp3",
+          "provider": "suno",
+          "provider_ref": "4208b55b-edd5-4dd1-a15a-b358bf68e2be",
+          "duration_s": 231.72,
+          "bytes": 5318393
+        }
+      ]
+    },
+    {
+      "provider": "suno",
+      "request_hash": "bbc0d61fdb18441d",
+      "fidelity": "loose",
+      "fidelity_note": "",
+      "style_prompt": "one repeating four-chord loop Em - C - G - D, one chord per bar, the same four chords in the same order through the entire song and never anything else, modern acoustic pop love song, 91 BPM, G major, reverberant plucked acoustic guitar loop up front with clean wide reverb, a nylon Spanish guitar answering with short melodic fills, warm emotional male tenor, close and breathy in the verses, aching and open in the chorus, gentle falsetto lifts, thick stacked harmonies on the chorus, strong unforgettable vocal melody that lingers sweetly on the major third, big singable chorus hook, deep pillowy sub bass, gentle electronic kick and finger-snap beat held back until the first chorus, airy pads, polished spacious production, nostalgic then soaring",
+      "cost_estimate_usd": 0.06,
+      "cost_actual_usd": 0.06,
+      "created_at": "2026-09-22T02:37:38.547071+00:00",
+      "payload": {
+        "note": "request body removed from the archive (it carried abandoned lyric drafts)"
+      },
+      "warnings": [
+        "Suno cover (upload-and-cover-audio) of work/ten-years-on-pluck take 2, task da07958fcc52c9e2dc6c3ad3da755ac2"
+      ],
+      "takes": [
+        {
+          "index": 9,
+          "file": "take-9.mp3",
+          "provider": "suno",
+          "provider_ref": "f046c88b-d173-414b-a1af-104001c91032",
+          "duration_s": 239.04,
+          "bytes": 5457347
+        },
+        {
+          "index": 10,
+          "file": "take-10.mp3",
+          "provider": "suno",
+          "provider_ref": "74b77472-dfe3-42a7-a54a-f8ae8c0833f5",
+          "duration_s": 237.12,
+          "bytes": 5376107
+        }
+      ]
+    },
+    {
+      "provider": "suno",
+      "request_hash": "bbc0d61fdb18441d",
+      "fidelity": "loose",
+      "fidelity_note": "",
+      "style_prompt": "one repeating four-chord loop Em - C - G - D, one chord per bar, the same four chords in the same order through the entire song and never anything else, modern acoustic pop love song, 91 BPM, G major, reverberant plucked acoustic guitar loop up front with clean wide reverb, a nylon Spanish guitar answering with short melodic fills, warm emotional male tenor, close and breathy in the verses, aching and open in the chorus, gentle falsetto lifts, thick stacked harmonies on the chorus, strong unforgettable vocal melody that lingers sweetly on the major third, big singable chorus hook, deep pillowy sub bass, gentle electronic kick and finger-snap beat held back until the first chorus, airy pads, polished spacious production, nostalgic then soaring",
+      "cost_estimate_usd": 0.06,
+      "cost_actual_usd": 0.06,
+      "created_at": "2026-09-22T02:37:38.547071+00:00",
+      "payload": {
+        "note": "request body removed from the archive (it carried abandoned lyric drafts)"
+      },
+      "warnings": [
+        "Suno cover (upload-and-cover-audio) of work/ten-years-on-pluck take 2, task 2e82bb2d09e3f82948a76ffb7a701e96"
+      ],
+      "takes": [
+        {
+          "index": 11,
+          "file": "take-11.mp3",
+          "provider": "suno",
+          "provider_ref": "b8c33d7a-c779-42b4-a044-50b2ddc86f0b",
+          "duration_s": 230.9,
+          "bytes": 5345786
+        },
+        {
+          "index": 12,
+          "file": "take-12.mp3",
+          "provider": "suno",
+          "provider_ref": "a1f02580-9c0f-429f-b4cd-5858cf8cfcc4",
+          "duration_s": 242.64,
+          "bytes": 5532530
+        }
+      ]
+    },
+    {
+      "provider": "suno",
+      "request_hash": "bbc0d61fdb18441d",
+      "fidelity": "loose",
+      "fidelity_note": "",
+      "style_prompt": "one repeating four-chord loop Em - C - G - D, one chord per bar, the same four chords in the same order through the entire song and never anything else, modern acoustic pop love song, 91 BPM, G major, reverberant plucked acoustic guitar loop up front with clean wide reverb, a nylon Spanish guitar answering with short melodic fills, warm emotional male tenor, close and breathy in the verses, aching and open in the chorus, gentle falsetto lifts, thick stacked harmonies on the chorus, strong unforgettable vocal melody that lingers sweetly on the major third, big singable chorus hook, deep pillowy sub bass, gentle electronic kick and finger-snap beat held back until the first chorus, airy pads, polished spacious production, nostalgic then soaring",
+      "cost_estimate_usd": 0.06,
+      "cost_actual_usd": 0.06,
+      "created_at": "2026-09-22T02:37:38.547071+00:00",
+      "payload": {
+        "note": "request body removed from the archive (it carried abandoned lyric drafts)"
+      },
+      "warnings": [
+        "Suno cover (upload-and-cover-audio) of work/ten-years-on-pluck take 2, task 2beb6a09ac8ebcbeb4ded1d89c789e04"
+      ],
+      "takes": [
+        {
+          "index": 13,
+          "file": "take-13.mp3",
+          "provider": "suno",
+          "provider_ref": "8c9a00f3-5e52-4d79-98fc-3d6f1f99d068",
+          "duration_s": 229.22,
+          "bytes": 5226236
+        },
+        {
+          "index": 14,
+          "file": "take-14.mp3",
+          "provider": "suno",
+          "provider_ref": "e01336d3-2452-41da-a46c-9ffb7b57c4a8",
+          "duration_s": 231.62,
+          "bytes": 5272748
+        }
+      ]
+    },
+    {
+      "provider": "suno",
+      "request_hash": "bbc0d61fdb18441d",
+      "fidelity": "loose",
+      "fidelity_note": "",
+      "style_prompt": "one repeating four-chord loop Em - C - G - D, one chord per bar, the same four chords in the same order through the entire song and never anything else, modern acoustic pop love song, 91 BPM, G major, reverberant plucked acoustic guitar loop up front with clean wide reverb, a nylon Spanish guitar answering with short melodic fills, warm emotional male tenor, close and breathy in the verses, aching and open in the chorus, gentle falsetto lifts, thick stacked harmonies on the chorus, strong unforgettable vocal melody that lingers sweetly on the major third, big singable chorus hook, deep pillowy sub bass, gentle electronic kick and finger-snap beat held back until the first chorus, airy pads, polished spacious production, nostalgic then soaring",
+      "cost_estimate_usd": 0.06,
+      "cost_actual_usd": 0.06,
+      "created_at": "2026-09-22T02:37:38.547071+00:00",
+      "payload": {
+        "note": "request body removed from the archive (it carried abandoned lyric drafts)"
+      },
+      "warnings": [
+        "Suno cover (upload-and-cover-audio) of work/ten-years-on-pluck take 2, task 5b36f40237c78f4499d708dfee46cfa3"
+      ],
+      "takes": [
+        {
+          "index": 15,
+          "file": "take-15.mp3",
+          "provider": "suno",
+          "provider_ref": "b0dc4472-c2a3-4645-bb6d-d6775bb4c6c2",
+          "duration_s": 238.82,
+          "bytes": 5433628
+        },
+        {
+          "index": 16,
+          "file": "take-16.mp3",
+          "provider": "suno",
+          "provider_ref": "fd686644-0358-4fb4-8196-1853bff6781b",
+          "duration_s": 231.02,
+          "bytes": 5312860
+        }
+      ]
+    },
+    {
+      "provider": "suno",
+      "request_hash": "bbc0d61fdb18441d",
+      "fidelity": "loose",
+      "fidelity_note": "",
+      "style_prompt": "one repeating four-chord loop Em - C - G - D, one chord per bar, the same four chords in the same order through the entire song and never anything else, modern acoustic pop love song, 91 BPM, G major, reverberant plucked acoustic guitar loop up front with clean wide reverb, a nylon Spanish guitar answering with short melodic fills, warm emotional male tenor, close and breathy in the verses, aching and open in the chorus, gentle falsetto lifts, thick stacked harmonies on the chorus, strong unforgettable vocal melody that lingers sweetly on the major third, big singable chorus hook, deep pillowy sub bass, gentle electronic kick and finger-snap beat held back until the first chorus, airy pads, polished spacious production, nostalgic then soaring",
+      "cost_estimate_usd": 0.06,
+      "cost_actual_usd": 0.06,
+      "created_at": "2026-09-22T02:37:38.547071+00:00",
+      "payload": {
+        "note": "request body removed from the archive (it carried abandoned lyric drafts)"
+      },
+      "warnings": [
+        "Suno cover (upload-and-cover-audio) of work/ten-years-on-pluck take 2, task 36911329916a03148e02628b15622be8"
+      ],
+      "takes": [
+        {
+          "index": 17,
+          "file": "take-17.mp3",
+          "provider": "suno",
+          "provider_ref": "10770e94-3c7a-4ec9-914d-87251ee36435",
+          "duration_s": 222.84,
+          "bytes": 5066850
+        },
+        {
+          "index": 18,
+          "file": "take-18.mp3",
+          "provider": "suno",
+          "provider_ref": "188f39b0-6b90-462c-9357-13c983fb16d1",
+          "duration_s": 219.79,
+          "bytes": 5030514
+        }
+      ]
+    },
+    {
+      "provider": "suno",
+      "request_hash": "bbc0d61fdb18441d",
+      "fidelity": "loose",
+      "fidelity_note": "",
+      "style_prompt": "one repeating four-chord loop Em - C - G - D, one chord per bar, the same four chords in the same order through the entire song and never anything else, modern acoustic pop love song, 91 BPM, G major, reverberant plucked acoustic guitar loop up front with clean wide reverb, a nylon Spanish guitar answering with short melodic fills, warm emotional male tenor, close and breathy in the verses, aching and open in the chorus, gentle falsetto lifts, thick stacked harmonies on the chorus, strong unforgettable vocal melody that lingers sweetly on the major third, big singable chorus hook, deep pillowy sub bass, gentle electronic kick and finger-snap beat held back until the first chorus, airy pads, polished spacious production, nostalgic then soaring",
+      "cost_estimate_usd": 0.0,
+      "cost_actual_usd": 0.0,
+      "created_at": "2026-09-22T02:37:38.547071+00:00",
+      "payload": {
+        "note": "request body removed from the archive (it carried abandoned lyric drafts)"
+      },
+      "warnings": [
+        "FINAL: take 17 edited locally (chorus 2 -> final chorus join, Verse 4 + Bridge removed, 'And me' trimmed); no generation"
+      ],
+      "takes": [
+        {
+          "index": 19,
+          "file": "take-19.mp3",
+          "provider": "suno",
+          "provider_ref": "edit-of-take-17",
+          "duration_s": 162.05,
+          "bytes": 6488667
+        }
+      ]
+    }
+  ]
+}
