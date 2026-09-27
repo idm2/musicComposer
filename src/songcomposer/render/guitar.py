@@ -5,9 +5,10 @@ from ..chordsym import parse_harte, pitch_class, transpose_name
 from ..models import Chord, Note
 from .timing import BeatMap
 
-OPEN_FRIENDLY = {"C", "D", "E", "G", "A", "Am", "Dm", "Em", "A7", "B7", "C7", "D7", "E7", "G7", "Cmaj7", "Fmaj7",
+OPEN_FRIENDLY = {"C", "D", "E", "G", "A", "Am", "Bm", "Dm", "Em", "A7", "B7", "C7", "D7", "E7", "G7", "Cmaj7", "Fmaj7",
                  "Am7", "Dm7", "Em7", "Dsus2", "Dsus4", "Asus2", "Asus4", "Esus4", "Cadd9"}
-MAX_CAPO = 7
+MAX_CAPO = 5                                 # above this a capo is a party trick, not a help
+ALREADY_OPEN = 0.6                           # this share of the song in open shapes needs no capo
 CAPO_PENALTY = 0.02
 
 TUNING = (40, 45, 50, 55, 59, 64)            # E2 A2 D3 G3 B3 E4
@@ -45,6 +46,8 @@ def suggest_capo(chords: list[Chord]) -> tuple[int, dict[str, str]]:
         good = sum(c.duration for c in chords if _shape_symbol(c, capo).split("/")[0] in OPEN_FRIENDLY)
         return good / total - CAPO_PENALTY * capo
 
+    if friendliness(0) >= ALREADY_OPEN:
+        return 0, {}
     best = max(range(MAX_CAPO + 1), key=friendliness)
     if best == 0 or friendliness(best) <= friendliness(0) + 0.1:        # only suggest a capo when it clearly helps
         return 0, {}

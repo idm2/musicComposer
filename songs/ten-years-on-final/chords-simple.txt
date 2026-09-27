@@ -1,12 +1,15 @@
-Ten Years On
-============
+Ten Years On — simple open chords (no capo)
+===========================================
 Key: D major (confidence 0.91)   Tempo: 91 BPM   Time: 4/4
-Transcribed from take 19. ? = low-confidence chord (below 0.5): 9 of 49 chords.
+Five chords only, all standard open shapes, no capo:
+  D  xx0232    Bm  x24432    G  320003    A  x02220    Em  022000
+Fancier chords from the full sheet are simplified (A/C# -> A, Bm7 -> Bm, Gmaj7 -> G, Em7 -> Em).
+? = a chord the transcription was less sure about; check it by ear.
 
 [Hook]
                             D
 Ten years on, another life, another shore
-                    A/C#?      Bm
+                    A?         Bm
 I don't think about the fights anymore
               A?         G
 I think about the roads, and the beaches we found
@@ -16,7 +19,7 @@ Sitting side by side while the sun went down
 [Verse 1]
 D
 Five a.m. at Hua Hin, the sea as calm as glass
-              A/C#? Bm7?
+              A?    Bm?
 So beautiful, we'd swim before the town woke up
            A?         G
 Fruit from the market in a plastic bag
@@ -24,7 +27,7 @@ Fruit from the market in a plastic bag
 We'd eat it on the motorbike, and that was enough
 
 [Pre-Chorus]
-             Bm7                               G
+             Bm                                G
 We were fire and fire, we could burn the whole night down
             D                       A
 Then water, the calmest sea around
@@ -32,13 +35,13 @@ Then water, the calmest sea around
 [Chorus]
                             D
 Ten years on, another life, another shore
-                    A/C#?      Bm7
+                    A?         Bm
 I don't think about the fights anymore
-              A          Gmaj7
+              A          G
 I think about the roads, and the beaches we found
                            D
 Sitting side by side while the sun went down
-A                                      Em7                 A
+A                                      Em                  A
 And every year they light the candles, and I think of you
                                D
 'Cause it's your birthday too
@@ -46,7 +49,7 @@ And every year they light the candles, and I think of you
 [Verse 2]
 We'd turn the key on the motorbike
 Any makeshift room would do for the night
-A/C#?       Bm
+A?          Bm
 We had next to nothing, and we had it all
 Another empty beach, watching the sun fall
 
@@ -60,14 +63,14 @@ We'd dance the night till we were drunk, then put Faded on
 And we'd be asleep before the end of the song
 
 [Pre-Chorus]
-             Bm7                   G
+             Bm                    G
 We were fire and fire, I can still feel the heat
             D
 Then water, that's the part I keep
 
 [Chorus]
 Ten years on, another life, another shore
-                    A/C#?      Bm7
+                    A?         Bm
 I don't think about the fights anymore
                   A      G
 I think about the roads, and the beaches we found
@@ -79,7 +82,7 @@ And every year they light the candles, and I think of you
 'Cause it's your birthday too
 
 [Tag]
-                               Bm7
+                               Bm
 'Cause it's your birthday too
                         G
 It's your birthday too

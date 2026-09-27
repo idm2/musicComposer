@@ -120,3 +120,25 @@ def test_importing_chordsheet_does_not_import_heavy_deps():
         capture_output=True, text=True,
     )
     assert proc.returncode == 0, proc.stderr
+
+
+def test_no_capo_for_a_song_already_in_open_d():
+    """Ten Years On regression: D–Bm–G–A (Bm is a barre) got 'capo 7, play G–Em–C–D' — every chord a guitarist
+    reads off that line is wrong. A mostly-open song never gets a capo, and no capo sits above fret 5."""
+    song = [ch("D:maj", "D", 0, 8), ch("B:min", "Bm", 8, 8), ch("G:maj", "G", 16, 8), ch("A:maj", "A", 24, 4)]
+    assert suggest_capo(song) == (0, {})
+
+
+def test_capo_never_suggested_above_fret_5():
+    song = [ch("B:maj", "B", 0, 4), ch("F#:maj", "F#", 4, 4), ch("G#:min", "G#m", 8, 4), ch("E:maj", "E", 12, 4)]
+    assert suggest_capo(song)[0] <= 5
+
+
+def test_chord_sheet_prints_no_capo_line_unless_asked():
+    from songcomposer.models import Transcription
+    from songcomposer.render.chordsheet import render_chordsheet
+    from test_tab import make_analysis
+    chords = [ch("Bb:maj", "Bb", 0, 4), ch("Eb:maj", "Eb", 4, 4), ch("F:maj", "F", 8, 4), ch("G:min", "Gm", 12, 4)]
+    t = Transcription(take=1, analysis=make_analysis([], chords=chords), lines=[])
+    assert "Capo" not in render_chordsheet("T", t)
+    assert "Capo suggestion: fret 3" in render_chordsheet("T", t, capo=True)

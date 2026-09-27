@@ -26,7 +26,7 @@ def _rows(line: LyricLine, chords: list[Chord]) -> tuple[str, str]:
     return row, line.text
 
 
-def render_chordsheet(title: str, t: Transcription) -> str:
+def render_chordsheet(title: str, t: Transcription, capo: bool = False) -> str:
     a = t.analysis
     chords = sorted(a.chords, key=lambda c: c.onset)
     low = sum(1 for c in chords if c.confidence < LOW_CONFIDENCE)
@@ -41,9 +41,10 @@ def render_chordsheet(title: str, t: Transcription) -> str:
         line.append(f"Time: {g.time_signature}")
     if line:
         out.append("   ".join(line))
-    capo, shapes = suggest_capo(chords)
-    if capo:
-        out.append(f"Capo suggestion: fret {capo} — play " + ", ".join(f"{k}→{v}" for k, v in shapes.items()))
+    # Off by default: Sam plays open shapes and a wrong capo line makes every chord on the sheet wrong.
+    fret, shapes = suggest_capo(chords) if capo else (0, {})
+    if fret:
+        out.append(f"Capo suggestion: fret {fret} — play " + ", ".join(f"{k}→{v}" for k, v in shapes.items()))
     out += [f"Transcribed from take {t.take}. ? = low-confidence chord (below {LOW_CONFIDENCE}): {low} of {len(chords)} chords.", ""]
 
     timed = [l for l in t.lines if l.start is not None]
