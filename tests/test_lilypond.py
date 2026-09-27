@@ -64,3 +64,19 @@ def test_importing_lilypond_does_not_import_heavy_deps():
         capture_output=True, text=True,
     )
     assert proc.returncode == 0, proc.stderr
+
+
+def test_fret_diagrams_use_the_tab_shapes(t):  # noqa: F811
+    """LilyPond's own fret calculation picks odd voicings (a D drawn as three muted strings and high dots);
+    every diagram must be pinned to the same shape the tab shows."""
+    ly = lilypond.build_ly("T", t)
+    assert '\storePredefinedDiagram #default-fret-table \chordmode { c } #guitar-tuning "x;3;2;0;1;0;"' in ly
+    assert ly.index("storePredefinedDiagram") < ly.index("\score")
+
+
+@pytest.mark.parametrize("harte,symbol,bass,expected", [
+    ("D:maj", "D", None, "x;x;0;2;3;2;"), ("A:maj", "A/C#", "C#", "x;4;2;2;2;0;"),
+    ("D:maj", "D/F#", "F#", "2;x;0;2;3;2;"), ("B:min7", "Bm7", None, "x;2;4;2;3;2;"), ("F#:min7", "F#m7", None, "2;4;2;2;2;2;")])
+def test_diagram_frets(harte, symbol, bass, expected):
+    c = ch(harte, symbol, 0, 1).model_copy(update={"bass": bass})
+    assert lilypond.diagram_frets(c) == expected

@@ -155,15 +155,14 @@ def test_confidence_floor_drops_very_low_confidence_notes_but_keeps_moderate_one
 # ---- I4: the slash-chord bass-note simplification is disclosed --------------------------------
 
 
-def test_slash_chord_shape_discloses_the_dropped_bass_note():
+def test_slash_chord_shape_puts_the_bass_note_on_a_low_string():
     slash = Chord(symbol="E/G#", harte="E:maj/3", root="E", quality="maj", extensions=[], bass="G#",
                   onset=0.0, duration=2.0, confidence=0.9)
     plain = ch("C:maj", "C", onset=3.0)
     a = make_analysis([], chords=[slash, plain])
     out = render_tab("T", Transcription(take=1, analysis=a, lines=[]))
-    assert "E/G#       022100  (bass note not shown — let the bass carry it)" in out
+    assert "E/G#       4x2100" in out                                # G# on the low E, A string muted
     assert "C          x32010" in out
-    assert "x32010  (bass" not in out
 
 
 # ---- M5: untested fallback paths ---------------------------------------------------------------

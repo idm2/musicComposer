@@ -3,8 +3,9 @@ import shutil
 import subprocess
 from pathlib import Path
 
-from ..chordsym import pitch_class
 from ..models import LOW_CONFIDENCE, Chord, Transcription
+from ..chordsym import pitch_class
+from . import guitar
 from .guitar import into_range
 from .leadsheet import chord_events, melody_events, melody_selection_note, selected_melody
 from .timing import BeatMap, split_at_bars, split_sixteenths
@@ -30,6 +31,26 @@ def ly_pitch(midi: int, flats: bool) -> str:
 def ly_chord(chord: Chord, beats: int) -> str:
     out = f"{_name(chord.root)}{DUR16[beats * 4]}{QUALITY.get(chord.quality, '')}"
     return out + (f"/{_name(chord.bass)}" if chord.bass else "")
+
+
+def diagram_frets(chord: Chord) -> str | None:
+    """The tab's voicing for this chord as a LilyPond fret string ("x;0;2;2;2;0;"). None when there is no shape."""
+    frets = guitar.voicing(chord)
+    return "".join(f"{f};" for f in frets) if frets else None
+
+
+def _diagrams(t: Transcription, beatmap: BeatMap) -> str:
+    out, seen = [], set()
+    for e in chord_events(t, beatmap):
+        if e.chord is None:
+            continue
+        name = ly_chord(e.chord, 1).replace("4", "", 1)
+        frets = diagram_frets(e.chord)
+        if name in seen or not frets:
+            continue
+        seen.add(name)
+        out.append(f'\\storePredefinedDiagram #default-fret-table \\chordmode {{ {name} }} #guitar-tuning "{frets}"')
+    return "\n".join(out)
 
 
 def _uses_flats(key_name: str) -> bool:
@@ -97,6 +118,7 @@ def build_ly(title: str, t: Transcription) -> str:
   composer = {_quote(f"Song Composer — transcribed from take {t.take}")}
   tagline = {_quote(tagline)}
 }}
+{_diagrams(t, beatmap)}
 harmonies = \\chordmode {{ {_harmonies(t, beatmap, True)} }}
 shapes = \\chordmode {{ {_harmonies(t, beatmap, False)} }}
 melody = {{ {' '.join(setup)} {music} }}

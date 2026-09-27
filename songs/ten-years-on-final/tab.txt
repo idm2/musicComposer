@@ -6,11 +6,11 @@ Inner parts of a mix transcribe approximately: treat the right-hand read as a st
 
 CHORD SHAPES (low E → high e; x = muted)
 D          xx0232
-A/C#?      x02220  (bass note not shown — let the bass carry it)
+A/C#?      x42220
 Bm         x24432
 A?         x02220
 G          320003
-Bm7?       797777
+Bm7?       x24232
 Gmaj7      320002
 Em7        022030
 Em?        022000

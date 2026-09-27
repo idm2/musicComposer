@@ -16,14 +16,11 @@ def _shapes_block(t: Transcription) -> list[str]:
         if c.symbol in seen:
             continue
         seen.add(c.symbol)
-        shape = guitar.shape_for(c)
-        if not shape:
+        frets = guitar.voicing(c)
+        if not frets:
             out.append(f"{label(c):<11}(no shape in dictionary — work it out from the chord name)")
             continue
-        line = f"{label(c):<11}{shape}"
-        if c.bass:
-            line += "  (bass note not shown — let the bass carry it)"
-        out.append(line)
+        out.append(f"{label(c):<11}{('.' if any(len(f) > 1 for f in frets) else '').join(frets)}")
     return out
 
 

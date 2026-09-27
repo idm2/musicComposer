@@ -17,7 +17,7 @@ SHAPES = {
     "Am": "x02210", "Dm": "xx0231", "Em": "022000", "Bm": "x24432",
     "A7": "x02020", "B7": "x21202", "C7": "x32310", "D7": "xx0212", "E7": "020100", "G7": "320001",
     "Cmaj7": "x32000", "Dmaj7": "xx0222", "Fmaj7": "xx3210", "Gmaj7": "320002", "Amaj7": "x02120",
-    "Am7": "x02010", "Dm7": "xx0211", "Em7": "022030",
+    "Am7": "x02010", "Bm7": "x24232", "Dm7": "xx0211", "Em7": "022030",
     "Dsus2": "xx0230", "Dsus4": "xx0233", "Asus2": "x02200", "Asus4": "x02230", "Esus4": "022200", "Cadd9": "x32030",
 }
 _BARRE = {"maj": (0, 2, 2, 1, 0, 0), "min": (0, 2, 2, 0, 0, 0), "7": (0, 2, 0, 1, 0, 0), "min7": (0, 2, 0, 0, 0, 0),
@@ -60,6 +60,25 @@ def shape_for(chord: Chord) -> str | None:
     fret = (pitch_class(chord.root) - 4) % 12                       # root on the low E string
     frets = [fret + d for d in _BARRE[chord.quality]]
     return ".".join(map(str, frets)) if max(frets) >= 10 else "".join(map(str, frets))
+
+
+def voicing(chord: Chord) -> list[str] | None:
+    """Per-string frets, low E first ("x" = muted). A slash chord's bass note goes on the low E or A string
+    (A/C# -> x42220, D/F# -> 2x0232) so the shape actually sounds the named chord."""
+    shape = shape_for(chord)
+    if not shape:
+        return None
+    frets = shape.split(".") if "." in shape else list(shape)
+    if chord.bass:
+        target = pitch_class(chord.bass)
+        for string in (0, 1):                                   # low E, then A
+            fret = (target - TUNING[string]) % 12
+            if fret <= 5:
+                frets = ["x"] * string + [str(fret)] + frets[string + 1:]
+                if string == 0:
+                    frets[1] = "x"                             # mute the A string rather than double a wrong bass
+                break
+    return frets
 
 
 def into_range(pitch: int) -> int:
