@@ -1,6 +1,6 @@
 """chords.txt — lyrics with chords above the line, placed from the transcription of the actual take."""
 from ..models import LOW_CONFIDENCE, Chord, LyricLine, Transcription
-from .guitar import suggest_capo
+from .guitar import chord_charts, suggest_capo
 
 LEAD_S = 0.15                 # a chord this close before a word belongs to that word
 OUTRO_GAP_S = 4.0
@@ -46,6 +46,8 @@ def render_chordsheet(title: str, t: Transcription, capo: bool = False) -> str:
     if fret:
         out.append(f"Capo suggestion: fret {fret} — play " + ", ".join(f"{k}→{v}" for k, v in shapes.items()))
     out += [f"Transcribed from take {t.take}. ? = low-confidence chord (below {LOW_CONFIDENCE}): {low} of {len(chords)} chords.", ""]
+    if chords:
+        out += chord_charts(chords) + [""]
 
     timed = [l for l in t.lines if l.start is not None]
     if timed:

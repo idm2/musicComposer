@@ -30,6 +30,8 @@ class SongPaths:
         self.tab_txt = self.out / "tab.txt"
         self.chart_ly = self.out / "chart.ly"
         self.chart_pdf = self.out / "chart.pdf"
+        self.songsheet_html = self.out / "songsheet.html"
+        self.songsheet_pdf = self.out / "songsheet.pdf"
         self.lyrics_json = self.out / "lyrics.json"
 
     def take(self, index: int) -> Path:

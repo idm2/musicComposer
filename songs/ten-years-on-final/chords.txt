@@ -3,6 +3,25 @@ Ten Years On
 Key: D major (confidence 0.91)   Tempo: 91 BPM   Time: 4/4
 Transcribed from take 19. ? = low-confidence chord (below 0.5): 9 of 49 chords.
 
+CHORD CHARTS (standard tuning, no capo; strings low E to high e, left to right)
+     D              A/C#             Bm              A               G              Bm7
+x x o           x         o     x               x o       o         o o o       x
+===========     ===========     ===========     ===========     ===========     ===========
+| | | | | |     | | | | | |     | | | | | |     | | | | | |     | | | | | |     | | | | | |
+| | | O | O     | | O O O |     | O | | | O     | | O O O |     | O | | | |     | O | O | O
+| | | | O |     | | | | | |     | | | | O |     | | | | | |     O | | | | O     | | | | O |
+| | | | | |     | O | | | |     | | O O | |     | | | | | |     | | | | | |     | | O | | |
+| | | | | |     | | | | | |     | | | | | |     | | | | | |     | | | | | |     | | | | | |
+
+   Gmaj7            Em7              Em
+    o o o       o     o   o     o     o o o
+===========     ===========     ===========
+| | | | | |     | | | | | |     | | | | | |
+| O | | | O     | O O | | |     | O O | | |
+O | | | | |     | | | | O |     | | | | | |
+| | | | | |     | | | | | |     | | | | | |
+| | | | | |     | | | | | |     | | | | | |
+
 [Hook]
                             D
 Ten years on, another life, another shore

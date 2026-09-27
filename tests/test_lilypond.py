@@ -27,13 +27,12 @@ def test_ly_chord_with_bass():
 def test_build_ly_has_every_layer_and_marks_doubt(t):  # noqa: F811
     ly = lilypond.build_ly('Glass "Hour"', t)
     assert 'title = "Glass \\"Hour\\""' in ly
-    for needle in ("\\new ChordNames", "\\new FretBoards", "\\new TabStaff", "\\lyricsto", "\\key c \\major",
+    for needle in ("\\new ChordNames", "\\fret-diagram-terse", "\\new TabStaff", "\\lyricsto", "\\key c \\major",
                    "\\time 4/4", "\\tempo 4 = 100", "chordChanges = ##t"):
         assert needle in ly, needle
     assert "r4 e'4 \\parenthesize g'2" in ly                        # rest, sure note, low-confidence note
     assert '"Glass" "hour"' in ly
     assert "c1 s1 \\once \\override ChordName.color = #grey bes1:m7" in ly
-    assert "c1 s1 bes1:m7" in ly                                    # FretBoards copy has no overrides
 
 
 @pytest.mark.skipif(shutil.which("lilypond") is None, reason="lilypond not installed")
@@ -66,12 +65,14 @@ def test_importing_lilypond_does_not_import_heavy_deps():
     assert proc.returncode == 0, proc.stderr
 
 
-def test_fret_diagrams_use_the_tab_shapes(t):  # noqa: F811
-    """LilyPond's own fret calculation picks odd voicings (a D drawn as three muted strings and high dots);
-    every diagram must be pinned to the same shape the tab shows."""
+def test_fret_diagrams_use_the_tab_shapes_once_above_the_music(t):  # noqa: F811
+    """LilyPond's own fret calculation picked odd voicings, and a box over every change cluttered the page:
+    each chord's diagram appears once, above the score, with the same shape the tab shows."""
     ly = lilypond.build_ly("T", t)
-    assert '\storePredefinedDiagram #default-fret-table \chordmode { c } #guitar-tuning "x;3;2;0;1;0;"' in ly
-    assert ly.index("storePredefinedDiagram") < ly.index("\score")
+    assert '\\bold "C" \\fret-diagram-terse #"x;3;2;o;1;o;"' in ly
+    assert ly.count('\\bold "C" ') == 1
+    assert ly.index("fret-diagram-terse") < ly.index("\\score")
+    assert "FretBoards" not in ly
 
 
 @pytest.mark.parametrize("harte,symbol,bass,expected", [

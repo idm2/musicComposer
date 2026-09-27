@@ -142,3 +142,22 @@ def test_chord_sheet_prints_no_capo_line_unless_asked():
     t = Transcription(take=1, analysis=make_analysis([], chords=chords), lines=[])
     assert "Capo" not in render_chordsheet("T", t)
     assert "Capo suggestion: fret 3" in render_chordsheet("T", t, capo=True)
+
+
+def test_chord_sheet_and_tab_start_with_chord_charts():
+    from songcomposer.models import Transcription
+    from songcomposer.render.chordsheet import render_chordsheet
+    from songcomposer.render.tab import render_tab
+    from test_tab import make_analysis
+    chords = [ch("D:maj", "D", 0, 4), ch("B:min", "Bm", 4, 4), ch("D:maj", "D", 8, 4)]
+    t = Transcription(take=1, analysis=make_analysis([], chords=chords), lines=[])
+    for text in (render_chordsheet("T", t), render_tab("T", t)):
+        assert "CHORD CHARTS (standard tuning, no capo" in text
+        assert text.count("     D  ") == 1                          # each chord charted once
+        assert "x x o" in text                                     # D: low E and A not played, D string open
+
+
+def test_chord_box_marks_high_shapes_with_their_fret():
+    from songcomposer.render.guitar import chord_box
+    box = chord_box("B", ["7", "9", "9", "8", "7", "7"])
+    assert box[3].rstrip() == "O | | | O O 7fr"

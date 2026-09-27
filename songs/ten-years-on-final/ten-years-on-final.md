@@ -7,7 +7,7 @@ It shares a birthday with the person it's for — hence "it's your birthday too"
 |---|---|
 | Key | D major (measured, confidence 0.91) |
 | Tempo / metre | 91 BPM, 4/4 |
-| Chords | D, A, Bm, G, Em7, Gmaj7, with an A/C♯ passing chord — open position, no capo (simple version: D, Bm, G, A, Em) |
+| Chords | D, A, Bm, G, Em7, Gmaj7, with an A/C♯ passing chord — open position, no capo |
 | Length | 2:42 |
 | Final recording | take 19 of `work/ten-years-on-final` (edit of take 17), Sam's pick "A" |
 
@@ -73,8 +73,8 @@ Happy birthday to you
 
 ## Deliverables
 
-- `chords.txt` — lyrics with chords, open position, no capo; `?` marks the 9 of 49 low-confidence chords.
-- `chords-simple.txt` — the same with only five open chords (D, Bm, G, A, Em) for easy playing.
+- `chords.txt` — chord charts, then lyrics with chords (open position, no capo); `?` marks the 9 of 49 low-confidence chords.
+- `songsheet.pdf` (in `out/`) — the page to play from: chord diagrams, then lyrics with chords, section by section.
 - `tab.txt` — chord shapes and the vocal melody as guitar tab (melody approximate; no consistent strum pattern detected).
 - `chart.ly` / `ten-years-on-final.musicxml` — notation (melody, chords, tab). The PDF and audio stay in the
   git-ignored `out/ten-years-on-final/`, along with the photo video (`song-A.mp4`, built by `tools/slideshow-video.py`).

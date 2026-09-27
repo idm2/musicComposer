@@ -84,6 +84,39 @@ def voicing(chord: Chord) -> list[str] | None:
     return frets
 
 
+CHART_FRETS = 5
+BOX_WIDTH = 16
+
+
+def chord_box(name: str, frets: list[str]) -> list[str]:
+    """One ASCII chord chart: strings low E to high e left to right, x = don't play, o = open, O = finger.
+    Shapes that sit high on the neck start at their lowest fret, labelled "7fr"."""
+    fretted = [int(f) for f in frets if f not in ("x", "0")]
+    base = 1 if not fretted or max(fretted) <= CHART_FRETS else min(fretted)
+    rows = [name.center(11), " ".join("x" if f == "x" else "o" if f == "0" else " " for f in frets),
+            "===========" if base == 1 else "-----------"]
+    for k in range(base, base + CHART_FRETS):
+        row = " ".join("O" if f not in ("x", "0") and int(f) == k else "|" for f in frets)
+        rows.append(row + (f" {base}fr" if k == base and base > 1 else ""))
+    return [r.ljust(BOX_WIDTH) for r in rows]
+
+
+def chord_charts(chords: list[Chord], per_row: int = 6) -> list[str]:
+    """Every distinct chord in the song, in order of first appearance, as ASCII charts side by side."""
+    boxes, seen = [], set()
+    for c in sorted(chords, key=lambda c: c.onset):
+        frets = voicing(c)
+        if c.symbol in seen or not frets:
+            continue
+        seen.add(c.symbol)
+        boxes.append(chord_box(c.symbol, frets))
+    out = ["CHORD CHARTS (standard tuning, no capo; strings low E to high e, left to right)"]
+    for i in range(0, len(boxes), per_row):
+        group = boxes[i:i + per_row]
+        out += ["".join(parts).rstrip() for parts in zip(*group)] + [""]
+    return out[:-1] if out[-1] == "" else out
+
+
 def into_range(pitch: int) -> int:
     while pitch < TUNING[0]:
         pitch += 12

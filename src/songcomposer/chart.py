@@ -8,6 +8,7 @@ from .render.chordsheet import render_chordsheet
 from .render.lilypond import write_pdf
 from .render.lyricsjson import build_lyrics_json
 from .render.musicxml import write_musicxml
+from .render.songsheet import write_songsheet
 from .render.tab import render_tab
 from .transcribe import run_transcribe
 
@@ -37,6 +38,8 @@ def run_chart(song: str, force: bool = False) -> dict[str, Path]:
             lambda: paths.chords_txt.write_text(render_chordsheet(title, t), encoding="utf-8"))
     attempt("tab", paths.tab_txt,
             lambda: paths.tab_txt.write_text(render_tab(title, t), encoding="utf-8"))
+    attempt("songsheet", paths.songsheet_pdf,
+            lambda: write_songsheet(title, t, paths.songsheet_html, paths.songsheet_pdf))
     attempt("lyrics", paths.lyrics_json,
             lambda: write_json(paths.lyrics_json, build_lyrics_json(song, title, t)))
 

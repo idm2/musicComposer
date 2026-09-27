@@ -99,5 +99,5 @@ def render_tab(title: str, t: Transcription) -> str:
     if len(a.beats) < 2:
         return "\n".join(head + ["", "No beat grid was detected — tab cannot be laid out. See chords.txt."]) + "\n"
     beatmap = BeatMap.from_analysis(a)
-    blocks = [head, _shapes_block(t), _rhythm_block(t, beatmap), _melody_block(t, beatmap)]
+    blocks = [head, guitar.chord_charts(a.chords), _shapes_block(t), _rhythm_block(t, beatmap), _melody_block(t, beatmap)]
     return "\n\n".join("\n".join(b) for b in blocks) + "\n"

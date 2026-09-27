@@ -4,6 +4,25 @@ Guitar tab, transcribed from take 19. Standard tuning.
 Key: D major   Tempo: 91 BPM   Time: 4/4
 Inner parts of a mix transcribe approximately: treat the right-hand read as a starting point, the chords and melody as the reliable part.
 
+CHORD CHARTS (standard tuning, no capo; strings low E to high e, left to right)
+     D              A/C#             Bm              A               G              Bm7
+x x o           x         o     x               x o       o         o o o       x
+===========     ===========     ===========     ===========     ===========     ===========
+| | | | | |     | | | | | |     | | | | | |     | | | | | |     | | | | | |     | | | | | |
+| | | O | O     | | O O O |     | O | | | O     | | O O O |     | O | | | |     | O | O | O
+| | | | O |     | | | | | |     | | | | O |     | | | | | |     O | | | | O     | | | | O |
+| | | | | |     | O | | | |     | | O O | |     | | | | | |     | | | | | |     | | O | | |
+| | | | | |     | | | | | |     | | | | | |     | | | | | |     | | | | | |     | | | | | |
+
+   Gmaj7            Em7              Em
+    o o o       o     o   o     o     o o o
+===========     ===========     ===========
+| | | | | |     | | | | | |     | | | | | |
+| O | | | O     | O O | | |     | O O | | |
+O | | | | |     | | | | O |     | | | | | |
+| | | | | |     | | | | | |     | | | | | |
+| | | | | |     | | | | | |     | | | | | |
+
 CHORD SHAPES (low E → high e; x = muted)
 D          xx0232
 A/C#?      x42220

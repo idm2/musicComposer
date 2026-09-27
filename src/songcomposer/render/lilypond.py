@@ -40,17 +40,20 @@ def diagram_frets(chord: Chord) -> str | None:
 
 
 def _diagrams(t: Transcription, beatmap: BeatMap) -> str:
-    out, seen = [], set()
+    """Every chord's diagram once, in a row above the music (not a tiny box over every change)."""
+    cells, seen = [], set()
     for e in chord_events(t, beatmap):
-        if e.chord is None:
+        if e.chord is None or e.chord.symbol in seen:
             continue
-        name = ly_chord(e.chord, 1).replace("4", "", 1)
         frets = diagram_frets(e.chord)
-        if name in seen or not frets:
+        if not frets:
             continue
-        seen.add(name)
-        out.append(f'\\storePredefinedDiagram #default-fret-table \\chordmode {{ {name} }} #guitar-tuning "{frets}"')
-    return "\n".join(out)
+        seen.add(e.chord.symbol)
+        terse = ";".join("o" if f == "0" else f for f in frets.rstrip(";").split(";")) + ";"
+        cells.append(f'\\center-column {{ \\bold {_quote(e.chord.symbol)} \\fret-diagram-terse #"{terse}" }}')
+    if not cells:
+        return ""
+    return "\\markup { \\override #'(baseline-skip . 2) \\fill-line { " + " ".join(cells) + " } }"
 
 
 def _uses_flats(key_name: str) -> bool:
@@ -120,13 +123,11 @@ def build_ly(title: str, t: Transcription) -> str:
 }}
 {_diagrams(t, beatmap)}
 harmonies = \\chordmode {{ {_harmonies(t, beatmap, True)} }}
-shapes = \\chordmode {{ {_harmonies(t, beatmap, False)} }}
 melody = {{ {' '.join(setup)} {music} }}
 words = \\lyricmode {{ {words} }}
 \\score {{
   <<
     \\new ChordNames {{ \\set chordChanges = ##t \\harmonies }}
-    \\new FretBoards {{ \\shapes }}
     \\new Staff {{ \\clef "treble_8" \\new Voice = "mel" {{ \\melody }} }}
     \\new Lyrics \\lyricsto "mel" {{ \\words }}
     \\new TabStaff {{ \\melody }}
